@@ -22,3 +22,14 @@ st.markdown( # Breite des main divs
 st.sidebar.title('Hello, World!')
 st.title('Hello, Jesus Christ!')
 st.title('You are great!')
+
+
+# Create a two-column layout
+col1, col2 = st.columns([0.001, 1]) # this will just call methods directly in the returned objects
+# Inside the first column, add the answer text
+with col1:
+    st.write("")
+# Inside the second column, add the image
+with col2:
+    st.image("001.jpg", caption="Lightning Image", use_column_width=True)
+
