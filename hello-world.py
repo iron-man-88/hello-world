@@ -22,7 +22,7 @@ st.markdown( # Breite des main divs
 st.sidebar.title('Hello, World!')
 st.title('Hello, Jesus Christ!')
 st.title('You are great!')
-
+st.title('The Preeminent One')
 
 # Create a two-column layout
 col1, col2 = st.columns([0.001, 1]) # this will just call methods directly in the returned objects
