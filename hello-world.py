@@ -31,5 +31,5 @@ with col1:
     st.write("")
 # Inside the second column, add the image
 with col2:
-    st.image("001.jpg", caption="Lightning Image", use_column_width=True)
+    st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
