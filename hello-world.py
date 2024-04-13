@@ -57,10 +57,3 @@ def main():
 #    returnif __name__ == "__main__":
      #main()
 main()
-
-def mmain():
-    st.subheader("Hello, world.")
-    
-mmain()
-
-
