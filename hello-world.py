@@ -34,6 +34,14 @@ with col1:
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
+@st.cache_data
+# Deswegen wird eine Funktion verwendet, welche in den Cache übernommen wird.
+def load_data_Seiten():
+    # Upload der XLSX-Datei in den DataFrame, Erstellung eines "pandas Dataframe" aus der XLSX-Datei
+    # Die XLSX Datei besteht aus 3 Spalten: Kapitel, Dateiname und der Dropdown_Anzeige
+    dfPdfs = pd.read_excel('database/text_bundle.xlsx', sheet_name='Seiten', usecols='A:C,J:BL', header=0) # usecols='A:C'   usecols=[0,1,2]
+    #dfPdfs = pd.read_csv('Studio21_pdf_Seiten.csv')
+    return dfPdfs
 
 
 
@@ -43,7 +51,6 @@ def load_bundle(locale):
     df = pd.read_csv("database/text_bundle.csv")
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
     lang_dict = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
-    st.write(lang_dict)
     return lang_dict
 def main():
     lang_options = {
