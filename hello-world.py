@@ -36,7 +36,7 @@ with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
-@st.cache_data
+#@st.cache_data
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
