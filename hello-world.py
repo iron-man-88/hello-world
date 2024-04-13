@@ -45,10 +45,8 @@ def load_bundle(locale):
     st.write("df ", df)
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
     df_en = df.query(f"en == '{locale}'")# Create and return a dictionary of key/values.
-    df_de = df.query(f"de == '{locale}'")# Create and return a dictionary of key/values.
     st.write("df.query ", df)
     st.write("df.query_en ", df_en)
-    st.write("df.query_de ", df_de)
     lang_dict = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
     lang_dict_en = {df.key_new.to_list()[i]:df.en.to_list()[i] for i in range(len(df.key_new.to_list()))}
     lang_dict_de = {df.key_new.to_list()[i]:df.de.to_list()[i] for i in range(len(df.key_new.to_list()))}
