@@ -37,8 +37,8 @@ with col2:
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 #@st.cache_data
-ddf = pd.read_csv("database/text_bundle.csv")
-st.write("ddf ", ddf)
+#ddf = pd.read_csv("database/text_bundle.csv")
+#st.write("ddf ", ddf)
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
