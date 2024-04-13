@@ -1,11 +1,3 @@
-Dateiname,Dropdown_Anzeige
-0 Buch_001, B-E00 008
-1 Buch_002, B E00 009
-2 Buch_003, B E00 010
-3 Buch_004, B E00 011
-4 Buch_005, B E00 012
-5 Buch_006, B E00 013
-6 Buch_007, B E00 014
-7 Buch_008, B E00 015
-8 Buch_009, B E01 016
-9 Buch_010, B E01 017
+locale,key,value
+en_US,greeting,"Hello, World"
+ja_JP,greeting,こんにちは世界
