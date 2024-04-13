@@ -35,19 +35,8 @@ with col1:
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
-@st.cache_data
-# Deswegen wird eine Funktion verwendet, welche in den Cache übernommen wird.
-def load_data_Seiten(locale):
-    # Upload der XLSX-Datei in den DataFrame, Erstellung eines "pandas Dataframe" aus der XLSX-Datei
-    # Die XLSX Datei besteht aus 3 Spalten: Kapitel, Dateiname und der Dropdown_Anzeige
-    dfPdfs = pd.read_excel("database/text_bundle.xlsx", sheet_name="Sheet1", usecols="A:C", header=0) # usecols='A:C' / [0,1,2]
-    st.write("dfPdfs")
-    st.write(dfPdfs)
-    return dfPdfs
-
-
-
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
+@st.cache_data
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
@@ -64,6 +53,6 @@ def main():
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
-#    returnif __name__ == "__main__":
-     #main()
-main()
+    returnif __name__ == "__main__":
+     main()
+#main()
