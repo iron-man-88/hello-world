@@ -53,9 +53,9 @@ def main():
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
-    returnif __name__ == "__main__":
-    main()
-#main()
+#    returnif __name__ == "__main__":
+#    main()
+main()
 
 def mmain():
     st.subheader("Hello, world.")
