@@ -48,9 +48,9 @@ def load_bundle(locale):
     st.write("df.query ", df)
     st.write("df.query_en ", df_en)
     lang_dict = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
-    lang_dict_en = {df.key.to_list()[i]:df.en.to_list()[i] for i in range(len(df.key.to_list()))}
+#    lang_dict_en = {df.key.to_list()[i]:df.en.to_list()[i] for i in range(len(df.key.to_list()))}
     st.write("lang_dict ", lang_dict)
-    st.write("lang_dict_en ", lang_dict_en)
+#    st.write("lang_dict_en ", lang_dict_en)
     return lang_dict
 def main():
     lang_options = {
