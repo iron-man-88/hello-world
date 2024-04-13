@@ -36,15 +36,13 @@ with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
-#@st.cache_data
-#ddf = pd.read_csv("database/text_bundle.csv")
-#st.write("ddf ", ddf)
+@st.cache_data
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
     st.write("df ", df)
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
-    df_en = df.query(f"en_US == '{locale}'")# Create and return a dictionary of key/values.
+    df_en = df.query(f"en_US == '{en_US}'")# Create and return a dictionary of key/values.
     st.write("df.query ", df)
     st.write("df.query_en ", df_en)
     lang_dict = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
