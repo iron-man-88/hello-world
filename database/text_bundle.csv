@@ -1,3 +1,3 @@
-locale,key,value,key_new,en,de,cn
+locale,key,value,key_new,en_US,de,cn
 en_US,greeting,"Hello, World",greetings,"Hello, World!","Hallo, Welt!","こんにちは世界"
 ja_JP,greeting,"こんにちは世界",,,,
