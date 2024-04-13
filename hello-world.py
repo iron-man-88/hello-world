@@ -44,8 +44,8 @@ def load_bundle(locale):
     df = pd.read_csv("database/text_bundle.csv")
     st.write("df ", df)
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
-    df_en = df.query(f"locale == '{en}'")# Create and return a dictionary of key/values.
-    df_de = df.query(f"locale == '{de}'")# Create and return a dictionary of key/values.
+    df_en = df.query(f"en == '{locale}'")# Create and return a dictionary of key/values.
+    df_de = df.query(f"de == '{locale}'")# Create and return a dictionary of key/values.
     st.write("df.query ", df)
     st.write("df.query_en ", df_en)
     st.write("df.query_de ", df_de)
