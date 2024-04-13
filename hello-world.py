@@ -54,8 +54,8 @@ def main():
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
 #    returnif __name__ == "__main__":
-     main()
-#main()
+#     main()
+main()
 
 def mmain():
     st.subheader("Hello, world.")
