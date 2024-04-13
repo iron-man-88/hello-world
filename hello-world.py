@@ -41,6 +41,7 @@ def load_data_Seiten(locale):
     # Upload der XLSX-Datei in den DataFrame, Erstellung eines "pandas Dataframe" aus der XLSX-Datei
     # Die XLSX Datei besteht aus 3 Spalten: Kapitel, Dateiname und der Dropdown_Anzeige
     dfPdfs = pd.read_excel("database/text_bundle.xlsx", sheet_name="Sheet1", usecols="A:C", header=0) # usecols='A:C' / [0,1,2]
+    st.write("dfPdfs")
     st.write(dfPdfs)
     return dfPdfs
 
