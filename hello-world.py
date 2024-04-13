@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-height-of-streamlit-sidebar
@@ -32,4 +33,22 @@ with col1:
 # Inside the second column, add the image
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
+
+
+
+
+# https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
+def load_bundle(locale):
+    # Load in the text bundle and filter by language locale.
+    df = pd.read_csv("text_bundle.csv")
+    df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
+    lang_dict = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
+    return lang_dictdef main():
+    lang_options = {
+        "English (US)":"en_US",
+        "日本語":"ja_JP"
+    }locale = st.radio(label='Language', options=list(lang_options.keys()))# Note we use the selected human-readable locale to get the relevant
+    # ISO locale code from the lang_options dictionary.
+    lang_dict = load_bundle(lang_options[locale])st.subheader(lang_dict['greeting'])returnif __name__ == "__main__":
+    main()
 
