@@ -20,19 +20,6 @@ st.markdown( # Breite des main divs
     unsafe_allow_html=True,)
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-st.sidebar.title('Hello, World! It is wonderful')
-st.title('Hello Jesus Christ!')
-st.title('You are great!')
-st.title('The Preeminent One')
-
-# Create a two-column layout
-col1, col2 = st.columns([0.001, 1]) # this will just call methods directly in the returned objects
-# Inside the first column, add the answer text
-with col1:
-    st.write("")
-# Inside the second column, add the image
-with col2:
-    st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
 
 
