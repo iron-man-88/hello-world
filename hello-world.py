@@ -43,23 +43,8 @@ def load_bundle(locale):
     df = pd.read_csv("database/text_bundle.csv")
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
     lang_dict = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
+    st.write(lang_dict)
     return lang_dictdef
-def main():
-    lang_options = {
-        "English (US)":"en_US",
-        "日本語":"ja_JP"
-    }
-    locale = st.radio(label='Language', options=list(lang_options.keys())) # Note we use the selected human-readable locale to get the relevant
-    # ISO locale code from the lang_options dictionary.
-    lang_dict = load_bundle(lang_options[locale])
-    st.subheader(lang_dict['greeting'])
-#    returnif __name__ == "__main__":
-#     main()
-main()
 
-def mmain():
-    st.subheader("Hello, world.")
-    
-mmain()
 
 
