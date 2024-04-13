@@ -36,7 +36,7 @@ with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
-@st.cache_data
+#@st.cache_data
 #ddf = pd.read_csv("database/text_bundle.csv")
 #st.write("ddf ", ddf)
 def load_bundle(locale):
