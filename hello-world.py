@@ -42,7 +42,7 @@ with col2:
 
 def main():
     st.subheader("Hello, world.")
-    returnif __name__ == "__main__":
-    main()
+    
+main()
 
 
