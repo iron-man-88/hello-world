@@ -37,10 +37,10 @@ with col2:
 
 
 @st.cache_data
-df_all = pd.read_csv("database/text_bundle.csv")
+dfall = pd.read_csv("database/text_bundle.csv")
 
-st.write("44 df_all ", df_all)
-aaa = df_all.iloc[1,0]
+st.write("44 df_all ", dfall)
+aaa = dfall.iloc[1,0]
 st.write("51 aaa ", aaa)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
