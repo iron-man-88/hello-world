@@ -40,12 +40,6 @@ st.write("39 df_all ", df_all)
 sel_value = df_all.iloc[1,0]
 st.write("41 sel_value ", sel_value)
 
-st.sidebar.option = st.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone'))
-
-#st.sidebar.write('You selected:', option)
-
 language_options = {
     "Deutsch":"de",
     "中文":"cn",
@@ -53,6 +47,7 @@ language_options = {
     "日本語":"ja_JP"
 }
 lllocale = st.radio(label='Languages', options=list(language_options.keys()))
+st.write("50 lllocale ", lllocale)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
