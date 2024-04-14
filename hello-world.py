@@ -37,25 +37,17 @@ with col2:
 
 
 @st.cache_data
-def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
-    return [row[i] for row in matrix]
-
 df_all = pd.read_csv("database/text_bundle.csv")
 st.write("44 df_all ", df_all)
-#FullListColumn2 = FB_column(df_all, 1) # Spalte "1" wird extrahiert
-#st.write("46 FullListColumn2 ", FullListColumn2)
-df_dee = df_all['de'] # selber
-st.write("48 df_dee ", df_dee)
 aaa = df_all.iloc[1,0]
-#df_dee_index1 = df_dee.index(1) # selber
 st.write("51 aaa ", aaa)
-
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
-    df = pd.read_csv("database/text_bundle.csv")
+#    df = pd.read_csv("database/text_bundle.csv")
+    df = df_all
     st.write("df ", df)
     df_de = df[['de']] # selber
     st.write("df_de ", df_de) # selber
