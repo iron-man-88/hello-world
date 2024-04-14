@@ -41,6 +41,8 @@ def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
     st.write("df ", df)
+    df_de = df[['de']] # selber
+    st.write("df_de ", df_de) # selber
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
 #    df_en = df.query(f"key_new == '{locale}'")# Create and return a dictionary of key/values.
     st.write("df.query ", df)
