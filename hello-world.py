@@ -40,7 +40,7 @@ st.write("39 df_all ", df_all)
 sel_value = df_all.iloc[1,0]
 st.write("41 sel_value ", sel_value)
 
-st.option = st.selectbox(
+st.sidebar.option = st.selectbox(
     'How would you like to be contacted?',
     ('Email', 'Home phone', 'Mobile phone'))
 
