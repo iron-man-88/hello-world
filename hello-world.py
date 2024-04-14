@@ -46,7 +46,7 @@ st.write("44 df_all ", df_all)
 #st.write("46 FullListColumn2 ", FullListColumn2)
 df_dee = df_all['de'] # selber
 st.write("48 df_dee ", df_dee)
-aaa = df_dee.iloc[1,0]
+aaa = df_all.iloc[1,0]
 #df_dee_index1 = df_dee.index(1) # selber
 st.write("51 aaa ", aaa)
 
