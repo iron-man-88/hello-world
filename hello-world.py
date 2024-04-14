@@ -53,7 +53,6 @@ def load_bundle(locale):
     return lang_dict
 def main():
     lang_options = {
-        "English":"en",
         "Deutsch":"de",
         "中文":"cn",
         "English (US)":"en_US",
