@@ -45,7 +45,7 @@ st.write("44 df_all ", df_all)
 #FullListColumn2 = FB_column(df_all, 1) # Spalte "1" wird extrahiert
 #st.write("46 FullListColumn2 ", FullListColumn2)
 df_dee = df_all['de'] # selber
-st.write("48 df_dee ", df_dee_index1)
+st.write("48 df_dee ", df_dee)
 df_dee_index1 = df_dee.index(1) # selber
 st.write("50 df_dee ", df_dee_index1)
 
