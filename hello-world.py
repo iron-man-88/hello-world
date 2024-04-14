@@ -55,7 +55,7 @@ elif lllocale == "cn":
 else:
     df_all_column = 7
 
-sel_value = df_all.iloc[df_all_column,0]
+sel_value = df_all.iloc[0,(df_all_column*1)]
 st.write("41 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
