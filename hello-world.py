@@ -42,7 +42,7 @@ def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion 
 
 df_all = pd.read_csv("database/text_bundle.csv")
 st.write("44 df_all ", df_all)
-#FullListColumn2 = FB_column(df_all, 1) # Spalte "1" wird extrahiert
+FullListColumn2 = FB_column(df_all, 1, index=False) # Spalte "1" wird extrahiert
 df_dee_index0 = df_all.index[1] # selber
 st.write("46 df_dee_index0 ", df_dee_index0)
 
