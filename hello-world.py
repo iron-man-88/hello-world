@@ -35,7 +35,7 @@ with col1:
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
-df_all_column = None
+df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
 st.write("39 df_all ", df_all)
