@@ -40,12 +40,12 @@ st.write("39 df_all ", df_all)
 sel_value = df_all.iloc[1,0]
 st.write("41 sel_value ", sel_value)
 
-    lang_options = {
-        "Deutsch":"de",
-        "中文":"cn",
-        "English (US)":"en_US",
-        "日本語":"ja_JP"
-    }
+language_options = {
+    "Deutsch":"de",
+    "中文":"cn",
+    "English (US)":"en_US",
+    "日本語":"ja_JP"
+}
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
