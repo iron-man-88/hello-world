@@ -44,7 +44,7 @@ st.sidebar.option = st.selectbox(
     'How would you like to be contacted?',
     ('Email', 'Home phone', 'Mobile phone'))
 
-stst.sidebar.write('You selected:', option)
+st.sidebar.write('You selected:', option)
 
 language_options = {
     "Deutsch":"de",
