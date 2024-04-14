@@ -37,7 +37,7 @@ with col2:
 
 df_all = pd.read_csv("database/text_bundle.csv")
 st.write("39 df_all ", df_all)
-sel_value = df_all.iloc[1,3]
+sel_value = df_all.iloc[0,3]
 st.write("41 sel_value ", sel_value)
 
 language_options = {
@@ -46,7 +46,7 @@ language_options = {
     "English":"en"
 }
 lllocale = st.radio(label='Languages', options=list(language_options.keys()))
-st.write("50 lllocale ", lllocale)
+st.write("49 lllocale ", lllocale)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
