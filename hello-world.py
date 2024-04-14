@@ -48,10 +48,10 @@ language_options = {
 lllocale = st.radio(label='Languages', options=list(language_options.keys()))
 st.write("49 lllocale ", lllocale)
 
-if lllocale = "de":
+if lllocale == "de":
     df_all_column = 5
     
-elif lllocale = "cn": 
+elif lllocale == "cn": 
 	if BMI <Index_BMI[1] or BMI ==Index_BMI[1]:
     df_all_column = 6
 
