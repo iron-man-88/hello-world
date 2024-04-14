@@ -48,9 +48,7 @@ st.sidebar.option = st.selectbox(
 
 language_options = {
     "Deutsch":"de",
-    "中文":"cn",
-    "English (US)":"en_US",
-    "日本語":"ja_JP"
+    "中文":"cn"
 }
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
