@@ -48,9 +48,9 @@ language_options = {
 lllocale = st.radio(label='Languages', options=list(language_options.keys()))
 st.write("49 lllocale ", lllocale)
 
-if lllocale == "de":
+if lllocale == "Deutsch":
     df_all_column = 4
-elif lllocale == "cn": 
+elif lllocale == "中文": 
     df_all_column = 5
 else:
     df_all_column = 6
