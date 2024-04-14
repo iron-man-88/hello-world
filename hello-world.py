@@ -44,7 +44,7 @@ def load_bundle(locale):
     df_de = df[['de']] # selber
     st.write("df_de ", df_de) # selber
     #df_de_Column2    = FB_column(FullList, 2)
-    df_de_index0 = df_de.index[0] # selber
+    df_de_index0 = df_de.index[1] # selber
     st.write("df_de_index0 ", df_de_index0) # selber
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
 #    df_en = df.query(f"key_new == '{locale}'")# Create and return a dictionary of key/values.
