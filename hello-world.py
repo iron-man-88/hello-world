@@ -50,20 +50,13 @@ st.write("49 lllocale ", lllocale)
 
 if lllocale == "de":
     df_all_column = 5
-    
 elif lllocale == "cn": 
-	if BMI <Index_BMI[1] or BMI ==Index_BMI[1]:
     df_all_column = 6
-
 else:
     df_all_column = 7
 
 sel_value = df_all.iloc[0,df_all_column]
 st.write("41 sel_value ", sel_value)
-
-
-
-    
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
