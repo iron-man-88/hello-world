@@ -40,7 +40,7 @@ with col2:
 def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
     return [row[i] for row in matrix]
 
-df_all = pd.read_csv("database/text_bundle.csv", index=False)
+df_all = pd.read_csv("database/text_bundle.csv")
 st.write("44 df_all ", df_all)
 df_list_all = df_all.tolist()
 #FullListColumn2 = FB_column(df_all, 1) # Spalte "1" wird extrahiert
