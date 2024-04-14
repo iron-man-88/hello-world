@@ -21,7 +21,7 @@ st.markdown( # Breite des main divs
     unsafe_allow_html=True,)
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-st.sidebar.title('Hello, World! It is wonderful ppp')
+st.sidebar.title('Hello, World! It is wonderful')
 st.title('Hello Jesus Christ!')
 st.title('You are great!')
 st.title('The Preeminent One')
