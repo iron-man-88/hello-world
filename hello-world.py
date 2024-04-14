@@ -35,6 +35,17 @@ with col1:
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
+
+@st.cache_data
+def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
+    return [row[i] for row in matrix]
+
+df_all = pd.read_csv("database/text_bundle.csv")
+st.write("df_all ", df_all)
+
+
+FullListColumn2    = FB_column(FullList, 2) # Spalte "2" wird extrahiert
+
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
 def load_bundle(locale):
