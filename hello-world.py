@@ -49,11 +49,11 @@ lllocale = st.radio(label='Languages', options=list(language_options.keys()))
 st.write("49 lllocale ", lllocale)
 
 if lllocale == "de":
-    df_all_column = 5
+    df_all_column = 4
 elif lllocale == "cn": 
-    df_all_column = 6
+    df_all_column = 5
 else:
-    df_all_column = 7
+    df_all_column = 6
 
 sel_value = df_all.iloc[0,(df_all_column*1)]
 st.write("41 sel_value ", sel_value)
