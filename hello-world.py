@@ -55,6 +55,7 @@ def main():
     lang_options = {
         "English":"en",
         "Deutsch":"de",
+        "中文":"cn",
         "English (US)":"en_US",
         "日本語":"ja_JP"
     }
