@@ -59,5 +59,5 @@ def main():
     st.write("lllocale ", locale)
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
-    st.subheader(lang_dict['greeting']," aaa")
+    st.subheader(lang_dict['greeting'])
 main()
