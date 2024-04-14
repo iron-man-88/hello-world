@@ -46,8 +46,9 @@ st.write("44 df_all ", df_all)
 #st.write("46 FullListColumn2 ", FullListColumn2)
 df_dee = df_all['de'] # selber
 st.write("48 df_dee ", df_dee)
+aaa = df_dee.loc[1,1]
 #df_dee_index1 = df_dee.index(1) # selber
-#st.write("50 df_dee ", df_dee_index1)
+st.write("51 aaa ", aaa)
 
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
