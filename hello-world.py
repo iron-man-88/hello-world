@@ -36,7 +36,7 @@ with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
 
-@st.cache_data
+#@st.cache_data
 df_all = pd.read_csv("database/text_bundle.csv")
 
 st.write("44 df_all ", df_all)
