@@ -48,9 +48,9 @@ st.sidebar.option = st.selectbox(
 
 language_options = {
     "Deutsch":"de",
-    "中文":"cn"
-    "English_(US)":"en_US",
-    "日本語_":"ja_JP"
+    "中文":"cn",
+    "English (US)":"en_US",
+    "日本語":"ja_JP"
 }
 lllocale = st.radio(label='Languages', options=list(language_options.keys()))
 
