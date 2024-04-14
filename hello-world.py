@@ -38,6 +38,7 @@ with col2:
 
 @st.cache_data
 df_all = pd.read_csv("database/text_bundle.csv")
+
 st.write("44 df_all ", df_all)
 aaa = df_all.iloc[1,0]
 st.write("51 aaa ", aaa)
@@ -47,7 +48,6 @@ st.write("51 aaa ", aaa)
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
-#    df = df_all
     st.write("df ", df)
     df_de = df[['de']] # selber
     st.write("df_de ", df_de) # selber
