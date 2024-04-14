@@ -43,8 +43,7 @@ st.write("41 sel_value ", sel_value)
 language_options = {
     "Deutsch":"de",
     "中文":"cn",
-    "English (US)":"en_US",
-    "日本語":"ja_JP"
+    "English":"en"
 }
 lllocale = st.radio(label='Languages', options=list(language_options.keys()))
 st.write("50 lllocale ", lllocale)
