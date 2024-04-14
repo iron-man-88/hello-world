@@ -35,13 +35,10 @@ with col1:
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
-
-#@st.cache_data
 df_all = pd.read_csv("database/text_bundle.csv")
-
-st.write("44 df_all ", df_all)
+st.write("39 df_all ", df_all)
 sel_value = df_all.iloc[1,0]
-st.write("44 sel_value ", sel_value)
+st.write("41 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
