@@ -53,11 +53,13 @@ def load_bundle(locale):
     return lang_dict
 def main():
     lang_options = {
+        "English":"en",
+        "Deutsch":"de",
         "English (US)":"en_US",
         "日本語":"ja_JP"
     }
     locale = st.radio(label='Language', options=list(lang_options.keys())) # Note we use the selected human-readable locale to get the relevant
-    st.write("lllocale ", locale)
+    st.write("60 locale ", locale)
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
