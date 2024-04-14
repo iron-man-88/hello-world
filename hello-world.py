@@ -35,10 +35,10 @@ with col1:
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
+df_all_column = None
+
 df_all = pd.read_csv("database/text_bundle.csv")
 st.write("39 df_all ", df_all)
-sel_value = df_all.iloc[0,3]
-st.write("41 sel_value ", sel_value)
 
 language_options = {
     "Deutsch":"de",
@@ -47,6 +47,23 @@ language_options = {
 }
 lllocale = st.radio(label='Languages', options=list(language_options.keys()))
 st.write("49 lllocale ", lllocale)
+
+if lllocale = "de":
+    df_all_column = 5
+    
+elif lllocale = "cn": 
+	if BMI <Index_BMI[1] or BMI ==Index_BMI[1]:
+    df_all_column = 6
+
+else:
+    df_all_column = 7
+
+sel_value = df_all.iloc[0,df_all_column]
+st.write("41 sel_value ", sel_value)
+
+
+
+    
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
