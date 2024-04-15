@@ -99,16 +99,47 @@ def main():
 main()
 
 
-
+########################################################################################
 if 'num' not in st.session_state:
     st.session_state.num = "1"
-
 def update2():
     st.session_state.num = "2"
-
 def update3():
     st.session_state.num = "3"
 
 st.write(st.session_state.num)
 st.button("Perform calculation 2", on_click=update2, key='key_2')
 st.button("Perform calculation 3", on_click=update3, key='key_3')
+
+##########################################################################################
+
+from PIL import Image
+if 'bt_clkd' not in st.session_state:
+    st.session_state.bt_clkd = ''
+if 'rd_clkd' not in st.session_state:
+    st.session_state.rd_clkd='film'
+
+img_16 = Image.open("img/001.jpg")
+with st.container():
+    st.write("---")
+    left_column, middle_column, right_column = st.columns([3,2,2],gap='small')
+
+    with left_column:
+        st.subheader(16)
+        st.image(img_16)
+        # n = st.session_state.bt
+        b = st.button("Click me ⤵️")
+# b = st.button('ckick me',key='a')
+
+        if (b) or (st.session_state.bt_clkd== 'y'):
+            rd = st.radio('select choice',options=['film','surfing','reading'],key='rdkey',index=0,horizontal=True)
+            st.session_state.bt_clkd = 'y'
+            if (st.session_state.bt_clkd=='y') and (rd =='film'):
+                st.session_state.rd_clkd = 'film'
+                st.write('film!!')
+            elif (st.session_state.bt_clkd=='y') and (rd=='surfing'):
+                st.session_state.rd_clkd = 'surfing'
+                st.write('surfing!!')
+            else:
+                st.session_state.rd_clkd = 'reading'
+                st.write('reading!')
