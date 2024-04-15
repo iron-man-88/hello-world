@@ -53,7 +53,7 @@ st.write("52 IndexSeite ", IndexSeite)
 #FullList[IndexSeite,'value'].tolist()
 #st.write("54 FullList ", FullList)
 
-vvaluee = FullList[1,1]
+vvaluee = FullList[1][1]
 st.write("57 vvaluee ", vvaluee)
 
 
