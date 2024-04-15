@@ -34,7 +34,7 @@ with col1:
 # Inside the second column, add the image
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
-
+###################################################################################################################
 @st.cache_data
 def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
     return [row[i] for row in matrix]
@@ -54,8 +54,8 @@ vvaluee = FullList[IndexSeite][4]
 st.write("54 vvaluee ", vvaluee)
 
 
-#row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
-#st.write("43 row_index ", row_index) # test
+row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
+st.write("58 row_index ", row_index) # test
 
 language_options = {
     "Deutsch":"de",
