@@ -46,8 +46,8 @@ st.write("41 df_all ", df_all)
 
 FullList        = df_all.values.tolist()
 st.write("44 FullList ", FullList)
-FullListColumn2 = FB_column(FullList, 2)
-IndexSeite = FullListColumn2.index(selWert2)
+FullListColumn2 = FB_column(FullList, 4)
+IndexSeite = FullListColumn2.index('Hello, World1')
 st.write("51 IndexSeite ", IndexSeite)
 
 
