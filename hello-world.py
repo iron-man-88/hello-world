@@ -44,6 +44,8 @@ df_all_column = 5
 df_all = pd.read_csv("database/text_bundle.csv")
 row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
 st.write("46 row_index ", row_index) # test
+df_all_cell = df_all[0,4]
+st.write("48 df_all_cell ", df_all_cell)
 #st.write("45 df_all ", df_all)
 FullList = df_all.values.tolist()
 st.write("47 FullList ", FullList)
