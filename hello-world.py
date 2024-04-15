@@ -50,8 +50,8 @@ FullListColumn2 = FB_column(FullList, 4)
 st.write("50 FullListColumn2 ", FullListColumn2)
 IndexSeite = FullListColumn2.index("Hallo, Welt1!")
 st.write("52 IndexSeite ", IndexSeite)
-FullList[IndexSeite,'value'].tolist()
-st.write("54 FullList ", FullList)
+FullList[IndexSeite].tolist()
+#st.write("54 FullList ", FullList)
 vvaluee = FullList[IndexSeite][4]
 st.write("56 vvaluee ", vvaluee)
 
