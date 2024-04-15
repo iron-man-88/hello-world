@@ -41,8 +41,8 @@ def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion 
 
 df_all_column = 5
 df_all = pd.read_csv("database/text_bundle.csv")
-df_all.to_string(index=False)
-st.write("45 df_all ", df_all)
+#df_all.to_string(index=False)
+st.write("45 df_all ", df_all.to_string(index=False))
 
 FullList        = df_all.values.tolist()
 st.write("48 FullList ", FullList)
