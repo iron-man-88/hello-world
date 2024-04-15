@@ -97,3 +97,18 @@ def main():
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
 main()
+
+
+
+if 'num' not in st.session_state:
+    st.session_state.num = "1"
+
+def update2():
+    st.session_state.num = "2"
+
+def update3():
+    st.session_state.num = "3"
+
+st.write(st.session_state.num)
+st.button("Perform calculation 2", on_click=update2, key='key_2')
+st.button("Perform calculation 3", on_click=update3, key='key_3')
