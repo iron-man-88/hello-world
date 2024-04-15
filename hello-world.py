@@ -39,7 +39,7 @@ df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
 st.write("41 df_all ", df_all)
-row_index = df_all.index[df_all['key_new'] == 'greetings_1'].tolist()
+row_index = df_all.index[df_all['key_new'] == 'greetings_1']
 st.write("43 row_index ", row_index)
 
 language_options = {
