@@ -52,7 +52,7 @@ st.write("51 IndexSeite ", IndexSeite)
 vvaluee = FullList[IndexSeite][4]
 st.write("53 vvaluee ", vvaluee)
 
-row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
+row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
 st.write("56 row_index ", row_index) # test
 
 language_options = {
