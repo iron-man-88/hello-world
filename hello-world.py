@@ -35,6 +35,10 @@ with col1:
 with col2:
     st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
 
+@st.cache_data
+def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
+    return [row[i] for row in matrix]
+
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
@@ -42,8 +46,9 @@ st.write("41 df_all ", df_all)
 
 FullList        = df_all.values.tolist()
 st.write("44 FullList ", FullList)
-#FullListColumn2 = FB_column(FullList, 2)
-#IndexSeite = FullListColumn2.index(selWert2)
+FullListColumn2 = FB_column(FullList, 2)
+IndexSeite = FullListColumn2.index(selWert2)
+st.write("51 IndexSeite ", IndexSeite)
 
 
 
