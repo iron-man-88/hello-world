@@ -37,16 +37,20 @@ with col2:
 
 df_all_column = 5
 
-df_all = pd.read_csv("database/text_bundle.csv").values.tolist()
+df_all = pd.read_csv("database/text_bundle.csv")
 st.write("41 df_all ", df_all)
 
+FullList        = df_all.values.tolist()
+st.write("44 FullList ", FullList)
+#FullListColumn2 = FB_column(FullList, 2)
+#IndexSeite = FullListColumn2.index(selWert2)
 
 
 
 
 
-row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
-st.write("43 row_index ", row_index) # test
+#row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
+#st.write("43 row_index ", row_index) # test
 
 language_options = {
     "Deutsch":"de",
