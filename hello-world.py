@@ -42,6 +42,8 @@ def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion 
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
+row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
+st.write("46 row_index ", row_index) # test
 #st.write("45 df_all ", df_all)
 FullList = df_all.values.tolist()
 st.write("47 FullList ", FullList)
@@ -52,8 +54,6 @@ st.write("51 IndexSeite ", IndexSeite)
 vvaluee = FullList[IndexSeite][4]
 st.write("53 vvaluee ", vvaluee)
 
-row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
-st.write("56 row_index ", row_index) # test
 
 language_options = {
     "Deutsch":"de",
