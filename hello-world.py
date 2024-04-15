@@ -54,7 +54,7 @@ vvaluee = FullList[IndexSeite][4]
 st.write("54 vvaluee ", vvaluee)
 
 
-row_index = (df_all.index[df_all['key_new'] == 'greetings_1'], , index=False, header=False)  # test
+row_index = (df_all.index[df_all['key_new'] == 'greetings_1'] , index=False, header=False)  # test
 st.write("58 row_index ", row_index) # test
 
 language_options = {
