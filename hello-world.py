@@ -40,22 +40,20 @@ def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion 
     return [row[i] for row in matrix]
 
 df_all_column = 5
+
 df_all = pd.read_csv("database/text_bundle.csv")
-#df_all.to_string(index=False)
-st.write("45 df_all ", df_all.to_string(index=False))
-
-FullList        = df_all.values.tolist()
-st.write("48 FullList ", FullList)
+#st.write("45 df_all ", df_all)
+FullList = df_all.values.tolist()
+st.write("47 FullList ", FullList)
 FullListColumn2 = FB_column(FullList, 4)
-st.write("50 FullListColumn2 ", FullListColumn2)
+st.write("49 FullListColumn2 ", FullListColumn2)
 IndexSeite = FullListColumn2.index("Hallo, Welt1!")
-st.write("52 IndexSeite ", IndexSeite)
+st.write("51 IndexSeite ", IndexSeite)
 vvaluee = FullList[IndexSeite][4]
-st.write("54 vvaluee ", vvaluee)
+st.write("53 vvaluee ", vvaluee)
 
-
-row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
-st.write("58 row_index ", row_index) # test
+row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
+st.write("56 row_index ", row_index) # test
 
 language_options = {
     "Deutsch":"de",
@@ -63,7 +61,7 @@ language_options = {
     "English":"en"
 }
 lllocale = st.radio(label='Languages', options=list(language_options.keys()))
-st.write("49 lllocale ", lllocale)
+st.write("64 lllocale ", lllocale)
 
 if lllocale == "Deutsch":
     df_all_column = 4
@@ -73,7 +71,7 @@ else:
     df_all_column = 6
 
 sel_value = df_all.iloc[0,df_all_column]
-st.write("76 sel_value ", sel_value)
+st.write("74 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
