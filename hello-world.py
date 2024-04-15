@@ -40,8 +40,8 @@ def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion 
     return [row[i] for row in matrix]
 
 df_all_column = 5
-
 df_all = pd.read_csv("database/text_bundle.csv")
+st.df_all(data,hide_index=True)
 st.write("45 df_all ", df_all)
 
 FullList        = df_all.values.tolist()
