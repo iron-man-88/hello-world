@@ -37,10 +37,16 @@ with col2:
 
 df_all_column = 5
 
-df_all = pd.read_csv("database/text_bundle.csv").tolist()
+df_all = pd.read_csv("database/text_bundle.csv").values.tolist()
 st.write("41 df_all ", df_all)
-row_index = df_all.index[df_all['key_new'] == 'greetings_1']
-st.write("43 row_index ", row_index)
+
+
+
+
+
+
+row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
+st.write("43 row_index ", row_index) # test
 
 language_options = {
     "Deutsch":"de",
