@@ -42,10 +42,10 @@ def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion 
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
-st.write("41 df_all ", df_all)
+st.write("45 df_all ", df_all)
 
 FullList        = df_all.values.tolist()
-st.write("44 FullList ", FullList)
+st.write("48 FullList ", FullList)
 FullListColumn2 = FB_column(FullList, 4)
 st.write("50 FullListColumn2 ", FullListColumn2)
 IndexSeite = FullListColumn2.index("Hallo, Welt1!")
