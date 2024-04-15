@@ -50,11 +50,10 @@ FullListColumn2 = FB_column(FullList, 4)
 st.write("50 FullListColumn2 ", FullListColumn2)
 IndexSeite = FullListColumn2.index("Hallo, Welt1!")
 st.write("52 IndexSeite ", IndexSeite)
-#FullList[IndexSeite,'value'].tolist()
-#st.write("54 FullList ", FullList)
-
-vvaluee = FullList[1][1]
-st.write("57 vvaluee ", vvaluee)
+FullList[IndexSeite,'value'].tolist()
+st.write("54 FullList ", FullList)
+vvaluee = FullList[IndexSeite][4]
+st.write("56 vvaluee ", vvaluee)
 
 
 #row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
