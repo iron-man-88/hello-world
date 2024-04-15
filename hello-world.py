@@ -50,6 +50,9 @@ FullListColumn2 = FB_column(FullList, 4)
 st.write("50 FullListColumn2 ", FullListColumn2)
 IndexSeite = FullListColumn2.index("Hallo, Welt1!")
 st.write("52 IndexSeite ", IndexSeite)
+vvaluee = FullList[1,1]
+st.write("54 vvaluee ", vvaluee)
+
 
 #row_index = df_all.index[df_all['key_new'] == 'greetings_1']  # test
 #st.write("43 row_index ", row_index) # test
@@ -69,7 +72,7 @@ elif lllocale == "中文":
 else:
     df_all_column = 6
 
-sel_value = FullList.iloc[0,df_all_column]
+sel_value = df_all.iloc[0,df_all_column]
 st.write("59 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
