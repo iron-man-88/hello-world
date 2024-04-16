@@ -149,3 +149,33 @@ with st.container():
             else:
                 st.session_state.rd_clkd = 'reading'
                 st.write('reading!')
+
+
+############################################################################################
+if 'bbt_clkd' not in st.session_state:
+    st.session_state.bt_clkd = ''
+if 'rrd_clkd' not in st.session_state:
+    st.session_state.rd_clkd='film'
+
+with st.container():
+    st.write("---")
+    left_column, middle_column, right_column = st.columns([1,0.001,0.001],gap='small')
+
+    with left_column:
+        st.subheader(16)
+        # n = st.session_state.bt
+        c = st.button("Click me ⤵️")
+# b = st.button('ckick me',key='a')
+
+        if (c) or (st.session_state.bbt_clkd== 'y'):
+            bbrd = st.radio('select choice',options=['film','surfing','reading'],key='rrdkey',index=0,horizontal=True)
+            st.session_state.bbt_clkd = 'y'
+            if (st.session_state.bbt_clkd=='y') and (rrd =='film'):
+                st.session_state.rrd_clkd = 'film'
+                st.write('film!!')
+            elif (st.session_state.bbt_clkd=='y') and (rrd=='surfing'):
+                st.session_state.rrd_clkd = 'surfing'
+                st.write('surfing!!')
+            else:
+                st.session_state.rrd_clkd = 'reading'
+                st.write('reading!')
