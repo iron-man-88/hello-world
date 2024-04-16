@@ -170,10 +170,10 @@ with st.container():
         if (c) or (st.session_state.bbt_clkd== 'y'):
             bbrd = st.radio('select choice',options=['film','surfing','reading'],key='rrdkey',index=0,horizontal=True)
             st.session_state.bbt_clkd = 'y'
-            if (st.session_state.bbt_clkd=='y') and (rrd =='film'):
+            if (st.session_state.bbt_clkd=='y') and (bbrd =='film'):
                 st.session_state.rrd_clkd = 'film'
                 st.write('film!!')
-            elif (st.session_state.bbt_clkd=='y') and (rrd=='surfing'):
+            elif (st.session_state.bbt_clkd=='y') and (bbrd=='surfing'):
                 st.session_state.rrd_clkd = 'surfing'
                 st.write('surfing!!')
             else:
