@@ -34,6 +34,7 @@ with col1:
 # Inside the second column, add the image
 with col2:
 #    st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
+    st.write("")
 ###################################################################################################################
 @st.cache_data
 def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
