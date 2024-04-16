@@ -164,7 +164,7 @@ with st.container():
     with lleft_column:
         st.subheader(16)
         # n = st.session_state.bt
-        c = st.button("Click me ⤵️")
+        c = st.button("Click mee ⤵️")
 # b = st.button('ckick me',key='a')
 
         if (c) or (st.session_state.bbt_clkd== 'y'):
