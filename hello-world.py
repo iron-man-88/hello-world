@@ -102,6 +102,8 @@ main()
 ########################################################################################
 if 'num' not in st.session_state:
     st.session_state.num = "1"
+def update1():
+    st.session_state.num = "1"
 def update2():
     st.session_state.num = "2"
 def update3():
@@ -110,6 +112,7 @@ def update3():
 key2 = "key_2"
 
 st.write(st.session_state.num)
+st.button("Perform calculation 1", on_click=update1, key="key_1")
 st.button("Perform calculation 2", on_click=update2, key=key2)
 st.button("Perform calculation 3", on_click=update3, key='key_3')
 
