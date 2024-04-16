@@ -42,19 +42,19 @@ def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion 
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
+st.write("49 df_all ", df_all)
 row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
 st.write("46 row_index ", row_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
 st.write("48 df_all_cell ", df_all_cell)
-#st.write("49 df_all ", df_all)
-FullList = df_all.values.tolist()
-st.write("51 FullList ", FullList)
-FullListColumn2 = FB_column(FullList, 4)
-st.write("53 FullListColumn2 ", FullListColumn2)
-IndexSeite = FullListColumn2.index("Hallo, Welt1!")
-st.write("55 IndexSeite ", IndexSeite)
-vvaluee = FullList[IndexSeite][4]
-st.write("57 vvaluee ", vvaluee)
+#FullList = df_all.values.tolist()
+#st.write("51 FullList ", FullList)
+#FullListColumn2 = FB_column(FullList, 4)
+#st.write("53 FullListColumn2 ", FullListColumn2)
+#IndexSeite = FullListColumn2.index("Hallo, Welt1!")
+#st.write("55 IndexSeite ", IndexSeite)
+#vvaluee = FullList[IndexSeite][4]
+#st.write("57 vvaluee ", vvaluee)
 
 
 language_options = {
