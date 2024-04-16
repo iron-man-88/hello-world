@@ -107,7 +107,7 @@ def update2():
 def update3():
     st.session_state.num = "3"
 
-key2 = key_2
+key2 = "key_2"
 
 st.write(st.session_state.num)
 st.button("Perform calculation 2", on_click=update2, key=key2)
