@@ -46,15 +46,15 @@ row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
 st.write("46 row_index ", row_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
 st.write("48 df_all_cell ", df_all_cell)
-#st.write("45 df_all ", df_all)
+#st.write("49 df_all ", df_all)
 FullList = df_all.values.tolist()
-st.write("47 FullList ", FullList)
+st.write("51 FullList ", FullList)
 FullListColumn2 = FB_column(FullList, 4)
-st.write("49 FullListColumn2 ", FullListColumn2)
+st.write("53 FullListColumn2 ", FullListColumn2)
 IndexSeite = FullListColumn2.index("Hallo, Welt1!")
-st.write("51 IndexSeite ", IndexSeite)
+st.write("55 IndexSeite ", IndexSeite)
 vvaluee = FullList[IndexSeite][4]
-st.write("53 vvaluee ", vvaluee)
+st.write("57 vvaluee ", vvaluee)
 
 
 language_options = {
