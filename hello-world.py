@@ -73,7 +73,7 @@ else:
     df_all_column = 6
 
 sel_value = df_all.iloc[0,df_all_column]
-st.write("74 sel_value ", sel_value)
+st.write("76 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
@@ -107,8 +107,10 @@ def update2():
 def update3():
     st.session_state.num = "3"
 
+key2 = key_2
+
 st.write(st.session_state.num)
-st.button("Perform calculation 2", on_click=update2, key='key_2')
+st.button("Perform calculation 2", on_click=update2, key=key2)
 st.button("Perform calculation 3", on_click=update3, key='key_3')
 
 ##########################################################################################
