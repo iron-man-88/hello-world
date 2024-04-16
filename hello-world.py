@@ -153,15 +153,15 @@ with st.container():
 
 ############################################################################################
 if 'bbt_clkd' not in st.session_state:
-    st.session_state.bt_clkd = ''
+    st.session_state.bbt_clkd = ''
 if 'rrd_clkd' not in st.session_state:
-    st.session_state.rd_clkd='film'
+    st.session_state.rrd_clkd='film'
 
 with st.container():
     st.write("---")
-    left_column, middle_column, right_column = st.columns([1,0.001,0.001],gap='small')
+    lleft_column, mmiddle_column, rright_column = st.columns([1,0.001,0.001],gap='small')
 
-    with left_column:
+    with lleft_column:
         st.subheader(16)
         # n = st.session_state.bt
         c = st.button("Click me ⤵️")
