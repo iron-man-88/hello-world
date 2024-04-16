@@ -119,14 +119,14 @@ if 'bt_clkd' not in st.session_state:
 if 'rd_clkd' not in st.session_state:
     st.session_state.rd_clkd='film'
 
-img_16 = Image.open("img/001.jpg")
+#img_16 = Image.open("img/001.jpg")
 with st.container():
     st.write("---")
     left_column, middle_column, right_column = st.columns([3,2,2],gap='small')
 
     with left_column:
         st.subheader(16)
-        st.image(img_16)
+#        st.image(img_16)
         # n = st.session_state.bt
         b = st.button("Click me ⤵️")
 # b = st.button('ckick me',key='a')
