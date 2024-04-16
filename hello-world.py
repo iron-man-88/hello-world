@@ -127,7 +127,7 @@ if 'rd_clkd' not in st.session_state:
 #img_16 = Image.open("img/001.jpg")
 with st.container():
     st.write("---")
-    left_column, middle_column, right_column = st.columns([1,0,0],gap='small')
+    left_column, middle_column, right_column = st.columns([1,0.001,0.001],gap='small')
 
     with left_column:
         st.subheader(16)
