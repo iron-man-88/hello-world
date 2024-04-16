@@ -91,7 +91,7 @@ def main():
         "English (US)":"en_US",
         "日本語":"ja_JP"
     }
-    locale = st.radio(label='Language', options=list(lang_options.keys())) # Note we use the selected human-readable locale to get the relevant
+    locale = st.radio(label='Language', options=list(lang_options.keys()),horizontal=True) # Note we use the selected human-readable locale to get the relevant
     st.write("60 locale ", locale)
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
