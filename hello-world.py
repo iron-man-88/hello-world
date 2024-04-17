@@ -43,19 +43,19 @@ with col2:
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
-st.write("49 df_all ", df_all)
+st.write("46 df_all ", df_all)
 row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
-st.write("46 row_index ", row_index) # test
+st.write("48 row_index ", row_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
-st.write("48 df_all_cell ", df_all_cell)
+st.write("50 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
 #st.write("51 FullList ", FullList)
 #FullListColumn2 = FB_column(FullList, 4)
-#st.write("53 FullListColumn2 ", FullListColumn2)
+#st.write("54 FullListColumn2 ", FullListColumn2)
 #IndexSeite = FullListColumn2.index("Hallo, Welt1!")
-#st.write("55 IndexSeite ", IndexSeite)
+#st.write("56 IndexSeite ", IndexSeite)
 #vvaluee = FullList[IndexSeite][4]
-#st.write("57 vvaluee ", vvaluee)
+#st.write("58 vvaluee ", vvaluee)
 
 
 language_options = {
@@ -74,7 +74,7 @@ else:
     df_all_column = 6
 
 sel_value = df_all.iloc[0,df_all_column]
-st.write("76 sel_value ", sel_value)
+st.write("77 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
@@ -93,7 +93,7 @@ def main():
         "日本語":"ja_JP"
     }
     locale = st.radio(label='Language', options=list(lang_options.keys()),horizontal=True) # Note we use the selected human-readable locale to get the relevant
-    st.write("60 locale ", locale)
+    st.write("96 locale ", locale)
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
@@ -122,7 +122,7 @@ from PIL import Image
 @st.cache_data
 def read_file_text():
     df_read_file = pd.read_csv("database/text_3_lang.csv")
-    st.write("158 df_read_file ", df_read_file)
+    st.write("125 df_read_file ", df_read_file)
 
 read_file_text()
 
@@ -141,7 +141,7 @@ with st.container():
         c = st.button("Click me ⤵️")
 
         if (c) or (st.session_state.but_click == 'y'):
-            brd = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
+            brd = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
             brd_sel = brd
             st.session_state.but_click = 'y'
             if (st.session_state.but_click=='y') and (brd == brd_sel):
