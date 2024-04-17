@@ -36,9 +36,9 @@ with col2:
 #    st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
     st.write("")
 ###################################################################################################################
-@st.cache_data
-def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
-    return [row[i] for row in matrix]
+#@st.cache_data
+#def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
+#    return [row[i] for row in matrix]
 
 df_all_column = 5
 
@@ -152,6 +152,11 @@ with st.container():
 
 
 ############################################################################################
+@st.cache_data
+def read_file_text():
+df_read_file = pd.read_csv("database/text_3_lang.csv")
+st.write("158 df_read_file ", df_read_file)
+
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
 if 'radio_click' not in st.session_state:
