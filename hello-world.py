@@ -152,8 +152,8 @@ with st.container():
 
 
 ############################################################################################
-if 'bbt_clkd' not in st.session_state:
-    st.session_state.bbt_clkd = ''
+if 'but_click' not in st.session_state:
+    st.session_state.but_click = ''
 if 'rrd_clkd' not in st.session_state:
     st.session_state.rrd_clkd='film'
 
@@ -167,10 +167,10 @@ with st.container():
         c = st.button("Click mee ⤵️")
 # b = st.button('ckick me',key='a')
 
-        if (c) or (st.session_state.bbt_clkd== 'y'):
+        if (c) or (st.session_state.but_click == 'y'):
             bbrd = st.radio('select choice',options=['film','surfing','reading'],key='rrdkey',index=0,horizontal=True)
             bbrd_sel = bbrd
-            st.session_state.bbt_clkd = 'y'
-            if (st.session_state.bbt_clkd=='y') and (bbrd ==bbrd_sel):
+            st.session_state.but_click = 'y'
+            if (st.session_state.but_click=='y') and (bbrd == bbrd_sel):
                 st.session_state.rrd_clkd = bbrd_sel
                 st.write(bbrd_sel)
