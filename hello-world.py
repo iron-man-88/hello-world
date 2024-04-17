@@ -142,7 +142,7 @@ with st.container():
 
         if (c) or (st.session_state.but_click == 'y'):
             brd = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
-            brd_sel = brd
+            #brd_sel = brd
             st.session_state.but_click = 'y'
             if (st.session_state.but_click=='y') and (brd == brd):
                 st.session_state.radio_click = brd
