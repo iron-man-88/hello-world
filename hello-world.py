@@ -123,6 +123,8 @@ from PIL import Image
 def read_file_text():
     df_read_file = pd.read_csv("database/text_3_lang.csv")
     st.write("125 df_read_file ", df_read_file)
+    aaaa = df_read_file.loc[0,de]
+    st.write("127 aaaa", aaaa)
 
 read_file_text()
 
@@ -149,5 +151,4 @@ with st.container():
             if (st.session_state.but_click=='y') and (brd == brd):
                 st.session_state.radio_click = brd
                 st.write(brd)
-aaaa = df_read_file.loc[0,de]
-st.write("150 aaaa", aaaa)
+
