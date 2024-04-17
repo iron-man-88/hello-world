@@ -121,8 +121,8 @@ st.button("Perform calculation 3", on_click=update3, key='key_3')
 from PIL import Image
 @st.cache_data
 def read_file_text():
-    df_read_file = pd.read_csv("database/text_3_lang.csv")
-    global df_read_file
+    #global df_read_file
+    global df_read_file = pd.read_csv("database/text_3_lang.csv")
     st.write("125 df_read_file ", df_read_file)
     st.write("127 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
     return df_read_file
