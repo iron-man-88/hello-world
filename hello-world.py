@@ -126,6 +126,8 @@ def read_file_text():
 
 read_file_text()
 
+df_read_file = None
+
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
 if 'radio_click' not in st.session_state:
@@ -149,3 +151,6 @@ with st.container():
                 st.write(brd)
 aaaa = df_read_file.iloc[0,de]
 st.write("150 aaaa", aaaa)
+
+
+df_all = pd.read_csv("database/text_bundle.csv")
