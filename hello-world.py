@@ -123,7 +123,7 @@ from PIL import Image
 def read_file_text():
     df_read_file = pd.read_csv("database/text_3_lang.csv")
     st.write("125 df_read_file ", df_read_file)
-    aaaa = df_read_file.loc[0,de]
+    aaaa = df_read_file.iloc[0,3]
     st.write("127 aaaa", aaaa)
 
 read_file_text()
