@@ -147,3 +147,4 @@ with st.container():
             if (st.session_state.but_click=='y') and (brd == brd):
                 st.session_state.radio_click = brd
                 st.write(brd)
+df_read_file.at[0,"de"]
