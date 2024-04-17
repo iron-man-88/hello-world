@@ -129,22 +129,21 @@ read_file_text()
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
 if 'radio_click' not in st.session_state:
-    st.session_state.radio_click = 'film'
+    st.session_state.radio_click = 'Deutsch'
 
 with st.container():
     st.write("---")
-    lleft_column, mmiddle_column, rright_column = st.columns([1,0.001,0.001],gap='small')
+    left_column, middle_column, right_column = st.columns([1,0.001,0.001],gap='small')
 
-    with lleft_column:
+    with left_column:
         st.subheader(16)
         # n = st.session_state.bt
-        c = st.button("Click mee ⤵️")
-# b = st.button('ckick me', key='a')
+        c = st.button("Click me ⤵️")
 
         if (c) or (st.session_state.but_click == 'y'):
-            bbrd = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
-            bbrd_sel = bbrd
+            brd = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
+            brd_sel = brd
             st.session_state.but_click = 'y'
-            if (st.session_state.but_click=='y') and (bbrd == bbrd_sel):
-                st.session_state.radio_click = bbrd_sel
-                st.write(bbrd_sel)
+            if (st.session_state.but_click=='y') and (brd == brd_sel):
+                st.session_state.radio_click = brd_sel
+                st.write(brd_sel)
