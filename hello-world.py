@@ -157,6 +157,8 @@ def read_file_text():
     df_read_file = pd.read_csv("database/text_3_lang.csv")
     st.write("158 df_read_file ", df_read_file)
 
+read_file_text()
+
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
 if 'radio_click' not in st.session_state:
