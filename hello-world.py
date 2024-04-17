@@ -144,6 +144,6 @@ with st.container():
             brd = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
             brd_sel = brd
             st.session_state.but_click = 'y'
-            if (st.session_state.but_click=='y') and (brd == brd_sel):
-                st.session_state.radio_click = brd_sel
-                st.write(brd_sel)
+            if (st.session_state.but_click=='y') and (brd == brd):
+                st.session_state.radio_click = brd
+                st.write(brd)
