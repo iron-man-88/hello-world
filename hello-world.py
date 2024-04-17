@@ -147,5 +147,5 @@ with st.container():
             if (st.session_state.but_click=='y') and (brd == brd):
                 st.session_state.radio_click = brd
                 st.write(brd)
-aaaa = df_read_file.loc[0,"de"]
+aaaa = df_read_file.loc[0,de]
 st.write("150 aaaa", aaaa)
