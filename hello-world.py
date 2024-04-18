@@ -45,7 +45,7 @@ if 'rradio_click' not in st.session_state:
 
 bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
 st.session_state.rradio_click = bbutton_read
-st.write("48 bbutton_read ", bbutton_read)
+#st.write("48 bbutton_read ", bbutton_read)
 if bbutton_read == "Deutsch":
     df_all_column = 1
 elif bbutton_read == "中文": 
