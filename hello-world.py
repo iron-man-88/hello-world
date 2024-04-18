@@ -168,9 +168,9 @@ if st.session_state.bbut_click == 'y':
     st.session_state.bbut_click = 'y'
     if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
         st.session_state.rradio_click = bbutton_read
-        st.write("168 bbutton_read ", bbutton_read)
+        st.write("171 bbutton_read ", bbutton_read)
 
-st.write("170 bbutton_read ", bbutton_read)
+st.write("173 bbutton_read ", bbutton_read)
 
 
 
