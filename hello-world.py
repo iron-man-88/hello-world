@@ -46,7 +46,23 @@ if 'rradio_click' not in st.session_state:
 bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
 st.session_state.rradio_click = bbutton_read
 st.write("48 bbutton_read ", bbutton_read)
+
+#####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
+#from PIL import Image
+df_read_file = None
+@st.cache_data
+def read_file_text():
+    global df_read_file
+    df_read_file = pd.read_csv("database/text_3_lang.csv")
+    st.write("127 df_read_file ", df_read_file)
+    st.write("128 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
+    return df_read_file
+
+read_file_text()
+st.write("132 df_read_file.iloc[0,1]", read_file_text().iloc[0,1])
+
 ###################################################################################################################
+
 #@st.cache_data
 #def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
 #    return [row[i] for row in matrix]
@@ -109,7 +125,7 @@ def main():
     st.subheader(lang_dict['greeting'])
 main()
 
-##https://stackoverflow.com/questions/73727634/how-to-replace-displayed-value-on-a-button-click-on-streamlit###
+############################################https://stackoverflow.com/questions/73727634/how-to-replace-displayed-value-on-a-button-click-on-streamlit#####################
 if 'num' not in st.session_state:
     st.session_state.num = "1"
 def update1():
@@ -126,19 +142,6 @@ st.button("Perform calculation 1", on_click=update1, key="key_1")
 st.button("Perform calculation 2", on_click=update2, key=key2)
 st.button("Perform calculation 3", on_click=update3, key='key_3')
 
-##https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###
-from PIL import Image
-df_read_file = None
-@st.cache_data
-def read_file_text():
-    global df_read_file
-    df_read_file = pd.read_csv("database/text_3_lang.csv")
-    st.write("127 df_read_file ", df_read_file)
-    st.write("128 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
-    return df_read_file
-
-read_file_text()
-st.write("132 df_read_file.iloc[0,1]", read_file_text().iloc[0,1])
 
 #################################################################################################################
 
