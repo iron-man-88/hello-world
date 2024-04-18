@@ -63,7 +63,7 @@ language_options = {
     "中文":"cn",
     "English":"en"
 }
-lllocale = st.radio(label='Languages', options=list(language_options.keys()),horizontal=True)
+locale = st.radio(label='Languages', options=list(language_options.keys()),horizontal=True)
 st.write("64 locale ", locale)
 
 if locale == "Deutsch":
