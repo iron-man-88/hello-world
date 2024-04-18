@@ -133,7 +133,29 @@ st.write("132 df_read_file.iloc[0,1]", read_file_text().iloc[0,1])
 
 #################################################################################################################
 
+if 'but_click' not in st.session_state:
+    st.session_state.but_click = ''
+if 'radio_click' not in st.session_state:
+    st.session_state.radio_click = 'Deutsch'
 
+with st.container():
+    st.write("---")
+    left_column, middle_column, right_column = st.columns([1,0.001,0.001],gap='small')
+
+    with left_column:
+        st.subheader(16)
+        # n = st.session_state.bt
+        c = st.button("Click me ⤵️")
+
+        if (c) or (st.session_state.but_click == 'y'):
+            button_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
+            #brd_sel = button_read
+            st.session_state.but_click = 'y'
+            if (st.session_state.but_click=='y') and (button_read == button_read):
+                st.session_state.radio_click = button_read
+                st.write("156 button_read ", button_read)
+
+st.write("158 button_read ", button_read)
 #####################################################################################################################
 
 if 'bbut_click' not in st.session_state:
