@@ -136,6 +136,8 @@ if 'but_click' not in st.session_state:
 if 'radio_click' not in st.session_state:
     st.session_state.radio_click = 'Deutsch'
 
+#################################################################################################################
+
 with st.container():
     st.write("---")
     left_column, middle_column, right_column = st.columns([1,0.001,0.001],gap='small')
@@ -154,3 +156,20 @@ with st.container():
                 st.write("154 button_read ", button_read)
 
 st.write("156 button_read ", button_read)
+#####################################################################################################################
+
+d = st.button("Click mee ⤵️")
+
+if (d) or (st.session_state.but_click == 'y'):
+    bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
+    st.session_state.but_click = 'y'
+    if (st.session_state.but_click=='y') and (bbutton_read == bbutton_read):
+        st.session_state.radio_click = bbutton_read
+        st.write("154 bbutton_read ", bbutton_read)
+
+st.write("156 bbutton_read ", bbutton_read)
+
+
+
+
+
