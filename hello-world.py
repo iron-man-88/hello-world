@@ -85,7 +85,7 @@ df_all_column = 5
 df_all = pd.read_csv("database/text_bundle.csv")
 #st.write("78 df_all ", df_all)
 row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
-st.write("80 row_index ", row_index) # test
+#st.write("80 row_index ", row_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
 st.write("82 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
