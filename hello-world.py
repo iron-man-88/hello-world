@@ -67,7 +67,7 @@ read_file_text()
 df_single_value = read_file_text()
 
 rrow_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values[0]  # test
-st.write("70 row_index ", row_index) # test
+st.write("70 row_index ", rrow_index) # test
 st.write("71 df_single_value.iloc[0,df_all_column]", df_single_value.iloc[rrow_index,df_all_column])
 
 greeting_1 = df_single_value.iloc[rrow_index,df_all_column]
