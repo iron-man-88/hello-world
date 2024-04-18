@@ -66,12 +66,6 @@ def read_file_text():
 
 read_file_text()
 st.write("68 df_read_file.iloc[0,df_all_column]", read_file_text().iloc[0,df_all_column])
-
-sel_value = df_read_file.iloc[0,df_all_column]
-st.write("71 sel_value ", sel_value)
-
-
-
 ###################################################################################################################
 
 #@st.cache_data
