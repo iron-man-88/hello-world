@@ -36,9 +36,6 @@ with col2:
 #    st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
     st.write("")
 
-
-
-
 #####################################################################################################################
 
 if 'bbut_click' not in st.session_state:
@@ -48,7 +45,7 @@ if 'rradio_click' not in st.session_state:
 
 bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
 st.session_state.rradio_click = bbutton_read
-st.write("171 bbutton_read ", bbutton_read)
+st.write("48 bbutton_read ", bbutton_read)
 ###################################################################################################################
 #@st.cache_data
 #def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
@@ -57,9 +54,9 @@ st.write("171 bbutton_read ", bbutton_read)
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
-st.write("46 df_all ", df_all)
+st.write("57 df_all ", df_all)
 row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
-st.write("48 row_index ", row_index) # test
+st.write("59 row_index ", row_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
 st.write("50 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
@@ -70,7 +67,6 @@ st.write("50 df_all_cell ", df_all_cell)
 #st.write("56 IndexSeite ", IndexSeite)
 #vvaluee = FullList[IndexSeite][4]
 #st.write("58 vvaluee ", vvaluee)
-
 
 language_options = {
     "Deutsch":"de",
@@ -112,7 +108,6 @@ def main():
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
 main()
-
 
 ##https://stackoverflow.com/questions/73727634/how-to-replace-displayed-value-on-a-button-click-on-streamlit###
 if 'num' not in st.session_state:
@@ -170,7 +165,3 @@ with st.container():
                 st.write("156 button_read ", button_read)
 
 st.write("158 button_read ", button_read)
-
-
-
-
