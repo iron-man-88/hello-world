@@ -67,6 +67,8 @@ read_file_text()
 df_single_value = read_file_text()
 st.write("68 df_read_file.iloc[0,df_all_column]", df_single_value.iloc[0,df_all_column])
 ###################################################################################################################
+###################################################################################################################
+###################################################################################################################
 
 #@st.cache_data
 #def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
