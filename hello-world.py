@@ -70,7 +70,7 @@ row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values
 #st.write("70 row_index ", row_index) # test
 #st.write("71 df_single_value.iloc[row_index,df_all_column]", df_single_value.iloc[row_index,df_all_column])
 
-greeting_1 = df_single_value.iloc[rrow_index,df_all_column]
+greeting_1 = df_single_value.iloc[row_index,df_all_column]
 st.write("74 greeting_1 ", greeting_1)
 st.write("75 greeting_2 ", greeting_2)
 st.write("76 greeting_3 ", greeting_3)
