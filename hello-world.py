@@ -160,14 +160,14 @@ st.write("156 button_read ", button_read)
 
 d = st.button("Click mee ⤵️")
 
-if (d) or (st.session_state.but_click == 'y'):
-    bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
-    st.session_state.but_click = 'y'
-    if (st.session_state.but_click=='y') and (bbutton_read == bbutton_read):
+if (d) or (st.session_state.bbut_click == 'y'):
+    bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
+    st.session_state.bbut_click = 'y'
+    if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
         st.session_state.radio_click = bbutton_read
-        st.write("154 bbutton_read ", bbutton_read)
+        st.write("168 bbutton_read ", bbutton_read)
 
-st.write("156 bbutton_read ", bbutton_read)
+st.write("170 bbutton_read ", bbutton_read)
 
 
 
