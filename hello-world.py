@@ -124,7 +124,7 @@ df_read_file = None
 def read_file_text():
     global df_read_file
     df_read_file = pd.read_csv("database/text_3_lang.csv")
-    st.write("125 df_read_file ", df_read_file)
+    st.write("127 df_read_file ", df_read_file)
     return df_read_file
 
 read_file_text()
