@@ -64,11 +64,11 @@ language_options = {
     "English":"en"
 }
 lllocale = st.radio(label='Languages', options=list(language_options.keys()),horizontal=True)
-st.write("64 lllocale ", lllocale)
+st.write("64 locale ", locale)
 
-if lllocale == "Deutsch":
+if locale == "Deutsch":
     df_all_column = 4
-elif lllocale == "中文": 
+elif locale == "中文": 
     df_all_column = 5
 else:
     df_all_column = 6
