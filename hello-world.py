@@ -72,10 +72,10 @@ row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values
 
 temp1 = None
 greeting_1 = df_single_value.iloc[row_index,df_lang_column]
-st.write("74 greeting_1 ", greeting_1)
-st.write("75 greeting_2 ", greeting_2)
-st.write("76 greeting_3 ", greeting_3)
-st.write("77 greeting_4 ", greeting_4)
+#st.write("74 greeting_1 ", greeting_1)
+#st.write("75 greeting_2 ", greeting_2)
+#st.write("76 greeting_3 ", greeting_3)
+#st.write("77 greeting_4 ", greeting_4)
 
 for i in range(0,5):
     global xi
