@@ -153,9 +153,9 @@ with st.container():
             st.session_state.but_click = 'y'
             if (st.session_state.but_click=='y') and (button_read == button_read):
                 st.session_state.radio_click = button_read
-                st.write("154 button_read ", button_read)
+                st.write("156 button_read ", button_read)
 
-st.write("156 button_read ", button_read)
+st.write("158 button_read ", button_read)
 #####################################################################################################################
 
 if 'bbut_click' not in st.session_state:
