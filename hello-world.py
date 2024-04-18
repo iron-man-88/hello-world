@@ -46,6 +46,12 @@ if 'rradio_click' not in st.session_state:
 bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
 st.session_state.rradio_click = bbutton_read
 st.write("48 bbutton_read ", bbutton_read)
+if bbutton_read == "Deutsch":
+    df_all_column = 1
+elif bbutton_read == "中文": 
+    df_all_column = 2
+else:
+    df_all_column = 3
 
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 #from PIL import Image
@@ -59,7 +65,12 @@ def read_file_text():
     return df_read_file
 
 read_file_text()
-st.write("132 df_read_file.iloc[0,1]", read_file_text().iloc[0,1])
+st.write("68 df_read_file.iloc[0,df_all_column]", read_file_text().iloc[0,df_all_column])
+
+sel_value = df_read_file.iloc[0,df_all_column]
+st.write("71 sel_value ", sel_value)
+
+
 
 ###################################################################################################################
 
