@@ -120,6 +120,8 @@ st.button("Perform calculation 3", on_click=update3, key='key_3')
 ##https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###
 from PIL import Image
 @st.cache_data
+df_read_file = None
+
 def read_file_text():
     global df_read_file
     df_read_file = pd.read_csv("database/text_3_lang.csv")
@@ -128,8 +130,6 @@ def read_file_text():
 
 read_file_text()
 st.write("130 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
-
-#df_read_file = None
 
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
