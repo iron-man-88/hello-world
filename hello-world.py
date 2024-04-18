@@ -60,7 +60,7 @@ df_read_file = None
 def read_file_text():
     global df_read_file
     df_read_file = pd.read_csv("database/text_3_lang.csv")
-    #st.write("63 df_read_file ", df_read_file)
+    st.write("63 df_read_file ", df_read_file)
     return df_read_file
 
 read_file_text()
@@ -70,6 +70,7 @@ row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values
 #st.write("70 row_index ", row_index) # test
 #st.write("71 df_single_value.iloc[row_index,df_lang_column]", df_single_value.iloc[row_index,df_lang_column])
 
+temp1 = None
 greeting_1 = df_single_value.iloc[row_index,df_lang_column]
 st.write("74 greeting_1 ", greeting_1)
 st.write("75 greeting_2 ", greeting_2)
