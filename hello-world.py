@@ -60,10 +60,10 @@ df_read_file = None
 def read_file_text():
     global df_read_file
     df_read_file = pd.read_csv("database/text_3_lang.csv")
-    st.write("63 df_read_file ", df_read_file)
     return df_read_file
 
 read_file_text()
+st.write("66 df_read_file ", df_read_file)
 df_single_value = read_file_text()
 
 row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values[0]  # test
