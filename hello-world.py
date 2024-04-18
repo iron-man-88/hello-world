@@ -164,7 +164,7 @@ if 'rradio_click' not in st.session_state:
     st.session_state.rradio_click = 'Deutsch'
 
 bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
-st.session_state.bbut_click = 'y'
+#st.session_state.bbut_click = 'y'
 st.session_state.rradio_click = bbutton_read
 st.write("171 bbutton_read ", bbutton_read)
 
