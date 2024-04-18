@@ -122,13 +122,13 @@ from PIL import Image
 df_read_file = None
 @st.cache_data
 def read_file_text():
-    global df_read_file
+    #global df_read_file
     df_read_file = pd.read_csv("database/text_3_lang.csv")
     st.write("127 df_read_file ", df_read_file)
     return df_read_file
 
 read_file_text()
-st.write("130 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
+st.write("131 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
 
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
