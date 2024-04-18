@@ -131,12 +131,12 @@ def read_file_text():
 read_file_text()
 st.write("132 df_read_file.iloc[0,1]", read_file_text().iloc[0,1])
 
+#################################################################################################################
+
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
 if 'radio_click' not in st.session_state:
     st.session_state.radio_click = 'Deutsch'
-
-#################################################################################################################
 
 with st.container():
     st.write("---")
@@ -158,13 +158,18 @@ with st.container():
 st.write("156 button_read ", button_read)
 #####################################################################################################################
 
+if 'bbut_click' not in st.session_state:
+    st.session_state.bbut_click = ''
+if 'rradio_click' not in st.session_state:
+    st.session_state.rradio_click = 'Deutsch'
+
 d = st.button("Click mee ⤵️")
 
 if (d) or (st.session_state.bbut_click == 'y'):
     bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
     st.session_state.bbut_click = 'y'
     if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
-        st.session_state.radio_click = bbutton_read
+        st.session_state.rradio_click = bbutton_read
         st.write("168 bbutton_read ", bbutton_read)
 
 st.write("170 bbutton_read ", bbutton_read)
