@@ -66,9 +66,9 @@ def read_file_text():
 read_file_text()
 df_single_value = read_file_text()
 
-rrow_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values[0]  # test
-#st.write("70 row_index ", rrow_index) # test
-#st.write("71 df_single_value.iloc[rrow_index,df_all_column]", df_single_value.iloc[rrow_index,df_all_column])
+row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values[0]  # test
+#st.write("70 row_index ", row_index) # test
+#st.write("71 df_single_value.iloc[row_index,df_all_column]", df_single_value.iloc[row_index,df_all_column])
 
 greeting_1 = df_single_value.iloc[rrow_index,df_all_column]
 st.write("74 greeting_1 ", greeting_1)
@@ -87,8 +87,8 @@ df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
 #st.write("78 df_all ", df_all)
-row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
-#st.write("80 row_index ", row_index) # test
+rrow_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
+#st.write("80 row_index ", rrow_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
 st.write("82 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
