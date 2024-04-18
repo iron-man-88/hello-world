@@ -62,7 +62,7 @@ def read_file_text():
     df_read_file = pd.read_csv("database/text_3_lang.csv")
     st.write("63 df_read_file ", df_read_file)
     st.write("64 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
-    return df_read_file
+    #return df_read_file
 
 read_file_text()
 st.write("68 df_read_file.iloc[0,df_all_column]", read_file_text().iloc[0,df_all_column])
