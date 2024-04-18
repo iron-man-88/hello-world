@@ -60,8 +60,8 @@ df_read_file = None
 def read_file_text():
     global df_read_file
     df_read_file = pd.read_csv("database/text_3_lang.csv")
-    st.write("127 df_read_file ", df_read_file)
-    st.write("128 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
+    st.write("63 df_read_file ", df_read_file)
+    st.write("64 df_read_file.iloc[0,1]", df_read_file.iloc[0,1])
     return df_read_file
 
 read_file_text()
@@ -75,11 +75,11 @@ st.write("68 df_read_file.iloc[0,df_all_column]", read_file_text().iloc[0,df_all
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
-st.write("57 df_all ", df_all)
+st.write("78 df_all ", df_all)
 row_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
-st.write("59 row_index ", row_index) # test
+st.write("80 row_index ", row_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
-st.write("50 df_all_cell ", df_all_cell)
+st.write("82 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
 #st.write("51 FullList ", FullList)
 #FullListColumn2 = FB_column(FullList, 4)
