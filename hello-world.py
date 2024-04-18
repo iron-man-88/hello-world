@@ -35,6 +35,20 @@ with col1:
 with col2:
 #    st.image("img/001.jpg", caption="Lightning Image", use_column_width=True)
     st.write("")
+
+
+
+
+#####################################################################################################################
+
+if 'bbut_click' not in st.session_state:
+    st.session_state.bbut_click = ''
+if 'rradio_click' not in st.session_state:
+    st.session_state.rradio_click = 'Deutsch'
+
+bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
+st.session_state.rradio_click = bbutton_read
+st.write("171 bbutton_read ", bbutton_read)
 ###################################################################################################################
 #@st.cache_data
 #def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
@@ -156,16 +170,6 @@ with st.container():
                 st.write("156 button_read ", button_read)
 
 st.write("158 button_read ", button_read)
-#####################################################################################################################
-
-if 'bbut_click' not in st.session_state:
-    st.session_state.bbut_click = ''
-if 'rradio_click' not in st.session_state:
-    st.session_state.rradio_click = 'Deutsch'
-
-bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
-st.session_state.rradio_click = bbutton_read
-st.write("171 bbutton_read ", bbutton_read)
 
 
 
