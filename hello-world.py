@@ -79,7 +79,7 @@ greeting_1 = df_single_value.iloc[row_index,df_lang_column]
 
 for i in range(0,5):
     global xi
-    xi = "fantastic"+i
+    xi = "fantastic"
     st.write("83 x+i ", xi)
 
 ###################################################################################################################
