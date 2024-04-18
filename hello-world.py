@@ -64,7 +64,8 @@ def read_file_text():
     return df_read_file
 
 read_file_text()
-st.write("68 df_read_file.iloc[0,df_all_column]", df_read_file.iloc[0,df_all_column])
+df_single_value = read_file_text()
+st.write("68 df_read_file.iloc[0,df_all_column]", df_single_value.iloc[0,df_all_column])
 ###################################################################################################################
 
 #@st.cache_data
