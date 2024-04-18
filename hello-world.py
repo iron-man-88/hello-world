@@ -78,7 +78,7 @@ st.write("76 greeting_3 ", greeting_3)
 st.write("77 greeting_4 ", greeting_4)
 
 for i in range(0,5):
-    global x+i
+    global xi
     x+i = "fantastic"+i
     st.write("83 x+i ", x+i)
 
