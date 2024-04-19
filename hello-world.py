@@ -97,7 +97,9 @@ empt_lists = []
 for n in range(0,3):
     empt_lists.append([])
 
-st.write("100 empt_lists ", empt_lists)
+empt_lists[2] = "wert"
+st.write("100 empt_lists ", empt_lists[2])
+
 
 
 ###################################################################################################################
