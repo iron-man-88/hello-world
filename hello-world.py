@@ -77,12 +77,16 @@ st.write("68 df_read_file ",df_read_file)
 #pdfSelectedFilename = (df_read_file[df_read_file["page"] == selWert2])["key"].values[0]
 #st.write("74 pdfSelectedFilename ", pdfSelectedFilename)
 
-data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'Bob'],
         'Age': [21, 22, 23, 24],
         'Grade': ['A', 'B', 'A', 'C']}
 df = pd.DataFrame(data)
 filtered_df = df[df['Grade'] == 'A']
 st.write("80 filtered_df" , filtered_df)
+
+no_of_media = df[df['Name'].str.contains('Bob')].shape[0]
+st.write("8 no_of_media " , no_of_media)
+
 
 #####################################
 
