@@ -69,6 +69,9 @@ st.write("64 df_read_file " , df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 #####################################
+selWert2 = 1
+pdfSelectedFilename = (df_read_file[df_read_file["page"] == selWert2])["key"].values[0]
+st.write("74 pdfSelectedFilename ", pdfSelectedFilename)
 
 data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
         'Age': [21, 22, 23, 24],
@@ -76,10 +79,6 @@ data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
 df = pd.DataFrame(data)
 filtered_df = df[df['Grade'] == 'A']
 st.write("80 filtered_df" , filtered_df)
-
-selected_Page_Text = pd.DataFrame(df_read_file)
-selected_df = selected_Page_Text[selected_Page_Text['page'] == 1]
-st.write("88 selected_df" , selected_df)
 
 #####################################
 
