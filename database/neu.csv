@@ -1,6 +1,5 @@
-locale,key,value,key_new,de,cn,en_US
-de,greeting,"Hello, World1",greetings_1,"Hallo, Welt1!","こんにちは世界1","Hello, World1!"
-cn,greeting,"Hello, World2",greetings_2,"Hallo, Welt2!","こんにちは世界2","Hello, World2!"
-en_US,greeting,"Hello, World3",greetings_3,"Hallo, Welt3!","こんにちは世界3","Hello, World3!"
-ja_JP,greeting,"こんにちは世界",,,,
-中文
+key,de,cn,en,page
+greeting_1,"Hallo, Welt1!","こんにちは世界1","Hello, World1!",1
+greeting_2,"Hallo, Welt2!","こんにちは世界2","Hello, World2!",1
+greeting_3,"Hallo, Welt3!","こんにちは世界3","Hello, World3!",2
+greeting_4,"Hallo, Welt4!","こんにちは世界4","Hello, World4!",2
