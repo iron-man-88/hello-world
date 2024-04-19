@@ -62,6 +62,7 @@ df_read_file = None                                                    ## ## cre
 def read_file_text():                                                  ## ## create FuBa "read_file_text()"
     global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
     df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
+    st.write("65 df_read_file ",df_read_file)
     return df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
 read_file_text()
