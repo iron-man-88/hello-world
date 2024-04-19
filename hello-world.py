@@ -82,17 +82,17 @@ for k in range(5):
     #exec(f'cat_{k} = k*2')
     var_list.append(exec(f'cat_{k} = k'))
 
+var_list[4] = "Wert"
+
 for j in range(5):
     var_list[j] = None
-
-#var_list[4] = "Wert"
 
 st.write(cat_0)
 st.write(cat_1)
 st.write(cat_2)
 st.write(cat_3)
 st.write(cat_4)
-st.write("91 var_list ", var_list)
+st.write("95 var_list ", var_list)
 
 my_list = [cat_1, cat_2, cat_3, cat_4]
 st.write("101 my_list ", my_list)
