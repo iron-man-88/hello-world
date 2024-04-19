@@ -83,8 +83,10 @@ selected_Page_Text = pd.DataFrame(df_read_file)
 selected_df = selected_Page_Text[selected_Page_Text['page'] == 1]
 st.write("84 selected_df" , selected_df)
 
+def load_data():
+    return pd.read_csv("database/text_3_lang.csv")
 
-
+st.write("89 pd" , pd)
 
 
 #####################################
