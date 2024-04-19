@@ -77,26 +77,25 @@ greeting_1 = df_single_value.iloc[row_index,df_lang_column]
 #st.write("77 greeting_4 ", greeting_4)
 
 ############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
-var_list = []      
+var_temp_list = []      
 for k in range(5):
     #exec(f'cat_{k} = k*2')
-    var_list.append(exec(f'cat_{k} = k'))
+    var_temp_list.append(exec(f'cat_{k} = k'))
 
-var_list[4] = "Wert"
+var_temp_list[4] = "Wert"
 
 for j in range(5):
-    var_list[j] = None
+    var_temp_list[j] = None
+
+for i in range(5):
+    var_temp_list[i] = i+8
 
 st.write(cat_0)
 st.write(cat_1)
 st.write(cat_2)
 st.write(cat_3)
 st.write(cat_4)
-st.write("94 var_list ", var_list)
-
-my_list = [cat_1, cat_2, cat_3, cat_4]
-st.write("97 my_list ", my_list)
-
+st.write("94 var_temp_list ", var_temp_list)
 ###################################################################################################################
 ###################################################################################################################
 ###################################################################################################################
