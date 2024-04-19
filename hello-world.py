@@ -38,8 +38,8 @@ with col2:
 
 #####################################################################################################################
 
-if 'bbut_click' not in st.session_state:
-    st.session_state.bbut_click = ''
+if 'but_click' not in st.session_state:
+    st.session_state.but_click = ''
 if 'rradio_click' not in st.session_state:
     st.session_state.rradio_click = 'Deutsch'
 
@@ -183,8 +183,8 @@ st.button("Perform calculation 3", on_click=update3, key='key_3')
 
 #################################################################################################################
 
-if 'but_click' not in st.session_state:
-    st.session_state.but_click = ''
+if 'bbut_click' not in st.session_state:
+    st.session_state.bbut_click = ''
 if 'radio_click' not in st.session_state:
     st.session_state.radio_click = 'Deutsch'
 
@@ -197,11 +197,11 @@ with st.container():
         # n = st.session_state.bt
         c = st.button("Click me ⤵️")
 
-        if (c) or (st.session_state.but_click == 'y'):
+        if (c) or (st.session_state.bbut_click == 'y'):
             bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
             #brd_sel = bbutton_read
-            st.session_state.but_click = 'y'
-            if (st.session_state.but_click=='y') and (bbutton_read == bbutton_read):
+            st.session_state.bbut_click = 'y'
+            if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
                 st.session_state.radio_click = bbutton_read
                 st.write("156 bbutton_read ", bbutton_read)
 
