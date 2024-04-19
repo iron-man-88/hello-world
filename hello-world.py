@@ -77,14 +77,7 @@ greeting_1 = df_single_value.iloc[row_index,df_lang_column]
 #st.write("76 greeting_3 ", greeting_3)
 #st.write("77 greeting_4 ", greeting_4)
 
-for k in range(5):
-    exec(f'cat_{k} = k*2')
 
-st.write(cat_0)
-st.write(cat_1)
-st.write(cat_2)
-st.write(cat_3)
-st.write(cat_4)
 
 for j in range(5):
     exec(f'cat_{j} = None
