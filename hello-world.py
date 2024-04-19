@@ -61,6 +61,8 @@ def read_file_text():                                                  ## ## cre
     global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
     df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
     return df_read_file                                                ## ## return is for selected output, otherwise value is empty
+
+#st.write("65 df_read_file " , df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 #####################################
@@ -84,9 +86,9 @@ st.write("80 filtered_df" , filtered_df)
 #st.write("84 selected_df" , selected_df)
 
 
-selected_indices = st.multiselect('Select rows:', df_read_file.index)
-selected_rows = df_read_file.loc[selected_indices]
-st.write('89 ### Selected Rows', selected_rows)
+#selected_indices = st.multiselect('Select rows:', df_read_file.index)
+#selected_rows = df_read_file.loc[selected_indices]
+#st.write('89 ### Selected Rows', selected_rows)
 
 
 #####################################
