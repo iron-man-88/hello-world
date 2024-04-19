@@ -69,9 +69,9 @@ st.write("64 df_read_file " , df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 #####################################
-selWert2 = 1
-pdfSelectedFilename = (df_read_file[df_read_file["page"] == selWert2])["key"].values[0]
-st.write("74 pdfSelectedFilename ", pdfSelectedFilename)
+#selWert2 = 1
+#pdfSelectedFilename = (df_read_file[df_read_file["page"] == selWert2])["key"].values[0]
+#st.write("74 pdfSelectedFilename ", pdfSelectedFilename)
 
 data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
         'Age': [21, 22, 23, 24],
@@ -168,7 +168,7 @@ def load_bundle(locale):
     df = pd.read_csv("database/text_bundle.csv")
     #st.write("84 df ", df)
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
-    st.write("df.query ", df)
+    st.write("171 df.query ", df)
     lang_dict    = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
     st.write("lang_dict ", lang_dict)
     return lang_dict
