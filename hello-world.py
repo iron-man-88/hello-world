@@ -91,7 +91,10 @@ st.write(cat_2)
 st.write(cat_3)
 st.write(cat_4)
 st.write("91 var_list ", var_list)
- 
+
+del var_list[4]
+st.write("96 var_list ", var_list)
+
 
 my_list = [cat_1, cat_2, cat_3, cat_4]
 #del my_list[2]
