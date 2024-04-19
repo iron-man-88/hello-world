@@ -80,8 +80,8 @@ greeting_1 = df_single_value.iloc[row_index,df_lang_column]
 var_list = []
 
 for k in range(5):
-    #exec(f'cat_{k} = k*2')
-    var_list.append(exec(f'cat_{k} = k*2'))
+    exec(f'cat_{k} = k*2')
+    #var_list.append(exec(f'cat_{k} = k*2'))
 
 st.write(cat_0)
 st.write(cat_1)
@@ -93,17 +93,10 @@ del cat_4
 st.write("93 var_list ", var_list)
  
 
-my_list = [1, 2, 3, 4, 5]
-del my_list[2]
+my_list = [cat_1, cat_2, cat_3, cat_4, cat_5]
+#del my_list[2]
+st.write("98 my_list ", my_list)
 
-
-empt_lists = []
-for n in range(0,3):
-    empt_lists.append([])
-
-empt_lists[2] = "wert"
-st.write("100 empt_lists ", empt_lists)
-st.write("100 empt_lists ", empt_lists[2])
 
 
 
