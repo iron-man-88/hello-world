@@ -92,19 +92,12 @@ st.write(cat_4)
 my_list = [1, 2, 3, 4, 5]
 del my_list[2]
 
-vvar_list = [2]
 
+empt_lists = []
+for n in range(0,3):
+    empt_lists.append([])
 
-
-k =[]
-L =[]
-num = 5
-for i in range (0,num):
-    k = "var" + str(i)
-    L.append("var" + str(i))
-
-st.write("106 L ", L)
-st.write("106 L ", var1)
+st.write("100 empt_lists ", empt_lists)
 
 
 ###################################################################################################################
