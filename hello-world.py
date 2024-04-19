@@ -83,7 +83,7 @@ for k in range(5):
     var_list.append(exec(f'cat_{k} = k'))
 
 for j in range(5):
-    var_list.var_list[j] = None
+    var_list[j] = None
 
 #var_list[4] = "Wert"
 
