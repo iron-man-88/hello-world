@@ -68,8 +68,22 @@ selected_Page_Texts = None
 selected_Page_Text = None
 #selected_Page_Texts = df_read_file[df_read_file['page'] == '1', 'key']
 #st.write("69 selected_Page_Texts" , selected_Page_Texts)
-selected_Page_Text = df_read_file.query("page == '1'")
-st.write("72 selected_Page_Text" , selected_Page_Text)
+#selected_Page_Text = df_read_file.query("page == '1'")
+#st.write("72 selected_Page_Text" , selected_Page_Text)
+
+
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'Age': [21, 22, 23, 24],
+        'Grade': ['A', 'B', 'A', 'C']}
+df = pd.DataFrame(data)
+filtered_df = df[df['Grade'] == 'A']
+st.write("80 filtered_df" , filtered_df)
+
+
+
+
+
+
 #####################################
 
 ############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
