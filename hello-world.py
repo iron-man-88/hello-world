@@ -70,11 +70,11 @@ st.write("64 df_read_file " , df_read_file)
 
 #####################################
 #selected_Page_Texts = None
-selected_Page_Text = None
+#selected_Page_Text = None
 #selected_Page_Texts = df_read_file[df_read_file['page'] == 1, 'key']
 #st.write("75 selected_Page_Texts" , selected_Page_Texts)
-selected_Page_Text = df_read_file.query("page == '1'")
-st.write("77 selected_Page_Text" , selected_Page_Text)
+#selected_Page_Text = df_read_file.query("page == '1'")
+#st.write("77 selected_Page_Text" , selected_Page_Text)
 
 data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
         'Age': [21, 22, 23, 24],
@@ -87,9 +87,9 @@ st.write("80 filtered_df" , filtered_df)
 #selected_df = selected_Page_Text[selected_Page_Text['page'] == 1]
 #st.write("84 selected_df" , selected_df)
 
-#selected_indices = st.multiselect('Select rows:', df_read_file.index)
-#selected_rows = df_read_file.loc[selected_indices]
-#st.write('89 ### Selected Rows', selected_rows)
+selected_indices = st.multiselect('Select rows:', df_read_file.index)
+selected_rows = df_read_file.loc[selected_indices]
+st.write('89 ### Selected Rows', selected_rows)
 
 #####################################
 
