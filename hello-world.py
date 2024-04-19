@@ -84,8 +84,8 @@ for k in range(5):
 
 var_list[4] = "Wert"
 
-#for j in range(5):
-#    var_list[j] = None
+for j in range(5):
+    var_list[j] = None
 
 st.write(cat_0)
 st.write(cat_1)
