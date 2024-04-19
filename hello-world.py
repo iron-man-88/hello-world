@@ -98,7 +98,7 @@ vvar_list = [2]
 
 k =[]
 num = 5
-for i in range (0,num,1):
+for i in range (0,num):
     k = "var" + str(i)
 
 var2 = [12,7,62]
