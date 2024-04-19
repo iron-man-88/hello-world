@@ -86,7 +86,7 @@ st.write("80 filtered_df" , filtered_df)
 #st.write("84 selected_df" , selected_df)
 
 
-#selected_indices = st.multiselect('Select rows:', df_read_file.index)
+selected_indices = st.multiselect('Select rows:', df_read_file.index)
 #selected_rows = df_read_file.loc[selected_indices]
 #st.write('89 ### Selected Rows', selected_rows)
 
