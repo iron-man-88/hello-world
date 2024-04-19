@@ -63,20 +63,6 @@ def read_file_text():                                                  ## ## cre
     df_read_file = pd.read_csv("database/text_3_lang.csv")
     return df_read_file
 
-read_file_text()
-st.write("66 df_read_file ", df_read_file)
-df_single_value = read_file_text()
-
-row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values[0]  # test
-#st.write("70 row_index ", row_index) # test
-#st.write("71 df_single_value.iloc[row_index,df_lang_column]", df_single_value.iloc[row_index,df_lang_column])
-
-greeting_1 = df_single_value.iloc[row_index,df_lang_column]
-#st.write("74 greeting_1 ", greeting_1)
-#st.write("75 greeting_2 ", greeting_2)
-#st.write("76 greeting_3 ", greeting_3)
-#st.write("77 greeting_4 ", greeting_4)
-
 ############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
 var_temp_list = []      
 for k in range(5):
@@ -97,6 +83,22 @@ st.write(cat_2)
 st.write(cat_3)
 st.write(cat_4)
 st.write("94 var_temp_list ", var_temp_list)
+############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
+
+read_file_text()
+st.write("89 df_read_file ", df_read_file)
+df_single_value = read_file_text()
+
+row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values[0]  # test
+#st.write("93 row_index ", row_index) # test
+#st.write("94 df_single_value.iloc[row_index,df_lang_column]", df_single_value.iloc[row_index,df_lang_column])
+
+greeting_1 = df_single_value.iloc[row_index,df_lang_column]
+#st.write("97 greeting_1 ", greeting_1)
+#st.write("98 greeting_2 ", greeting_2)
+#st.write("99 greeting_3 ", greeting_3)
+#st.write("100 greeting_4 ", greeting_4)
+
 ###################################################################################################################
 ###################################################################################################################
 ###################################################################################################################
