@@ -55,7 +55,7 @@ else:
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 #from PIL import Image
 ## ## create var "df_read_file = None" with value "None", copy FuBa "read_file_text()" to "@st.cache_data"
-df_read_file = None                                                    ## ## create var "df_read_file = None" with value "None"
+#df_read_file = None                                                    ## ## create var "df_read_file = None" with value "None"
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def read_file_text():                                                  ## ## create FuBa "read_file_text()"
     global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
@@ -86,7 +86,7 @@ st.write("80 filtered_df" , filtered_df)
 #st.write("84 selected_df" , selected_df)
 
 
-selected_indices = st.multiselect('Select rows:', df_read_file.index)
+#selected_indices = st.multiselect('Select rows:', df_read_file.index)
 #selected_rows = df_read_file.loc[selected_indices]
 #st.write('89 ### Selected Rows', selected_rows)
 
