@@ -65,8 +65,8 @@ def read_file_text():                                                  ## ## cre
 
 #####################################
 selected_Page_Texts = None
-selected_Page_Texts = df_read_file[df_read_file['page'] == 1]
-st.write("69 selected_Page_Texts" , selected_Page_Texts, "key")
+selected_Page_Texts = df_read_file[df_read_file['page'] == 1, "key"]
+st.write("69 selected_Page_Texts" , selected_Page_Texts)
 #####################################
 
 ############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
