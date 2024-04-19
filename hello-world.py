@@ -83,10 +83,10 @@ st.write("80 filtered_df" , filtered_df)
 #selected_df = selected_Page_Text[selected_Page_Text['page'] == 1]
 #st.write("84 selected_df" , selected_df)
 
-def load_data():
-    return pd.read_csv("database/text_3_lang.csv")
 
-st.write("89 pd" , pd)
+selected_indices = st.multiselect('Select rows:', df_read_file.index)
+selected_rows = df_read_file.loc[selected_indices]
+st.write('89 ### Selected Rows', selected_rows)
 
 
 #####################################
