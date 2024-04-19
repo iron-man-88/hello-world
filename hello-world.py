@@ -81,7 +81,7 @@ data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
         'Age': [21, 22, 23, 24],
         'Grade': ['A', 'B', 'A', 'C']}
 df = pd.DataFrame(data)
-filtered_df = df[df['Grade'] == 'A'] & df[df['Age'] == 23]
+filtered_df = (df[df['Grade'] == 'A'] & df[df['Age'] == 23])
 st.write("80 filtered_df" , filtered_df)
 
 #####################################
