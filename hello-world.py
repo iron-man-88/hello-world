@@ -64,7 +64,7 @@ def read_file_text():                                                  ## ## cre
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 #####################################
-selected_Page_Texts = df_read_file.loc[df_read_file["pages"] == 1, "key"]
+selected_Page_Texts = df_read_file.loc[df_read_file["page"] == 1, "key"]
 st.write("68 selected_Page_Texts" , selected_Page_Texts)
 #####################################
 
