@@ -40,11 +40,11 @@ with col2:
 
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
-if 'rradio_click' not in st.session_state:
-    st.session_state.rradio_click = 'Deutsch'
+if 'radio_click' not in st.session_state:
+    st.session_state.radio_click = 'Deutsch'
 
 button_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
-st.session_state.rradio_click = button_read
+st.session_state.radio_click = button_read
 #st.write("48 button_read ", button_read)
 if button_read == "Deutsch":
     df_lang_column = 1
@@ -185,8 +185,8 @@ st.button("Perform calculation 3", on_click=update3, key='key_3')
 
 if 'bbut_click' not in st.session_state:
     st.session_state.bbut_click = ''
-if 'radio_click' not in st.session_state:
-    st.session_state.radio_click = 'Deutsch'
+if 'rradio_click' not in st.session_state:
+    st.session_state.rradio_click = 'Deutsch'
 
 with st.container():
     st.write("---")
@@ -202,7 +202,7 @@ with st.container():
             #brd_sel = bbutton_read
             st.session_state.bbut_click = 'y'
             if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
-                st.session_state.radio_click = bbutton_read
+                st.session_state.rradio_click = bbutton_read
                 st.write("156 bbutton_read ", bbutton_read)
 
 st.write("158 bbutton_read ", bbutton_read)
