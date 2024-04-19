@@ -69,8 +69,8 @@ st.write("64 df_read_file " , df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 #####################################
-dddf = df_read_file.query(f"page == 1")# Create and return a dictionary of key/values.
-st.write("73 df.query ", dddf)
+#dddf = df_read_file.query(f"page == 1")# Create and return a dictionary of key/values.
+#st.write("73 df.query ", dddf)
 
 #selWert2 = 1
 #pdfSelectedFilename = (df_read_file[df_read_file["page"] == selWert2])["key"].values[0]
