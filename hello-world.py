@@ -87,8 +87,13 @@ st.write(cat_3)
 st.write(cat_4)
 
 for j in range(5):
-    del cat_{j}
+    exec(f'cat_{j} = None
 
+st.write(cat_0)
+st.write(cat_1)
+st.write(cat_2)
+st.write(cat_3)
+st.write(cat_4)
 
 
 ###################################################################################################################
