@@ -70,7 +70,6 @@ row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values
 #st.write("70 row_index ", row_index) # test
 #st.write("71 df_single_value.iloc[row_index,df_lang_column]", df_single_value.iloc[row_index,df_lang_column])
 
-temp1 = None
 greeting_1 = df_single_value.iloc[row_index,df_lang_column]
 #st.write("74 greeting_1 ", greeting_1)
 #st.write("75 greeting_2 ", greeting_2)
@@ -92,10 +91,10 @@ st.write(cat_1)
 st.write(cat_2)
 st.write(cat_3)
 st.write(cat_4)
-st.write("95 var_list ", var_list)
+st.write("94 var_list ", var_list)
 
 my_list = [cat_1, cat_2, cat_3, cat_4]
-st.write("101 my_list ", my_list)
+st.write("97 my_list ", my_list)
 
 ###################################################################################################################
 ###################################################################################################################
