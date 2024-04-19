@@ -63,6 +63,11 @@ def read_file_text():                                                  ## ## cre
     return df_read_file                                                ## ## return is for selected output, otherwise value is empty
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
+#####################################
+selected_Page_Texts = df_read_file.loc[df_read_file["pagesl"] == 1, "Dropdown_Anzeige"]
+
+#####################################
+
 ############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
 var_temp_list = []
 for k in range(5):
