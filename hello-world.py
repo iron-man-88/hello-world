@@ -88,7 +88,7 @@ st.write(cat_1)
 st.write(cat_2)
 st.write(cat_3)
 st.write(cat_4)
-st.write(var_list)
+st.write(cat_{4})
 
 my_list = [1, 2, 3, 4, 5]
 del my_list[2]
