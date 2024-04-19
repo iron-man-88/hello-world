@@ -87,7 +87,7 @@ st.write(cat_3)
 st.write(cat_4)
 
 for j in range(5):
-    del exec(f'cat_{j})
+    del exec(cat_{j})
 
 
 
