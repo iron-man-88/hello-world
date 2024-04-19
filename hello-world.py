@@ -81,7 +81,7 @@ var_list = []
 
 for k in range(5):
     #exec(f'cat_{k} = k*2')
-    var_list.append(exec(f'cat_{k}))
+    var_list.append(exec(f'cat_{k = ""}))
 #    var_list.append(exec(f'cat_{k} = k*2'))
 
 var_list[4] = "Wert"
