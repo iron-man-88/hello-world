@@ -85,7 +85,7 @@ filtered_df = df[df['Grade'] == 'A']
 st.write("80 filtered_df" , filtered_df)
 
 no_of_media = df[df['Name'].str.contains('Bob')].shape[0]
-st.write("8 no_of_media " , no_of_media)
+st.write("88 no_of_media " , no_of_media)
 
 
 #####################################
