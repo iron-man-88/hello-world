@@ -79,6 +79,9 @@ df = pd.DataFrame(data)
 filtered_df = df[df['Grade'] == 'A']
 st.write("80 filtered_df" , filtered_df)
 
+selected_Page_Text = pd.DataFrame(df_read_file)
+selected_df = selected_Page_Text[selected_Page_Text['page'] == '1']
+st.write("84 selected_df" , selected_df)
 
 
 
