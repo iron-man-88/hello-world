@@ -64,8 +64,8 @@ def read_file_text():                                                  ## ## cre
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 #####################################
-selected_Page_Texts = df_read_file.loc[df_read_file["pagesl"] == 1, "Dropdown_Anzeige"]
-
+selected_Page_Texts = df_read_file.loc[df_read_file["pagesl"] == 1, "key"]
+st.write("68 selected_Page_Texts" , selected_Page_Texts)
 #####################################
 
 ############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
