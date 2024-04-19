@@ -64,9 +64,8 @@ def read_file_text():                                                  ## ## cre
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 ############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
-var_temp_list = []      
+var_temp_list = []
 for k in range(5):
-    #exec(f'cat_{k} = k*2')
     var_temp_list.append(exec(f'cat_{k} = k'))
 
 var_temp_list[4] = "Wert"
