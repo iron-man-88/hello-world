@@ -55,10 +55,11 @@ else:
 
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 #from PIL import Image
-df_read_file = None
-@st.cache_data
-def read_file_text():
-    global df_read_file
+## ## create var "df_read_file = None" with value "None", copy FuBa "read_file_text()" to "@st.cache_data"
+df_read_file = None                                                    ## ## create var "df_read_file = None" with value "None"
+@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
+def read_file_text():                                                  ## ## create FuBa "read_file_text()"
+    global df_read_file                                                ## ## 
     df_read_file = pd.read_csv("database/text_3_lang.csv")
     return df_read_file
 
