@@ -80,9 +80,12 @@ greeting_1 = df_single_value.iloc[row_index,df_lang_column]
 var_list = []
 for k in range(5):
     #exec(f'cat_{k} = k*2')
-    var_list.append(exec(f'cat_{k} = k-k'))
+    var_list.append(exec(f'cat_{k} = k'))
 
-var_list[4] = "Wert"
+for j in range(5):
+    var_list.var_list[j] = None
+
+#var_list[4] = "Wert"
 
 st.write(cat_0)
 st.write(cat_1)
