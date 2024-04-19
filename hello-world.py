@@ -56,10 +56,11 @@ else:
 #df_read_file = None
 @st.cache_data
 def read_file_text():
-    global df_read_file 
+    #global df_read_file 
     df_read_file = pd.read_csv("database/text_3_lang.csv")
-    return df_read_file
     st.write("63 df_read_file " , df_read_file)
+    return df_read_file
+
 st.write("64 df_read_file " , df_read_file)
 
 
