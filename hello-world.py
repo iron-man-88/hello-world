@@ -43,12 +43,12 @@ if 'bbut_click' not in st.session_state:
 if 'rradio_click' not in st.session_state:
     st.session_state.rradio_click = 'Deutsch'
 
-bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
-st.session_state.rradio_click = bbutton_read
-#st.write("48 bbutton_read ", bbutton_read)
-if bbutton_read == "Deutsch":
+button_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
+st.session_state.rradio_click = button_read
+#st.write("48 button_read ", button_read)
+if button_read == "Deutsch":
     df_lang_column = 1
-elif bbutton_read == "中文": 
+elif button_read == "中文": 
     df_lang_column = 2
 else:
     df_lang_column = 3
@@ -99,6 +99,7 @@ st.write("94 var_temp_list ", var_temp_list)
 ###################################################################################################################
 ###################################################################################################################
 ###################################################################################################################
+
 
 #@st.cache_data
 #def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
@@ -197,11 +198,11 @@ with st.container():
         c = st.button("Click me ⤵️")
 
         if (c) or (st.session_state.but_click == 'y'):
-            button_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
-            #brd_sel = button_read
+            bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
+            #brd_sel = bbutton_read
             st.session_state.but_click = 'y'
-            if (st.session_state.but_click=='y') and (button_read == button_read):
-                st.session_state.radio_click = button_read
-                st.write("156 button_read ", button_read)
+            if (st.session_state.but_click=='y') and (bbutton_read == bbutton_read):
+                st.session_state.radio_click = bbutton_read
+                st.write("156 bbutton_read ", bbutton_read)
 
-st.write("158 button_read ", button_read)
+st.write("158 bbutton_read ", bbutton_read)
