@@ -68,13 +68,10 @@ df_read_file = None
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def read_file_text():                                                  ## ## create FuBa "read_file_text()"
     global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
-    df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
+    df_read_file = pd.read_csv("database/neu.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
     return df_read_file                                                ## ## return is for selected output, otherwise value is empty
     st.write("73 df_read_file " , df_read_file)
 st.write("74 df_read_file " , df_read_file)
-
-
-
 
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
@@ -85,7 +82,6 @@ selected_Page_Text = None
 #st.write("69 selected_Page_Texts" , selected_Page_Texts)
 #selected_Page_Text = df_read_file.query("page == '1'")
 #st.write("72 selected_Page_Text" , selected_Page_Text)
-
 
 data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
         'Age': [21, 22, 23, 24],
@@ -98,11 +94,9 @@ st.write("80 filtered_df" , filtered_df)
 #selected_df = selected_Page_Text[selected_Page_Text['page'] == 1]
 #st.write("84 selected_df" , selected_df)
 
-
 #selected_indices = st.multiselect('Select rows:', df_read_file.index)
 #selected_rows = df_read_file.loc[selected_indices]
 #st.write('89 ### Selected Rows', selected_rows)
-
 
 #####################################
 
