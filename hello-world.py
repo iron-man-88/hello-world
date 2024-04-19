@@ -92,7 +92,7 @@ st.write("91 var_list ", var_list)
 st.write("93 var_list ", var_list)
  
 
-my_list = [cat_1, cat_2, cat_3, cat_4, cat_5]
+my_list = [cat_1, cat_2, cat_3, cat_4]
 #del my_list[2]
 st.write("98 my_list ", my_list)
 
