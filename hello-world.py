@@ -66,9 +66,9 @@ def read_file_text():                                                  ## ## cre
 #####################################
 selected_Page_Texts = None
 selected_Page_Text = None
-#selected_Page_Texts = df_read_file[df_read_file['page'] == 1, 'key']
+#selected_Page_Texts = df_read_file[df_read_file['page'] == '1', 'key']
 #st.write("69 selected_Page_Texts" , selected_Page_Texts)
-selected_Page_Text = df_read_file.query("page == 1")
+selected_Page_Text = df_read_file.query("page == '1'")
 st.write("72 selected_Page_Text" , selected_Page_Text)
 #####################################
 
