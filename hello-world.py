@@ -53,8 +53,7 @@ else:
     df_lang_column = 3
 
 
-## ## create var "df_read_file = None" with value "None"
-df_read_file = None
+#df_read_file = None
 @st.cache_data
 def read_file_text():
     global df_read_file 
