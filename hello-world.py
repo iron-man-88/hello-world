@@ -267,3 +267,16 @@ ddf = load_data()
 # Display the dataframe and allow the user to stretch the dataframe
 # across the full width of the container, based on the checkbox value
 st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
+
+
+
+
+
+
+
+
+
+
+dfff = pd.read_clipboard()          # here, we are initializing the df variable to store the #copied data from the Excel file  
+dfff
+
