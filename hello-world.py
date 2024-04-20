@@ -235,3 +235,32 @@ with st.container():
                 st.write("156 bbutton_read ", bbutton_read)
 
 st.write("158 bbutton_read ", bbutton_read)
+
+
+
+
+
+
+
+
+
+
+
+
+@st.cache_data
+def load_data():
+    return pd.DataFrame(
+        {
+            "first column": [1, 2, 3, 4],
+            "second column": [10, 20, 30, 40],
+        }
+    )
+
+# Boolean to resize the dataframe, stored as a session state variable
+st.checkbox("Use container width", value=False, key="use_container_width")
+
+ddf = load_data()
+
+# Display the dataframe and allow the user to stretch the dataframe
+# across the full width of the container, based on the checkbox value
+st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
