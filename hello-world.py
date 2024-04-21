@@ -240,7 +240,7 @@ st.write("158 bbutton_read ", bbutton_read)
 
 
 
-ddd pd.read_clipboard
+ddd pd.read_clipboard()
 ddd.head()
 
 
