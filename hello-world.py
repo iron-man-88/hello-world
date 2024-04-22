@@ -284,8 +284,9 @@ def get_data():
 user_id = st.text_input("User ID")
 foo = st.slider("foo", 0, 100)
 bar = st.slider("bar", 0, 100)
+b=st.text_area('TType in the text_area and click copy')
 
 if st.button("Add row"):
-    get_data().append({"UserID": user_id, "foo": foo, "bar": bar})
+    get_data().append({"UserID": user_id, "foo": foo, "bar": bar, "st.text_area": st.text_area})
 
 st.write(pd.DataFrame(get_data()))
