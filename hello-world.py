@@ -268,6 +268,24 @@ a=st.text_area('Type in the text_area and click copy')
 if st.button('Copy'):
     st.success('Text copied successfully!')
 
-ddff = pd.read_table(a, delimiter=" ")
-# display DataFrame
-st.write("ddff ", ddff)
+
+
+
+
+
+
+
+
+
+@st.cache(allow_output_mutation=True)
+def get_data():
+    return []
+
+user_id = st.text_input("User ID")
+foo = st.slider("foo", 0, 100)
+bar = st.slider("bar", 0, 100)
+
+if st.button("Add row"):
+    get_data().append({"UserID": user_id, "foo": foo, "bar": bar})
+
+st.write(pd.DataFrame(get_data()))
