@@ -1,0 +1,2 @@
+pyperclip
+streamlit==1.3.*
