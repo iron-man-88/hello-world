@@ -1,2 +1,2 @@
-#pyperclip
+pyperclip
 streamlit==1.33.*
