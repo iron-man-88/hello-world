@@ -264,19 +264,6 @@ st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
 
 
 
-
-
-
-#import pyperclip
-a=st.text_area('Type in the text_area and click copy')
-if st.button('Copy'):
-    pyperclip.copy(a)
-    st.success('Text copied successfully!')
-
-
-
-
-
 from st_copy_to_clipboard import st_copy_to_clipboard
 # Render copy to clipboard button
 st_copy_to_clipboard("Copy this to clipboard")
