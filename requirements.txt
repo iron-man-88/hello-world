@@ -1,3 +1,2 @@
 st-copy-to-clipboard
-#pyperclip
 streamlit==1.33.*
