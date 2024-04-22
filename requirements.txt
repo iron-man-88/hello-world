@@ -1,2 +1,1 @@
-st-copy-to-clipboard
 streamlit==1.33.*
