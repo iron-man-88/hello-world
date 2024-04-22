@@ -269,6 +269,6 @@ st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
 
 import pyperclip
 text_to_be_copied = 'wwwwwwwwwwwwwwwwwwThe text to be copied to the clipboard.'
-pyperclip.copy("text_to_be_copied")
+pyperclip.copy(text_to_be_copied)
 clipboard_content = pyperclip.paste()
 st.write("pyperclip.paste ", clipboard_content)
