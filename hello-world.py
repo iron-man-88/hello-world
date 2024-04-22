@@ -290,3 +290,10 @@ if st.button("Add row"):
     get_data().append({"UserID": user_id, "foo": foo, "bar": bar, "st.text_area": b})
 
 st.write(pd.DataFrame(get_data()))
+
+
+
+
+
+#https://docs.streamlit.io/develop/concepts/design/dataframes
+#Copy and paste support
