@@ -302,3 +302,4 @@ st.write(pd.DataFrame(get_data()))
 #file:///F:/uni/Faecher/Unterricht/2023/22-Konversation/Konversation/Konversation.html
 #PDF 3 Definite articles + indefinite articles.
 #3-nominakkusnegation_Ocean.pdf
+#https://de.savefrom.net
