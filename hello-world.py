@@ -240,13 +240,6 @@ st.write("158 bbutton_read ", bbutton_read)
 
 
 
-ddd pd.read_clipboard()
-ddd.head()
-
-
-
-
-
 
 
 # https://docs.streamlit.io/develop/api-reference/data/st.dataframe
