@@ -266,7 +266,7 @@ st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
 
 from st_copy_to_clipboard import st_copy_to_clipboard
 # Render copy to clipboard button
-st_copy_to_clipboard("Copy this to clipboard")
+#st_copy_to_clipboard("Copy this to clipboard")
 st.write("158 bbutton_read ", st_copy_to_clipboard("Copy this to clipboard"))
 
 
