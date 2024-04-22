@@ -268,9 +268,7 @@ st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
 
 
 import pyperclip
-text_to_be_copied = 'The text to be copied to the clipboard.'
-pyperclip.copy(text_to_be_copied)
-clipboard_content = pyperclip.paste()
-st.write("pyperclip.paste ", clipboard_content)
-
-
+a=st.text_area('Type in the text_area and click copy')
+if st.button('Copy'):
+    pyperclip.copy(a)
+    st.success('Text copied successfully!')
