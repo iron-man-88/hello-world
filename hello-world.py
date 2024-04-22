@@ -266,9 +266,8 @@ st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
 
 a=st.text_area('Type in the text_area and click copy')
 st.button('Copy'):
+    pyperclip.copy(a)
     st.success('Text copied successfully!')
-
-
 
 
 
