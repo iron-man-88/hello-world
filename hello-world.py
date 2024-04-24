@@ -393,6 +393,42 @@ st.markdown(f"386 Your favorite command is **{favorite_command}** 🎈")
 
 
 
+
+
+
+
+data_df = pd.DataFrame(
+    {
+        "widgets": ["st.selectbox", "st.number_input", "st.text_area", "st.button"],
+    }
+)
+
+st.data_editor(
+    data_df,
+    column_config={
+        "widgets": st.column_config.TextColumn(
+            "Widgets",
+            help="Streamlit **widget_ttt** commands 🎈",
+            default="st.",
+            max_chars=50,
+            validate="^st\.[a-z_]+$",
+        )
+    },
+#    hide_index=True,
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
 #file:///F:/uni/Faecher/Unterricht/2023/22-Konversation/Konversation/Konversation.html
 #PDF 3 Definite articles + indefinite articles.
 #3-nominakkusnegation_Ocean.pdf
