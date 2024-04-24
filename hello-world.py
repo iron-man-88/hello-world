@@ -347,9 +347,9 @@ config = {
 
 result = st.data_editor(df, column_config = config, num_rows='dynamic')
 
-if st.button('Get results'):
-    st.write(result)
-
+#if st.button('Get results'):
+ #   st.write(result)
+st.write(result)
 
 
 
