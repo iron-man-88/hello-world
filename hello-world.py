@@ -399,7 +399,7 @@ st.markdown(f"386 Your favorite command is **{favorite_command}** 🎈")
 
 data_df = pd.DataFrame(
     {
-        "widgets": ["st.selectbox", "st.number_input", "st.text_area", "st.button"],
+        "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
     }
 )
 
@@ -408,7 +408,7 @@ st.data_editor(
     column_config={
         "widgets": st.column_config.TextColumn(
             "Widgets",
-            help="Streamlit **widget_ttt** commands 🎈",
+            help="Streamlit **widget** commands 🎈",
             default="st.",
             max_chars=50,
             validate="^st\.[a-z_]+$",
