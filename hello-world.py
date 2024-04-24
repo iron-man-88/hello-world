@@ -327,7 +327,7 @@ config = {
 result = st.data_editor(dframe, column_config = config, num_rows='dynamic')
 
 if st.button('Get results'):
-    st.write("325 ", result)
+    st.write("330 ", result)
 
 
 
@@ -349,7 +349,7 @@ result = st.data_editor(ddf, column_config = config, num_rows='dynamic')
 
 #if st.button('Get results'):
  #   st.write(result)
-st.write(result)
+st.write("352 ", result)
 
 
 
@@ -383,7 +383,7 @@ edited_df = st.data_editor(
 )
 
 favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
+st.markdown(f"386 Your favorite command is **{favorite_command}** 🎈")
 
 
 
