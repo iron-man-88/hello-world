@@ -180,7 +180,7 @@ def load_bundle(locale):
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
     st.write("171 df.query ", df)
     lang_dict    = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
-    st.write("lang_dict ", lang_dict)
+    st.write("183 lang_dict ", lang_dict)
     return lang_dict
 def main():
     lang_options = {
