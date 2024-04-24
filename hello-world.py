@@ -306,6 +306,7 @@ dataf = pd.DataFrame(
 )
 
 st.dataframe(dataf, use_container_width=True)
+st.write("309 dataf ", dataf)
 
 
 
