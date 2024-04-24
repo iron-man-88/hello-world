@@ -297,6 +297,31 @@ st.write(pd.DataFrame(get_data()))
 
 #https://docs.streamlit.io/develop/concepts/design/dataframes
 #Copy and paste support
+dataf = pd.DataFrame(
+    [
+        {"command": "st.selectbox", "rating": 4, "is_widget": True},
+        {"command": "st.balloons", "rating": 5, "is_widget": False},
+        {"command": "st.time_input", "rating": 3, "is_widget": True},
+    ]
+)
+
+dataf = load_data()
+edited_df = st.data_editor(dataf) # 👈 An editable dataframe
+
+favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
+st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #file:///F:/uni/Faecher/Unterricht/2023/22-Konversation/Konversation/Konversation.html
