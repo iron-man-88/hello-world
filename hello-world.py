@@ -337,7 +337,7 @@ if st.button('Get results'):
 
 
 
-df = pd.DataFrame(columns=['name','age','color'])
+ddf = pd.DataFrame(columns=['name','age','color'])
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
@@ -345,7 +345,7 @@ config = {
     'color' : st.column_config.SelectboxColumn('Favorite Color', options=colors)
 }
 
-result = st.data_editor(df, column_config = config, num_rows='dynamic')
+result = st.data_editor(ddf, column_config = config, num_rows='dynamic')
 
 #if st.button('Get results'):
  #   st.write(result)
@@ -357,7 +357,33 @@ st.write(result)
 
 
 
+dff = pd.DataFrame(
+    [
+        {"command": "st.selectbox", "rating": 4, "is_widget": True},
+        {"command": "st.balloons", "rating": 5, "is_widget": False},
+        {"command": "st.time_input", "rating": 3, "is_widget": True},
+    ]
+)
+edited_df = st.data_editor(
+    dff,
+    column_config={
+        "command": "Streamlit Command",
+        "rating": st.column_config.NumberColumn(
+            "Your rating",
+            help="How much do you like this command (1-5)?",
+            min_value=1,
+            max_value=5,
+            step=1,
+            format="%d ⭐",
+        ),
+        "is_widget": "Widget ?",
+    },
+    disabled=["command", "is_widget"],
+    hide_index=True,
+)
 
+favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
+st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
 
 
 
