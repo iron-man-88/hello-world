@@ -379,7 +379,8 @@ edited_df = st.data_editor(
         "is_widget": "Widget ?",
     },
     disabled=["command", "is_widget"],
-    hide_index=True,
+#    hide_index=True,
+
 )
 
 favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
