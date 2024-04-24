@@ -305,11 +305,7 @@ dataf = pd.DataFrame(
     ]
 )
 
-dataf = load_data()
-edited_df = st.data_editor(dataf) # 👈 An editable dataframe
-
-favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-st.markdown(f"Your favorite command is **{favorite_command}** 🎈")
+st.dataframe(dataf, use_container_width=True)
 
 
 
