@@ -365,7 +365,7 @@ dff = pd.DataFrame(
     ]
 )
 edited_df = st.data_editor(
-    dff,
+    dff, hide_index=False,
     column_config={
         "command": "Streamlit Command",
         "rating": st.column_config.NumberColumn(
