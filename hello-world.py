@@ -317,7 +317,7 @@ ddata = [
 ]
 
 dframe = pd.DataFrame(ddata,columns=['HSK', 'name','age','color'])
-hsks = ['HSK 1','HSK 2','HSK 3','HSK 4','HSK 5']
+hsks = ['HSK 1','HSK 2','HSK 3','HSK 4','HSK 5'],
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'hsk' : st.column_config.SelectboxColumn('HSK', options=hsks)
