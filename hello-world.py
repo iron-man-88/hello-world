@@ -309,27 +309,27 @@ st.dataframe(dataf, use_container_width=True)
 st.write("309 dataf ", dataf)
 
 
-
+#######################################################
 ddata = [
-['dom', 10, 'blue'],['abhi', 15, 'blue'],
-['celeste', 1, 'blue'],['celeste', 15, 'blue'],['celeste', 16, 'blue'],
-['celeste', 17, 'blue']
+['HSK 1', 'dom', 10, 'blue'],['HSK 1', 'abhi', 15, 'blue'],
+['HSK 1', 'celeste', 1, 'blue'],['HSK 1', 'celeste', 15, 'blue'],['HSK 1', 'celeste', 16, 'blue'],
+['HSK 1', 'celeste', 17, 'blue']
 ]
 
-dframe = pd.DataFrame(ddata,columns=['name','age','color'])
+dframe = pd.DataFrame(ddata,columns=['HSK', 'name','age','color'])
+hsks = ['HSK 1','HSK 2','HSK 3','HSK 4','HSK 5']
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
+    'hsk' : st.column_config.SelectboxColumn('HSK', options=hsks)
     'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'color' : st.column_config.SelectboxColumn('Favorite Color', options=colors)
 }
-
 result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide_index=False)
-
 if st.button('Get results'):
     st.write("330 ", result)
 
-
+#######################################################
 
 
 
