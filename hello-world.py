@@ -317,10 +317,11 @@ ddata = [
 ]
 
 dframe = pd.DataFrame(ddata,columns=['HSK', 'name','age','color'])
-hsks = ['HSK 1','HSK 2','HSK 3','HSK 4','HSK 5'],
+#dframe = pd.DataFrame(ddata,columns=['HSK', 'name','age','color'])
+#hsks = ['HSK 1','HSK 2','HSK 3','HSK 4','HSK 5'],
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
-    'hsk' : st.column_config.SelectboxColumn('HSK', options=hsks)
+#    'hsk' : st.column_config.SelectboxColumn('HSK', options=hsks)
     'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'color' : st.column_config.SelectboxColumn('Favorite Color', options=colors)
