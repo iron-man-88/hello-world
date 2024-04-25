@@ -316,12 +316,12 @@ ddata = [
 ['HSK 1', 'Adjektiv', 'dom', 10]
 ]
 
-dframe = pd.DataFrame(ddata,columns=['HSK', 'name','age','color'])
+dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','name','age'])
 hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
 wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
-    'color' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
+    'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
     'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122)
 }
