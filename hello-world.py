@@ -318,11 +318,11 @@ ddata = [
 
 dframe = pd.DataFrame(ddata,columns=['name','age','color'])
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-config = {
+config = ({
     'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'color' : st.column_config.SelectboxColumn('Favorite Color', options=colors)
-}
+}, hide_index=False)
 
 result = st.data_editor(dframe, column_config = config, num_rows='dynamic')
 
