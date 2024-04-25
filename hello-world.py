@@ -311,9 +311,9 @@ st.write("309 dataf ", dataf)
 
 #######################################################
 ddata = [
-['HSK 1', 'dom', 10, 'blue'],['HSK 1', 'abhi', 15, 'blue'],
-['HSK 1', 'celeste', 1, 'blue'],['HSK 1', 'cceleste', 15, 'blue'],['HSK 1', 'celeste', 16, 'blue'],
-['HSK 1', 'celeste', 17, 'blue']
+['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'dom', 10],
+['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'dom', 10],
+['HSK 1', 'Adjektiv', 'dom', 10]
 ]
 
 dframe = pd.DataFrame(ddata,columns=['HSK', 'name','age','color'])
@@ -321,9 +321,9 @@ hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
 wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
+    'color' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
     'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
-    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
-    'color' : st.column_config.SelectboxColumn('Wortart', options=wortarten)
+    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122)
 }
 result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide_index=False)
 if st.button('Get results'):
