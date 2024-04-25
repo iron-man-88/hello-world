@@ -312,7 +312,7 @@ st.write("309 dataf ", dataf)
 #######################################################
 ddata = [
 ['HSK 1', 'dom', 10, 'blue'],['HSK 1', 'abhi', 15, 'blue'],
-['HSK 1', 'celeste', 1, 'blue'],['HSK 1', 'celeste', 15, 'blue'],['HSK 1', 'celeste', 16, 'blue'],
+['HSK 1', 'celeste', 1, 'blue'],['HSK 1', 'cceleste', 15, 'blue'],['HSK 1', 'celeste', 16, 'blue'],
 ['HSK 1', 'celeste', 17, 'blue']
 ]
 
