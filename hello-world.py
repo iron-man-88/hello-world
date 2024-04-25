@@ -414,7 +414,7 @@ st.data_editor(
             validate="^st\.[a-z_]+$",
         )
     },
-#    hide_index=True,
+    hide_index=False,
 )
 
 
