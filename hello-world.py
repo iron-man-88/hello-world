@@ -236,7 +236,7 @@ with st.container():
                 st.session_state.rradio_click = bbutton_read
                 st.write("156 bbutton_read ", bbutton_read)
 
-#st.write("158 bbutton_read ", bbutton_read)
+#st.write("239 bbutton_read ", bbutton_read)
 
 
 
@@ -402,16 +402,8 @@ cols[2].write(df.dtypes)
 ###############################################
 
 st.write("404 ", result) #######################################################
-@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
-def table_read_write():
-    global table_options
-    table_options = {
-        "read":"read",
-        "write":"write"
-    }
-    return table_options
-    
-#st.write("420 table_options ", table_options)
+button_read_write = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
+st.write("406 button_read_write ", button_read_write)
 
 
 
