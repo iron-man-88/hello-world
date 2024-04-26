@@ -437,7 +437,7 @@ st.data_editor(
     column_config={
         "widgets": st.column_config.TextColumn(
             "Widgets",
-            help="Streamlit **widget** commands 🎈",
+            help="Streamlit **widget** commands 🎈 her yiu can explain a little bit",
             default="st.",
             max_chars=50,
             validate="^st\.[a-z_]+$",
