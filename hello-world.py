@@ -410,7 +410,7 @@ wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet'
 config = {
     'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
     'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
-    'col_key' : st.column_config.TextColumn('Key_col', key=True),
+    'col_key' : st.column_config.TextColumn('Key_col'),
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
 }
