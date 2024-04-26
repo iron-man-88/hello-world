@@ -401,8 +401,8 @@ st.write("389 ")
 data_df = pd.DataFrame(
     {
         "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
-        "widgets": ["st.selectbox_x", "st.number_input", "st.text_area", "st.button"],
-        "widgets": ["st.selectbox_xx", "st.number_input", "st.text_area", "st.button"],
+        "widgetss": ["st.selectbox_x", "st.number_input", "st.text_area", "st.button"],
+        "widgetsss": ["st.selectbox_xx", "st.number_input", "st.text_area", "st.button"],
     }
 )
 
