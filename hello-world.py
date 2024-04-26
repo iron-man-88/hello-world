@@ -471,8 +471,7 @@ st.write("448 ")
 
 
 
-
-col1_options = ["APPS", "BBBY"]
+col1_options = ["read", "write"]
 col2_options = ["GPS", "GRWG"]
 col3_options = ["PLUG", "RNG"]
 col4_options = ["aAPPS", "aBBBY"]
@@ -492,7 +491,7 @@ if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "c
 
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-col1_choice = col1.radio("", col1_options,horizontal=True)
+col1_choice = col1.radio("choose read or write", col1_options,horizontal=True,key='read_write',index=0)
 col2_choice = col2.radio("", col2_options,horizontal=True)
 col3_choice = col3.radio("", col3_options,horizontal=True)
 col4_choice = col4.radio("", col4_options,horizontal=True)
