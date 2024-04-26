@@ -403,10 +403,12 @@ cols[2].write(df.dtypes)
 
 st.write("404 ", result) #######################################################
 button_read_write = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
+if button_read_write = 'read':
+    readwrite = 'static'
+else:
+    readwrite = 'dynamic'
+
 st.write("406 button_read_write ", button_read_write)
-
-
-
 
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
 ['HSK 1', 'Adjektiv',7, 'dom']]
