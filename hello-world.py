@@ -472,23 +472,32 @@ st.write("448 ")
 
 
 
-col1_options = ["APPS", "BBBY", "CHPT", "CNC", "COUP", "DAL", "DDD", "FL", "FSLY", "GME"]
-col2_options = ["GPS", "GRWG", "KSS", "LVS", "M", "MARA", "NVAX", "OKTA", "PENN"]
-col3_options = ["PLUG", "RNG", "SHAK", "STEM", "STX", "UAL", "URBN", "YY", "ZS"]
+col1_options = ["APPS", "BBBY"]
+col2_options = ["GPS", "GRWG"]
+col3_options = ["PLUG", "RNG"]
+col4_options = ["aAPPS", "aBBBY"]
+col5_options = ["aGPS", "aGRWG"]
+col6_options = ["aPLUG", "aRNG"]
 
 if "current" not in st.session_state:
     st.session_state.current = col1_options[0]
 
-if "col1_old" and "col2_old" and "col3_old" not in st.session_state:
+if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "col6_old" not in st.session_state:
     st.session_state.col1_old = col1_options[0]
     st.session_state.col2_old = col2_options[0]
     st.session_state.col3_old = col3_options[0]
+    st.session_state.col4_old = col4_options[0]
+    st.session_state.col5_old = col5_options[0]
+    st.session_state.col6_old = col6_options[0]
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 col1_choice = col1.radio("", col1_options,horizontal=True)
 col2_choice = col2.radio("", col2_options,horizontal=True)
 col3_choice = col3.radio("", col3_options,horizontal=True)
+col4_choice = col4.radio("", col4_options,horizontal=True)
+col5_choice = col5.radio("", col5_options,horizontal=True)
+col6_choice = col6.radio("", col6_options,horizontal=True)
 
 if col1_choice != st.session_state.col1_old:
     st.session_state.current = col1_choice
@@ -501,6 +510,19 @@ if col2_choice != st.session_state.col2_old:
 if col3_choice != st.session_state.col3_old:
     st.session_state.current = col3_choice
     st.session_state.col3_old = col3_choice
+
+
+if col4_choice != st.session_state.col4_old:
+    st.session_state.current = col4_choice
+    st.session_state.col4_old = col4_choice
+
+if col5_choice != st.session_state.col5_old:
+    st.session_state.current = col5_choice
+    st.session_state.col5_old = col5_choice
+
+if col6_choice != st.session_state.col6_old:
+    st.session_state.current = col6_choice
+    st.session_state.col6_old = col6_choice
 
 if st.session_state.current != None:
     st.write("You've picked: ", st.session_state.current)
