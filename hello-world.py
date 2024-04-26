@@ -402,14 +402,15 @@ cols[2].write(df.dtypes)
 ###############################################
 
 st.write("404 ", result) #######################################################
-button_num_rows=None
+#button_num_rows=None
 button_use_container_width=True
 button_num_rows = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
 if button_num_rows == 'read':
     readwrite = 'static'
 else:
     readwrite = 'dynamic'
-st.write("406 button_read_write ", button_read_write)
+    
+st.write("406 button_num_rows ", button_num_rows)
 
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
 ['HSK 1', 'Adjektiv',7, 'dom']]
