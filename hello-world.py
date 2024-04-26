@@ -416,13 +416,14 @@ config = {
 ##test
 #cccolumn_config={
 #        "widgets": st.column_config.TextColumn(
-#            "Widgets",
+#            "419Widgets",
 #            help="Streamlit **widget** commands 🎈 her you can explain a little bit",
 #            default="st.",
 #            max_chars=50,
 #            validate="^st\.[a-z_]+$",)
 #}
-#st.data_editor(dframe, cccolumn_config=column_config,hide_index=False,)
+#st.data_editor(dframe, cccolumn_config=column_config,hide_index=False,) #test
+#result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide_index=False) #test
 result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide_index=False) #org
 if st.button('Get results'): #org
     st.write("422 ", result) #org
@@ -442,7 +443,7 @@ st.data_editor(
     data_df,
     column_config={
         "widgets": st.column_config.TextColumn(
-            "Widgets",
+            "446 Widgets",
             help="Streamlit **widget** commands 🎈 her you can explain a little bit",
             default="st.",
             max_chars=50,
