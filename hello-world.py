@@ -425,7 +425,7 @@ if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "c
 
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-col1_choice = col1.radio("choose read or write", col1_options,horizontal=True)
+button_num_rows = col1.radio("choose read or write", col1_options,horizontal=True)
 col2_choice = col2.radio("", col2_options,horizontal=True)
 col3_choice = col3.radio("", col3_options,horizontal=True)
 col4_choice = col4.radio("", col4_options,horizontal=True)
@@ -433,8 +433,8 @@ col5_choice = col5.radio("", col5_options,horizontal=True)
 col6_choice = col6.radio("", col6_options,horizontal=True)
 
 if col1_choice != st.session_state.col1_old:
-    st.session_state.current = col1_choice
-    st.session_state.col1_old = col1_choice
+    st.session_state.current = button_num_rows
+    st.session_state.col1_old = button_num_rows
 
 if col2_choice != st.session_state.col2_old:
     st.session_state.current = col2_choice
@@ -458,18 +458,18 @@ if col6_choice != st.session_state.col6_old:
     st.session_state.col6_old = col6_choice
 
 if st.session_state.current != None:
-    st.write("461 You've picked: ", st.session_state.current, col1_choice)
+    st.write("461 You've picked: ", st.session_state.current, button_num_rows)
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors
 
 #button_num_rows=None
 button_use_container_width=True
-button_num_rows = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
-if button_num_rows == 'read':
+bbutton_num_rows = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
+if bbutton_num_rows == 'read':
     readwrite = 'static'
 else:
     readwrite = 'dynamic'
     
-st.write("406 button_num_rows ", button_num_rows)
+st.write("406 bbutton_num_rows ", bbutton_num_rows)
 
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
 ['HSK 1', 'Adjektiv',7, 'dom']]
