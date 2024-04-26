@@ -410,12 +410,14 @@ def read_file_text():                                                  ## ## cre
     return df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
 def table_read_write():
+    global table_options
     table_options = {
         "read":"read",
         "write":"write"
     }
     return table_options
-st.write("418 table_options ", table_options)
+    
+st.write("420 table_options ", table_options)
 
 
 
