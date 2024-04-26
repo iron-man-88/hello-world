@@ -409,18 +409,6 @@ if button_num_rows == 'read':
     readwrite = 'static'
 else:
     readwrite = 'dynamic'
-
-####
-radio_columns = st.columns(3)
-#radio_columns[0].write(st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True))
-radio_columns[1].write('Data Editor display')
-radio_columns[2].write(df.dtypes)
-st.write("441 ")
-####
-
-
-
-
 st.write("406 button_read_write ", button_read_write)
 
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
