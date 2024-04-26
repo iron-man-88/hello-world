@@ -412,7 +412,7 @@ else:
 
 ####
 radio_columns = st.columns(3)
-radio_columns[0].write(button_num_rows = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True))
+radio_columns[0].button_num_rows = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
 radio_columns[1].write('Data Editor display')
 radio_columns[2].write(df.dtypes)
 st.write("441 ")
