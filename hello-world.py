@@ -458,7 +458,7 @@ if col6_choice != st.session_state.col6_old:
     st.session_state.col6_old = col6_choice
 
 if st.session_state.current != None:
-    st.write("You've picked: ", st.session_state.current)
+    st.write("461 You've picked: ", st.session_state.current, col1_choice)
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors
 
 #button_num_rows=None
