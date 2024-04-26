@@ -402,8 +402,8 @@ cols[2].write(df.dtypes)
 ###############################################
 
 st.write("404 ", result) #######################################################
-ddata = [['HSK 1', 'Adjektiv', '10', 'dom'],['HSK 1', 'Adjektiv', 12, 'dom'],
-['HSK 1', 'Adjektiv', 7, 'dom']]
+ddata = [['HSK 1', 'Adjektiv','Adjektiv0',  '10', 'dom'],['HSK 1','Adjektiv', 'Adjektiv1', 12, 'dom'],
+['HSK 1', 'Adjektiv','Adjektiv2',  7, 'dom']]
 dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','col_key','age','name'])
 hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
 wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
