@@ -310,27 +310,6 @@ st.write("309 dataf ", dataf)
 #11#############################
 
 
-#######################################################
-ddata = [
-['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'bdom', 12],
-['HSK 1', 'Adjektiv', 'adom', 11],['HSK 1', 'Adjektiv', 'cdom', 0],['HSK 1', 'Adjektiv', 'bbdom', 4],
-['HSK 1', 'Adjektiv', 'fgdom', 7]
-]
-
-dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','name','age'])
-hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
-wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
-config = {
-    'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
-    'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
-    'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
-    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122)
-}
-result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide_index=False)
-if st.button('Get results'):
-    st.write("330 ", result)
-
-#######################################################
 
 
 
@@ -390,45 +369,6 @@ st.write("389 ")
 
 
 
-
-
-
-
-
-
-
-st.write("400 ")
-data_df = pd.DataFrame(
-    {
-        "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
-        "widgetss": ["st.selectbox_x", "st.number_input", "st.text_area", "st.button"],
-        "widgetsss": ["st.selectbox_xx", "st.number_input", "st.text_area", "st.button"],
-    }
-)
-
-st.data_editor(
-    data_df,
-    column_config={
-        "widgets": st.column_config.TextColumn(
-            "Widgets",
-            help="Streamlit **widget** commands 🎈",
-            default="st.",
-            max_chars=50,
-            validate="^st\.[a-z_]+$",
-        )
-    },
-    hide_index=False,
-)
-st.write("422 ")
-
-
-
-
-
-
-
-
-
 ###############################################
 df = pd.DataFrame({'A':[1,2,3],'B':[1,2,3]})
 
@@ -461,8 +401,52 @@ cols[2].write('Column Types')
 cols[2].write(df.dtypes)
 ###############################################
 
+#######################################################
+ddata = [
+['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'bdom', 12],
+['HSK 1', 'Adjektiv', 'adom', 11],['HSK 1', 'Adjektiv', 'cdom', 0],['HSK 1', 'Adjektiv', 'bbdom', 4],
+['HSK 1', 'Adjektiv', 'fgdom', 7]
+]
 
+dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','name','age'])
+hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
+wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
+config = {
+    'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
+    'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
+    'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
+    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122)
+}
+result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide_index=False)
+if st.button('Get results'):
+    st.write("330 ", result)
 
+#######################################################
+############################################
+st.write("426 ")
+data_df = pd.DataFrame(
+    {
+        "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
+        "widgetss": ["st.selectbox_x", "st.number_input", "st.text_area", "st.button"],
+        "widgetsss": ["st.selectbox_xx", "st.number_input", "st.text_area", "st.button"],
+    }
+)
+
+st.data_editor(
+    data_df,
+    column_config={
+        "widgets": st.column_config.TextColumn(
+            "Widgets",
+            help="Streamlit **widget** commands 🎈",
+            default="st.",
+            max_chars=50,
+            validate="^st\.[a-z_]+$",
+        )
+    },
+    hide_index=False,
+)
+st.write("448 ")
+##################################################
 
 
 
