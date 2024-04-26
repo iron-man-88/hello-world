@@ -336,7 +336,7 @@ st.write("352 ", result)
 
 
 
-
+st.write("339 ", result)
 dff = pd.DataFrame(
     [
         {"command": "st.selectbox", "rating": 4, "is_widget": True},
@@ -365,7 +365,7 @@ edited_df = st.data_editor(
 
 favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
 st.markdown(f"386 Your favorite command is **{favorite_command}** 🎈")
-st.write("389 ")
+st.write("368 ")
 
 
 
@@ -401,7 +401,7 @@ cols[2].write('Column Types')
 cols[2].write(df.dtypes)
 ###############################################
 
-#######################################################
+st.write("404 ", result) #######################################################
 ddata = [
 ['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'bdom', 12],
 ['HSK 1', 'Adjektiv', 'adom', 11],['HSK 1', 'Adjektiv', 'cdom', 0],['HSK 1', 'Adjektiv', 'bbdom', 4],
@@ -419,7 +419,7 @@ config = {
 }
 result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide_index=False)
 if st.button('Get results'):
-    st.write("330 ", result)
+    st.write("422 ", result)
 
 #######################################################
 ############################################
