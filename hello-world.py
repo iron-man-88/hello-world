@@ -432,7 +432,7 @@ col4_choice = col4.radio("", col4_options,horizontal=True)
 col5_choice = col5.radio("", col5_options,horizontal=True)
 col6_choice = col6.radio("", col6_options,horizontal=True)
 
-if col1_choice != st.session_state.col1_old:
+if button_num_rows != st.session_state.col1_old:
     st.session_state.current = button_num_rows
     st.session_state.col1_old = button_num_rows
 
