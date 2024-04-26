@@ -311,9 +311,9 @@ st.write("309 dataf ", dataf)
 
 #######################################################
 ddata = [
-['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'dom', 12],
-['HSK 1', 'Adjektiv', 'dom', 11],['HSK 1', 'Adjektiv', 'dom', 0],['HSK 1', 'Adjektiv', 'dom', 4],
-['HSK 1', 'Adjektiv', 'dom', 7]
+['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'bdom', 12],
+['HSK 1', 'Adjektiv', 'adom', 11],['HSK 1', 'Adjektiv', 'cdom', 0],['HSK 1', 'Adjektiv', 'bbdom', 4],
+['HSK 1', 'Adjektiv', 'fgdom', 7]
 ]
 
 dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','name','age'])
