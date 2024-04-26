@@ -444,7 +444,6 @@ if col3_choice != st.session_state.col3_old:
     st.session_state.current = col3_choice
     st.session_state.col3_old = col3_choice
 
-
 if col4_choice != st.session_state.col4_old:
     st.session_state.current = col4_choice
     st.session_state.col4_old = col4_choice
@@ -464,12 +463,12 @@ if st.session_state.current != None:
 #button_num_rows=None
 button_use_container_width=True
 bbutton_num_rows = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
-if bbutton_num_rows == 'read':
+if button_num_rows == 'read':
     readwrite = 'static'
 else:
     readwrite = 'dynamic'
     
-st.write("406 bbutton_num_rows ", bbutton_num_rows)
+st.write("406 button_num_rows ", button_num_rows)
 
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
 ['HSK 1', 'Adjektiv',7, 'dom']]
