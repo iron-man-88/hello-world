@@ -403,12 +403,6 @@ cols[2].write(df.dtypes)
 
 st.write("404 ", result) #######################################################
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
-def read_file_text():                                                  ## ## create FuBa "read_file_text()"
-    global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
-    df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
-    #st.write("65 df_read_file ",df_read_file)
-    return df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
-
 def table_read_write():
     global table_options
     table_options = {
@@ -417,7 +411,7 @@ def table_read_write():
     }
     return table_options
     
-st.write("420 table_options ", table_options)
+#st.write("420 table_options ", table_options)
 
 
 
