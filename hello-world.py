@@ -402,6 +402,65 @@ cols[2].write(df.dtypes)
 ###############################################
 
 st.write("404 ", result) #######################################################
+
+### https://discuss.streamlit.io/t/split-st-radio-in-columns/17044/3 ###
+### Mögliche Optionen zur Konfiguration des Data Frame Editors
+col1_options = ["read", "write"]
+col2_options = ["GPS", "GRWG"]
+col3_options = ["PLUG", "RNG"]
+col4_options = ["aAPPS", "aBBBY"]
+col5_options = ["aGPS", "aGRWG"]
+col6_options = ["aPLUG", "aRNG"]
+
+if "current" not in st.session_state:
+    st.session_state.current = col1_options[0]
+
+if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "col6_old" not in st.session_state:
+    st.session_state.col1_old = col1_options[0]
+    st.session_state.col2_old = col2_options[0]
+    st.session_state.col3_old = col3_options[0]
+    st.session_state.col4_old = col4_options[0]
+    st.session_state.col5_old = col5_options[0]
+    st.session_state.col6_old = col6_options[0]
+
+col1, col2, col3, col4, col5, col6 = st.columns(6)
+
+col1_choice = col1.radio("choose read or write", col1_options,horizontal=True)
+col2_choice = col2.radio("", col2_options,horizontal=True)
+col3_choice = col3.radio("", col3_options,horizontal=True)
+col4_choice = col4.radio("", col4_options,horizontal=True)
+col5_choice = col5.radio("", col5_options,horizontal=True)
+col6_choice = col6.radio("", col6_options,horizontal=True)
+
+if col1_choice != st.session_state.col1_old:
+    st.session_state.current = col1_choice
+    st.session_state.col1_old = col1_choice
+
+if col2_choice != st.session_state.col2_old:
+    st.session_state.current = col2_choice
+    st.session_state.col2_old = col2_choice
+
+if col3_choice != st.session_state.col3_old:
+    st.session_state.current = col3_choice
+    st.session_state.col3_old = col3_choice
+
+
+if col4_choice != st.session_state.col4_old:
+    st.session_state.current = col4_choice
+    st.session_state.col4_old = col4_choice
+
+if col5_choice != st.session_state.col5_old:
+    st.session_state.current = col5_choice
+    st.session_state.col5_old = col5_choice
+
+if col6_choice != st.session_state.col6_old:
+    st.session_state.current = col6_choice
+    st.session_state.col6_old = col6_choice
+
+if st.session_state.current != None:
+    st.write("You've picked: ", st.session_state.current)
+### Mögliche Optionen zur Konfiguration des Data Frame Editors
+
 #button_num_rows=None
 button_use_container_width=True
 button_num_rows = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
@@ -469,59 +528,3 @@ st.write("448 ")
 #https://de.savefrom.net
 
 
-
-
-col1_options = ["read", "write"]
-col2_options = ["GPS", "GRWG"]
-col3_options = ["PLUG", "RNG"]
-col4_options = ["aAPPS", "aBBBY"]
-col5_options = ["aGPS", "aGRWG"]
-col6_options = ["aPLUG", "aRNG"]
-
-if "current" not in st.session_state:
-    st.session_state.current = col1_options[0]
-
-if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "col6_old" not in st.session_state:
-    st.session_state.col1_old = col1_options[0]
-    st.session_state.col2_old = col2_options[0]
-    st.session_state.col3_old = col3_options[0]
-    st.session_state.col4_old = col4_options[0]
-    st.session_state.col5_old = col5_options[0]
-    st.session_state.col6_old = col6_options[0]
-
-col1, col2, col3, col4, col5, col6 = st.columns(6)
-
-col1_choice = col1.radio("choose read or write", col1_options,horizontal=True)
-col2_choice = col2.radio("", col2_options,horizontal=True)
-col3_choice = col3.radio("", col3_options,horizontal=True)
-col4_choice = col4.radio("", col4_options,horizontal=True)
-col5_choice = col5.radio("", col5_options,horizontal=True)
-col6_choice = col6.radio("", col6_options,horizontal=True)
-
-if col1_choice != st.session_state.col1_old:
-    st.session_state.current = col1_choice
-    st.session_state.col1_old = col1_choice
-
-if col2_choice != st.session_state.col2_old:
-    st.session_state.current = col2_choice
-    st.session_state.col2_old = col2_choice
-
-if col3_choice != st.session_state.col3_old:
-    st.session_state.current = col3_choice
-    st.session_state.col3_old = col3_choice
-
-
-if col4_choice != st.session_state.col4_old:
-    st.session_state.current = col4_choice
-    st.session_state.col4_old = col4_choice
-
-if col5_choice != st.session_state.col5_old:
-    st.session_state.current = col5_choice
-    st.session_state.col5_old = col5_choice
-
-if col6_choice != st.session_state.col6_old:
-    st.session_state.current = col6_choice
-    st.session_state.col6_old = col6_choice
-
-if st.session_state.current != None:
-    st.write("You've picked: ", st.session_state.current)
