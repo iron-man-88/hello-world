@@ -438,13 +438,6 @@ if st.button('Get results'):
 
 ############################################
 st.write("426 ")
-#my_data = [
-#['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'bdom', 12],
-#['HSK 1', 'Adjektiv', 'adom', 11],['HSK 1', 'Adjektiv', 'cdom', 0],['HSK 1', 'Adjektiv', 'bbdom', 4],
-#['HSK 1', 'Adjektiv', 'fgdom', 7]
-#]
-#data_columns = pd.DataFrame(ddata,columns=['widgets', 'widgetss','widgetsss'])
-
 data_df = pd.DataFrame(
     {
         "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
