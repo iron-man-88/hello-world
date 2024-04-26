@@ -486,9 +486,9 @@ if "col1_old" and "col2_old" and "col3_old" not in st.session_state:
 
 col1, col2, col3 = st.columns(3)
 
-col1_choice = col1.radio("", col1_options)
-col2_choice = col2.radio("", col2_options)
-col3_choice = col3.radio("", col3_options)
+col1_choice = col1.radio("", col1_options,horizontal=True)
+col2_choice = col2.radio("", col2_options,horizontal=True)
+col3_choice = col3.radio("", col3_options,horizontal=True)
 
 if col1_choice != st.session_state.col1_old:
     st.session_state.current = col1_choice
