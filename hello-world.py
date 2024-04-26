@@ -404,7 +404,7 @@ cols[2].write(df.dtypes)
 st.write("404 ", result) #######################################################
 button_read_write=None
 button_read_write = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
-if button_read_write = 'read':
+if button_read_write == 'read':
     readwrite = 'static'
 else:
     readwrite = 'dynamic'
