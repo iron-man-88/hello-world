@@ -421,7 +421,21 @@ result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide
 if st.button('Get results'):
     st.write("422 ", result)
 
+
+##test
+#cccolumn_config={
+#        "widgets": st.column_config.TextColumn(
+#            "Widgets",
+#            help="Streamlit **widget** commands 🎈 her you can explain a little bit",
+#            default="st.",
+#            max_chars=50,
+#            validate="^st\.[a-z_]+$",
+#        )
+#}
+#st.data_editor(dframe, cccolumn_config=column_config,hide_index=False,)
+##test
 #######################################################
+
 ############################################
 st.write("426 ")
 #my_data = [
@@ -429,6 +443,8 @@ st.write("426 ")
 #['HSK 1', 'Adjektiv', 'adom', 11],['HSK 1', 'Adjektiv', 'cdom', 0],['HSK 1', 'Adjektiv', 'bbdom', 4],
 #['HSK 1', 'Adjektiv', 'fgdom', 7]
 #]
+#data_columns = pd.DataFrame(ddata,columns=['widgets', 'widgetss','widgetsss'])
+
 data_df = pd.DataFrame(
     {
         "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
@@ -436,13 +452,12 @@ data_df = pd.DataFrame(
         "widgetsss": ["st.selectbox_xx", "st.number_input", "st.text_area", "st.button"],
     }
 )
-#data_columns = pd.DataFrame(ddata,columns=['widgets', 'widgetss','widgetsss'])
 st.data_editor(
     data_df,
     column_config={
         "widgets": st.column_config.TextColumn(
             "Widgets",
-            help="Streamlit **widget** commands 🎈 her yiu can explain a little bit",
+            help="Streamlit **widget** commands 🎈 her you can explain a little bit",
             default="st.",
             max_chars=50,
             validate="^st\.[a-z_]+$",
