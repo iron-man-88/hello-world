@@ -478,3 +478,40 @@ st.write("448 ")
 #PDF 3 Definite articles + indefinite articles.
 #3-nominakkusnegation_Ocean.pdf
 #https://de.savefrom.net
+
+
+
+
+
+col1_options = ["APPS", "BBBY", "CHPT", "CNC", "COUP", "DAL", "DDD", "FL", "FSLY", "GME"]
+col2_options = ["GPS", "GRWG", "KSS", "LVS", "M", "MARA", "NVAX", "OKTA", "PENN"]
+col3_options = ["PLUG", "RNG", "SHAK", "STEM", "STX", "UAL", "URBN", "YY", "ZS"]
+
+if "current" not in st.session_state:
+    st.session_state.current = col1_options[0]
+
+if "col1_old" and "col2_old" and "col3_old" not in st.session_state:
+    st.session_state.col1_old = col1_options[0]
+    st.session_state.col2_old = col2_options[0]
+    st.session_state.col3_old = col3_options[0]
+
+col1, col2, col3 = st.columns(3)
+
+col1_choice = col1.radio("", col1_options)
+col2_choice = col2.radio("", col2_options)
+col3_choice = col3.radio("", col3_options)
+
+if col1_choice != st.session_state.col1_old:
+    st.session_state.current = col1_choice
+    st.session_state.col1_old = col1_choice
+
+if col2_choice != st.session_state.col2_old:
+    st.session_state.current = col2_choice
+    st.session_state.col2_old = col2_choice
+
+if col3_choice != st.session_state.col3_old:
+    st.session_state.current = col3_choice
+    st.session_state.col3_old = col3_choice
+
+if st.session_state.current != None:
+    st.write("You've picked: ", st.session_state.current)
