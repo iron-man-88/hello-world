@@ -412,19 +412,10 @@ config = {
     'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
-} #org
-##test
-#cccolumn_config={
-#        "widgets": st.column_config.TextColumn(
-#            "419Widgets",
-#            help="Streamlit **widget** commands 🎈 her you can explain a little bit",
-#            default="st.",
-#            max_chars=50,
-#            validate="^st\.[a-z_]+$",)
+}
 result = st.data_editor(dframe, column_config = config, num_rows='dynamic', hide_index=False) #org
-if st.button('Get results'): #org
-    st.write("422 ", result) #org
-##test
+if st.button('Get results'):
+    st.write("422 ", result)
 #######################################################
 
 ############################################
