@@ -404,14 +404,14 @@ cols[2].write(df.dtypes)
 st.write("404 ", result) #######################################################
 ddata = [['HSK 1', 'Adjektiv', 'dom', 10],['HSK 1', 'Adjektiv', 'bdom', 12],
 ['HSK 1', 'Adjektiv', 'fgdom', 7]]
-dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','age','name'])
+dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','name','age'])
 hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
 wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
     'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
     'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
-    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
-    'name' : st.column_config.TextColumn('Name (required)', width='large', required=True)
+    'name' : st.column_config.TextColumn('Name (required)', width='large', required=True),
+    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122)
 } #org
 ##test
 #cccolumn_config={
