@@ -176,9 +176,9 @@ st.write("77 sel_value ", sel_value)
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
-    #st.write("84 df ", df)
+    #st.write("179 df ", df)
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
-    st.write("171 df.query ", df)
+    st.write("181 df.query ", df)
     lang_dict    = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
     st.write("183 lang_dict ", lang_dict)
     return lang_dict
@@ -188,7 +188,7 @@ def main():
         "日本語":"ja_JP"
     }
     locale = st.radio(label='Language', options=list(lang_options.keys()),horizontal=True) # Note we use the selected human-readable locale to get the relevant
-    st.write("96 locale ", locale)
+    st.write("191 locale ", locale)
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
@@ -402,6 +402,24 @@ cols[2].write(df.dtypes)
 ###############################################
 
 st.write("404 ", result) #######################################################
+@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
+def read_file_text():                                                  ## ## create FuBa "read_file_text()"
+    global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
+    df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
+    #st.write("65 df_read_file ",df_read_file)
+    return df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
+
+def table_read_write():
+    table_options = {
+        "read":"read",
+        "write":"write"
+    }
+    return table_options
+st.write("418 table_options ", table_options)
+
+
+
+
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
 ['HSK 1', 'Adjektiv',7, 'dom']]
 dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','age','name'])
@@ -413,7 +431,7 @@ config = {
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
 }
-result = st.data_editor(dframe, column_config = config, num_rows='static', hide_index=False) #org
+result = st.data_editor(dframe, column_config = config, num_rows='static', hide_index=False) #org dynamic
 if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
