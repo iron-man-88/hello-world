@@ -422,7 +422,7 @@ config = {
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
 }
-result = st.data_editor(dframe, column_config = config, num_rows= button_read_write, hide_index=False) #org dynamic
+result = st.data_editor(dframe, column_config = config, num_rows=readwrite, hide_index=False) #org dynamic
 if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
