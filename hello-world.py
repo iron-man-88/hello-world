@@ -469,7 +469,7 @@ if st.button('Get results'):
 #######################################################
 
 #########
-agree = st.checkbox('def')
+agree = st.checkbox('wwdef')
 if agree:
     st.write('Great!')
 else:
