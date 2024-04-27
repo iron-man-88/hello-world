@@ -487,6 +487,17 @@ else:
     st.write('You can select maximum 3 variables.')
 
 #########
+checks = st.columns(4)
+with checks[0]:
+    st.checkbox('0')
+with checks[1]:
+    st.checkbox('1')
+with checks[2]:
+    st.checkbox('2')
+with checks[3]:
+    st.checkbox('3')
+#########
+
 
 
 ############################################
