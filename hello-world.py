@@ -468,6 +468,12 @@ if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
 
+agree = st.checkbox('I agree')
+if agree:
+    st.write('Great!')
+else:
+    st.write('bu Great!')
+
 ############################################
 st.write("426 ")
 data_df = pd.DataFrame(
