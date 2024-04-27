@@ -389,7 +389,7 @@ cols[0].dataframe(df)
 cols[1].write('Data Editor display')
 cols[1].experimental_data_editor(df, num_rows='dynamic')
 cols[2].write('Column Types')
-cols[2].write(df.dtypes)
+cols[2].write("392 ", df.dtypes)
 
 cols = st.columns(3)
 df = df.reset_index()
@@ -413,7 +413,7 @@ col5_options = ["aGPS", "aGRWG"]
 col6_options = ["aPLUG", "aRNG"]
 
 if "current" not in st.session_state:
-    st.session_state.current = col1_options[0]
+    st.session_state.current = col1_read_write[0]
 
 if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "col6_old" not in st.session_state:
     st.session_state.col1_old = col1_read_write[0]
