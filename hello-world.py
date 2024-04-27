@@ -367,7 +367,6 @@ favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
 st.markdown(f"386 Your favorite command is **{favorite_command}** 🎈")
 st.write("368 ")
 
-
 st.write("371 ", result) #######################################################
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
@@ -378,6 +377,7 @@ col3_hide_index = [True, False] # hide_index Ja oder Nein
 col4_column_order = ["cn", "py", "de", "en"] # Anzeige von Spalten oder und deren Reihenfolge column_order (Iterable of str or None)
 col5_options = ["aGPS", "aGRWG"]
 col6_options = ["aPLUG", "aRNG"]
+agree = st.checkbox('def')
 
 if "current" not in st.session_state:
     st.session_state.current = col1_read_write[0]
@@ -395,9 +395,16 @@ col1, col2, col3, col4, col5, col6 = st.columns(6)
 button_num_rows = col1.radio("choose read or write", col1_read_write, horizontal=True)
 button_use_container_width = col2.radio("choose container width", col2_use_container_width, horizontal=True)
 button_hide_index = col3.radio("choose index view", col3_hide_index, horizontal=True)
-button_column_order = col4.radio("choose order", col4_column_order, horizontal=True)
+button_column_order = st.checkbox('def')     #col4.radio("choose order", col4_column_order, horizontal=True)
 col5_choice = col5.radio("", col5_options, horizontal=True)
 col6_choice = col6.radio("", col6_options, horizontal=True)
+#########
+#agree = st.checkbox('def')
+if agree:
+    st.write('Great!')
+else:
+    st.write('bu Great!')
+#########
 
 if button_num_rows != st.session_state.col1_old:
     st.session_state.current = button_num_rows
@@ -468,11 +475,6 @@ if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
 
-agree = st.checkbox('I agree')
-if agree:
-    st.write('Great!')
-else:
-    st.write('bu Great!')
 
 ############################################
 st.write("426 ")
