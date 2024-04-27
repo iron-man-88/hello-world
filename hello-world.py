@@ -472,9 +472,9 @@ else:
     useContainerWidth = False
 ### Konfiguration Data-Frame-Editor index Anzeige oder nicht
 if button_hide_index == True:
-    useHideIndex = True
-else:
     useHideIndex = False
+else:
+    useHideIndex = True
     
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
 ['HSK 1', 'Adjektiv',7, 'dom']]
