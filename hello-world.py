@@ -368,40 +368,7 @@ st.markdown(f"386 Your favorite command is **{favorite_command}** 🎈")
 st.write("368 ")
 
 
-
-###############################################
-df = pd.DataFrame({'A':[1,2,3],'B':[1,2,3]})
-
-cols = st.columns(3)
-df = df.reset_index()
-cols[0].write('Dataframe display')
-cols[0].dataframe(df)
-cols[1].write('Data Editor display')
-cols[1].experimental_data_editor(df, num_rows='dynamic')
-cols[2].write('Column Types')
-cols[2].write(df.dtypes)
-st.write("441 ")
-
-cols = st.columns(3)
-df.index = ['a','b','c']
-cols[0].write('Dataframe display')
-cols[0].dataframe(df)
-cols[1].write('Data Editor display')
-cols[1].experimental_data_editor(df, num_rows='dynamic')
-cols[2].write('Column Types')
-cols[2].write("392 ", df.dtypes)
-
-cols = st.columns(3)
-df = df.reset_index()
-cols[0].write('Dataframe display')
-cols[0].dataframe(df)
-cols[1].write('Data Editor display')
-cols[1].experimental_data_editor(df, num_rows='dynamic')
-cols[2].write('Column Types')
-cols[2].write(df.dtypes)
-###############################################
-
-st.write("404 ", result) #######################################################
+st.write("371 ", result) #######################################################
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
 ### https://discuss.streamlit.io/t/split-st-radio-in-columns/17044/3 ###
