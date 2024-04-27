@@ -437,8 +437,8 @@ if button_num_rows != st.session_state.col1_old:
     st.session_state.col1_old = button_num_rows
 
 if button_use_container_width != st.session_state.col2_old:
-    st.session_state.current = col2_choice
-    st.session_state.col2_old = col2_choice
+    st.session_state.current = button_use_container_width
+    st.session_state.col2_old = button_use_container_width
 
 if col3_choice != st.session_state.col3_old:
     st.session_state.current = col3_choice
