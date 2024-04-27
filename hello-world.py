@@ -443,7 +443,7 @@ if button_hide_index == True:
 else:
     useHideIndex = True
 ### Konfiguration Data-Frame-Editor Spalten Anzeige oder nicht oder welche Reihenfolge
-if button_column_order == True:
+if button_column_order == False:
     useColumnOrder = ("col1", "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9", "col10", "col11")
 else:
     useColumnOrder = ("col1", "col2")
