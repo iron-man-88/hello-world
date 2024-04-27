@@ -452,25 +452,25 @@ if st.button('Get results'):
 #######################################################
 
 #########
-#agree = st.checkbox('wwdef')
-if agree:
-    st.write('Great!')
-else:
-    st.write('bu Great!')
-#########
 checks = st.columns(4)
 with checks[0]:
-    st.checkbox('Flip the value1', key='test1')
-    st.write(st.session_state.test1)
+    st.checkbox('HSK', key='cb_HSK')
+    st.write(st.session_state.cb_HSK)
 with checks[1]:
-    st.checkbox('Flip the value2', key='test2')
-    st.write(st.session_state.test2)
+    st.checkbox('Wortart', key='cb_Wortart')
+    st.write(st.session_state.cb_Wortart)
 with checks[2]:
     st.checkbox('Flip the value3', key='test3')
     st.write(st.session_state.test3)
 with checks[3]:
     st.checkbox('Flip the value4', key='test4')
     st.write(st.session_state.test4)
+
+if cb_HSK:
+    st.write('Great!')
+else:
+    st.write('bu Great!')
+
 #########
 
 ############################################
