@@ -270,13 +270,6 @@ if st.button('Copy'):
 
 
 
-
-
-
-
-
-
-
 @st.cache(allow_output_mutation=True)
 def get_data():
     return []
@@ -294,21 +287,7 @@ st.write(pd.DataFrame(get_data()))
 
 
 
-#11#############################
 #https://docs.streamlit.io/develop/concepts/design/dataframes
-#Copy and paste support
-dataf = pd.DataFrame(
-    [
-        {"command": "st.selectbox", "rating": 4, "is_widget": True},
-        {"command": "st.balloons", "rating": 5, "is_widget": False},
-        {"command": "st.time_input", "rating": 3, "is_widget": True},
-    ]
-)
-
-st.dataframe(dataf, use_container_width=True)
-st.write("309 dataf ", dataf)
-#11#############################
-
 ddf = pd.DataFrame(columns=['name','age','color'])
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
