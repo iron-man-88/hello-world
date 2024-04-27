@@ -395,7 +395,7 @@ col1, col2, col3, col4, col5, col6 = st.columns(6)
 button_num_rows = col1.radio("choose read or write", col1_read_write, horizontal=True)
 button_use_container_width = col2.radio("choose container width", col2_use_container_width, horizontal=True)
 button_hide_index = col3.radio("choose index view", col3_hide_index, horizontal=True)
-button_column_order = col4.checkbox('wwdef') #radio("choose order", col4_column_order, horizontal=True)
+button_column_order = col4.radio("choose order", col4_column_order, horizontal=True)
 col5_choice = col5.radio("", col5_options, horizontal=True)
 col6_choice = col6.radio("", col6_options, horizontal=True)
 
@@ -474,6 +474,18 @@ if agree:
     st.write('Great!')
 else:
     st.write('bu Great!')
+#########
+st.write('Select three known variables:')
+opts = [ ('s', 'displacement'), ('u', 'initial velocity'), ('v', 'final velocity'), ('a', 'acceleration'), ('t', 'time') ]
+known_variables = {symbol: st.checkbox(f"{name} ({symbol})") for symbol, name in opts}    
+
+if sum(known_variables.values()) < 3:
+    st.write('You have to select minimum 3 variables.')
+elif sum(known_variables.values()) == 3:
+    st.write('Now put the values of your selected variables in SI units.')
+else:
+    st.write('You can select maximum 3 variables.')
+
 #########
 
 
