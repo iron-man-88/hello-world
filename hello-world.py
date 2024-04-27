@@ -430,7 +430,7 @@ if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
 
-#########
+######### https://discuss.streamlit.io/t/session-state-issue-with-st-checkbox/24020/2
 checks = st.columns(4)
 with checks[0]:
     st.checkbox('HSK', key='cb_HSK')
