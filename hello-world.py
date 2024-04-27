@@ -446,7 +446,7 @@ else:
 if button_column_order == False:
     useColumnOrder = ("col1", "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9", "col10", "col11")
 else:
-    useColumnOrder = ("col1", "col2","col3", "col4")
+    useColumnOrder = ("col1", "col2")
 
 ddata = [['HSK 1', 'Adjektiv',10, 'cndom', 'pydom', 'dedom', 'endom', 'cndom', 'pydom', 'dedom', 'endom'],
          ['HSK 2','Verb',12, 'cndomm', 'pydomn', 'dedomu', 'endomv', 'cndom', 'pydom', 'dedom', 'endom']]
@@ -462,7 +462,7 @@ config = {
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
 }
 result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
-                        hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=useColumnOrder) #org dynamic
+                        hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=("col1", "col2")) #org dynamic
 if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
