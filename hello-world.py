@@ -426,7 +426,7 @@ if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "c
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 button_num_rows = col1.radio("choose read or write", col1_read_write, horizontal=True)
-col2_choice = col2.radio("choose container width", col2_use_container_width, horizontal=True)
+button_use_container_width = col2.radio("choose container width", col2_use_container_width, horizontal=True)
 col3_choice = col3.radio("", col3_options,horizontal=True)
 col4_choice = col4.radio("", col4_options,horizontal=True)
 col5_choice = col5.radio("", col5_options,horizontal=True)
@@ -436,7 +436,7 @@ if button_num_rows != st.session_state.col1_old:
     st.session_state.current = button_num_rows
     st.session_state.col1_old = button_num_rows
 
-if col2_choice != st.session_state.col2_old:
+if button_use_container_width != st.session_state.col2_old:
     st.session_state.current = col2_choice
     st.session_state.col2_old = col2_choice
 
@@ -462,9 +462,14 @@ if st.session_state.current != None:     ## del
 ### Hier wird die Konfiguration "eingestellt"
 ### Konfiguration Data-Frame-Editor Nur Leserechte oder Schreibrechte
 if button_num_rows == 'read':
-    readwrite = 'static'
+    readWrite = 'static'
 else:
-    readwrite = 'dynamic'
+    readWrite = 'dynamic'
+### Konfiguration Data-Frame-Editor Gesamte Bilschirmbreite oder nicht
+if button_use_container_width == True:
+    useContainerWidth = True
+else:
+    useContainerWidth = False
     
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
 ['HSK 1', 'Adjektiv',7, 'dom']]
@@ -478,7 +483,7 @@ config = {
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
 }
-result = st.data_editor(dframe, column_config = config, num_rows=readwrite, hide_index=False, use_container_width=True) #org dynamic
+result = st.data_editor(dframe, column_config = config, num_rows=readWrite, hide_index=False, use_container_width=useContainerWidth) #org dynamic
 if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
