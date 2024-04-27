@@ -489,22 +489,6 @@ else:
 #########
 checks = st.columns(4)
 with checks[0]:
-    st.checkbox('0')
-with checks[1]:
-    st.checkbox('1')
-with checks[2]:
-    st.checkbox('2')
-with checks[3]:
-    st.checkbox('3')
-#########
-st.checkbox('Flip the value', key='test')
-st.write(st.session_state.test)
-#########
-
-
-#########
-checks = st.columns(4)
-with checks[0]:
     st.checkbox('Flip the value1', key='test1')
     st.write(st.session_state.test1)
 with checks[1]:
