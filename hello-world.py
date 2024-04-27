@@ -446,7 +446,7 @@ else:
 if button_column_order == False:
     useColumnOrder = ("col1", "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9", "col10", "col11")
 else:
-    useColumnOrder = ("col1", "col2")
+    useColumnOrder = ("col1", "col2","col3", "col4")
 
 ddata = [['HSK 1', 'Adjektiv',10, 'cndom', 'pydom', 'dedom', 'endom', 'cndom', 'pydom', 'dedom', 'endom'],
          ['HSK 2','Verb',12, 'cndomm', 'pydomn', 'dedomu', 'endomv', 'cndom', 'pydom', 'dedom', 'endom']]
