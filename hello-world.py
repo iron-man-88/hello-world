@@ -309,14 +309,6 @@ st.dataframe(dataf, use_container_width=True)
 st.write("309 dataf ", dataf)
 #11#############################
 
-
-
-
-
-
-
-
-
 ddf = pd.DataFrame(columns=['name','age','color'])
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 config = {
@@ -326,17 +318,8 @@ config = {
 }
 
 result = st.data_editor(ddf, column_config = config, num_rows='dynamic')
+st.write("321 ", result)
 
-#if st.button('Get results'):
- #   st.write(result)
-st.write("352 ", result)
-
-
-
-
-
-
-st.write("339 ", result)
 dff = pd.DataFrame(
     [
         {"command": "st.selectbox", "rating": 4, "is_widget": True},
@@ -367,7 +350,7 @@ favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
 st.markdown(f"386 Your favorite command is **{favorite_command}** 🎈")
 st.write("368 ")
 
-st.write("371 ", result) #######################################################
+# st.write("371 ", result) #######################################################
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
 ### https://discuss.streamlit.io/t/split-st-radio-in-columns/17044/3 ###
