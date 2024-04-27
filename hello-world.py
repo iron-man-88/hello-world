@@ -466,7 +466,7 @@ with checks[3]:
     st.checkbox('Flip the value4', key='test4')
     st.write(st.session_state.test4)
 
-if cb_HSKst.session_state == True:
+if st.session_state.cb_HSK == True:
     st.write('470 Great!')
 else:
     st.write('472 bu Great!')
