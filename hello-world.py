@@ -406,8 +406,8 @@ st.write("404 ", result) #######################################################
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
 ### https://discuss.streamlit.io/t/split-st-radio-in-columns/17044/3 ###
 col1_read_write = ["read", "write"] # Lese- oder Schreibrechte
-col2_use_container_width = [True, False] #use_container_width
-col3_options = ["PLUG", "RNG"]
+col2_use_container_width = [True, False] # use_container_width Ja oder Nein
+col3_hide_index = [True, False] # hide_index Ja oder Nein
 col4_options = ["aAPPS", "aBBBY"]
 col5_options = ["aGPS", "aGRWG"]
 col6_options = ["aPLUG", "aRNG"]
@@ -418,7 +418,7 @@ if "current" not in st.session_state:
 if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "col6_old" not in st.session_state:
     st.session_state.col1_old = col1_read_write[0]
     st.session_state.col2_old = col2_use_container_width[0]
-    st.session_state.col3_old = col3_options[0]
+    st.session_state.col3_old = col3_hide_index[0]
     st.session_state.col4_old = col4_options[0]
     st.session_state.col5_old = col5_options[0]
     st.session_state.col6_old = col6_options[0]
@@ -427,7 +427,7 @@ col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 button_num_rows = col1.radio("choose read or write", col1_read_write, horizontal=True)
 button_use_container_width = col2.radio("choose container width", col2_use_container_width, horizontal=True)
-col3_choice = col3.radio("", col3_options,horizontal=True)
+col3_choice = col3.radio("", col3_hide_index,horizontal=True)
 col4_choice = col4.radio("", col4_options,horizontal=True)
 col5_choice = col5.radio("", col5_options,horizontal=True)
 col6_choice = col6.radio("", col6_options,horizontal=True)
