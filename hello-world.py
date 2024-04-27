@@ -398,13 +398,6 @@ button_hide_index = col3.radio("choose index view", col3_hide_index, horizontal=
 button_column_order = col4.radio("choose order", col4_column_order, horizontal=True)
 col5_choice = col5.radio("", col5_options, horizontal=True)
 col6_choice = col6.radio("", col6_options, horizontal=True)
-#########
-agree = st.checkbox('def')
-if agree:
-    st.write('Great!')
-else:
-    st.write('bu Great!')
-#########
 
 if button_num_rows != st.session_state.col1_old:
     st.session_state.current = button_num_rows
@@ -474,6 +467,14 @@ result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
 if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
+
+#########
+agree = st.checkbox('def')
+if agree:
+    st.write('Great!')
+else:
+    st.write('bu Great!')
+#########
 
 
 ############################################
