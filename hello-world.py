@@ -489,8 +489,7 @@ config = {
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
 }
 result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
-                        hide_index=False, use_container_width=useContainerWidth,
-                        hide_index=useHideIndex) #org dynamic
+                        hide_index=useHideIndex, use_container_width=useContainerWidth) #org dynamic
 if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
