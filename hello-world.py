@@ -375,7 +375,7 @@ st.write("371 ", result) #######################################################
 col1_read_write = ["read", "write"] # Lese- oder Schreibrechte
 col2_use_container_width = [True, False] # use_container_width Ja oder Nein
 col3_hide_index = [True, False] # hide_index Ja oder Nein
-col4_column_order = ["(col1, col2)"] # Anzeige von Spalten oder und deren Reihenfolge column_order (Iterable of str or None)
+col4_column_order = ["(col1, col2 ...)", "alle"] # Anzeige von Spalten oder und deren Reihenfolge column_order (Iterable of str or None)
 col5_options = ["aGPS", "aGRWG"]
 col6_options = ["aPLUG", "aRNG"]
 
