@@ -375,7 +375,7 @@ st.write("371 ", result) #######################################################
 col1_read_write = ["read", "write"] # Lese- oder Schreibrechte
 col2_use_container_width = [True, False] # use_container_width Ja oder Nein
 col3_hide_index = [True, False] # hide_index Ja oder Nein
-col4_options = ["aAPPS", "aBBBY"]
+col4_column_order = ["(col1, col2)"] # Anzeige von Spalten oder und deren Reihenfolge column_order (Iterable of str or None)
 col5_options = ["aGPS", "aGRWG"]
 col6_options = ["aPLUG", "aRNG"]
 
@@ -386,7 +386,7 @@ if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "c
     st.session_state.col1_old = col1_read_write[0]
     st.session_state.col2_old = col2_use_container_width[0]
     st.session_state.col3_old = col3_hide_index[0]
-    st.session_state.col4_old = col4_options[0]
+    st.session_state.col4_old = col4_column_order[0]
     st.session_state.col5_old = col5_options[0]
     st.session_state.col6_old = col6_options[0]
 
@@ -394,10 +394,10 @@ col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 button_num_rows = col1.radio("choose read or write", col1_read_write, horizontal=True)
 button_use_container_width = col2.radio("choose container width", col2_use_container_width, horizontal=True)
-button_hide_index = col3.radio("choose index view", col3_hide_index,horizontal=True)
-col4_choice = col4.radio("", col4_options,horizontal=True)
-col5_choice = col5.radio("", col5_options,horizontal=True)
-col6_choice = col6.radio("", col6_options,horizontal=True)
+button_hide_index = col3.radio("choose index view", col3_hide_index, horizontal=True)
+button_column_order = col4.radio("choose order", col4_column_order, horizontal=True)
+col5_choice = col5.radio("", col5_options, horizontal=True)
+col6_choice = col6.radio("", col6_options, horizontal=True)
 
 if button_num_rows != st.session_state.col1_old:
     st.session_state.current = button_num_rows
@@ -411,9 +411,9 @@ if button_hide_index != st.session_state.col3_old:
     st.session_state.current = button_hide_index
     st.session_state.col3_old = button_hide_index
 
-if col4_choice != st.session_state.col4_old:
-    st.session_state.current = col4_choice
-    st.session_state.col4_old = col4_choice
+if button_column_order != st.session_state.col4_old:
+    st.session_state.current = button_column_order
+    st.session_state.col4_old = button_column_order
 
 if col5_choice != st.session_state.col5_old:
     st.session_state.current = col5_choice
@@ -442,7 +442,12 @@ if button_hide_index == True:
     useHideIndex = False
 else:
     useHideIndex = True
-    
+### Konfiguration Data-Frame-Editor Spalten Anzeige oder nicht oder welche Reihenfolge
+if button_column_order == True:
+    useColumnOrder = ("col1", "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9", "col10", "col11")
+else:
+    useColumnOrder = ("col1", "col2")
+
 ddata = [['HSK 1', 'Adjektiv',10, 'cndom', 'pydom', 'dedom', 'endom', 'cndom', 'pydom', 'dedom', 'endom'],
          ['HSK 2','Verb',12, 'cndomm', 'pydomn', 'dedomu', 'endomv', 'cndom', 'pydom', 'dedom', 'endom']]
 dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','Häufigkeit','Wort cn','Wort py','Wort de','Wort en',
@@ -457,7 +462,7 @@ config = {
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
 }
 result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
-                        hide_index=useHideIndex, use_container_width=useContainerWidth) #org dynamic
+                        hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=useColumnOrder) #org dynamic
 if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
