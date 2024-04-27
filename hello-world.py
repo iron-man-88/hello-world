@@ -403,8 +403,8 @@ cols[2].write(df.dtypes)
 
 st.write("404 ", result) #######################################################
 
+### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
 ### https://discuss.streamlit.io/t/split-st-radio-in-columns/17044/3 ###
-### Mögliche Optionen zur Konfiguration des Data Frame Editors
 col1_options = ["read", "write"]
 col2_options = ["GPS", "GRWG"]
 col3_options = ["PLUG", "RNG"]
@@ -456,32 +456,29 @@ if col6_choice != st.session_state.col6_old:
     st.session_state.current = col6_choice
     st.session_state.col6_old = col6_choice
 
-if st.session_state.current != None:
-    st.write("461 You've picked: ", st.session_state.current, button_num_rows)
-### Mögliche Optionen zur Konfiguration des Data Frame Editors
-
-#button_num_rows=None
-button_use_container_width=True
-bbutton_num_rows = st.radio('select choice',options=['read','write'],key='read_write',index=0,horizontal=True)
+if st.session_state.current != None:     ## del
+    st.write("461 You've picked: ", st.session_state.current, button_num_rows)    ## del
+### Mögliche Optionen zur Konfiguration des Data Frame Editors Ende
+### Hier wird die Konfiguration "eingestellt"
+### Konfiguration Data-Frame-Editor Nur Leserechte oder Schreibrechte
 if button_num_rows == 'read':
     readwrite = 'static'
 else:
     readwrite = 'dynamic'
     
-st.write("406 button_num_rows ", button_num_rows)
-
 ddata = [['HSK 1', 'Adjektiv',10, 'dom'],['HSK 1','Adjektiv',12, 'dom'],
 ['HSK 1', 'Adjektiv',7, 'dom']]
 dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','age','name'])
 hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
 wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
+### Hier wird die Konfiguration durchgeführt
 config = {
     'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
     'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
     'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
     'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
 }
-result = st.data_editor(dframe, column_config = config, num_rows=readwrite, hide_index=False) #org dynamic
+result = st.data_editor(dframe, column_config = config, num_rows=readwrite, hide_index=False, use_container_width=True) #org dynamic
 if st.button('Get results'):
     st.write("422 ", result)
 #######################################################
