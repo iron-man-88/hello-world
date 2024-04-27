@@ -497,8 +497,9 @@ with checks[2]:
 with checks[3]:
     st.checkbox('3')
 #########
-
-
+st.checkbox('Flip the value', key='test')
+st.write(st.session_state.test)
+#########
 
 ############################################
 st.write("426 ")
