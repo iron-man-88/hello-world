@@ -297,7 +297,7 @@ config = {
 }
 
 result = st.data_editor(ddf, column_config = config, num_rows='dynamic')
-st.write("321 ", result)
+#st.write("321 ", result)
 
 dff = pd.DataFrame(
     [
