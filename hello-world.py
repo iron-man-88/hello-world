@@ -496,7 +496,7 @@ def options_select():
             st.session_state["max_selections"] = len(available_options)
 
 
-available_options = [i for i in range(-1, 10)]
+available_options = [alles, HSK, Wortart, Häufigkeit]
 if "max_selections" not in st.session_state:
     st.session_state["max_selections"] = len(available_options)
 
@@ -506,7 +506,7 @@ st.multiselect(
     key="selected_options",
     max_selections=st.session_state["max_selections"],
     on_change=options_select,
-    format_func=lambda x: "All" if x == -1 else f"Option {x}",
+    format_func=lambda x: "alles" if x == "alles" else f"Option {x}",
 )
 
 st.write(
