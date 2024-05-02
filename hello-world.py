@@ -49,10 +49,10 @@ else:
 #from PIL import Image
 ## ## create var "df_read_file = None" with value "None", copy FuBa "read_file_text()" to "@st.cache_data"
 
-df_read_file = None                                                    ## ## create var "df_read_file = None" with value "None"
+global df_read_file = None                                                    ## ## create var "df_read_file = None" with value "None"
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def read_file_text():                                                  ## ## create FuBa "read_file_text()"
-    global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
+    #global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
     df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
     st.write("57 df_read_file ",df_read_file)
     return df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
