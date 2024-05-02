@@ -98,7 +98,7 @@ else:
     df_all_column = 6
 
 sel_value = df_all.iloc[0,df_all_column]
-st.write("141 sel_value ", sel_value)
+st.write("101 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
