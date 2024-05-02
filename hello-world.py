@@ -489,7 +489,7 @@ st.write("448 ")
 
 def options_select():
     if "selected_options" in st.session_state:
-        if -1 in st.session_state["selected_options"]:
+        if "alles" in st.session_state["selected_options"]:
             st.session_state["selected_options"] = [available_options[0]]
             st.session_state["max_selections"] = 1
         else:
