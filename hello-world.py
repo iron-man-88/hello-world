@@ -82,27 +82,6 @@ st.write("88 no_of_media " , no_of_media)
 
 #####################################
 
-############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
-var_temp_list = []
-for k in range(5):
-    var_temp_list.append(exec(f'cat_{k} = k'))
-
-var_temp_list[4] = "Wert"
-
-for j in range(5):
-    var_temp_list[j] = None
-
-for i in range(5):
-    var_temp_list[i] = i+8
-
-st.write(cat_0)
-st.write(cat_1)
-st.write(cat_2)
-st.write(cat_3)
-st.write(cat_4)
-st.write("94 var_temp_list ", var_temp_list)
-############https://stackoverflow.com/questions/6181935/how-do-you-create-different-variable-names-while-in-a-loop#######################
-
 read_file_text()
 st.write("89 df_read_file ", df_read_file)
 df_single_value = read_file_text()
