@@ -54,7 +54,7 @@ df_read_file = None                                                    ## ## cre
 def read_file_text():                                                  ## ## create FuBa "read_file_text()"
     global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
     df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
-    #st.write("65 df_read_file ",df_read_file)
+    st.write("57 df_read_file ",df_read_file)
     return df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
 read_file_text()
@@ -105,9 +105,9 @@ st.write("101 sel_value ", sel_value)
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
-    #st.write("148 df ", df)
+    #st.write("108 df ", df)
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
-    st.write("150 df.query ", df)
+    st.write("110 df.query ", df)
     lang_dict    = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
     st.write("112 lang_dict ", lang_dict)
     return lang_dict
