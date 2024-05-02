@@ -61,46 +61,6 @@ read_file_text()
 st.write("61 df_read_file ",df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
-#####################################
-#dddf = df_read_file.query(f"page == 1")# Create and return a dictionary of key/values.
-#st.write("73 df.query ", dddf)
-
-#selWert2 = 1
-#pdfSelectedFilename = (df_read_file[df_read_file["page"] == selWert2])["key"].values[0]
-#st.write("74 pdfSelectedFilename ", pdfSelectedFilename)
-
-data = {'Name': ['Alice', 'Bob', 'Charlie', 'Bob'],
-        'Age': [21, 22, 23, 24],
-        'Grade': ['A', 'B', 'A', 'C']}
-df = pd.DataFrame(data)
-filtered_df = df[df['Grade'] == 'A']
-st.write("80 filtered_df" , filtered_df)
-
-no_of_media = df[df['Name'].str.contains('Bob')].shape[0]
-st.write("88 no_of_media " , no_of_media)
-
-
-#####################################
-
-read_file_text()
-st.write("89 df_read_file ", df_read_file)
-df_single_value = read_file_text()
-
-row_index = df_single_value.index[df_single_value['key'] == 'greeting_1'].values[0]  # test
-#st.write("93 row_index ", row_index) # test
-#st.write("94 df_single_value.iloc[row_index,df_lang_column]", df_single_value.iloc[row_index,df_lang_column])
-
-greeting_1 = df_single_value.iloc[row_index,df_lang_column]
-#st.write("97 greeting_1 ", greeting_1)
-#st.write("98 greeting_2 ", greeting_2)
-#st.write("99 greeting_3 ", greeting_3)
-#st.write("100 greeting_4 ", greeting_4)
-
-###################################################################################################################
-###################################################################################################################
-###################################################################################################################
-
-
 #@st.cache_data
 #def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
 #    return [row[i] for row in matrix]
