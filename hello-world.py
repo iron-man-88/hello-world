@@ -331,34 +331,6 @@ st.write("330 ")
 
 # st.write("332 ", result) #######################################################
 
-#############
-def options_select():
-    if "selected_options" in st.session_state:
-        if -1 in st.session_state["selected_options"]:
-            st.session_state["selected_options"] = [available_options[0]]
-            st.session_state["max_selections"] = 1
-        else:
-            st.session_state["max_selections"] = len(available_options)
-
-available_options = [-1, "HSK", "Wortart", "Häufigkeit", 4, 5, 6, 7, 8, 9, 10]
-if "max_selections" not in st.session_state:
-    st.session_state["max_selections"] = len(available_options)
-
-st.multiselect(
-    label="Select an Option",
-    options=available_options,
-    key="selected_options",
-    max_selections=st.session_state["max_selections"],
-    on_change=options_select,
-    format_func=lambda x: "All" if x == -1 else f"Option {x}",
-)
-
-st.write(
-    available_options[1:]
-    if st.session_state["max_selections"] == 1
-    else st.session_state["selected_options"]
-)
-#############
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
 ### https://discuss.streamlit.io/t/split-st-radio-in-columns/17044/3 ###
@@ -416,6 +388,36 @@ if col6_choice != st.session_state.col6_old:
 
 if st.session_state.current != None:     ## del
     st.write("389 You've picked: ", st.session_state.current, button_num_rows)    ## del
+
+#############
+def options_select():
+    if "selected_options" in st.session_state:
+        if -1 in st.session_state["selected_options"]:
+            st.session_state["selected_options"] = [available_options[0]]
+            st.session_state["max_selections"] = 1
+        else:
+            st.session_state["max_selections"] = len(available_options)
+
+available_options = [-1, "HSK", "Wortart", "Häufigkeit", 4, 5, 6, 7, 8, 9, 10]
+if "max_selections" not in st.session_state:
+    st.session_state["max_selections"] = len(available_options)
+
+st.multiselect(
+    label="Select an Option",
+    options=available_options,
+    key="selected_options",
+    max_selections=st.session_state["max_selections"],
+    on_change=options_select,
+    format_func=lambda x: "All" if x == -1 else f"Option {x}",
+)
+
+st.write(
+    available_options[1:]
+    if st.session_state["max_selections"] == 1
+    else st.session_state["selected_options"]
+)
+#############
+
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Ende
 ### Hier wird die Konfiguration "eingestellt"
 ### Konfiguration Data-Frame-Editor Nur Leserechte oder Schreibrechte
