@@ -326,10 +326,10 @@ edited_df = st.data_editor(
 )
 
 favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-st.markdown(f"386 Your favorite command is **{favorite_command}** 🎈")
-st.write("368 ")
+st.markdown(f"329 Your favorite command is **{favorite_command}** 🎈")
+st.write("330 ")
 
-# st.write("371 ", result) #######################################################
+# st.write("332 ", result) #######################################################
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
 ### https://discuss.streamlit.io/t/split-st-radio-in-columns/17044/3 ###
@@ -386,7 +386,7 @@ if col6_choice != st.session_state.col6_old:
     st.session_state.col6_old = col6_choice
 
 if st.session_state.current != None:     ## del
-    st.write("461 You've picked: ", st.session_state.current, button_num_rows)    ## del
+    st.write("389 You've picked: ", st.session_state.current, button_num_rows)    ## del
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Ende
 ### Hier wird die Konfiguration "eingestellt"
 ### Konfiguration Data-Frame-Editor Nur Leserechte oder Schreibrechte
@@ -427,7 +427,7 @@ config = {
 result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
                         hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=(useColumnOrder)) #org dynamic
 if st.button('Get results'):
-    st.write("422 ", result)
+    st.write("430 ", result)
 #######################################################
 
 ######### https://discuss.streamlit.io/t/session-state-issue-with-st-checkbox/24020/2
@@ -446,14 +446,14 @@ with checks[3]:
     st.write(st.session_state.test4)
 
 if st.session_state.cb_HSK == True:
-    st.write('470 Great!')
+    st.write('449 Great!')
 else:
-    st.write('472 bu Great!')
+    st.write('451 bu Great!')
 
 #########
 
 ############################################
-st.write("426 ")
+st.write("456 ")
 data_df = pd.DataFrame(
     {
         "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
@@ -465,7 +465,7 @@ st.data_editor(
     data_df,
     column_config={
         "widgets": st.column_config.TextColumn(
-            "446 Widgets",
+            "468 Widgets",
             help="Streamlit **widget** commands 🎈 her you can explain a little bit",
             default="st.",
             max_chars=50,
@@ -474,7 +474,7 @@ st.data_editor(
     },
     hide_index=False,
 )
-st.write("448 ")
+st.write("477 ")
 ##################################################
 
 
@@ -483,9 +483,6 @@ st.write("448 ")
 
 
 
-
-
-#available_options = ["alles", "HSK", "Wortart", "Häufigkeit"]
 
 
 def options_select():
@@ -497,7 +494,7 @@ def options_select():
             st.session_state["max_selections"] = len(available_options)
 
 
-available_options = [-1, "HSK", "Wortart", 3, 4, 5, 6, 7, 8, 9, 10]
+available_options = [-1, "HSK", "Wortart", "Häufigkeit", 4, 5, 6, 7, 8, 9, 10]
 if "max_selections" not in st.session_state:
     st.session_state["max_selections"] = len(available_options)
 
