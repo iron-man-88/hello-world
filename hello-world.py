@@ -68,11 +68,11 @@ st.write("61 df_read_file ",df_read_file)
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
-st.write("111 df_all ", df_all)
+st.write("71 df_all ", df_all)
 rrow_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
-#st.write("113 row_index ", rrow_index) # test
+#st.write("73 row_index ", rrow_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
-st.write("115 df_all_cell ", df_all_cell)
+st.write("75 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
 #st.write("51 FullList ", FullList)
 #FullListColumn2 = FB_column(FullList, 4)
@@ -88,7 +88,7 @@ language_options = {
     "English":"en"
 }
 locale = st.radio(label='Languages', options=list(language_options.keys()),horizontal=True)
-st.write("131 locale ", locale)
+st.write("91 locale ", locale)
 
 if locale == "Deutsch":
     df_all_column = 4
@@ -109,7 +109,7 @@ def load_bundle(locale):
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
     st.write("150 df.query ", df)
     lang_dict    = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
-    st.write("152 lang_dict ", lang_dict)
+    st.write("112 lang_dict ", lang_dict)
     return lang_dict
 def main():
     lang_options = {
@@ -117,7 +117,7 @@ def main():
         "日本語":"ja_JP"
     }
     locale = st.radio(label='Language', options=list(lang_options.keys()),horizontal=True) # Note we use the selected human-readable locale to get the relevant
-    st.write("160 locale ", locale)
+    st.write("120 locale ", locale)
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
@@ -163,7 +163,7 @@ with st.container():
             st.session_state.bbut_click = 'y'
             if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
                 st.session_state.rradio_click = bbutton_read
-                st.write("206 bbutton_read ", bbutton_read)
+                st.write("166 bbutton_read ", bbutton_read)
 
 #st.write("208 bbutton_read ", bbutton_read)
 
@@ -209,7 +209,7 @@ config = {
 }
 
 result = st.data_editor(ddf, column_config = config, num_rows='dynamic')
-#st.write("252 ", result)
+#st.write("212 ", result)
 
 dff = pd.DataFrame(
     [
@@ -238,10 +238,10 @@ edited_df = st.data_editor(
 )
 
 favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-st.markdown(f"281 Your favorite command is **{favorite_command}** 🎈")
-st.write("282 ")
+st.markdown(f"241 Your favorite command is **{favorite_command}** 🎈")
+st.write("242 ")
 
-# st.write("284 ", result) #######################################################
+# st.write("244 ", result) #######################################################
 
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
@@ -371,7 +371,7 @@ config = {
 result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
                         hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=(useColumnOrder)) #org dynamic
 if st.button('Get results'):
-    st.write("414 ", result)
+    st.write("374 ", result)
 #######################################################
 
 ######### https://discuss.streamlit.io/t/session-state-issue-with-st-checkbox/24020/2
@@ -390,14 +390,14 @@ with checks[3]:
     st.write(st.session_state.test4)
 
 if st.session_state.cb_HSK == True:
-    st.write('433 Great!')
+    st.write('393 Great!')
 else:
-    st.write('435 bu Great!')
+    st.write('395 bu Great!')
 
 #########
 
 ############################################
-st.write("440 ")
+st.write("400 ")
 data_df = pd.DataFrame(
     {
         "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
@@ -409,7 +409,7 @@ st.data_editor(
     data_df,
     column_config={
         "widgets": st.column_config.TextColumn(
-            "452 Widgets",
+            "412 Widgets",
             help="Streamlit **widget** commands 🎈 her you can explain a little bit",
             default="st.",
             max_chars=50,
@@ -418,7 +418,7 @@ st.data_editor(
     },
     hide_index=False,
 )
-st.write("461 ")
+st.write("421 ")
 ##################################################
 
 
