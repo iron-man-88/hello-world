@@ -301,7 +301,7 @@ if col6_choice != st.session_state.col6_old:
 if st.session_state.current != None:     ## del
     st.write("389 You've picked: ", st.session_state.current, button_num_rows)    ## del
 
-#############
+############# https://medium.com/streamlit/multi-select-all-option-in-streamlit-3c92a0f20526
 def options_select():
     if "selected_options" in st.session_state:
         if -1 in st.session_state["selected_options"]:
@@ -328,7 +328,7 @@ st.write(
     if st.session_state["max_selections"] == 1
     else st.session_state["selected_options"]
 )
-#############
+############# https://medium.com/streamlit/multi-select-all-option-in-streamlit-3c92a0f20526
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Ende
 ### Hier wird die Konfiguration "eingestellt"
