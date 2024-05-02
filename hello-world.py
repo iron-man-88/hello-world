@@ -299,7 +299,7 @@ if col6_choice != st.session_state.col6_old:
     st.session_state.col6_old = col6_choice
 
 if st.session_state.current != None:     ## del
-    st.write("389 You've picked: ", st.session_state.current, button_num_rows)    ## del
+    st.write("302 You've picked: ", st.session_state.current, button_num_rows)    ## del
 
 ############# https://medium.com/streamlit/multi-select-all-option-in-streamlit-3c92a0f20526
 def options_select():
