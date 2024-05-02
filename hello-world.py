@@ -440,7 +440,8 @@ if button_column_order == False:
     useColumnOrder = ('HSK', 'Wortart','Häufigkeit','Wort cn','Wort py','Wort de','Wort en',
                       'Satz cn','Satz py','Satz de','Satz en')
 else:
-    useColumnOrder = ('HSK', 'Wortart','Häufigkeit')
+    useColumnOrder = st.session_state["selected_options"]
+#    useColumnOrder = ('HSK', 'Wortart','Häufigkeit')
 
 ddata = [['HSK 1', 'Adjektiv',10, 'cndom', 'pydom', 'dedom', 'endom', 'cndom', 'pydom', 'dedom', 'endom'],
          ['HSK 2','Verb',12, 'cndomm', 'pydomn', 'dedomu', 'endomv', 'cndom', 'pydom', 'dedom', 'endom']]
