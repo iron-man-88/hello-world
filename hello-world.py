@@ -57,8 +57,8 @@ def read_file_text():                                                  ## ## cre
     st.write("57 df_read_file ",df_read_file)
     return df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
-st.write("61 df_read_file ", df_read_file)
 read_file_text()
+st.write("61 read_file_text ", read_file_text)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 #@st.cache_data
