@@ -350,7 +350,7 @@ def options_select():
         else:
             st.session_state["max_selections"] = len(available_options)
 
-available_options = [-1, "HSK", "Wortart", "Häufigkeit", 4, 5, 6, 7, 8, 9, 10]
+available_options = [-1, "HSK", "Wortart", "Häufigkeit", "Wort cn", "Wort py", "Wort de", "Wort cn", "Satz cn", "Satz py", "Satz de", "Satz en"]
 if "max_selections" not in st.session_state:
     st.session_state["max_selections"] = len(available_options)
 
