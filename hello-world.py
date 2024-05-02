@@ -497,7 +497,7 @@ def options_select():
             st.session_state["max_selections"] = len(available_options)
 
 
-available_options = [-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+available_options = [-1, "HSK", 2, 3, 4, 5, 6, 7, 8, 9, 10]
 if "max_selections" not in st.session_state:
     st.session_state["max_selections"] = len(available_options)
 
