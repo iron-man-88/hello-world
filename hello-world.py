@@ -108,11 +108,11 @@ greeting_1 = df_single_value.iloc[row_index,df_lang_column]
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
-st.write("143 df_all ", df_all)
+st.write("111 df_all ", df_all)
 rrow_index = df_all.index[df_all['key_new'] == 'greetings_1'].values[0]  # test
-#st.write("80 row_index ", rrow_index) # test
+#st.write("113 row_index ", rrow_index) # test
 df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
-st.write("82 df_all_cell ", df_all_cell)
+st.write("115 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
 #st.write("51 FullList ", FullList)
 #FullListColumn2 = FB_column(FullList, 4)
@@ -128,7 +128,7 @@ language_options = {
     "English":"en"
 }
 locale = st.radio(label='Languages', options=list(language_options.keys()),horizontal=True)
-st.write("64 locale ", locale)
+st.write("131 locale ", locale)
 
 if locale == "Deutsch":
     df_all_column = 4
@@ -138,18 +138,18 @@ else:
     df_all_column = 6
 
 sel_value = df_all.iloc[0,df_all_column]
-st.write("77 sel_value ", sel_value)
+st.write("141 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
 def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
     df = pd.read_csv("database/text_bundle.csv")
-    #st.write("179 df ", df)
+    #st.write("148 df ", df)
     df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
-    st.write("181 df.query ", df)
+    st.write("150 df.query ", df)
     lang_dict    = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
-    st.write("183 lang_dict ", lang_dict)
+    st.write("152 lang_dict ", lang_dict)
     return lang_dict
 def main():
     lang_options = {
@@ -203,9 +203,9 @@ with st.container():
             st.session_state.bbut_click = 'y'
             if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
                 st.session_state.rradio_click = bbutton_read
-                st.write("156 bbutton_read ", bbutton_read)
+                st.write("206 bbutton_read ", bbutton_read)
 
-#st.write("239 bbutton_read ", bbutton_read)
+#st.write("208 bbutton_read ", bbutton_read)
 
 
 
@@ -411,7 +411,7 @@ config = {
 result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
                         hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=(useColumnOrder)) #org dynamic
 if st.button('Get results'):
-    st.write("430 ", result)
+    st.write("414 ", result)
 #######################################################
 
 ######### https://discuss.streamlit.io/t/session-state-issue-with-st-checkbox/24020/2
@@ -430,14 +430,14 @@ with checks[3]:
     st.write(st.session_state.test4)
 
 if st.session_state.cb_HSK == True:
-    st.write('449 Great!')
+    st.write('433 Great!')
 else:
-    st.write('451 bu Great!')
+    st.write('435 bu Great!')
 
 #########
 
 ############################################
-st.write("456 ")
+st.write("440 ")
 data_df = pd.DataFrame(
     {
         "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
@@ -449,7 +449,7 @@ st.data_editor(
     data_df,
     column_config={
         "widgets": st.column_config.TextColumn(
-            "468 Widgets",
+            "452 Widgets",
             help="Streamlit **widget** commands 🎈 her you can explain a little bit",
             default="st.",
             max_chars=50,
@@ -458,7 +458,7 @@ st.data_editor(
     },
     hide_index=False,
 )
-st.write("477 ")
+st.write("461 ")
 ##################################################
 
 
