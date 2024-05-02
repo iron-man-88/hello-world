@@ -270,21 +270,6 @@ if st.button('Copy'):
 
 
 
-@st.cache(allow_output_mutation=True)
-def get_data():
-    return []
-
-user_id = st.text_input("User ID")
-b=st.text_area('TType in the text_area and click copy')
-
-if st.button("Add row"):
-    get_data().append({"UserID": user_id,"st.text_area": b})
-
-st.write(pd.DataFrame(get_data()))
-
-
-
-
 #https://docs.streamlit.io/develop/concepts/design/dataframes
 ddf = pd.DataFrame(columns=['name','age','color'])
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
