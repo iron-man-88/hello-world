@@ -157,7 +157,7 @@ def main():
         "日本語":"ja_JP"
     }
     locale = st.radio(label='Language', options=list(lang_options.keys()),horizontal=True) # Note we use the selected human-readable locale to get the relevant
-    st.write("191 locale ", locale)
+    st.write("160 locale ", locale)
     # ISO locale code from the lang_options dictionary.
     lang_dict = load_bundle(lang_options[locale])
     st.subheader(lang_dict['greeting'])
@@ -249,7 +249,7 @@ config = {
 }
 
 result = st.data_editor(ddf, column_config = config, num_rows='dynamic')
-#st.write("321 ", result)
+#st.write("252 ", result)
 
 dff = pd.DataFrame(
     [
@@ -278,10 +278,10 @@ edited_df = st.data_editor(
 )
 
 favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-st.markdown(f"329 Your favorite command is **{favorite_command}** 🎈")
-st.write("330 ")
+st.markdown(f"281 Your favorite command is **{favorite_command}** 🎈")
+st.write("282 ")
 
-# st.write("332 ", result) #######################################################
+# st.write("284 ", result) #######################################################
 
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
