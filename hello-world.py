@@ -510,8 +510,8 @@ st.multiselect(
 )
 
 st.write(
-    available_options[1:]
-    if st.session_state["max_selections"] == 1
+    available_options["alles":]
+    if st.session_state["max_selections"] == "alles"
     else st.session_state["selected_options"]
 )
 
