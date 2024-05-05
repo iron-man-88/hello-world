@@ -71,7 +71,7 @@ df_all = pd.read_csv("database/text_bundle.csv")
 st.write("71 df_all ", df_all)
 rrow_index = df_all.index[df_all['key_new'] == 'greetings_2'].values[0]  # test
 st.write("73 rrow_index ", rrow_index) # test
-df_all_cell = df_all.iloc[0][4]   #    df.iloc[index][col]
+df_all_cell = df_all.iloc[rrow_index][4]   #    df.iloc[index][col]
 st.write("75 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
 #st.write("51 FullList ", FullList)
