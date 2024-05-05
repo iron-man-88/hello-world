@@ -69,7 +69,7 @@ df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
 st.write("71 df_all ", df_all)
-rrow_index = df_all.index[df_all['key_new'] == 'greetings_2'].values[0]  # test
+rrow_index = df_all.index[df_all['key_new'] == 'greetings_3'].values[0]  # test
 st.write("73 rrow_index ", rrow_index) # test
 df_all_cell = df_all.iloc[rrow_index][4]   #    df.iloc[index][col]
 st.write("75 df_all_cell ", df_all_cell)
