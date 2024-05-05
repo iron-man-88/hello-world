@@ -97,7 +97,7 @@ elif locale == "中文":
 else:
     df_all_column = 6
 
-sel_value = df_all.iloc[rrow_index,df_all_column]
+sel_value = df_all.iloc[0,df_all_column]
 st.write("101 sel_value ", sel_value)
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
