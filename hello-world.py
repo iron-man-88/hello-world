@@ -50,9 +50,11 @@ else:
 ## ## create var "df_read_file = None" with value "None", copy FuBa "read_file_text()" to "@st.cache_data"
 
 df_read_file_cell = None                                                    ## ## create var "df_read_file = None" with value "None"
+df_read_file      = None                                                    ## ## create var "df_read_file = None" with value "None"
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def read_file_text():                                                  ## ## create FuBa "read_file_text()"
     global df_read_file_cell                                                ## ## "global" is for global access of var "df_read_file" 
+    global df_read_file                                                ## ## "global" is for global access of var "df_read_file" 
     df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
     #st.write("57 df_read_file ", df_read_file)
 
@@ -60,10 +62,10 @@ def read_file_text():                                                  ## ## cre
     st.write("60 row_index ", row_index) # test
     df_read_file_cell = df_read_file.iloc[row_index][2]   #    df.iloc[index][col]
 
-    return df_read_file_cell                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
+    return df_read_file_cell, df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
 read_file_text()
-st.write("66 df_read_file_cell ", df_read_file_cell)
+st.write("66 df_read_file_cell ", df_read_file_cell, df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 #@st.cache_data
