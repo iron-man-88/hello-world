@@ -108,6 +108,16 @@ st.write("101 sel_value ", sel_value)
 
 
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
+def name():
+x = 1+1
+return x
+
+name()
+
+
+
+
+@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def smaller_numm(x,y):
     if x>y:
         number= y
@@ -118,7 +128,7 @@ def smaller_numm(x,y):
 x = 31
 y = 7
 
-smaller = smaller_numm(x,y)
+smaller = smaller_numm(x, y)
 st.write("The smaller number between 119 ", smaller)
 
 
