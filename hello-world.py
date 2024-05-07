@@ -436,7 +436,7 @@ def smaller_num(x,y):
     return number
 
 
-x = 1
+x = 31
 y = 2
 
 smaller = smaller_num(x,y)
