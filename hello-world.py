@@ -56,9 +56,9 @@ def read_file_text():                                                  ## ## cre
     df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
     #st.write("57 df_read_file ", df_read_file)
 
-    #row_index = df_read_file.index[df_read_file['key'] == 'greetings_2'].values[0]  # test
-    #st.write("73 row_index ", row_index) # test
-    #df_read_file_cell = df_read_file.iloc[row_index][2]   #    df.iloc[index][col]
+    row_index = df_read_file.index[df_read_file['key'] == 'greeting_2'].values[0]  # test
+    st.write("73 row_index ", row_index) # test
+    df_read_file_cell = df_read_file.iloc[row_index][2]   #    df.iloc[index][col]
 
     
     
