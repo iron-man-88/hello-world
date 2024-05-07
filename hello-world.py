@@ -441,7 +441,7 @@ y = 7
 
 smaller = smaller_num(x,y)
 
-st.write("The smaller number between ", x, y , smaller)
+st.write("The smaller number between ", smaller)
 
 
 
