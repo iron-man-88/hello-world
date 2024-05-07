@@ -441,7 +441,7 @@ y = 2
 
 smaller = smaller_num(x,y)
 
-st.write("The smaller number between " +  x + " and " + y + " is " + smaller)
+st.write("The smaller number between ", x, y , smaller)
 
 
 
