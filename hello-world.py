@@ -107,6 +107,7 @@ st.write("101 sel_value ", sel_value)
 
 
 
+@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def smaller_num(x,y):
     if x>y:
         number= y
