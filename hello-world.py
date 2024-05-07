@@ -429,7 +429,7 @@ with checks[3]:
 if st.session_state.cb_HSK == True:
     st.write('393 Great!')
 else:
-    st.write('395 bu Great!')
+    st.write('395 buuuuuuuuuuuuuuu Great!')
 
 #########
 
