@@ -49,8 +49,8 @@ else:
 #from PIL import Image
 ## ## create var "df_read_file = None" with value "None", copy FuBa "read_file_text()" to "@st.cache_data"
 
-#df_read_file_cell = None                                                    ## ## create var "df_read_file = None" with value "None"
-#df_read_file      = None                                                    ## ## create var "df_read_file = None" with value "None"
+df_read_file_cell = None                                                    ## ## create var "df_read_file = None" with value "None"
+df_read_file      = None                                                    ## ## create var "df_read_file = None" with value "None"
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def read_file_text():                                                  ## ## create FuBa "read_file_text()"
     global df_read_file_cell                                                ## ## "global" is for global access of var "df_read_file" 
