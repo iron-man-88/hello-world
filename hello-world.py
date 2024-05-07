@@ -57,7 +57,7 @@ def read_file_text():                                                  ## ## cre
     #st.write("57 df_read_file ", df_read_file)
 
     row_index = df_read_file.index[df_read_file['key'] == 'greeting_2'].values[0]  # test
-    st.write("73 row_index ", row_index) # test
+    st.write("60 row_index ", row_index) # test
     df_read_file_cell = df_read_file.iloc[row_index][2]   #    df.iloc[index][col]
 
     
