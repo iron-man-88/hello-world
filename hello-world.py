@@ -437,7 +437,7 @@ def smaller_num(x,y):
 
 
 x = 31
-y = 2
+y = 1
 
 smaller = smaller_num(x,y)
 
