@@ -436,13 +436,12 @@ def smaller_num(x,y):
     return number
 
 
-x = input("Enter first number:-")
-
-y = input("Enter second number:-")
+x = 1
+y = 2
 
 smaller = smaller_num(x,y)
 
-st.write("The smaller number between " +  str(x) + " and " + str(y) + " is " + str(smaller))
+st.write("The smaller number between " +  x + " and " + y + " is " + smaller)
 
 
 
