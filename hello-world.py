@@ -113,8 +113,10 @@ def smaller_num(x,y):
     else:
         number= x
     return number
+
 x = 31
 y = 7
+
 smaller = smaller_num(x,y)
 st.write("The smaller number between 119 ", smaller)
 
