@@ -427,19 +427,6 @@ st.write("421 ")
 ##################################################
 
 
-def smaller_num(x,y):
-    if x>y:
-        number= y
-    else:
-        number= x
-    return number
-x = 31
-y = 7
-smaller = smaller_num(x,y)
-st.write("The smaller number between ", smaller)
-
-
-
 
 
 
