@@ -108,14 +108,13 @@ st.write("101 sel_value ", sel_value)
 
 
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
-def name():
-    global x    ## ## "global" is for global access of var "df_read_file"
+def name(x):
     x = 1+1
     return x
 
-x = 3                                                    ## ## create var "df_read_file = None" with value "None"
+x = None                                                    ## ## create var "df_read_file = None" with value "None"
 
-name()
+name(3)
 
 #@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 #def smaller_numm(x,y):
