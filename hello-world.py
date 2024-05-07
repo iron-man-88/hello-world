@@ -105,6 +105,25 @@ else:
 sel_value = df_all.iloc[0,df_all_column]
 st.write("101 sel_value ", sel_value)
 
+
+
+def smaller_num(x,y):
+    if x>y:
+        number= y
+    else:
+        number= x
+    return number
+x = 31
+y = 7
+smaller = smaller_num(x,y)
+st.write("The smaller number between 119 ", smaller)
+
+
+
+
+
+
+
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
 @st.cache_data
 def load_bundle(locale):
@@ -425,10 +444,6 @@ st.data_editor(
 )
 st.write("421 ")
 ##################################################
-
-
-
-
 
 #file:///F:/uni/Faecher/Unterricht/2023/22-Konversation/Konversation/Konversation.html
 #PDF 3 Definite articles + indefinite articles.
