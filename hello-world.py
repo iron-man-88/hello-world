@@ -113,25 +113,25 @@ x = None                                                    ## ## create var "df
 
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def name():
-    global x                                                ## ## "global" is for global access of var "df_read_file" 
-x = 1+1
-return x
+    global x    ## ## "global" is for global access of var "df_read_file"
+    x = 1+1
+    return x
 
 name()
 
-@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
-def smaller_numm(x,y):
-    if x>y:
-        number= y
-    else:
-        number= x
-    return number
+#@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
+#def smaller_numm(x,y):
+#    if x>y:
+#        number= y
+#    else:
+#        number= x
+#    return number
 
-x = 31
-y = 7
+#x = 31
+#y = 7
 
-smaller = smaller_numm(x, y)
-st.write("The smaller number between 119 ", smaller)
+#smaller = smaller_numm(x, y)
+#st.write("The smaller number between 119 ", smaller)
 
 
 
