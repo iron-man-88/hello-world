@@ -108,13 +108,13 @@ st.write("101 sel_value ", sel_value)
 
 
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
-def name(x):
+def namee(x):
     x = 1+1
     return x
 
 x = None                                                    ## ## create var "df_read_file = None" with value "None"
 
-name(3)
+namee(3)
 
 #@st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 #def smaller_numm(x,y):
