@@ -87,23 +87,23 @@ st.write("78 rrow_index ", rrow_index) # test
 #vvaluee = FullList[IndexSeite][4]
 #st.write("88 vvaluee ", vvaluee)
 
-language_options = {
-    "Deutsch":"de",
-    "中文":"cn",
-    "English":"en"
-}
-locale = st.radio(label='Languages', options=list(language_options.keys()),horizontal=True)
-st.write("91 locale ", locale)
+#language_options = {
+#    "Deutsch":"de",
+#    "中文":"cn",
+#    "English":"en"
+#}
+#locale = st.radio(label='Languages', options=list(language_options.keys()),horizontal=True)
+#st.write("91 locale ", locale)
 
-if locale == "Deutsch":
-    df_all_column = 4
-elif locale == "中文": 
-    df_all_column = 5
-else:
-    df_all_column = 6
+#if locale == "Deutsch":
+#    df_all_column = 4
+#elif locale == "中文": 
+#    df_all_column = 5
+#else:
+#    df_all_column = 6
 
-sel_value = df_all.iloc[0,df_all_column]
-st.write("101 sel_value ", sel_value)
+#sel_value = df_all.iloc[0,df_all_column]
+#st.write("101 sel_value ", sel_value)
 
 
 
