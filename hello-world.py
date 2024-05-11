@@ -49,8 +49,6 @@ else:
 #from PIL import Image
 ## ## create var "df_read_file = None" with value "None", copy FuBa "read_file_text()" to "@st.cache_data"
 
-df_read_file_cell = None                                                    ## ## create var "df_read_file = None" with value "None"
-df_read_file      = None                                                    ## ## create var "df_read_file = None" with value "None"
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
 def read_file_text(df_lang_column):                                    ## ## create FuBa "read_file_text()"
     global df_read_file_cell                                                ## ## "global" is for global access of var "df_read_file" 
@@ -62,6 +60,9 @@ def read_file_text(df_lang_column):                                    ## ## cre
     df_read_file_cell = df_read_file.iloc[row_index][df_lang_column]   #    df.iloc[index][col]
     st.write("63 df_read_file_cell ", df_read_file_cell) # test
     return df_read_file_cell, df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
+
+df_read_file_cell = None                                                    ## ## create var "df_read_file = None" with value "None"
+df_read_file      = None                                                    ## ## create var "df_read_file = None" with value "None"
 
 read_file_text(df_lang_column)
 st.write("67 df_read_file_cell ", df_read_file_cell, df_read_file)
