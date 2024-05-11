@@ -35,7 +35,7 @@ if 'but_click' not in st.session_state:
 if 'radio_click' not in st.session_state:
     st.session_state.radio_click = 'Deutsch'
 
-button_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
+button_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
 st.session_state.radio_click = button_read
 if button_read == "Deutsch":
     df_lang_column = 1
