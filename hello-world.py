@@ -161,18 +161,18 @@ else:
 #main()
 
 ############################################https://stackoverflow.com/questions/73727634/how-to-replace-displayed-value-on-a-button-click-on-streamlit#####################
-if 'num' not in st.session_state:
-    st.session_state.num = "1"
+if 'nnum' not in st.session_state:
+    st.session_state.nnum = "1"
 def update1():
-    st.session_state.num = "1"
+    st.session_state.nnum = "1"
 def update2():
-    st.session_state.num = "2"
+    st.session_state.nnum = "2"
 def update3():
-    st.session_state.num = "3"
+    st.session_state.nnum = "3"
 
 key2 = "key_2"
 
-st.write(st.session_state.num)
+st.write(st.session_state.nnum)
 st.button("Perform calculation 1", on_click=update1, key="key_1")
 st.button("Perform calculation 2", on_click=update2, key=key2)
 st.button("Perform calculation 3", on_click=update3, key='key_3')
