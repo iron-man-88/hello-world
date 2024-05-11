@@ -67,13 +67,13 @@ st.write("66 df_read_file_cell ", df_read_file_cell, df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 @st.cache_data
-def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
-    return [row[i] for row in matrix]
+#def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
+#    return [row[i] for row in matrix]
 
-df_all_column = 1
+#df_all_column = 1
 
-df_all = pd.read_csv("database/text_bundle.csv")
-st.write("76 df_all ", df_all)
+#df_all = pd.read_csv("database/text_bundle.csv")
+#st.write("76 df_all ", df_all)
 #rrow_index = df_all.index[df_all['key_new'] == 'greetings_2'].values[0]  # test
 #st.write("78 rrow_index ", rrow_index) # test
 #df_all_cell = df_all.iloc[rrow_index][4]   #    df.iloc[index][col]
