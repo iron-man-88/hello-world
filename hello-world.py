@@ -50,16 +50,16 @@ else:
 ## ## create var "df_read_file = None" with value "None", copy FuBa "read_file_text()" to "@st.cache_data"
 
 @st.cache_data                                                         ## ## copy FuBa "read_file_text()" to "@st.cache_data"
-def read_file_text(df_lang_column):                                    ## ## create FuBa "read_file_text()"
+def read_file_text(df_lang_column, csv_key):                                    ## ## create FuBa "read_file_text()"
     df_read_file = pd.read_csv("database/text_3_lang.csv")             ## ## read csv data file, FuBa is necessary, otherwise "@st.cache_data" is not possible!!!
 #    st.write("57 df_read_file ", df_read_file)
-    row_index = df_read_file.index[df_read_file['key'] == 'greeting_2'].values[0]  # test
+    row_index = df_read_file.index[df_read_file['key'] == csv_key].values[0]  # test
 #    st.write("60 row_index ", row_index) # test
     df_read_file_cell = df_read_file.iloc[row_index][df_lang_column]   #    df.iloc[index][col]
 #    st.write("63 df_read_file_cell ", df_read_file_cell) # test
     return df_read_file_cell                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
-st.write("62 df_read_file_cell ",read_file_text(df_lang_column))
+st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_2'))
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 def greet(name, namee):
