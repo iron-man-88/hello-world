@@ -59,11 +59,10 @@ def read_file_text():                                                  ## ## cre
     st.write("57 df_read_file ", df_read_file)
     row_index = df_read_file.index[df_read_file['key'] == 'greeting_2'].values[0]  # test
     st.write("60 row_index ", row_index) # test
-#    df_read_file_cell = df_read_file.iloc[row_index][2]   #    df.iloc[index][col]
     df_read_file_cell = df_read_file.iloc[row_index][2]   #    df.iloc[index][col]
-    st.write("64 df_read_file_cell ", df_read_file_cell) # test
+    st.write("63 df_read_file_cell ", df_read_file_cell) # test
     return df_read_file_cell, df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
 read_file_text()
-#st.write("66 df_read_file_cell ", df_read_file_cell, df_read_file)
+st.write("67 df_read_file_cell ", df_read_file_cell, df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
