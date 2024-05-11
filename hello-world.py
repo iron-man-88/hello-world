@@ -166,3 +166,92 @@ st.write(
 ############# https://medium.com/streamlit/multi-select-all-option-in-streamlit-3c92a0f20526
 
 ### Mögliche Optionen zur Konfiguration des Data Frame Editors Ende
+
+### Hier wird die Konfiguration "eingestellt"
+### Konfiguration Data-Frame-Editor Nur Leserechte oder Schreibrechte
+if button_num_rows == 'read':
+    readWrite = 'static'
+else:
+    readWrite = 'dynamic'
+### Konfiguration Data-Frame-Editor Gesamte Bilschirmbreite oder nicht
+if button_use_container_width == True:
+    useContainerWidth = True
+else:
+    useContainerWidth = False
+### Konfiguration Data-Frame-Editor index Anzeige oder nicht
+if button_hide_index == True:
+    useHideIndex = False
+else:
+    useHideIndex = True
+### Konfiguration Data-Frame-Editor Spalten Anzeige oder nicht oder welche Reihenfolge
+if button_column_order == False:
+    useColumnOrder = ('HSK', 'Wortart','Häufigkeit','Wort cn','Wort py','Wort de','Wort en',
+                      'Satz cn','Satz py','Satz de','Satz en')
+else:
+    useColumnOrder = st.session_state["selected_options"]
+#    useColumnOrder = ('HSK', 'Wortart','Häufigkeit')
+
+ddata = [['HSK 1', 'Adjektiv',10, 'cndom', 'pydom', 'dedom', 'endom', 'cndom', 'pydom', 'dedom', 'endom'],
+         ['HSK 2','Verb',12, 'cndomm', 'pydomn', 'dedomu', 'endomv', 'cndom', 'pydom', 'dedom', 'endom']]
+dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','Häufigkeit','Wort cn','Wort py','Wort de','Wort en',
+                                     'Satz cn','Satz py','Satz de','Satz en',])
+hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
+wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
+### Hier wird die Konfiguration durchgeführt
+config = {
+    'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
+    'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
+    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
+    'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
+}
+result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
+                        hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=(useColumnOrder)) #org dynamic
+if st.button('Get results'):
+    st.write("374 ", result)
+#######################################################
+
+######### https://discuss.streamlit.io/t/session-state-issue-with-st-checkbox/24020/2
+checks = st.columns(4)
+with checks[0]:
+    st.checkbox('HSK', key='cb_HSK')
+    st.write(st.session_state.cb_HSK)
+with checks[1]:
+    st.checkbox('Wortart', key='cb_Wortart')
+    st.write(st.session_state.cb_Wortart)
+with checks[2]:
+    st.checkbox('Flip the value3', key='test3')
+    st.write(st.session_state.test3)
+with checks[3]:
+    st.checkbox('Flip the value4', key='test4')
+    st.write(st.session_state.test4)
+
+if st.session_state.cb_HSK == True:
+    st.write('430 Greattttttttttttttttt!')
+else:
+    st.write('432 buuuuuuuuuuuuuuu Great!')
+
+#########
+
+############################################
+st.write("400 ")
+data_df = pd.DataFrame(
+    {
+        "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
+        "widgetss": ["st.selectbox_x", "st.number_input", "st.text_area", "st.button"],
+        "widgetsss": ["st.selectbox_xx", "st.number_input", "st.text_area", "st.button"],
+    }
+)
+st.data_editor(
+    data_df,
+    column_config={
+        "widgets": st.column_config.TextColumn(
+            "412 Widgets",
+            help="Streamlit **widget** commands 🎈 her you can explain a little bit",
+            default="st.",
+            max_chars=50,
+            validate="^st\.[a-z_]+$",
+        )
+    },
+    hide_index=False,
+)
+st.write("421 ")
