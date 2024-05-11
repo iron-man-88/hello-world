@@ -64,7 +64,7 @@ def read_file_text(df_lang_column):                                    ## ## cre
 #df_read_file_cell = None                                                    ## ## create var "df_read_file = None" with value "None"
 #df_read_file      = None                                                    ## ## create var "df_read_file = None" with value "None"
 
-st.write(read_file_text(df_lang_column))
+st.write("67 df_read_file_cell ",read_file_text(df_lang_column))
 #st.write("67 df_read_file_cell ", df_read_file_cell)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
