@@ -61,6 +61,7 @@ def read_file_text():                                                  ## ## cre
     st.write("60 row_index ", row_index) # test
 #    df_read_file_cell = df_read_file.iloc[row_index][2]   #    df.iloc[index][col]
     df_read_file_cell = df_read_file.iloc[row_index][1]   #    df.iloc[index][col]
+    st.write("64 df_read_file_cell ", df_read_file_cell) # test
     return df_read_file_cell, df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
 read_file_text()
