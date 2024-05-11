@@ -59,7 +59,7 @@ def read_file_text(df_lang_column):                                    ## ## cre
     st.write("60 row_index ", row_index) # test
     df_read_file_cell = df_read_file.iloc[row_index][df_lang_column]   #    df.iloc[index][col]
     st.write("63 df_read_file_cell ", df_read_file_cell) # test
-    return df_read_file_cell, df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
+#    return df_read_file_cell, df_read_file                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
 df_read_file_cell = None                                                    ## ## create var "df_read_file = None" with value "None"
 df_read_file      = None                                                    ## ## create var "df_read_file = None" with value "None"
