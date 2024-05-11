@@ -59,7 +59,10 @@ def read_file_text(df_lang_column, csv_key):                                    
 #    st.write("63 df_read_file_cell ", df_read_file_cell) # test
     return df_read_file_cell                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
+st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_1'))
 st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_2'))
+st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_3'))
+st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_4'))
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 def greet(name, namee):
