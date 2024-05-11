@@ -138,27 +138,27 @@ else:
 
 
 # https://medium.com/@groxli/konnichiwa-streamlit-689e6e48bdcb
-@st.cache_data
-def load_bundle(locale):
+#@st.cache_data
+#def load_bundle(locale):
     # Load in the text bundle and filter by language locale.
-    df = pd.read_csv("database/text_bundle.csv")
-    #st.write("108 df ", df)
-    df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
-    st.write("110 df.query ", df)
-    lang_dict    = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
-    st.write("112 lang_dict ", lang_dict)
-    return lang_dict
-def main():
-    lang_options = {
-        "English (US)":"en_US",
-        "日本語":"ja_JP"
-    }
-    locale = st.radio(label='Language', options=list(lang_options.keys()),horizontal=True) # Note we use the selected human-readable locale to get the relevant
-    st.write("120 locale ", locale)
-    # ISO locale code from the lang_options dictionary.
-    lang_dict = load_bundle(lang_options[locale])
-    st.subheader(lang_dict['greeting'])
-main()
+#    df = pd.read_csv("database/text_bundle.csv")
+#    #st.write("108 df ", df)
+#    df = df.query(f"locale == '{locale}'")# Create and return a dictionary of key/values.
+#    st.write("110 df.query ", df)
+#    lang_dict    = {df.key.to_list()[i]:df.value.to_list()[i] for i in range(len(df.key.to_list()))}
+#    st.write("112 lang_dict ", lang_dict)
+#    return lang_dict
+#def main():
+#    lang_options = {
+#        "English (US)":"en_US",
+#        "日本語":"ja_JP"
+#    }
+#    locale = st.radio(label='Language', options=list(lang_options.keys()),horizontal=True) # Note we use the selected human-readable locale to get the relevant
+#    st.write("120 locale ", locale)
+#    # ISO locale code from the lang_options dictionary.
+#    lang_dict = load_bundle(lang_options[locale])
+#    st.subheader(lang_dict['greeting'])
+#main()
 
 ############################################https://stackoverflow.com/questions/73727634/how-to-replace-displayed-value-on-a-button-click-on-streamlit#####################
 if 'num' not in st.session_state:
