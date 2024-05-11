@@ -211,73 +211,73 @@ else:
 
 # https://docs.streamlit.io/develop/api-reference/data/st.dataframe
 @st.cache_data
-def load_data():
-    return pd.DataFrame(
-        {
-            "first column": [1, 2, 3, 
-                             4],
-            "second column": [10, 20, 30, 40],
-        }
-    )
+#def load_data():
+#    return pd.DataFrame(
+#        {
+#            "first column": [1, 2, 3, 
+#                             4],
+#            "second column": [10, 20, 30, 40],
+#        }
+#    )
 
 # Boolean to resize the dataframe, stored as a session state variable
-st.checkbox("Use container width", value=False, key="use_container_width")
+#st.checkbox("Use container width", value=False, key="use_container_width")
 
-ddf = load_data()
+#ddf = load_data()
 
 # Display the dataframe and allow the user to stretch the dataframe
 # across the full width of the container, based on the checkbox value
-st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
+#st.dataframe(ddf, use_container_width=st.session_state.use_container_width)
 
 
 
-a=st.text_area('Type in the text_area and click copy')
-if st.button('Copy'):
-    st.success('Text copied successfully!')
+#a=st.text_area('Type in the text_area and click copy')
+#if st.button('Copy'):
+#    st.success('Text copied successfully!')
 
 
 
 #https://docs.streamlit.io/develop/concepts/design/dataframes
-ddf = pd.DataFrame(columns=['name','age','color'])
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-config = {
-    'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
-    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
-    'color' : st.column_config.SelectboxColumn('Favorite Color', options=colors)
-}
+#ddf = pd.DataFrame(columns=['name','age','color'])
+#colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+#config = {
+#    'name' : st.column_config.TextColumn('Full Name (required)', width='large', required=True),
+#    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
+#    'color' : st.column_config.SelectboxColumn('Favorite Color', options=colors)
+#}
 
-result = st.data_editor(ddf, column_config = config, num_rows='dynamic')
+#result = st.data_editor(ddf, column_config = config, num_rows='dynamic')
 #st.write("212 ", result)
 
-dff = pd.DataFrame(
-    [
-        {"command": "st.selectbox", "rating": 4, "is_widget": True},
-        {"command": "st.balloons", "rating": 5, "is_widget": False},
-        {"command": "st.time_input", "rating": 3, "is_widget": True},
-    ]
-)
-edited_df = st.data_editor(
-    dff, hide_index=False,
-    column_config={
-        "command": "Streamlit Command",
-        "rating": st.column_config.NumberColumn(
-            "Your rating",
-            help="How much do you like this command (1-5)?",
-            min_value=1,
-            max_value=5,
-            step=1,
-            format="%d ⭐",
-        ),
-        "is_widget": "Widget ?",
-    },
-    disabled=["command", "is_widget"],
+#dff = pd.DataFrame(
+#    [
+#        {"command": "st.selectbox", "rating": 4, "is_widget": True},
+#        {"command": "st.balloons", "rating": 5, "is_widget": False},
+#        {"command": "st.time_input", "rating": 3, "is_widget": True},
+#    ]
+#)
+#edited_df = st.data_editor(
+#    dff, hide_index=False,
+#    column_config={
+#        "command": "Streamlit Command",
+#        "rating": st.column_config.NumberColumn(
+#            "Your rating",
+#            help="How much do you like this command (1-5)?",
+#            min_value=1,
+#            max_value=5,
+#            step=1,
+#            format="%d ⭐",
+#        ),
+#        "is_widget": "Widget ?",
+#    },
+#    disabled=["command", "is_widget"],
 #    hide_index=True,
 
-)
+#)
 
-favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
-st.markdown(f"241 Your favorite command is **{favorite_command}** 🎈")
-st.write("242 ")
+#favorite_command = edited_df.loc[edited_df["rating"].idxmax()]["command"]
+#st.markdown(f"241 Your favorite command is **{favorite_command}** 🎈")
+#st.write("242 ")
 
 # st.write("244 ", result) #######################################################
 
