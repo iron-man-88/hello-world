@@ -181,9 +181,9 @@ else:
 
 #################################################################################################################
 
-if 'bbut_click' not in st.session_state:
+ if 'bbut_click' not in st.session_state:
     st.session_state.bbut_click = ''
-if 'rradio_click' not in st.session_state:
+ if 'rradio_click' not in st.session_state:
     st.session_state.rradio_click = 'Deutsch'
 
 with st.container():
