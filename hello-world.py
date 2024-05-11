@@ -281,3 +281,187 @@ else:
 
 # st.write("244 ", result) #######################################################
 
+
+### Mögliche Optionen zur Konfiguration des Data Frame Editors Beginn
+### https://discuss.streamlit.io/t/split-st-radio-in-columns/17044/3 ###
+col1_read_write = ["read", "write"] # Lese- oder Schreibrechte
+col2_use_container_width = [True, False] # use_container_width Ja oder Nein
+col3_hide_index = [True, False] # hide_index Ja oder Nein
+col4_column_order = [True, False] # Anzeige von Spalten oder und deren Reihenfolge column_order (Iterable of str or None)
+col5_options = ["aGPS", "aGRWG"]
+col6_options = ["aPLUG", "aRNG"]
+agree = st.checkbox('def')
+
+if "current" not in st.session_state:
+    st.session_state.current = col1_read_write[0]
+
+if "col1_old" and "col2_old" and "col3_old" and "col4_old" and "col5_old" and "col6_old" not in st.session_state:
+    st.session_state.col1_old = col1_read_write[0]
+    st.session_state.col2_old = col2_use_container_width[0]
+    st.session_state.col3_old = col3_hide_index[0]
+    st.session_state.col4_old = col4_column_order[0]
+    st.session_state.col5_old = col5_options[0]
+    st.session_state.col6_old = col6_options[0]
+
+col1, col2, col3, col4, col5, col6 = st.columns(6)
+
+button_num_rows = col1.radio("read or write", col1_read_write, horizontal=True)
+button_use_container_width = col2.radio("container width", col2_use_container_width, horizontal=True)
+button_hide_index = col3.radio("index view", col3_hide_index, horizontal=True)
+button_column_order = col4.radio("order", col4_column_order, horizontal=True)    #del
+col5_choice = col5.radio("", col5_options, horizontal=True)
+col6_choice = col6.radio("", col6_options, horizontal=True)
+
+if button_num_rows != st.session_state.col1_old:
+    st.session_state.current = button_num_rows
+    st.session_state.col1_old = button_num_rows
+
+if button_use_container_width != st.session_state.col2_old:
+    st.session_state.current = button_use_container_width
+    st.session_state.col2_old = button_use_container_width
+
+if button_hide_index != st.session_state.col3_old:
+    st.session_state.current = button_hide_index
+    st.session_state.col3_old = button_hide_index
+
+if button_column_order != st.session_state.col4_old:
+    st.session_state.current = button_column_order
+    st.session_state.col4_old = button_column_order
+
+if col5_choice != st.session_state.col5_old:
+    st.session_state.current = col5_choice
+    st.session_state.col5_old = col5_choice
+
+if col6_choice != st.session_state.col6_old:
+    st.session_state.current = col6_choice
+    st.session_state.col6_old = col6_choice
+
+if st.session_state.current != None:     ## del
+    st.write("302 You've picked: ", st.session_state.current, button_num_rows)    ## del
+
+############# https://medium.com/streamlit/multi-select-all-option-in-streamlit-3c92a0f20526
+def options_select():
+    if "selected_options" in st.session_state:
+        if -1 in st.session_state["selected_options"]:
+            st.session_state["selected_options"] = [available_options[0]]
+            st.session_state["max_selections"] = 1
+        else:
+            st.session_state["max_selections"] = len(available_options)
+
+available_options = [-1, "HSK", "Wortart", "Häufigkeit", "Wort cn", "Wort py", "Wort de", "Wort cn", "Satz cn", "Satz py", "Satz de", "Satz en"]
+if "max_selections" not in st.session_state:
+    st.session_state["max_selections"] = len(available_options)
+
+st.multiselect(
+    label="Select an Option",
+    options=available_options,
+    key="selected_options",
+    max_selections=st.session_state["max_selections"],
+    on_change=options_select,
+    format_func=lambda x: "All" if x == -1 else f"Option {x}",
+)
+
+st.write(
+    available_options[1:]
+    if st.session_state["max_selections"] == 1
+    else st.session_state["selected_options"]
+)
+############# https://medium.com/streamlit/multi-select-all-option-in-streamlit-3c92a0f20526
+
+### Mögliche Optionen zur Konfiguration des Data Frame Editors Ende
+### Hier wird die Konfiguration "eingestellt"
+### Konfiguration Data-Frame-Editor Nur Leserechte oder Schreibrechte
+if button_num_rows == 'read':
+    readWrite = 'static'
+else:
+    readWrite = 'dynamic'
+### Konfiguration Data-Frame-Editor Gesamte Bilschirmbreite oder nicht
+if button_use_container_width == True:
+    useContainerWidth = True
+else:
+    useContainerWidth = False
+### Konfiguration Data-Frame-Editor index Anzeige oder nicht
+if button_hide_index == True:
+    useHideIndex = False
+else:
+    useHideIndex = True
+### Konfiguration Data-Frame-Editor Spalten Anzeige oder nicht oder welche Reihenfolge
+if button_column_order == False:
+    useColumnOrder = ('HSK', 'Wortart','Häufigkeit','Wort cn','Wort py','Wort de','Wort en',
+                      'Satz cn','Satz py','Satz de','Satz en')
+else:
+    useColumnOrder = st.session_state["selected_options"]
+#    useColumnOrder = ('HSK', 'Wortart','Häufigkeit')
+
+ddata = [['HSK 1', 'Adjektiv',10, 'cndom', 'pydom', 'dedom', 'endom', 'cndom', 'pydom', 'dedom', 'endom'],
+         ['HSK 2','Verb',12, 'cndomm', 'pydomn', 'dedomu', 'endomv', 'cndom', 'pydom', 'dedom', 'endom']]
+dframe = pd.DataFrame(ddata,columns=['HSK', 'Wortart','Häufigkeit','Wort cn','Wort py','Wort de','Wort en',
+                                     'Satz cn','Satz py','Satz de','Satz en',])
+hsks = ['HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5']
+wortarten = ['Adjektiv', 'Abverb', 'yellow', 'green', 'blue', 'indigo', 'violet']
+### Hier wird die Konfiguration durchgeführt
+config = {
+    'HSK' : st.column_config.SelectboxColumn('HSK', options=hsks),
+    'Wortart' : st.column_config.SelectboxColumn('Wortart', options=wortarten),
+    'age' : st.column_config.NumberColumn('Age (years)', min_value=0, max_value=122),
+    'name' : st.column_config.TextColumn('Name (required)', width='large', default="st.", required=True)
+}
+result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
+                        hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=(useColumnOrder)) #org dynamic
+if st.button('Get results'):
+    st.write("374 ", result)
+#######################################################
+
+######### https://discuss.streamlit.io/t/session-state-issue-with-st-checkbox/24020/2
+checks = st.columns(4)
+with checks[0]:
+    st.checkbox('HSK', key='cb_HSK')
+    st.write(st.session_state.cb_HSK)
+with checks[1]:
+    st.checkbox('Wortart', key='cb_Wortart')
+    st.write(st.session_state.cb_Wortart)
+with checks[2]:
+    st.checkbox('Flip the value3', key='test3')
+    st.write(st.session_state.test3)
+with checks[3]:
+    st.checkbox('Flip the value4', key='test4')
+    st.write(st.session_state.test4)
+
+if st.session_state.cb_HSK == True:
+    st.write('430 Greattttttttttttttttt!')
+else:
+    st.write('432 buuuuuuuuuuuuuuu Great!')
+
+#########
+
+############################################
+st.write("400 ")
+data_df = pd.DataFrame(
+    {
+        "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
+        "widgetss": ["st.selectbox_x", "st.number_input", "st.text_area", "st.button"],
+        "widgetsss": ["st.selectbox_xx", "st.number_input", "st.text_area", "st.button"],
+    }
+)
+st.data_editor(
+    data_df,
+    column_config={
+        "widgets": st.column_config.TextColumn(
+            "412 Widgets",
+            help="Streamlit **widget** commands 🎈 her you can explain a little bit",
+            default="st.",
+            max_chars=50,
+            validate="^st\.[a-z_]+$",
+        )
+    },
+    hide_index=False,
+)
+st.write("421 ")
+##################################################
+
+#file:///F:/uni/Faecher/Unterricht/2023/22-Konversation/Konversation/Konversation.html
+#PDF 3 Definite articles + indefinite articles.
+#3-nominakkusnegation_Ocean.pdf
+#https://de.savefrom.net
+
+
