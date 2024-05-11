@@ -28,3 +28,16 @@ st.title('Hello Jesus Christ!')
 st.title('You are great!')
 st.title('The Preeminent One')
 
+if 'but_click' not in st.session_state:
+    st.session_state.but_click = ''
+if 'radio_click' not in st.session_state:
+    st.session_state.radio_click = 'DDeutsch'
+
+button_read = st.radio('select choice',options=['DDeutsch','中文','English'],key='rrdkey',index=0,horizontal=True)
+st.session_state.radio_click = button_read
+if button_read == "DDeutsch":
+    df_lang_column = 1
+elif button_read == "中文": 
+    df_lang_column = 2
+else:
+    df_lang_column = 3
