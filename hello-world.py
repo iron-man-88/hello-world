@@ -70,7 +70,7 @@ st.write("66 df_read_file_cell ", df_read_file_cell, df_read_file)
 #def FB_column(matrix, i):                 # Diese Funktion dient der Extraktion einzelner Spalten aus einer Liste
 #    return [row[i] for row in matrix]
 
-df_all_column = 5
+df_all_column = 1
 
 df_all = pd.read_csv("database/text_bundle.csv")
 st.write("76 df_all ", df_all)
