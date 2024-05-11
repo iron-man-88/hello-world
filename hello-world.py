@@ -67,3 +67,14 @@ df_read_file      = None                                                    ## #
 read_file_text(df_lang_column)
 st.write("67 df_read_file_cell ", df_read_file_cell, df_read_file)
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
+
+
+
+
+def greet(name):
+    st.write("75 Hello name ", name)
+
+# pass argument
+greet("John")
+
+
