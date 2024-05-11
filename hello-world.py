@@ -73,19 +73,19 @@ st.write("66 df_read_file_cell ", df_read_file_cell, df_read_file)
 df_all_column = 5
 
 df_all = pd.read_csv("database/text_bundle.csv")
-st.write("71 df_all ", df_all)
+st.write("76 df_all ", df_all)
 rrow_index = df_all.index[df_all['key_new'] == 'greetings_2'].values[0]  # test
-st.write("73 rrow_index ", rrow_index) # test
+st.write("78 rrow_index ", rrow_index) # test
 df_all_cell = df_all.iloc[rrow_index][4]   #    df.iloc[index][col]
-st.write("75 df_all_cell ", df_all_cell)
+st.write("80 df_all_cell ", df_all_cell)
 #FullList = df_all.values.tolist()
-#st.write("51 FullList ", FullList)
+#st.write("82 FullList ", FullList)
 #FullListColumn2 = FB_column(FullList, 4)
-#st.write("54 FullListColumn2 ", FullListColumn2)
+#st.write("84 FullListColumn2 ", FullListColumn2)
 #IndexSeite = FullListColumn2.index("Hallo, Welt1!")
-#st.write("56 IndexSeite ", IndexSeite)
+#st.write("86 IndexSeite ", IndexSeite)
 #vvaluee = FullList[IndexSeite][4]
-#st.write("58 vvaluee ", vvaluee)
+#st.write("88 vvaluee ", vvaluee)
 
 language_options = {
     "Deutsch":"de",
