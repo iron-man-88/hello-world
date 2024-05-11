@@ -181,27 +181,27 @@ else:
 
 #################################################################################################################
 
- if 'bbut_click' not in st.session_state:
-    st.session_state.bbut_click = ''
- if 'rradio_click' not in st.session_state:
-    st.session_state.rradio_click = 'Deutsch'
+#if 'bbut_click' not in st.session_state:
+#    st.session_state.bbut_click = ''
+#if 'rradio_click' not in st.session_state:
+#    st.session_state.rradio_click = 'Deutsch'
 
-with st.container():
-    st.write("---")
-    left_column, middle_column, right_column = st.columns([1,0.001,0.001],gap='small')
+#with st.container():
+#    st.write("---")
+#    left_column, middle_column, right_column = st.columns([1,0.001,0.001],gap='small')
 
-    with left_column:
-        st.subheader(16)
-        # n = st.session_state.bt
-        c = st.button("Click me ⤵️")
+#    with left_column:
+#        st.subheader(16)
+#        # n = st.session_state.bt
+#        c = st.button("Click me ⤵️")
 
-        if (c) or (st.session_state.bbut_click == 'y'):
-            bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
-            #brd_sel = bbutton_read
-            st.session_state.bbut_click = 'y'
-            if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
-                st.session_state.rradio_click = bbutton_read
-                st.write("166 bbutton_read ", bbutton_read)
+#        if (c) or (st.session_state.bbut_click == 'y'):
+#            bbutton_read = st.radio('select choice',options=['Deutsch','中文','English'],key='rdkey',index=0,horizontal=True)
+#            #brd_sel = bbutton_read
+#            st.session_state.bbut_click = 'y'
+#            if (st.session_state.bbut_click=='y') and (bbutton_read == bbutton_read):
+#                st.session_state.rradio_click = bbutton_read
+#                st.write("166 bbutton_read ", bbutton_read)
 
 #st.write("208 bbutton_read ", bbutton_read)
 
