@@ -77,7 +77,8 @@ greet("John", "Johnn")
 
 def add_numbers(num1, num2):
     sum = num1 + num2
-    st.write("80 Sum: ", sum)
+#    st.write("80 Sum: ", sum)
 
 # function call with two values
-add_numbers(5, 4)
+aaa = add_numbers(5, 4)
+st.write("80 Sum: ", aaa)
