@@ -60,23 +60,19 @@ def read_file_text(df_lang_column, csv_key):                                    
     return df_read_file_cell                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
 st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_1'))
-st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_2'))
-st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_3'))
-st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_4'))
+st.write("63 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_2'))
+st.write("64 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_3'))
+st.write("65 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_4'))
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 def greet(name, namee):
-    st.write("66 Hello name ", name, namee)
-
+    st.write("69 Hello name ", name, namee)
 # pass argument
 greet("John", "Johnn")
-
 
 def add_numbers(num1, num2):
     sum = num1 + num2
     return sum
-#    st.write("80 Sum: ", sum)
-
 # function call with two values
 aaa = add_numbers(5, 4)
-st.write("79 Sum: ", aaa)
+st.write("78 Sum: ", aaa)
