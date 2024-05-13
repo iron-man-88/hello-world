@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import base64
 #import streamlit_extras as se
 #from streamlit_extras.dataframe_explorer import dataframe_explorer
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
@@ -327,6 +328,26 @@ sidebar_bg(side_bg)
 
 
 
+titleimg = "./AB_01_01.svg"
+def set_bg_hack(main_bg):
+    # set bg name
+    main_bg_ext = "svg"
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
+        background-repeat: no-repeat;
+        background-position: right 50% bottom 95%;
+        background-size: contain;
+        background-attachment: local;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+        )
+
+set_bg_hack(titleimg)
 
 
 
