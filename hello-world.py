@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
-import base64
-import requests
-#import cairosvg
+#import base64
 #import streamlit_extras as se
 #from streamlit_extras.dataframe_explorer import dataframe_explorer
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
@@ -262,6 +260,5 @@ st.write("257 ")
 
 svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
-st.image(url=svg_url, output_width=426, output_height=240)
-
+st.image(svg_url)
 
