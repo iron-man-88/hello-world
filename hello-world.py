@@ -298,7 +298,7 @@ def set_png_as_page_bg(png_file):
     page_bg_img = '''
     <style>
     body {
-    background-image: url("data:image/svg;base64,%s");
+    background-image: url("data:image/svgsvg+xml;base64,%s");
     background-size: cover;
     }
     </style>
