@@ -278,7 +278,7 @@ with st.popover("Open popover"):
                 background-size: cover;
                 position: fixed;
                 top: 80px;
-                left: 10px;
+                left: 100px;
                 }}
                 </style>
                 """,
