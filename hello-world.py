@@ -271,7 +271,19 @@ st.write("257 ")
 
 with st.popover("Open popover"):
     st.markdown("Hello World 👋",
-               position: right)
+                f"""
+                <style>
+                .stApp {{
+                background-image: url("AB_01_01.svg");
+                background-size: cover;
+                position: fixed;
+                top: 80px;
+                left: 10px;
+                }}
+                </style>
+                """,
+                unsafe_allow_html=True
+                )
     name = st.text_input("What's your name?")
 
 st.write("Your name:", name)
