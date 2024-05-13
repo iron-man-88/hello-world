@@ -265,10 +265,10 @@ st.write("257 ")
 
 
 
-titleimg = “img/AB_01_01.svg”
+titleimg = "img/AB_01_01.svg"
 def set_bg_hack(main_bg):
 # set bg name
-main_bg_ext = “svg”
+main_bg_ext = "svg"
 st.markdown(
     f"""
      <style>
