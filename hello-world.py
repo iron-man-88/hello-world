@@ -226,14 +226,14 @@ with checks[3]:
     st.write(st.session_state.test4)
 
 if st.session_state.cb_HSK == True:
-    st.write('430 Greattttttttttttttttt!')
+    st.write('229 Greattttttttttttttttt!')
 else:
-    st.write('432 buuuuuuuuuuuuuuu Great!')
+    st.write('231 buuuuuuuuuuuuuuu Great!')
 
 #########
 
 ############################################
-st.write("400 ")
+st.write("236 ")
 data_df = pd.DataFrame(
     {
         "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
@@ -245,7 +245,7 @@ st.data_editor(
     data_df,
     column_config={
         "widgets": st.column_config.TextColumn(
-            "412 Widgets",
+            "248 Widgets",
             help="Streamlit **widget** commands 🎈 her you can explain a little bit",
             default="st.",
             max_chars=50,
@@ -254,4 +254,32 @@ st.data_editor(
     },
     hide_index=False,
 )
-st.write("421 ")
+st.write("257 ")
+
+
+
+
+
+
+
+
+
+
+titleimg = “static/Picture7.png”
+def set_bg_hack(main_bg):
+# set bg name
+main_bg_ext = “png”
+st.markdown(
+    f"""
+     <style>
+     .main {{
+         background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
+         background-repeat: no-repeat;
+         background-position: right 50% bottom 95%;
+         background-size: contain;
+         background-attachment: local;
+     }}
+     </style>
+     """,
+    unsafe_allow_html=True,
+)
