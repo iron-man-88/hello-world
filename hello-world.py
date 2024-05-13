@@ -315,3 +315,35 @@ def sidebar_bg(side_bg):
 
 side_bg = 'AB_01_01.svg'
 sidebar_bg(side_bg)
+
+
+
+
+
+
+
+
+
+
+
+
+titleimg = "./AB_01_01.svg"
+def set_bg_hack(main_bg):
+    # set bg name
+    main_bg_ext = "svg"
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
+        background-repeat: no-repeat;
+        background-position: right 50% bottom 95%;
+        background-size: contain;
+        background-attachment: local;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+        )
+
+set_bg_hack(titleimg)
