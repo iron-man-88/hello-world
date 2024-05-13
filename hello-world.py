@@ -270,7 +270,7 @@ st.write("257 ")
 
 
 with st.popover("Open popover"):
-    st.markdown("Hello World 👋",
+    st.markdown(
                 f"""
                 <style>
                 .stApp {{
