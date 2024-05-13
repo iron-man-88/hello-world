@@ -259,6 +259,22 @@ st.data_editor(
 st.write("257 ")
 
 
+
+
+
+
+
+
+
+
+with st.popover("Open popover"):
+    st.markdown("Hello World 👋")
+    name = st.text_input("What's your name?")
+
+st.write("Your name:", name)
+
+
+
 svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
 st.image(svg_url)
@@ -355,7 +371,7 @@ def render_svg(svg):
 
 def render_svg_example():
     svg = """
-        <svg xmlns="AB_01_01.svg" width="100" height="100">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
             <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
         </svg>
     """
