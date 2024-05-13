@@ -272,7 +272,7 @@ def set_bg_hack(main_bg):
     st.markdown(
         f"""
         <style>
-        .main {{
+        .stApp {{
         background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
         background-repeat: no-repeat;
         background-position: right 50% bottom 95%;
