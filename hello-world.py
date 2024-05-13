@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import base64
+import requests
 #import streamlit_extras as se
 #from streamlit_extras.dataframe_explorer import dataframe_explorer
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
@@ -347,3 +348,24 @@ def set_bg_hack(main_bg):
         )
 
 set_bg_hack(titleimg)
+
+
+
+
+
+
+
+
+
+def render_svg(svg):
+    """Renders the given svg string."""
+    b64 = base64.b64encode(svg.encode('utf-8')).decode("utf-8")
+    html = r'<img src="data:image/svg+xml;base64,%s"/>' % b64
+    st.write(html, unsafe_allow_html=True)
+
+
+url = "./AB_01_01.svg"
+r = requests.get(url) # Get the webpage
+svg = r.content.decode() # Decoded response content with the svg string
+
+render_svg(svg) # Render the svg string
