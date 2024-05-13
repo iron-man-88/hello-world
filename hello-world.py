@@ -262,7 +262,7 @@ def add_bg_from_local():
         f"""
         <style>
         .stApp {{
-            background-image: url("./image/AB_01_01.svg");
+            background-image: url("image/AB_01_01.svg");
             background-size: cover;
         }}
         </style>
