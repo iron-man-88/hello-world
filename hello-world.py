@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 #from streamlit_extras.grid import grid
-#import base64
+import base64
 #import textwrap
 #import streamlit_extras as se
 #from streamlit_extras.dataframe_explorer import dataframe_explorer
