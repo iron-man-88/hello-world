@@ -260,14 +260,7 @@ st.data_editor(
 st.write("257 ")
 
 
-
-
-
-
-
-
-
-svg_url = "https://restcountries.eu/data/usa.svg"
+svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
 st.image(svg_url)
 
