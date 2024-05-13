@@ -423,3 +423,5 @@ def example():
         st.slider("Filter by Height", 0.0, 2.0, 1.0)
         st.slider("Filter by Weight", 0.0, 100.0, 50.0)
     my_grid.dataframe(random_df, use_container_width=True)
+
+example()
