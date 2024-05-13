@@ -262,6 +262,6 @@ st.write("257 ")
 
 svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
-st.image(svg_url)
+st.image(url=svg_url, output_width=426, output_height=240)
 
 
