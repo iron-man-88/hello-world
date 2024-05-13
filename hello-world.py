@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import base64
 import requests
+import cairosvg
 #import streamlit_extras as se
 #from streamlit_extras.dataframe_explorer import dataframe_explorer
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
@@ -259,20 +260,6 @@ st.data_editor(
 st.write("257 ")
 
 
-def add_bg_from_local():
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("AB_01_01.svg");
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-add_bg_from_local()
 
 
 
@@ -280,92 +267,8 @@ add_bg_from_local()
 
 
 
+svg_url = "https://restcountries.eu/data/usa.svg"
+my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
+st.image(my_png)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def sidebar_bg(side_bg):
-
-   side_bg_ext = 'svg'
-
-   st.markdown(
-      f"""
-      <style>
-      [data-testid="stSidebar"] > div:first-child {{
-          background: url(data:img/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
-      }}
-      </style>
-      """,
-      unsafe_allow_html=True,
-      )
-
-side_bg = 'AB_01_01.svg'
-sidebar_bg(side_bg)
-
-
-
-
-
-
-
-
-
-
-
-
-titleimg = "./AB_01_01.svg"
-def set_bg_hack(main_bg):
-    # set bg name
-    main_bg_ext = "svg"
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
-        background-repeat: no-repeat;
-        background-position: right 50% bottom 95%;
-        background-size: contain;
-        background-attachment: local;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True,
-        )
-
-set_bg_hack(titleimg)
-
-
-
-
-
-
-
-
-
-def render_svg(svg):
-    """Renders the given svg string."""
-    b64 = base64.b64encode(svg.encode('utf-8')).decode("utf-8")
-    html = r'<img src="data:image/svg+xml;base64,%s"/>' % b64
-    st.write(html, unsafe_allow_html=True)
-
-
-url = "./AB_01_01.svg"
-r = requests.get(url) # Get the webpage
-svg = r.content.decode() # Decoded response content with the svg string
-
-render_svg(svg) # Render the svg string
