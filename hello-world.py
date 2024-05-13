@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-#from streamlit_extras.grid import grid
+import grid
 #import base64
 #import textwrap
 #import streamlit_extras as se
-from streamlit_extras.dataframe_explorer import dataframe_explorer
+#from streamlit_extras.dataframe_explorer import dataframe_explorer
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
 
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
