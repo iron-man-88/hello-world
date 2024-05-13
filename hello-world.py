@@ -277,24 +277,62 @@ add_bg_from_local()
 
 
 
-titleimg = "./AB_01_01.svg"
-def set_bg_hack(main_bg):
-    # set bg name
-    main_bg_ext = "svg"
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-        background: url(data:img/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
-        background-repeat: no-repeat;
-        background-position: right 50% bottom 95%;
-        background-size: contain;
-        background-attachment: local;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True,
-        )
 
-set_bg_hack(titleimg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def sidebar_bg(side_bg):
+
+   side_bg_ext = 'png'
+
+   st.markdown(
+      f"""
+      <style>
+      [data-testid="stSidebar"] > div:first-child {{
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True,
+      )
+
+side_bg = './AB_01_01.svg'
+sidebar_bg(side_bg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
