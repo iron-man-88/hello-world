@@ -267,7 +267,7 @@ def add_bg_from_local():
     st.markdown(
         f"""
         <style>
-        .stApp {{
+        .main {{
             background-image: url("AB_01_01.svg");
             background-size: cover;
         }}
