@@ -283,9 +283,6 @@ def example2(leftt):
                 background-color: green;
                 color: white;
                 border-radius: 20px;
-                #position: relative;
-                #left: 30px;
-                #bottom: 500px;
             }
             """,
     ):
@@ -301,7 +298,7 @@ def example2(leftt):
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: leftt px;
+                left: lefttt px;
                 bottom: 500px;
             }
             """,
