@@ -305,8 +305,8 @@ def example2():
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: 100px;
-                bottom: 200px;
+                left: 300px;
+                bottom: 500px;
             }
             """,
     ):
