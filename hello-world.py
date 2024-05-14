@@ -276,7 +276,7 @@ st.image(svg_url)
 
 leftt = 130
 def example2():
-    stri3 = """""
+    stri3 = """
     with stylable_container(
         key="green_button",
         css_styles=stri3
