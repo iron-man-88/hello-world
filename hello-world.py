@@ -308,7 +308,29 @@ def example2(leftt):
 example2(leftt)
 
 
-
+st.markdown(
+    """
+    <style>
+    .element-container:has(style){
+        display: none;
+    }
+    #button-after {
+        display: none;
+    }
+    .element-container:has(#button-after) {
+        display: none;
+    }
+    .element-container:has(#button-after) + div button {
+        background-color: orange;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+st.button("button1")
+st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
+st.button("My Button")
+st.button("button2")
 
 
 @st.cache(allow_output_mutation=True)
