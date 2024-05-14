@@ -274,17 +274,19 @@ svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
 st.image(svg_url)
 
-leftt = 130
-def example2():
-    stri3= '"""'
-    with stylable_container(
-        key="green_button",
-        css_styles="""
+def example0():
             button {
                 background-color: green;
                 color: white;
                 border-radius: 20px;
             }
+
+leftt = 130
+def example2():
+    with stylable_container(
+        key="green_button",
+        css_styles="""
+            example0()
             """,
     ):
         st.button("Green button")
