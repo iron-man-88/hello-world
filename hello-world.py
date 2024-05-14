@@ -301,7 +301,7 @@ def example2(leftt):
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: leftt+"px";
+                left: leftt px;
                 bottom: 500px;
             }
             """,
