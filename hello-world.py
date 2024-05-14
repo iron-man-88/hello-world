@@ -274,7 +274,7 @@ svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
 st.image(svg_url)
 
-leftt = 30
+leftt = 130
 def example2(leftt):
     with stylable_container(
         key="green_button",
