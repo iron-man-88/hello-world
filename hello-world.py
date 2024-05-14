@@ -290,6 +290,9 @@ def example2():
                 background-color: green;
                 color: white;
                 border-radius: 20px;
+                position: relative;
+                left: 30px;
+                bottom: 500px;
             }
             """,
     ):
@@ -305,7 +308,7 @@ def example2():
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: 300px;
+                left: 30px;
                 bottom: 500px;
             }
             """,
