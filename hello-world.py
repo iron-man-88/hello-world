@@ -398,7 +398,7 @@ if __name__ == '__main__':
 
 
 
-def example():
+def example1():
     random_df = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
     my_grid = grid(2, [2, 4, 1], 1, 4, vertical_align="bottom")
@@ -424,4 +424,35 @@ def example():
         st.slider("Filter by Weight", 0.0, 100.0, 50.0)
     my_grid.dataframe(random_df, use_container_width=True)
 
-example()
+example1()
+
+
+
+def example2():
+    with stylable_container(
+        key="green_button",
+        css_styles="""
+            button {
+                background-color: green;
+                color: white;
+                border-radius: 20px;
+            }
+            """,
+    ):
+        st.button("Green button")
+
+    st.button("Normal button")
+
+    with stylable_container(
+        key="container_with_border",
+        css_styles="""
+            {
+                border: 1px solid rgba(49, 51, 63, 0.2);
+                border-radius: 0.5rem;
+                padding: calc(1em - 1px)
+            }
+            """,
+    ):
+        st.markdown("This is a container with a border.")
+
+example2()
