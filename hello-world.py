@@ -308,7 +308,7 @@ def example2(leftt):
     ):
         st.markdown("This is a container with a border.")
 
-example2()
+example2(leftt)
 
 
 
