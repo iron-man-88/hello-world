@@ -318,30 +318,6 @@ example2()
 
 
 
-def add_bg_from_local():
-    st.markdown(
-        f"""
-        <style>
-        .main {{
-            background-image: url("AB_01_01.svg");
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-add_bg_from_local()
-
-
-
-
-
-
-
-
-
-
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
@@ -363,72 +339,6 @@ def set_png_as_page_bg(png_file):
     return
 
 set_png_as_page_bg('AB_01_01.svg')
-
-
-
-page_bg_img = '''
-<style>
-body {
-background-image: url("AB_01_01.svg");
-background-size: cover;
-}
-</style>
-'''
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
-
-def sidebar_bg(side_bg):
-   side_bg_ext = 'png'
-   st.markdown(
-      f"""
-      <style>
-      [data-testid="stSidebar"] > div:first-child {{
-          background: url(data:image/svgsvg+xml;base64,%s);
-      }}
-      </style>
-      """,
-      unsafe_allow_html=True,
-      )
-
-side_bg = 'AB_01_01.svg'
-sidebar_bg(side_bg)
-
-
-
-
-
-
-
-def render_svg(svg):
-    """Renders the given svg string."""
-    b64 = base64.b64encode(svg.encode('utf-8')).decode("utf-8")
-    html = r'<img src="data:image/svg+xml;base64,%s"/>' % b64
-    st.write(html, unsafe_allow_html=True)
-
-def render_svg_example():
-    svg = """
-        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-        </svg>
-    """
-    st.write('## Rendering an SVG in Streamlit')
-
-    st.write('### SVG Input')
-    st.code(textwrap.dedent(svg), 'svg')
-
-    st.write('### SVG Output')
-    render_svg(svg)
-
-if __name__ == '__main__':
-    render_svg_example()
-
-
-
-
-
-
 
 
 
