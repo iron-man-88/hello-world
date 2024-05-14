@@ -274,7 +274,7 @@ svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
 st.image(svg_url)
 
-left = 30px
+left = 30
 def example2(leftt):
     with stylable_container(
         key="green_button",
@@ -301,7 +301,7 @@ def example2(leftt):
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: leftt;
+                left: leftt+"px";
                 bottom: 500px;
             }
             """,
