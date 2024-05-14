@@ -262,14 +262,6 @@ st.data_editor(
 st.write("257 ")
 
 
-
-
-
-
-
-
-
-
 with st.popover("Open popover"):
     st.markdown("Hello World 👋")
     name = st.text_input("What's your name?")
@@ -282,7 +274,8 @@ svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
 st.image(svg_url)
 
-def example2():
+left = 30px
+def example2(leftt):
     with stylable_container(
         key="green_button",
         css_styles="""
@@ -308,7 +301,7 @@ def example2():
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: 30px;
+                left: leftt;
                 bottom: 500px;
             }
             """,
