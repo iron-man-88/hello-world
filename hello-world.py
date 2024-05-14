@@ -322,6 +322,9 @@ st.markdown(
     }
     .element-container:has(#button-after) + div button {
         background-color: orange;
+        position: relative;
+        left: 30px;
+        bottom: 500px;
         }
     </style>
     """,
