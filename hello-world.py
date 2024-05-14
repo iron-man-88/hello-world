@@ -279,7 +279,7 @@ def example2():
     stri3= '"""'
     with stylable_container(
         key="green_button",
-        css_styles=stri3
+        css_styles="""
             button {
                 background-color: green;
                 color: white;
