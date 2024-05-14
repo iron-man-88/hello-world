@@ -282,6 +282,41 @@ svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
 st.image(svg_url)
 
+def example2():
+    with stylable_container(
+        key="green_button",
+        css_styles="""
+            button {
+                background-color: green;
+                color: white;
+                border-radius: 20px;
+            }
+            """,
+    ):
+        st.button("Green button")
+
+    st.button("Normal button")
+
+    with stylable_container(
+        key="container_with_border",
+        css_styles="""
+            {
+                border: 1px solid rgba(49, 51, 63, 0.2);
+                border-radius: 0.5rem;
+                padding: calc(1em - 1px);
+                position: relative;
+                left: 100px;
+                bottom: 200px;
+            }
+            """,
+    ):
+        st.markdown("This is a container with a border.")
+
+example2()
+
+
+
+
 
 def add_bg_from_local():
     st.markdown(
@@ -426,37 +461,3 @@ def example1():
     my_grid.dataframe(random_df, use_container_width=True)
 
 example1()
-
-
-
-def example2():
-    with stylable_container(
-        key="green_button",
-        css_styles="""
-            button {
-                background-color: green;
-                color: white;
-                border-radius: 20px;
-            }
-            """,
-    ):
-        st.button("Green button")
-
-    st.button("Normal button")
-
-    with stylable_container(
-        key="container_with_border",
-        css_styles="""
-            {
-                border: 1px solid rgba(49, 51, 63, 0.2);
-                border-radius: 0.5rem;
-                padding: calc(1em - 1px);
-                position: relative;
-                left: 100px;
-                bottom: 200px;
-            }
-            """,
-    ):
-        st.markdown("This is a container with a border.")
-
-example2()
