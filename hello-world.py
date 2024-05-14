@@ -290,9 +290,9 @@ def example2():
                 background-color: green;
                 color: white;
                 border-radius: 20px;
-                position: relative;
-                left: 30px;
-                bottom: 500px;
+                #position: relative;
+                #left: 30px;
+                #bottom: 500px;
             }
             """,
     ):
