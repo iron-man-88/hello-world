@@ -275,7 +275,7 @@ svg_url = "AB_01_01.svg"
 st.image(svg_url)
 
 leftt = 130
-def example2(leftt):
+def example2():
     with stylable_container(
         key="green_button",
         css_styles="""
@@ -298,14 +298,14 @@ def example2(leftt):
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: lefttt px;
+                left: 30px;
                 bottom: 500px;
             }
             """,
     ):
         st.markdown("This is a container with a border.")
 
-example2(leftt)
+example2()
 
 
 st.markdown(
