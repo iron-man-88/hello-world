@@ -289,7 +289,7 @@ def example2():
         st.button("Green button")
 
     st.button("Normal button")
-    lleft = str("60"&px)
+    lleft = str(60)
     with stylable_container(
         key="container_with_border",
         css_styles="""
