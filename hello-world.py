@@ -289,7 +289,7 @@ def example2():
         st.button("Green button")
 
     st.button("Normal button")
-    lleft = 60
+    lleft = 60+"px"
     with stylable_container(
         key="container_with_border",
         css_styles="""
@@ -298,7 +298,7 @@ def example2():
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: {lleft}+"px";
+                left: {lleft};
                 bottom: 500px;
             }
             """,
