@@ -298,7 +298,7 @@ def example2():
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: {lleft};
+                left: {lleft}px;
                 bottom: 500px;
             }
             """,
