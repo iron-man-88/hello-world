@@ -2,5 +2,5 @@ streamlit==1.34.*
 # https://www.restack.io/docs/streamlit-knowledge-fix-modulenotfounderror-streamlit-extras
 streamlit_extras==0.4.2
 streamlit_float
-streamlit_ace
+#streamlit_ace
 
