@@ -498,3 +498,32 @@ css = float_css_helper(position="relative", left="100", background=bg_color)
 
 # Float the footer container and provide CSS to target it with
 footer_container.float(css)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
+
+variable_output = st.text_input("Enter some text", value="Streamlit is awesome")
+font_size = st.slider("Enter a font size", 1, 300, value=30)
+
+html_str = f"""
+<style>
+p.a {{
+  font: bold {font_size}px Courier;
+}}
+</style>
+<p class="a">{variable_output}</p>
+"""
+
+st.markdown(html_str, unsafe_allow_html=True)
