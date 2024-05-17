@@ -46,39 +46,10 @@ if bg_color is None:
     bg_color = "white"
 
 # Generate CSS to target the floating footer container
-css = float_css_helper(top="30", background=bg_color)
+css = float_css_helper(top="0", background=bg_color)
 
 # Float the footer container and provide CSS to target it with
 footer_container.float(css)
-
-
-
-
-
-
-
-
-
-
-
-
-header_output = st.write("Header Enter some text")
-
-html_str = f"""
-<style>
-p.a {{
-  font: bold 20px Courier;
-  position: fixed;
-  left: 0px;
-  top: 20px;
-  background-color: blue;
-  color: red;
-  z-index: 1;
-  width: fit-content;
-}}
-</style>
-<p class="a">{header_output}</p>
-"""
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
