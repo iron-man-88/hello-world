@@ -30,26 +30,11 @@ st.markdown( # Breite des main divs
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-from streamlit_float import *
+def header(content):
+     st.markdown(f'<p style="background-color:#0066cc;color:#33ff33;font-size:24px;border-radius:2%;">{cont}</p>', unsafe_allow_html=True)
+header(the content you want to show)
 
-# Float feature initialization
-float_init()
 
-# Create footer container and add content
-footer_container = st.container()
-with footer_container:
-    st.markdown("Copyright &copy; 2023 Your Name - All Rights Reserved.")
-
-# Get custom theme background color if set, otherwise default to white
-bg_color = st.get_option('theme.backgroundColor')
-if bg_color is None:
-    bg_color = "white"
-
-# Generate CSS to target the floating footer container
-css = float_css_helper(top="-15", background=bg_color)
-
-# Float the footer container and provide CSS to target it with
-footer_container.float(css)
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
