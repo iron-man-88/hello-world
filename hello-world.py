@@ -271,7 +271,7 @@ html_str = f"""
 p.a {{
   font: bold {font_size}px Courier;
   position: relative;
-  left: 0px;
+  left: {font_size}px;
   bottom: 0px;
 }}
 </style>
