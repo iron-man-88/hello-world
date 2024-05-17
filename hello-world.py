@@ -330,26 +330,6 @@ example2()
 
 ##########################
 ####################################################################################################
-with stylable_container(
-        key="green_popover",
-        css_styles="""
-            button {
-                width: 150px;
-                height: 60px;
-                background-color: green;
-                color: white;
-                border-radius: 5px;
-                white-space: nowrap;
-                position: relative;
-                left: 160px; #{lleft};
-                bottom: 100px;
-            }
-            """,
-    ):
-        po = st.popover(label='green popover')
-        po.text_input('name', key='nname')
-
-st.write("Your name:", name)
 ##########################
 
 st.markdown(
