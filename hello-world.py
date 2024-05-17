@@ -34,7 +34,6 @@ st.title('You are great!')
 st.title('The Preeminent One')
 
 #####################################################################################################################
-
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
 if 'radio_click' not in st.session_state:
@@ -48,8 +47,6 @@ elif button_read == "中文":
     df_lang_column = 2
 else:
     df_lang_column = 3
-
-
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 #from PIL import Image
 ## ## create var "df_read_file = None" with value "None", copy FuBa "read_file_text()" to "@st.cache_data"
