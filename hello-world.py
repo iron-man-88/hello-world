@@ -307,30 +307,26 @@ def example2():
 
 example2()
 
-    ##########################
+##########################
 
 with stylable_container(
-    key="test_pop_over",
-    css_styles="""
-        {
-            border: 1px solid rgba(20, 30, 40, 0.2);
-            border-radius: 0.5rem;
-            padding: calc(1em - 1px);
-            position: relative;
-            left: 60px; #{lleft};
-            bottom: 500px;
-        }
-        """,
-):
-    st.markdown("This is a test_pop_over container with a border.")
-    st.popover("Open popover"):
-    st.markdown("Hello World 👋")
-    name = st.text_input("What's your name?")
-#    with st.popover("Open popover"):
-#        st.markdown("Hello World 👋")
-#        name = st.text_input("What's your name?")
-
-st.write("Your name:", name)
+        key="green_popover",
+        css_styles="""
+            button {
+                width: 150px;
+                height: 60px;
+                background-color: green;
+                color: white;
+                border-radius: 5px;
+                white-space: nowrap;
+                position: relative;
+                left: 160px; #{lleft};
+                bottom: 100px;
+            }
+            """,
+    ):
+        po = st.popover(label='green popover')
+        po.text_input('name', key='name')
 ##########################
 
 st.markdown(
