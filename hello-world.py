@@ -465,3 +465,35 @@ with col2:
         ''', 
         unsafe_allow_html=True
         )
+
+
+
+
+
+
+
+
+
+
+
+
+from streamlit_float import *
+
+# Float feature initialization
+float_init()
+
+# Create footer container and add content
+footer_container = st.container()
+with footer_container:
+    st.markdown("Copyright &copy; 2023 Your Name - All Rights Reserved.")
+
+# Get custom theme background color if set, otherwise default to white
+bg_color = st.get_option('theme.backgroundColor')
+if bg_color is None:
+    bg_color = "white"
+
+# Generate CSS to target the floating footer container
+css = float_css_helper(bottom="0", background=bg_color)
+
+# Float the footer container and provide CSS to target it with
+footer_container.float(css)
