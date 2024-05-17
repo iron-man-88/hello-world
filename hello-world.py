@@ -262,7 +262,7 @@ st.data_editor(
 st.write("257 ")
 
 
-with st.popover("Open popover"):
+with st.popover("OP"):
     st.markdown("Hello World 👋")
     name = st.text_input("What's your name?")
 
