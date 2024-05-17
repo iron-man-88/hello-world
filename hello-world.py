@@ -273,6 +273,8 @@ p.a {{
   position: relative;
   left: {left_position}px;
   top: 230px;
+  background-color: white;
+  color: red;
 }}
 </style>
 <p class="a">{variable_output}</p>
