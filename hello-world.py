@@ -493,7 +493,7 @@ if bg_color is None:
     bg_color = "white"
 
 # Generate CSS to target the floating footer container
-css = float_css_helper(bottom="100", left="100", background=bg_color)
+css = float_css_helper(position: relative, bottom="100", left="100", background=bg_color)
 
 # Float the footer container and provide CSS to target it with
 footer_container.float(css)
