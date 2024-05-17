@@ -270,12 +270,12 @@ html_str = f"""
 <style>
 p.a {{
   font: bold {font_size}px Courier;
+  position: relative;
+  left: 60px;
+  bottom: 500px;
 }}
 </style>
-<p class="a">{variable_output}</p>;
-position: relative;
-left: 60px;
-bottom: 500px;
+<p class="a">{variable_output}</p>
 """
 
 st.markdown(html_str, unsafe_allow_html=True)
