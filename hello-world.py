@@ -529,10 +529,10 @@ if bg_color is None:
     bg_color = "white"
 
 # Generate CSS to target the floating footer container
-css = float_css_helper(bottom="0", background=bg_color)
+##css = float_css_helper(bottom="0", background=bg_color)
 
 # Float the footer container and provide CSS to target it with
-footer_container.float(css)
+##footer_container.float(css)
 
 
 
