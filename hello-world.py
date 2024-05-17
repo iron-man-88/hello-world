@@ -274,7 +274,7 @@ p.a {{
 </style>
 <p class="a">{variable_output}</p>;
 position: relative;
-left: 60px; #{lleft};
+left: 60px;
 bottom: 500px;
 """
 
