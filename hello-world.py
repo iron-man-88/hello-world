@@ -324,7 +324,7 @@ with stylable_container(
             }
             """,
     ):
-        st.popover(label='Open popover')
+        st.popover(label='text_green_popover')
         st.markdown("Hello World 👋")
         name = st.text_input("What's your name?")
 
