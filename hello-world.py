@@ -136,7 +136,7 @@ if col6_choice != st.session_state.col6_old:
     st.session_state.col6_old = col6_choice
 
 if st.session_state.current != None:     ## del
-    st.write("302 You've picked: ", st.session_state.current, button_num_rows)    ## del
+    st.write("139 You've picked: ", st.session_state.current, button_num_rows)    ## del
 
 ############# https://medium.com/streamlit/multi-select-all-option-in-streamlit-3c92a0f20526
 def options_select():
@@ -209,7 +209,7 @@ config = {
 result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
                         hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=(useColumnOrder)) #org dynamic
 if st.button('Get results'):
-    st.write("374 ", result)
+    st.write("212 ", result)
 #######################################################
 
 ######### https://discuss.streamlit.io/t/session-state-issue-with-st-checkbox/24020/2
@@ -228,9 +228,9 @@ with checks[3]:
     st.write(st.session_state.test4)
 
 if st.session_state.cb_HSK == True:
-    st.write('229 Greattttttttttttttttt!')
+    st.write('231 Greattttttttttttttttt!')
 else:
-    st.write('231 buuuuuuuuuuuuuuu Great!')
+    st.write('233 buuuuuuuuuuuuuuu Great!')
 
 #########
 
@@ -256,7 +256,7 @@ st.data_editor(
     },
     hide_index=False,
 )
-st.write("257 ")
+st.write("259 ")
 
 
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
@@ -406,9 +406,6 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('AB_01_01.svg')
 ####################################################################################################
 
-
-
-
 def example1():
     random_df = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
@@ -436,21 +433,6 @@ def example1():
     my_grid.dataframe(random_df, use_container_width=True)
 
 example1()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
