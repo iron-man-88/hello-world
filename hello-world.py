@@ -275,6 +275,7 @@ p.a {{
   top: 230px;
   background-color: blue;
   color: red;
+  z-index: 1;
 }}
 </style>
 <p class="a">{variable_output}</p>
