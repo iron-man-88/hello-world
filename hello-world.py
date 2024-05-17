@@ -330,6 +330,26 @@ example2()
 
 ##########################
 ####################################################################################################
+with stylable_container(
+        key="green_popover",
+        css_styles="""
+            button {
+                width: 150px;
+                height: 60px;
+                background-color: green;
+                color: white;
+                border-radius: 5px;
+                white-space: nowrap;
+                position: relative;
+                left: 160px; #{lleft};
+                bottom: 100px;
+            }
+            """,
+    ):
+        po = st.popover(label='green popover')
+        po.text_input('name', key='nname')
+
+st.write("Your name:", name)
 ##########################
 
 st.markdown(
@@ -360,27 +380,6 @@ st.button("My Button")
 st.button("button2")
 
 
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("data:image/svgsvg+xml;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
-
-set_png_as_page_bg('AB_01_01.svg')
 ####################################################################################################
 
 
