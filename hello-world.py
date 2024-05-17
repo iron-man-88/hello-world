@@ -313,8 +313,8 @@ with stylable_container(
         key="green_popover",
         css_styles="""
             button {
-                #width: 150px;
-                height: ttt
+                width: 150px;
+                height: 60px;
                 background-color: green;
                 color: white;
                 border-radius: 5px;
