@@ -273,7 +273,7 @@ p.a {{
   font: bold 20px Courier;
   position: fixed;
   left: {left_position}px;
-  top: 0px;
+  top: 100px;
   background-color: blue;
   color: red;
   z-index: 1;
