@@ -308,7 +308,6 @@ def example2():
 example2()
 
 ##########################
-
 with stylable_container(
         key="green_popover",
         css_styles="""
@@ -326,7 +325,13 @@ with stylable_container(
             """,
     ):
         po = st.popover(label='green popover')
-        po.text_input('name', key='name')
+        po.text_input('name', key='nname')
+        nname = st.text_input("What's your name?")
+
+    #name = st.text_input("What's your name?")
+
+st.write("Your name:", nname)
+
 ##########################
 
 st.markdown(
