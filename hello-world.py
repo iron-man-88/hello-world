@@ -325,9 +325,9 @@ with stylable_container(
             """,
     ):
         po = st.popover(label='green popover')
-        po.text_input('name', key='name')
+        po.text_input('name', key='nname')
 
-st.write("Your name:", name)
+st.write("Your name:", nname)
 ##########################
 
 st.markdown(
