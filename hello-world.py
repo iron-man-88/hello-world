@@ -312,8 +312,8 @@ with stylable_container(
         key="green_popover",
         css_styles="""
             button {
-                width: 150px;
-                height: 60px;
+                #width: 150px;
+                #height: 60px;
                 background-color: green;
                 color: white;
                 border-radius: 5px;
@@ -327,7 +327,7 @@ with stylable_container(
         po = st.popover(label='green popover')
         po.text_input('name', key='nname')
 
-st.write("Your name:", nname)
+st.write("Your name:", name)
 ##########################
 
 st.markdown(
