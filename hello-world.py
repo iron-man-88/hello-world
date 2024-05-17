@@ -273,7 +273,7 @@ p.a {{
   position: relative;
   left: {left_position}px;
   top: 230px;
-  background: white;
+  background-color: blue;
   color: red;
 }}
 </style>
