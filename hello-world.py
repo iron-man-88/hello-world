@@ -323,9 +323,9 @@ with stylable_container(
         """,
 ):
     st.markdown("This is a test_pop_over container with a border.")
-    with st.popover("Open popover"):
-        st.markdown("Hello World 👋")
-        name = st.text_input("What's your name?")
+        with st.popover("Open popover"):
+            st.markdown("Hello World 👋")
+            name = st.text_input("What's your name?")
 
 st.write("Your name:", name)
 ##########################
