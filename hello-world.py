@@ -272,7 +272,7 @@ p.a {{
   font: bold 20px Courier;
   position: relative;
   left: {left_position}px;
-  top: 200px;
+  top: 230px;
 }}
 </style>
 <p class="a">{variable_output}</p>
