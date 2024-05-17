@@ -287,7 +287,15 @@ st.markdown(html_str, unsafe_allow_html=True)
 st.write("Your name:")
 
 
+#########################################################
+from streamlit_ace import st_ace
 
+# Spawn a new Ace editor
+content = st_ace()
+
+# Display editor's content as you type
+content
+#########################################################
 
 
 ##################################################
