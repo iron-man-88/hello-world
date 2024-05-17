@@ -352,34 +352,29 @@ with stylable_container(
 st.write("Your name:", name)
 ##########################
 
-st.markdown(
-    """
+
+
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_png_as_page_bg(png_file):
+    bin_str = get_base64_of_bin_file(png_file)
+    page_bg_img = '''
     <style>
-    .element-container:has(style){
-        display: none;
+    body {
+    background-image: url("data:image/svgsvg+xml;base64,%s");
+    background-size: cover;
     }
-    #button-after {
-        display: none;
-    }
-    .element-container:has(#button-after) {
-        display: none;
-    }
-    .element-container:has(#button-after) + div button {
-        background-color: orange;
-        #position: relative;
-        #left: 30px;
-        #bottom: 500px;
-        }
     </style>
-    """,
-    unsafe_allow_html=True,
-)
-st.button("button1")
-st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
-st.button("My Button")
-st.button("button2")
+    ''' % bin_str
+    
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    return
 
-
+set_png_as_page_bg('AB_01_01.svg')
 ####################################################################################################
 
 
