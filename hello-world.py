@@ -264,14 +264,14 @@ st.write("257 ")
 
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
 variable_output = st.text_input("Enter some text", value="Streamlit is awesome")
-font_size = st.slider("Enter a font size", 1, 300, value=20)
+left_position = st.slider("Enter a left", 1, 1100, value=0)
 
 html_str = f"""
 <style>
 p.a {{
-  font: bold {font_size}px Courier;
+  font: bold 20px Courier;
   position: relative;
-  left: {font_size}px;
+  left: {left_position}px;
   bottom: 0px;
 }}
 </style>
