@@ -329,80 +329,121 @@ def example2():
 example2()
 
 ##########################
-ttt = "60px;"
-with stylable_container(
-        key="green_popover",
-        css_styles="""
-            button {
-                width: 150px;
-                height: 60px;
-                background-color: green;
-                color: white;
-                border-radius: 5px;
-                white-space: nowrap;
-                position: relative;
-                left: 160px; #{lleft};
-                bottom: 100px;
-            }
-            """,
-    ):
-        po = st.popover(label='green popover')
-        po.text_input('name', key='nname')
-
-st.write("Your name:", name)
-##########################
-
-st.markdown(
-    """
-    <style>
-    .element-container:has(style){
-        display: none;
-    }
-    #button-after {
-        display: none;
-    }
-    .element-container:has(#button-after) {
-        display: none;
-    }
-    .element-container:has(#button-after) + div button {
-        background-color: orange;
-        #position: relative;
-        #left: 30px;
-        #bottom: 500px;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-st.button("button1")
-st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
-st.button("My Button")
-st.button("button2")
-
-
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("data:image/svgsvg+xml;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
-
-set_png_as_page_bg('AB_01_01.svg')
 
 
 
 
 
+def example1():
+    random_df = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+    my_grid = grid(2, [2, 4, 1], 1, 4, vertical_align="bottom")
+
+    # Row 1:
+    my_grid.dataframe(random_df, use_container_width=True)
+    my_grid.line_chart(random_df, use_container_width=True)
+    # Row 2:
+    my_grid.selectbox("Select Country", ["Germany", "Italy", "Japan", "USA"])
+    my_grid.text_input("Your name")
+    my_grid.button("Send", use_container_width=True)
+    # Row 3:
+    my_grid.text_area("Your message", height=40)
+    # Row 4:
+    my_grid.button("Example 1", use_container_width=True)
+    my_grid.button("Example 2", use_container_width=True)
+    my_grid.button("Example 3", use_container_width=True)
+    my_grid.button("Example 4", use_container_width=True)
+    # Row 5 (uses the spec from row 1):
+    with my_grid.expander("Show Filters", expanded=True):
+        st.slider("Filter by Age", 0, 100, 50)
+        st.slider("Filter by Height", 0.0, 2.0, 1.0)
+        st.slider("Filter by Weight", 0.0, 100.0, 50.0)
+    my_grid.dataframe(random_df, use_container_width=True)
+
+example1()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+t = 'A faster way to build and share data apps'
+
+html_style = '''
+<style>
+div:has( >.element-container div.floating) {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+div.floating {
+    height:0%;
+}
+</style>
+'''
+st.markdown(html_style, unsafe_allow_html=True)
+
+col1, col2 = st.columns([3, 2])
+
+with col1:
+    for i in range(0, 30):
+        st.header("Today's news")
+        st.write(t)
+
+with col2:
+    st.markdown(
+        '''
+            <div class="floating">
+                <a href='https://streamlit.io/'>Hello Streamlit</a>
+                <a href='https://streamlit.io/'>Hello Streamlit</a>
+                <a href='https://streamlit.io/'>Hello Streamlit</a>
+            </div>
+        ''', 
+        unsafe_allow_html=True
+        )
+
+
+
+
+
+
+
+
+
+
+
+
+from streamlit_float import *
+
+# Float feature initialization
+float_init()
+
+# Create footer container and add content
+footer_container = st.container()
+with footer_container:
+    st.markdown("Copyright &copy; 2023 Your Name - All Rights Reserved.")
+
+# Get custom theme background color if set, otherwise default to white
+bg_color = st.get_option('theme.backgroundColor')
+if bg_color is None:
+    bg_color = "white"
+
+# Generate CSS to target the floating footer container
+##css = float_css_helper(bottom="0", background=bg_color)
+
+# Float the footer container and provide CSS to target it with
+##footer_container.float(css)
