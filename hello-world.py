@@ -271,9 +271,9 @@ html_str = f"""
 <style>
 p.a {{
   font: bold 20px Courier;
-  position: fixed;
+  position: relative;
   left: {left_position}px;
-  top: 100px;
+  top: -100px;
   background-color: blue;
   color: red;
   z-index: 1;
