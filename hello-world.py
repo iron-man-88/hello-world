@@ -24,7 +24,7 @@ st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-he
 )
 st.markdown( # Breite des main divs
     """<style>.block-container {padding-bottom: 0.01rem;: 0 !important; padding-top: 0.5rem;: 0 !important;  \
-        padding-left: 0.25rem;: 0 !important; padding-right: 0.25rem;: 0 !important;}</style>""",
+        padding-left: 0.25rem;: 0 !important; padding-right: 0.25rem;: 0 !important; position: fixed !important}</style>""",
     unsafe_allow_html=True,)
 
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
