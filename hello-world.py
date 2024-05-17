@@ -308,12 +308,13 @@ def example2():
 example2()
 
 ##########################
+ttt = "60px;"
 with stylable_container(
         key="green_popover",
         css_styles="""
             button {
                 #width: 150px;
-                #height: 60px;
+                height: ttt
                 background-color: green;
                 color: white;
                 border-radius: 5px;
