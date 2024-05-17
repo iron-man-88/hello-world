@@ -447,7 +447,7 @@ div.floating {
 '''
 st.markdown(html_style, unsafe_allow_html=True)
 
-col1, col2 = st.columns([9, 2])
+col1, col2 = st.columns([3, 2])
 
 with col1:
     for i in range(0, 30):
