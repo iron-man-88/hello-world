@@ -271,8 +271,8 @@ html_str = f"""
 p.a {{
   font: bold {font_size}px Courier;
   position: relative;
-  left: 60px;
-  bottom: 500px;
+  left: 20px;
+  bottom: 20px;
 }}
 </style>
 <p class="a">{variable_output}</p>
