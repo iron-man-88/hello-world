@@ -326,7 +326,7 @@ with stylable_container(
     ):
         po = st.popover(label='green popover')
         po.text_input('name', key='nname')
-        nname = st.text_input("What's your name?")
+        #nname = st.text_input("What's your name?")
 
     #name = st.text_input("What's your name?")
 
