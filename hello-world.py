@@ -279,8 +279,8 @@ p.a {{
 }}
 a.ttip{{
   position:relative;
-  left: 70px;
-  top: 100px;
+  left: {left_position}px;
+  top: {top_position}px;
   color:blue;
 }}
 a.ttip:hover::after{{
