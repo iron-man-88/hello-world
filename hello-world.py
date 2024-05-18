@@ -286,7 +286,7 @@ a.ttip{{
   border:1px#808080 solid;
   padding:2px;
 }}
-a.ttip::after{{
+a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:absolute;
   min-width:50px;
