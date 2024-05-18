@@ -263,7 +263,7 @@ st.write("259 ")
 #variable_output = st.text_input("Enter some text", value="Streamlit is awesome")
 variable_output = st.text_area("Enter some text", value="Streamlit is awesome")
 left_position = st.slider("Left", 1, 1340, value=0)
-top_position = st.slider("Top", 1, 800, value=0)
+top_position = st.slider("", 1, 800, value=0)
 
 html_str = f"""
 <style>
