@@ -282,13 +282,14 @@ a.ttip{{
   left: {left_position}px;
   top: {top_position}px;
   color:blue;
+  background-color:lightblue;
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:absolute;
   min-width:50px;
   border:1px#808080 solid;
-  padding:8px;
+  padding:2px;
   color:black;
   background-color:lightblue;
   z-index:1;
