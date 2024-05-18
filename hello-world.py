@@ -281,7 +281,7 @@ a.ttip{{
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
-  color:blue;
+  color:yellow;
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
