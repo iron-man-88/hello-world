@@ -277,6 +277,20 @@ p.a {{
   z-index: 1;
   width: fit-content;
 }}
+a.ttip{{
+  position:relative;
+  color:blue;
+}}
+a.ttip:hover::after{{
+  content:attr(data-tooltip);
+  position:absolute;
+  min-width:50px;
+  border:1px#808080 solid;
+  padding:8px;
+  color:black;
+  background-color:lightblue;
+  z-index:1;
+}}
 </style>
 <p class="a">{variable_output}</p>
 """
