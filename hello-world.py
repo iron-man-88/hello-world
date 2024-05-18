@@ -283,6 +283,8 @@ a.ttip{{
   top: {top_position}px;
   color:blue;
   background-color:lightblue;
+  border:1px#808080 solid;
+  padding:2px;
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
