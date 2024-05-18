@@ -260,7 +260,7 @@ st.write("259 ")
 
 
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
-left_position = st.sidebar.slider("Left", 1, 1340, value=0)
+left_position = st.sidebar.slider(, 1, 1340, value=0)
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
 #variable_output = st.text_input("Enter some text", value="Streamlit is awesome")
 variable_output = st.sidebar.text_area("Enter some text", value="Streamlit is awesome")
