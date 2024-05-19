@@ -286,6 +286,7 @@ a.ttip{{
   border:1px#808080 solid;
   padding:2px;
   text-decoration: none;
+  z-index:1;
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
