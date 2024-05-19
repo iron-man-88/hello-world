@@ -491,4 +491,4 @@ def change_label_style(label, font_size='12px', font_color='blue', font_family='
 
 label = "My text here"
 st.text_input(label)
-change_label_style(label, '80px')
+change_label_style(label, '30px')
