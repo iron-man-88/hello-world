@@ -477,7 +477,7 @@ example1()
 
 
 
-def change_label_style(label, font_size='12px', font_color='black', font_family='sans-serif'):
+def change_label_style(label, font_size='12px', font_color='blue', font_family='sans-serif'):
     html = f"""
     <script>
         var elems = window.parent.document.querySelectorAll('p');
