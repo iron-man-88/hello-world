@@ -312,7 +312,7 @@ st.write("Your name:")
 def change_label_style(label, font_size='12px', font_color='blue', font_family='sans-serif'):
     html = f"""
     <script>
-        var elems = window.parent.document.querySelectorAll('a');
+        var elems = window.parent.document.querySelectorAll('p');
         var elem = Array.from(elems).find(x => x.innerText == '{label}');
         elem.style.fontSize = '{font_size}';
         elem.style.color = '{font_color}';
