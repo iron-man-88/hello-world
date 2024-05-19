@@ -318,7 +318,7 @@ a.ttip:hover::after{{
 }}
 </style>
 <p class="a">{variable_output}</p>
-<a data-tooltip="Kampf" class="ttip">'{variable_output}'
+<a data-tooltip="Kampf" class="ttip">{variable_output}
 """
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
