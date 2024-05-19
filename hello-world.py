@@ -296,7 +296,6 @@ a.ttip:hover::after{{
   padding:2px;
   color:black;
   background-color:lightblue;
-  z-index:1;
 }}
 </style>
 <p class="a">{variable_output}</p>
