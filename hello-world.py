@@ -259,6 +259,25 @@ st.data_editor(
 st.write("259 ")
 
 
+
+#################################################
+def change_label_style(label, font_size='12px', font_color='blue', font_family='sans-serif'):
+    html = f"""
+    <script>
+        var elems = window.parent.document.querySelectorAll('p');
+        var elem = Array.from(elems).find(x => x.innerText == '{label}');
+        elem.style.fontSize = '{font_size}';
+        elem.style.color = '{font_color}';
+        elem.style.fontFamily = '{font_family}';
+    </script>
+    """
+    st.components.v1.html(html)
+
+label = "324 My text here"
+st.text_input(label)
+change_label_style(label, '30px')
+#################################################
+
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
 left_position = st.sidebar.slider("Left", 1, 1340, value=0)
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
@@ -299,7 +318,7 @@ a.ttip:hover::after{{
 }}
 </style>
 <p class="a">{variable_output}</p>
-<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
+<a data-tooltip="Kampf" class="ttip">'{label}'
 """
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
@@ -308,31 +327,8 @@ st.write("Your name:")
 
 
 #################################################
-def change_label_style(label, font_size='12px', font_color='blue', font_family='sans-serif'):
-    html = f"""
-    <script>
-        var elems = window.parent.document.querySelectorAll('p');
-        var elem = Array.from(elems).find(x => x.innerText == '{label}');
-        elem.style.fontSize = '{font_size}';
-        elem.style.color = '{font_color}';
-        elem.style.fontFamily = '{font_family}';
-    </script>
-    """
-    st.components.v1.html(html)
 
-label = "324 My text here"
-st.text_input(label)
-change_label_style(label, '30px')
-
-
-
-
-
-
-
-
-
-##################################################
+#################################################
 with st.popover("OP"):
     st.markdown("Hello World 👋")
     name = st.text_input("What's your name?")
