@@ -298,7 +298,8 @@ a.ttip:hover::after{{
   background-color:lightblue;
 }}
 </style>
-<a class="a">{variable_output}</a>
+#<p class="a">{variable_output}</p>
+<a class="a">{variable_output}
 <a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 """
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
