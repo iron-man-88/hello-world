@@ -297,7 +297,7 @@ p.a {{
   z-index: 1;
   width: fit-content;
 }}
-div.ttip{{
+a.ttip{{
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
@@ -307,7 +307,7 @@ div.ttip{{
   z-index:1;
   text-decoration: none;
 }}
-div.ttip:hover::after{{
+a.ttip:{{
   content:attr(data-tooltip);
   position:relative;
   left: {left_position}px;
@@ -342,7 +342,7 @@ div.div_inner:hover::after{{
 }}
 </style>
 <a data-tooltip="Kampf" class="ttip">{variable_output}
-<div data-tooltip="Kampf" class="ttip" <p class="div_outer">{variable_output}</p>
+<a data-tooltip="Kampf" class="ttip" <p class="div_outer">{variable_output}</p>
 """
 ###<p class="a">{variable_output}</p>
 ###<div data-tooltip="Kampf" class="div_inner" <div class="div_outer">{variable_output}</div>
