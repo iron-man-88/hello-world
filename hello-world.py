@@ -339,9 +339,9 @@ div_inner:hover::after{{
 }}
 </style>
 <p class="a">{variable_output}</p>
-#<a data-tooltip="Kampf" class="ttip">{variable_output}
 <div class="div_outer" <div class="div_inner">>342K&auml;mpfer
 """
+###<a data-tooltip="Kampf" class="ttip">{variable_output}
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 st.markdown(html_str, unsafe_allow_html=True)
