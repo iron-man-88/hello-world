@@ -316,9 +316,30 @@ a.ttip:hover::after{{
   color:black;
   background-color:lightblue;
 }}
+
+div_outer {{
+  font: bold 20px Courier;
+  position: relative;
+  left: {left_position}px;
+  top: {top_position}px;
+  background-color: blue;
+  color: red;
+  z-index: 1;
+  width: fit-content;
+}}
+div_inner:hover::after{{
+  content:attr(data-tooltip);
+  position:absolute;
+  min-width:50px;
+  border:1px#808080 solid;
+  padding:2px;
+  color:black;
+  background-color:lightblue;
+}}
 </style>
 <p class="a">{variable_output}</p>
 <a data-tooltip="Kampf" class="ttip">{variable_output}
+<div class="div_outer" <div class="div_inner">K&auml;mpfer>
 """
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
