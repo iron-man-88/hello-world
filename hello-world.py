@@ -328,6 +328,7 @@ position:relative;
   padding:2px;
   text-decoration: none;
   z-index:1;
+  width: fit-content;
  }}
 div_inner:hover::after{{
   content:attr(data-tooltip);
