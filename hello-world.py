@@ -303,7 +303,6 @@ a.ttip{{
   top: {top_position}px;
   color:blue;
   background-color:lightblue;
-  border:1px#808080 solid;
   padding:2px;
   text-decoration: none;
   z-index:1;
