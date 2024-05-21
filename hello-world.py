@@ -307,7 +307,7 @@ a.ttip{{
   z-index:1;
   text-decoration: none;
 }}
-a.ttip:{{
+a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
   left: {left_position}px;
@@ -317,6 +317,8 @@ a.ttip:{{
   color:black;
   background-color:lightblue;
   text-decoration: none;
+  pointer-events: none;
+  cursor: default;
 }}
 
 p.div_outer{{
