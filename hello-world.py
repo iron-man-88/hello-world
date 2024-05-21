@@ -297,7 +297,7 @@ p.a {{
   z-index: 1;
   width: fit-content;
 }}
-a.ttip{{
+div.ttip{{
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
