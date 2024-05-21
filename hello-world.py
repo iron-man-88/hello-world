@@ -314,7 +314,6 @@ a.ttip:hover::after{{
   left: {left_position}px;
   top: {top_position}px;
   min-width:50px;
-  border:1px#808080 solid;
   padding:2px;
   color:black;
   background-color:lightblue;
@@ -341,7 +340,6 @@ div.div_inner:hover::after{{
   padding:2px;
   color:black;
   background-color:lightblue;
-  text-decoration: none;
 }}
 </style>
 <a data-tooltip="Kampf" class="ttip">{variable_output}
