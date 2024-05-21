@@ -308,7 +308,7 @@ a.ttip{{
   text-decoration: none;
   z-index:1;
 }}
-a.ttip:hover::after{{
+p.ttip:hover::after{{
   content:attr(data-tooltip);
   position:absolute;
   min-width:50px;
