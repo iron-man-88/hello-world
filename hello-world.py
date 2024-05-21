@@ -317,8 +317,6 @@ a.ttip:hover::after{{
   color:black;
   background-color:lightblue;
   text-decoration: none;
-  pointer-events: none;
-  cursor: default;
 }}
 
 p.div_outer{{
