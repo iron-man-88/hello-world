@@ -330,7 +330,7 @@ position:relative;
   z-index:1;
   width: fit-content;
  }}
-div_inner:hover::after{{
+div.div_inner:hover::after{{
   content:attr(data-tooltip);
   position:absolute;
   min-width:50px;
@@ -342,6 +342,7 @@ div_inner:hover::after{{
 </style>
 <p class="a">{variable_output}</p>
 <div class="div_outer">{variable_output}
+<div data-tooltip="Kampf" class="div_inner">
 """
 ###<a data-tooltip="Kampf" class="ttip">{variable_output}
 ###<div class="div_outer"><div class="div_inner">342 kkkK&auml;mpfer</div></div>
