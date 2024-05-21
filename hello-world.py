@@ -273,7 +273,7 @@ def change_label_style(label, font_size='12px', font_color='blue', font_family='
     """
     st.components.v1.html(html)
 
-label = "324 My text here"
+label = "My text here"
 st.text_input(label)
 change_label_style(label, '30px')
 #################################################
