@@ -339,7 +339,7 @@ div_inner:hover::after{{
 </style>
 <p class="a">{variable_output}</p>
 <a data-tooltip="Kampf" class="ttip">{variable_output}
-<div class="div_outer" <div class="div_inner">K&auml;mpfer>
+<div class="div_outer" <div class="div_inner">342K&auml;mpfer>
 """
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
