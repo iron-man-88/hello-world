@@ -310,7 +310,9 @@ a.ttip{{
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
-  position:absolute;
+  position:relative;
+  left: {left_position}px;
+  top: {top_position}px;
   min-width:50px;
   border:1px#808080 solid;
   padding:2px;
@@ -340,9 +342,9 @@ div.div_inner:hover::after{{
   background-color:lightblue;
 }}
 </style>
-<p class="a">{variable_output}</p>
 <a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 """
+###<p class="a">{variable_output}</p>
 ###<div data-tooltip="Kampf" class="div_inner" <div class="div_outer">{variable_output}</div>
 ###<div data-tooltip="Kampf" class="div_inner">
 ###<a data-tooltip="Kampf" class="ttip">{variable_output}
