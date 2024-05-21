@@ -318,7 +318,7 @@ a.ttip:hover::after{{
   background-color:lightblue;
 }}
 
-div.div_outer {{
+div.div_inner.div_outer {{
 position:relative;
   left: {left_position}px;
   top: {top_position}px;
