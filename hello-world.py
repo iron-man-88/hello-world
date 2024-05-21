@@ -319,15 +319,16 @@ a.ttip:hover::after{{
 }}
 
 div.div_outer {{
-  font: bold 20px Courier;
-  position: relative;
+position:relative;
   left: {left_position}px;
   top: {top_position}px;
-  background-color: blue;
-  color: red;
-  z-index: 1;
-  width: fit-content;
-}}
+  color:blue;
+  background-color:lightblue;
+  border:1px#808080 solid;
+  padding:2px;
+  text-decoration: none;
+  z-index:1;
+ }}
 div_inner:hover::after{{
   content:attr(data-tooltip);
   position:absolute;
