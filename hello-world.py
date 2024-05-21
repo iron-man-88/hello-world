@@ -317,6 +317,7 @@ a.ttip:hover::after{{
   color:black;
   background-color:lightblue;
   text-decoration: none;
+  pointer-events: none;
 }}
 
 p.div_outer{{
@@ -342,7 +343,7 @@ div.div_inner:hover::after{{
 }}
 </style>
 <a data-tooltip="Kampf" class="ttip">{variable_output}
-<[a data-tooltip="Kampf" class="ttip"]{pointer-events: none;}<p class="div_outer">{variable_output}</p>
+<a data-tooltip="Kampf" class="ttip"<p class="div_outer">{variable_output}</p>
 """
 ######<a data-tooltip="Kampf" class="ttip"<p class="div_outer">{variable_output}</p>
 ###<p class="a">{variable_output}</p>
