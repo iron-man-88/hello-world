@@ -318,6 +318,7 @@ a.ttip:hover::after{{
   padding:2px;
   color:black;
   background-color:lightblue;
+  text-decoration: none;
 }}
 
 p.div_outer{{
