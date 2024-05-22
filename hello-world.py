@@ -341,7 +341,7 @@ div.div_inner:hover::after{{
   background-color:lightblue;
 }}
 </style>
-<p class="a">{variable_output}, help='346 Select a number out of 3 choices'</p>
+<p class="a">{variable_output}</p>
 """
 ######<a data-tooltip="Kampf" class="ttip"<p class="div_outer">{variable_output}</p>
 ###<p class="a">{variable_output}</p>
