@@ -539,10 +539,7 @@ with st.container(border=True):
 
 st.write("""
   <style>
-    div[data-testid="stVerticalBlockBorderWrapper"]:has(
-      >div>div>div[data-testid="element-container"] 
-      .red-frame
-    ) {
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(>div>div>div[data-testid="element-container"].red-frame) {
       outline: 2px solid red;
       border-radius: 2px; 
     }
