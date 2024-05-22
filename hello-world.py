@@ -596,4 +596,4 @@ def create_container_with_color(id, color="#E4F2EC"):
     st.markdown(chat_plh_style, unsafe_allow_html=True)
     return plh
 
-create_container_with_color("ppp", color="#E4F2EC")
+create_container_with_color("ppp", color="blue")
