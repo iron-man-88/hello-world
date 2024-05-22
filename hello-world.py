@@ -530,12 +530,12 @@ example1()
 
 
 
-st.write('text outside the container')
+st.write('533 text outside the container')
 with st.container(border=True):
-  st.write('text inside container with red border')
+  st.write('535 text inside container with red border')
   st.write('<span class="red-frame"/>', unsafe_allow_html=True)
 with st.container(border=True):
-  st.write('text inside container')
+  st.write('538 text inside container')
 
 st.write("""
   <style>
