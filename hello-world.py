@@ -529,7 +529,6 @@ example1()
 
 
 
-
 st.write('533 text outside the container')
 with st.container(border=True):
   st.write('535 text inside container with red border')
@@ -571,6 +570,7 @@ st.write("""
 
 
 
+#https://discuss.streamlit.io/t/applying-custom-css-to-manually-created-containers/33428/9
 
 
 def create_container_with_color(id, color="#E4F2EC"):
@@ -587,7 +587,7 @@ def create_container_with_color(id, color="#E4F2EC"):
         <style>
             div[data-testid='stVerticalBlock']:has(div#my_div_inner_%s):not(:has(div#my_div_outer)) {
                 background-color: %s;
-                border-radius: 10px;
+                border-radius: 10px 10px 10px 20px;
                 padding: 10px;height:10px
             };
         </style>
