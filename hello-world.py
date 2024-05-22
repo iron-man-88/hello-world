@@ -510,3 +510,41 @@ example1()
 
 ####################################################################################################
 # https://discuss.streamlit.io/t/anybody-interested-in-simple-component-to-float-containers/45013/5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+st.write('text outside the container')
+with st.container(border=True):
+  st.write('text inside container with red border')
+  st.write('<span class="red-frame"/>', unsafe_allow_html=True)
+with st.container(border=True):
+  st.write('text inside container')
+
+st.write("""
+  <style>
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(
+      >div>div>div[data-testid="element-container"] 
+      .red-frame
+    ) {
+      outline: 2px solid red;
+      border-radius: 2px; 
+    }
+  </style>
+  """, unsafe_allow_html=True)
