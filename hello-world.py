@@ -588,7 +588,7 @@ def create_container_with_color(id, color="#E4F2EC"):
             div[data-testid='stVerticalBlock']:has(div#my_div_inner_%s):not(:has(div#my_div_outer)) {
                 background-color: %s;
                 border-radius: 10px;
-                padding: 10px 10px 20px 10px;
+                padding: 10px 10px 20px 10px;height:10px
                 width: fit-content;
             };
         </style>
@@ -598,3 +598,33 @@ def create_container_with_color(id, color="#E4F2EC"):
     return plh
 
 create_container_with_color("ppp", color="blue")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+st.title('Tooltips in Streamlit')
+st.radio("Pick a number", [1, 2, 3], help='Select a number out of 3 choices')
+
+# Tooltips also support markdown
+radio_markdown = '''
+Select a number, you have **3** choices!
+'''.strip()
+
+st.header('Tooltips with Markdown')
+st.radio("Pick a number", [1, 2, 3], help=radio_markdown)
