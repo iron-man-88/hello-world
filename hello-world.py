@@ -537,7 +537,7 @@ with st.container(border=True):
 st.write("""
   <style>
     div[data-testid="stVerticalBlockBorderWrapper"]:has(
-      >div>div[data-testid="element-container"] 
+      >div[data-testid="element-container"] 
       .red-frame
     ) {
       outline: 2px solid red;
