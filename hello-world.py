@@ -715,7 +715,7 @@ card("ID","name","nickname","mother_name","bd",)
 
 
 
-
+# https://discuss.streamlit.io/t/html-template/63836/2
 import streamlit.components.v1 as components
 from jinja2 import Template
 
