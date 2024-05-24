@@ -342,6 +342,7 @@ div.div_inner:hover::after{{
 }}
 </style>
 <div class="a">{variable_output}</div>
+<div data-tooltip="Kampf" class="div_inner" <div class="div_outer">{variable_output}</div>
 """
 ######<a data-tooltip="Kampf" class="ttip"<p class="div_outer">{variable_output}</p>
 ###<p class="a">{variable_output}</p>
@@ -546,7 +547,7 @@ st.write("""
       border-radius: 2px; 
     }
   </style>
-  """, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
+  """, unsafe_allow_html=True)
 
 
 
