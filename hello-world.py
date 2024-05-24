@@ -287,7 +287,7 @@ variable_output = st.sidebar.text_area("Enter some text", value="Streamlit is aw
 
 html_str = f"""
 <style>
-p.a {{
+div.a {{
   font: bold 20px Courier;
   position: relative;
   left: {left_position}px;
@@ -341,7 +341,7 @@ div.div_inner:hover::after{{
   background-color:lightblue;
 }}
 </style>
-<p class="a">{variable_output}</p>
+<div class="a">{variable_output}</div>
 """
 ######<a data-tooltip="Kampf" class="ttip"<p class="div_outer">{variable_output}</p>
 ###<p class="a">{variable_output}</p>
