@@ -653,7 +653,7 @@ def card(ID,name,nickname,mother_name,bd,):
 
     return f'''
 
-    <div class="card text-center" style="width: 18rem;">
+    <div class="card text-center" style="width: 3rem;  color: red;">
 
         <div class="card-body">
 
