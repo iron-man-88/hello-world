@@ -283,7 +283,7 @@ st.text_input(label)
 left_position = st.sidebar.slider("Left", 1, 1340, value=0)
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
 #variable_output = st.text_input("Enter some text", value="Streamlit is awesome")
-variable_output = st.sidebar.text_area("Enter some text", value="*Streamlit* **is** awesome<br>aaa")
+variable_output = st.sidebar.text_area("Enter some text", value="Streamlit is awesome<br>aaa")
 
 html_str = f"""
 <style>
@@ -351,7 +351,8 @@ div.div_inner:hover::after{{
 ###<div class="div_outer"><div class="div_inner">342 kkkK&auml;mpfer</div></div>
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
-st.markdown(html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
+## org ###   st.markdown(html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
+st.markdown(html_str, "*italic*", unsafe_allow_html=True, help='354 Select a number out of 3 choices')
 st.write("Your name:")
 
 
