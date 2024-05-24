@@ -727,7 +727,7 @@ def main():
     # Load the Jinja2 template
     with open("template.html", "r") as template_file:
         template_content = template_file.read()
-        jinja_template = Template(template_content, {variable_output})
+        jinja_template = Template(template_content)
 
     # Render the template with dynamic data
     rendered_html = jinja_template.render(title=app_title, items=items)
