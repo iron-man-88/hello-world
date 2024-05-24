@@ -683,9 +683,9 @@ with st.sidebar.form(key='search_form',clear_on_submit= False):
      regular_search_term=st.text_input("Enter Search Term")
      if st.form_submit_button("search"):
          df_result_search = df[df['name'].str.contains(regular_search_term)|df['nickname'].str.contains(regular_search_term)|df['mother_name'].str.contains(regular_search_term)]
-
- st.write("{} Records ".format(str(df_result_search.shape[0])))
- for index ,row in df_result_search.iterrows():
+         
+st.write("{} Records ".format(str(df_result_search.shape[0])))
+for index ,row in df_result_search.iterrows():
          st.markdown(card(
                             row[0],
                             row[1],
