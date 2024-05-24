@@ -532,7 +532,7 @@ example1()
 st.write('533 text outside the container')
 with st.container(border=True):
   st.write('535 text inside container with red border')
-  st.write('<span class="red-frame"/>', unsafe_allow_html=True, help='354 Select a number out of 3 choices')
+  st.write('<span class="red-frame"/>', unsafe_allow_html=True)
 with st.container(border=True):
   st.write('538 text inside container')
 
@@ -546,7 +546,7 @@ st.write("""
       border-radius: 2px; 
     }
   </style>
-  """, unsafe_allow_html=True)
+  """, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
 
 
 
