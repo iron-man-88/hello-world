@@ -735,4 +735,4 @@ def main():
     # Display the HTML in Streamlit app
     components.html(rendered_html, height=200, scrolling=True)
 
-if __name__ == '__main__':
+main()
