@@ -351,9 +351,10 @@ div.div_inner:hover::after{{
 ###<div class="div_outer"><div class="div_inner">342 kkkK&auml;mpfer</div></div>
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
-st.markdown("*aaa*", html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
+aaa="*bbb*"
+st.markdown(aaa)
+st.markdown(aaa + html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
 st.write("Your name:")
-st.markdown("*aaa*")
 
 
 #################################################
