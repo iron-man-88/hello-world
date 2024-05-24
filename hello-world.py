@@ -693,3 +693,5 @@ for index ,row in df_result_search.iterrows():
                             row[3],
                             row[4],
     ),unsafe_allow_html=True)
+
+def card("ID","name","nickname","mother_name","bd",)
