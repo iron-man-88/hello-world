@@ -586,7 +586,7 @@ def create_container_with_color(id, color="#E4F2EC"):
     ## applying style
     chat_plh_style = """
         <style>
-            div[data-testid='stVerticalBlock']:has(div#my_div_inner_%s) {
+            div[data-testid='stVerticalBlock']:has(div#my_div_inner_%s):not(:has(div#my_div_outer)) {
                 background-color: %s;
                 border-radius: 10px;
                 padding: 10px 10px 20px 10px;height:10px
@@ -629,3 +629,68 @@ Select a number, you have **3** choices!
 
 st.header('Tooltips with Markdown')
 st.radio("Pick a number", [1, 2, 3], help=radio_markdown)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################################    https://discuss.streamlit.io/t/how-to-use-if-statment-inside-div-tags-with-streamlit/25543
+
+def card(ID,name,nickname,mother_name,bd,):
+
+    return f'''
+
+    <div class="card text-center" style="width: 18rem;">
+
+        <div class="card-body">
+
+            <h5 class="card-title">ID: {ID}</h5>
+
+            <h6 class="card-subtitle mb-2 text-muted">Name: {name}</h6>
+
+            <p class="card-text">Nickname: {nickname}</p>
+
+            <p class="card-text">Date of Birth: {bd}</p>
+
+            <p class="card-text">Mother Name: {mother_name}</p>
+
+        </div>
+
+    </div>
+
+    '''
+st.markdown("""
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+""",unsafe_allow_html=True)
+
+df_result_search = pd.DataFrame()
+with st.sidebar.form(key='search_form',clear_on_submit= False):
+     regular_search_term=st.text_input("Enter Search Term")
+     if st.form_submit_button("search"):
+         df_result_search = df[df['name'].str.contains(regular_search_term)|df['nickname'].str.contains(regular_search_term)|df['mother_name'].str.contains(regular_search_term)]
+                        
+                            
+ st.write("{} Records ".format(str(df_result_search.shape[0])))
+ for index ,row in df_result_search.iterrows():
+         st.markdown(card(
+                            row[0],
+                            row[1],
+                            row[2],
+                            row[3],
+                            row[4],
+    ),unsafe_allow_html=True)
