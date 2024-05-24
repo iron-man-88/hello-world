@@ -723,12 +723,11 @@ def main():
     # Your dynamic data
     app_title = "My Streamlit App"
     items = ["Item 1", "Item 2", "Item 3"]
-    {variable_output}
 
     # Load the Jinja2 template
     with open("template.html", "r") as template_file:
         template_content = template_file.read()
-        jinja_template = Template(template_content)
+        jinja_template = Template(template_content, {variable_output})
 
     # Render the template with dynamic data
     rendered_html = jinja_template.render(title=app_title, items=items)
