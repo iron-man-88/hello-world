@@ -731,7 +731,7 @@ def main():
         jinja_template = Template(template_content)
 
     # Render the template with dynamic data
-    rendered_html = jinja_template.render(title=app_title, items=items)
+    rendered_html = jinja_template.render(title=app_title, items=items, variable_output = variable_output)
 
     # Display the HTML in Streamlit app
     components.html(rendered_html, height=200, scrolling=True)
