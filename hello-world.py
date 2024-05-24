@@ -719,11 +719,13 @@ card("ID","name","nickname","mother_name","bd",)
 import streamlit.components.v1 as components
 from jinja2 import Template
 
+bbb = "aaa"
+
 def main():
     # Your dynamic data
     app_title = "My Streamlit App"
     items = ["Item 1", "Item 2", "Item 3"]
-    variable_output = "aaa"
+    variable_output = bbb
 
     # Load the Jinja2 template
     with open("template.html", "r") as template_file:
