@@ -725,7 +725,7 @@ def main():
     items = ["Item 1", "Item 2", "Item 3"]
 
     # Load the Jinja2 template
-    with open("template/template.html", "r") as template_file:
+    with open("template.html", "r") as template_file:
         template_content = template_file.read()
         jinja_template = Template(template_content)
 
