@@ -655,6 +655,6 @@ def main():
 
     # Display the HTML in Streamlit app
     #components.html(rendered_html, width=400, height=230, scrolling=False)
-    components.html("""<link rel="stylesheet" href="/static/css.css">""", rendered_html, width=400, height=230, scrolling=False)
+    components.html("""<link rel="stylesheet" href="/css.css">""", rendered_html, width=400, height=230, scrolling=False)
 
 main()
