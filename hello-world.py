@@ -646,7 +646,7 @@ def main():
     variable_output = bbb
 
     # Load the Jinja2 template
-    with open("template1.html", "r") as template_file:
+    with open("template.html", "r") as template_file:
         template_content = template_file.read()
         jinja_template = Template(template_content)
 
