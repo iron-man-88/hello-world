@@ -644,7 +644,7 @@ def main():
     # Your dynamic data
     app_title = "My Streamlit App"
     items = ["Item 1", "Item 2", "Item 3"]
-    variable_output = bbb
+    variable_output = "bbb"
 
     # Load the Jinja2 template
     with open("template.html", "r") as template_file:
