@@ -654,6 +654,8 @@ def main():
     rendered_html = jinja_template.render(title=app_title, items=items, variable_output = variable_output)
 
     # Display the HTML in Streamlit app
-    components.html(rendered_html, width=400, height=230, scrolling=False)
+# org    components.html(rendered_html, width=400, height=230, scrolling=False)
+    components.html("""<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">""",
+                    rendered_html, width=400, height=230, scrolling=False)
 
 main()
