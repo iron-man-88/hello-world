@@ -302,14 +302,12 @@ div.square{{
   border-style: solid;
   border-color: blue;
   border-radius: 10px;
-  text-decoration: none;
 }}
 div.a {{
   font: bold 20px Courier;
   background-color: blue;
   color: red;
   z-index: 1;
-  text-decoration: none;
   width:fit-content;
   height:fit-content;
 }}
