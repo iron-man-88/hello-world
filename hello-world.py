@@ -337,6 +337,7 @@ div.square{{
   z-index: 1;
   padding:0px 8px 4px 8px;
   border:1px;
+  border-color:blue;
   border-radius: 15px;
 }}
 </style>
