@@ -655,6 +655,6 @@ def main():
     rendered_html = jinja_template.render(title=app_title, items=items, variable_output = variable_outputtt)
 
     # Display the HTML in Streamlit app
-    components.html(rendered_html, width=400, height=630, scrolling=False)
+    components.html(rendered_html, width=400, height=630, bottom=150, left=200, scrolling=False)
     
 main()
