@@ -316,15 +316,6 @@ div.a {{
   width:fit-content;
   height:fit-content;
 }}
-div.aa.ttip{{
-  color:blue;
-  padding:2px;
-  z-index:1;
-  width:fit-content;
-  height:fit-content;
-  text-decoration-line: underline;
-  text-decoration-color: lightblue;
-}}
 div.ttip{{
   color:blue;
   padding:2px;
