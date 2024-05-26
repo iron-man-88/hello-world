@@ -612,7 +612,7 @@ main()
 
 
 
-ccc = "<span style="""""+color:blue"""+">xxx</span>"
+ccc = "<span style="""""color:blue""""">xxx</span>"
 st.write("616_ ", ccc)
 from st_copy_to_clipboard import st_copy_to_clipboard
 
