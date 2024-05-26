@@ -341,7 +341,7 @@ div.div_inner:hover::after{{
   background-color:lightblue;
 }}
 </style>
-<div class="a" data-tooltip="Kampf" class="ttip" K&auml;mpfer + {variable_output}></div>
+<div class="a" data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 """
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
 #<div class="a" data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
