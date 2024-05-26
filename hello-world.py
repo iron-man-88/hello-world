@@ -343,8 +343,6 @@ div.div_inner:hover::after{{
 
 div.square{{
       background-color: #2ecc71;
-      width: 200px;
-      height: 200px;
 }}
 
 
