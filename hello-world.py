@@ -342,7 +342,8 @@ div.div_inner:hover::after{{
 }}
 
 div.square{{
-      background-color: #2ecc71;
+  background-color: #2ecc71;
+  width: fit-content;
 }}
 
 
