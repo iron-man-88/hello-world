@@ -330,6 +330,7 @@ position:relative;
 div.square{{
   background-color: lightblue;
   width: fit-content;
+  block-size: fit-content;
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
