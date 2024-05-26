@@ -608,3 +608,12 @@ def main():
     components.html(rendered_html, width=400, height=500, scrolling=False)
     
 main()
+
+
+
+
+
+
+
+import pyperclip
+pyperclip.copy('Hello, world!')
