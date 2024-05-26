@@ -308,7 +308,7 @@ a.ttip{{
   z-index:1;
   text-decoration: none;
 }}
-a.ttip:hover::after{{
+ba.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
   left: {left_position}px;
