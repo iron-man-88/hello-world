@@ -332,6 +332,7 @@ div.square{{
   text-align: center;
   background: lightblue;
   position:relative;
+  text-decoration: none;
   left: {left_position}px;
   top: {top_position}px;
   z-index: 1;
