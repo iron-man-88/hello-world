@@ -312,7 +312,7 @@ a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
   left: 12px;
-  top: 0px;
+  top: -20px;
   min-width:50px;
   padding:2px;
   color:black;
