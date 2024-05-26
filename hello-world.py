@@ -304,7 +304,7 @@ div.a.ttip{{
   text-decoration: none;
   width: fit-content;
 }}
-div.a.ttip:hover::after{{
+a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
   left: 5px;
