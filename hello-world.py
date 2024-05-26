@@ -340,7 +340,7 @@ a:link {{
 
 /* visited link */
 a:visited {{
-  color: lightblue;
+  color: blue;
   text-decoration: none;
 }}
 
@@ -352,7 +352,7 @@ a:hover {{
 
 /* selected link */
 a:active {{
-  color: lightblue;
+  color: blue;
   text-decoration: none;
 }}
 
