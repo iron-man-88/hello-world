@@ -334,7 +334,7 @@ a.ttip:hover::after{{
 
 /* unvisited link */
 a:link {{
-  color: lightblue;
+  color: blue;
   text-decoration: none;
 }}
 
