@@ -296,6 +296,7 @@ div.a {{
   background-color: blue;
   color: red;
   z-index: 1;
+  text-decoration: none;
 }}
 div.a.ttip{{
   color:blue;
@@ -332,7 +333,6 @@ div.square{{
   text-align: center;
   background: lightblue;
   position:relative;
-  text-decoration: none;
   left: {left_position}px;
   top: {top_position}px;
   z-index: 1;
