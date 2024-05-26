@@ -612,9 +612,9 @@ main()
 
 
 
-
+ccc = "<span style=/"color:blue/">xxx</span>"
 
 from st_copy_to_clipboard import st_copy_to_clipboard
 
 # Render copy to clipboard button
-st_copy_to_clipboard("Copy this to clipboard", help='<span style="color:blue">xxx</span>')
+st_copy_to_clipboard("Copy this to clipboard", help=ccc)
