@@ -335,9 +335,9 @@ div.square{{
   left: {left_position}px;
   top: {top_position}px;
   z-index: 1;
-  padding:0px 8px 4px 8px;
-  border:1px;
-  border-color:blue;
+  padding: 0px 8px 4px 8px;
+  border-size: 1px;
+  border-color: blue;
   border-radius: 15px;
 }}
 </style>
