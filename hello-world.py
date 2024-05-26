@@ -308,11 +308,11 @@ a.ttip{{
   z-index:1;
   text-decoration: none;
 }}
-ba.ttip:hover::after{{
+a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
-  left: {left_position}px;
-  top: {top_position}px;
+  left: 2px;
+  top: 2px;
   min-width:50px;
   padding:2px;
   color:black;
