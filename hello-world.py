@@ -311,11 +311,11 @@ a.ttip{{
 a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
-  left: 25px;
+  left: 5px;
   min-width:50px;
   padding:2px;
   color:black;
-  background-color:lightblue;
+  background-color:blue;
   text-decoration: none;
 }}
 
