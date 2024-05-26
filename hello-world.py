@@ -296,7 +296,6 @@ div.a {{
   background-color: blue;
   color: red;
   z-index: 1;
-  width: fit-content;
 }}
 a.ttip{{
   position:relative;
@@ -341,7 +340,7 @@ div.div_inner:hover::after{{
   background-color:lightblue;
 }}
 </style>
-<div data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
+<div class="a" data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 """
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
 #<div class="a" data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
