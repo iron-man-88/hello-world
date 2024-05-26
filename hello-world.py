@@ -298,7 +298,7 @@ div.a {{
   z-index: 1;
   text-decoration: none;
 }}
-div.a.ttip{{
+div.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
