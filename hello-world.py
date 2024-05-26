@@ -322,7 +322,7 @@ div.ttip{{
   z-index:1;
   width:fit-content;
   height:fit-content;
-  text-decoration: none;
+  text-decoration-line: underline;
   text-decoration-color: lightblue;
 }}
 a.ttip:hover::after{{
