@@ -320,9 +320,9 @@ div.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
-  text-decoration: none;
   width:fit-content;
   height:fit-content;
+  text-decoration: none;
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
