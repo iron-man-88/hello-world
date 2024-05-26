@@ -341,6 +341,7 @@ div.square{{
   border-style: solid;
   border-color: blue;
   border-radius: 10px;
+  text-decoration: none;
 }}
 </style>
 <div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
