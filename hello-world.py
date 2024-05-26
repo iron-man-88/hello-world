@@ -298,14 +298,14 @@ div.a {{
   z-index: 1;
   text-decoration: none;
 }}
-a.ttip{{
+div.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
   text-decoration: none;
   width: fit-content;
 }}
-a.ttip:hover::after{{
+ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
   left: 5px;
