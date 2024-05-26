@@ -337,12 +337,10 @@ div.ssquare{{
 }}
 
 div.square{{
+  width:fit-content;
+  height:fit-content;
   text-align: center;
   background: dodgerblue;
-  position: absolute;
-  top: 50%;
-  left: 1%;
-  right: 1%;
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
