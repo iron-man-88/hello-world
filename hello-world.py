@@ -327,15 +327,6 @@ position:relative;
   z-index:1;
   width: fit-content;
  }}
-div.div_inner:hover::after{{
-  content:attr(data-tooltip);
-  position:absolute;
-  min-width:50px;
-  border:1px#808080 solid;
-  padding:2px;
-  color:black;
-  background-color:lightblue;
-}}
 div.square{{
   background-color: lightblue;
   width: fit-content;
@@ -353,9 +344,7 @@ div.square{{
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
 #<div class="a" data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 #######<div class="a">{variable_output}<div data-tooltip="346Kampf"></div></div>
-#<div data-tooltip="Kampf" class="div_inner" <div class="div_outer">{variable_output}</div>
 #<div class="a">{variable_output}</div>
-#<div class="a">{variable_output}<div data-tooltip="346Kampf"</div></div>
 ######<a data-tooltip="Kampf" class="ttip"<p class="div_outer">{variable_output}</p>
 ###<p class="a">{variable_output}</p>
 ###<div data-tooltip="Kampf" class="div_inner" <div class="div_outer">{variable_output}</div>
