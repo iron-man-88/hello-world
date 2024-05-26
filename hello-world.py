@@ -298,7 +298,7 @@ div.a {{
   z-index: 1;
   width: fit-content;
 }}
-a.ttip{{
+div.a.ttip{{
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
@@ -308,7 +308,7 @@ a.ttip{{
   z-index:1;
   text-decoration: none;
 }}
-a.ttip:hover::after{{
+div.a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
   left: 5px;
