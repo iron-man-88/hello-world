@@ -327,7 +327,7 @@ position:relative;
   z-index:1;
   width: fit-content;
  }}
-div.square{{
+div.square.a{{
   width:fit-content;
   height:fit-content;
   text-align: center;
