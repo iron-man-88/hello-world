@@ -346,7 +346,7 @@ div.square{{
 
 
 </style>
-<div class="square">data-tooltip="Kampf" class="ttip" K&auml;mpfer + {variable_output}</div>
+<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 """
 #<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
