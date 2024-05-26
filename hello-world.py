@@ -306,7 +306,6 @@ a.ttip{{
   background-color:lightblue;
   padding:2px;
   z-index:1;
-  text-decoration: none;
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
