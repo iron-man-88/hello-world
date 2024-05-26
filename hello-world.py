@@ -298,9 +298,6 @@ div.a {{
   z-index: 1;
 }}
 a.ttip{{
-  position:relative;
-  left: {left_position}px;
-  top: {top_position}px;
   color:blue;
   background-color:lightblue;
   padding:2px;
@@ -340,10 +337,12 @@ div.div_inner:hover::after{{
   color:black;
   background-color:lightblue;
 }}
-
 div.square{{
   background-color: #2ecc71;
   width: fit-content;
+  position:relative;
+  left: {left_position}px;
+  top: {top_position}px;
 }}
 
 
