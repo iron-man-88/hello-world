@@ -617,4 +617,4 @@ main()
 from st_copy_to_clipboard import st_copy_to_clipboard
 
 # Render copy to clipboard button
-st_copy_to_clipboard("Copy this to clipboard")
+st_copy_to_clipboard("Copy this to clipboard", help='span red')
