@@ -316,7 +316,7 @@ div.a {{
   width:fit-content;
   height:fit-content;
 }}
-a.ttip{{
+div.a.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
