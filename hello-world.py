@@ -297,14 +297,14 @@ div.a {{
   color: red;
   z-index: 1;
 }}
-a.ttip{{
+div.a.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
   text-decoration: none;
   width: fit-content;
 }}
-a.ttip:hover::after{{
+div.a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
   left: 5px;
@@ -326,15 +326,6 @@ position:relative;
   z-index:1;
   width: fit-content;
  }}
-div.ssquare{{
-  background-color: lightblue;
-  width: fit-content;
-  position:relative;
-  left: {left_position}px;
-  top: {top_position}px;
-  z-index: 1;
-}}
-
 div.square{{
   width:fit-content;
   height:fit-content;
@@ -345,11 +336,6 @@ div.square{{
   top: {top_position}px;
   z-index: 1;
 }}
-
-
-
-
-
 </style>
 <div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 """
