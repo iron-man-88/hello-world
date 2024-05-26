@@ -335,21 +335,25 @@ a.ttip:hover::after{{
 /* unvisited link */
 a:link {{
   color: lightblue;
+  text-decoration: none;
 }}
 
 /* visited link */
 a:visited {{
   color: lightblue;
+  text-decoration: none;
 }}
 
 /* mouse over link */
 a:hover {{
-  color: lightblue;
+  color: blue;
+  text-decoration: none;
 }}
 
 /* selected link */
 a:active {{
   color: lightblue;
+  text-decoration: none;
 }}
 
 
