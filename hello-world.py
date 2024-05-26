@@ -316,16 +316,16 @@ div.a {{
   width:fit-content;
   height:fit-content;
 }}
-div.ttip{{
+a.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
   width:fit-content;
   height:fit-content;
-  text-decoration-line: line-through;
+  text-decoration-line: underline;
   text-decoration-color: lightblue;
 }}
-a.ttip{{
+div.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
