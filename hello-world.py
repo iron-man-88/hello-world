@@ -334,22 +334,22 @@ a.ttip:hover::after{{
 
 /* unvisited link */
 a:link {{
-  color: red;
+  color: lightblue;
 }}
 
 /* visited link */
 a:visited {{
-  color: green;
+  color: lightblue;
 }}
 
 /* mouse over link */
 a:hover {{
-  color: hotpink;
+  color: lightblue;
 }}
 
 /* selected link */
 a:active {{
-  color: blue;
+  color: lightblue;
 }}
 
 
