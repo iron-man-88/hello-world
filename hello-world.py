@@ -325,6 +325,15 @@ div.ttip{{
   text-decoration-line: line-through;
   text-decoration-color: lightblue;
 }}
+div.a.ttip{{
+  color:blue;
+  padding:2px;
+  z-index:1;
+  width:fit-content;
+  height:fit-content;
+  text-decoration-line: line-through;
+  text-decoration-color: lightblue;
+}}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
