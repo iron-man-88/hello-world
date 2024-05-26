@@ -332,6 +332,30 @@ a.ttip:hover::after{{
   text-decoration: none;
 }}
 
+/* unvisited link */
+a:link {{
+  color: red;
+}}
+
+/* visited link */
+a:visited {{
+  color: green;
+}}
+
+/* mouse over link */
+a:hover {{
+  color: hotpink;
+}}
+
+/* selected link */
+a:active {{
+  color: blue;
+}}
+
+
+
+
+
 p.div_outer{{
 position:relative;
   left: {left_position}px;
