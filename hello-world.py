@@ -335,7 +335,8 @@ div.square{{
   left: {left_position}px;
   top: {top_position}px;
   z-index: 1;
-  padding:3px;
+  padding:8px;
+  border:1px;
 }}
 </style>
 <div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
