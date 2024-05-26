@@ -327,15 +327,30 @@ position:relative;
   z-index:1;
   width: fit-content;
  }}
-div.square{{
+div.ssquare{{
   background-color: lightblue;
   width: fit-content;
-  block-size: fit-content;
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
   z-index: 1;
 }}
+
+div.square{{
+  text-align: center;
+  background: dodgerblue;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  right: 1%;
+  position:relative;
+  left: {left_position}px;
+  top: {top_position}px;
+  z-index: 1;
+}}
+
+
+
 
 
 </style>
