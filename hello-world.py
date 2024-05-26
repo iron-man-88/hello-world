@@ -325,7 +325,7 @@ div.ttip{{
   text-decoration-line: line-through;
   text-decoration-color: lightblue;
 }}
-div.a.ttip{{
+a.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
