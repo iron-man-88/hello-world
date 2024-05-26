@@ -329,36 +329,16 @@ a.ttip:hover::after{{
   padding:2px;
   color:black;
   background-color:blue;
-  text-decoration: none;
 }}
 
 /* unvisited link */
-a:link {{
-  color: blue;
-  text-decoration: none;
-}}
-
+a:link {{color: blue; text-decoration: none;}}
 /* visited link */
-a:visited {{
-  color: blue;
-  text-decoration: none;
-}}
-
+a:visited {{color: blue; text-decoration: none;}}
 /* mouse over link */
-a:hover {{
-  color: blue;
-  text-decoration: none;
-}}
-
+a:hover {{color: blue;text-decoration: none;}}
 /* selected link */
-a:active {{
-  color: blue;
-  text-decoration: none;
-}}
-
-
-
-
+a:active {{color: blue; text-decoration: none;}}
 
 p.div_outer{{
 position:relative;
