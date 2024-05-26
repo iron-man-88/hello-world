@@ -340,8 +340,16 @@ div.div_inner:hover::after{{
   color:black;
   background-color:lightblue;
 }}
+
+div.square{{
+      background-color: #2ecc71;
+      width: 200px;
+      height: 200px;
+}}
+
+
 </style>
-<div><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
+<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 """
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
 #<div class="a" data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
