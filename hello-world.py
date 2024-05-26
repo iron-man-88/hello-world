@@ -288,6 +288,22 @@ variable_output = st.sidebar.text_area("Enter some text", value="286Streamlit is
 
 html_str = f"""
 <style>
+div.square{{
+  width:fit-content;
+  height:fit-content;
+  text-align: center;
+  background: lightblue;
+  position:relative;
+  left: {left_position}px;
+  top: {top_position}px;
+  z-index: 1;
+  padding: 0px 8px 4px 8px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 10px;
+  text-decoration: none;
+}}
 div.a {{
   font: bold 20px Courier;
   position: relative;
@@ -300,7 +316,7 @@ div.a {{
   width:fit-content;
   height:fit-content;
 }}
-a.ttip{{
+div.a.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
@@ -330,22 +346,6 @@ position:relative;
   z-index:1;
   width: fit-content;
  }}
-div.square{{
-  width:fit-content;
-  height:fit-content;
-  text-align: center;
-  background: lightblue;
-  position:relative;
-  left: {left_position}px;
-  top: {top_position}px;
-  z-index: 1;
-  padding: 0px 8px 4px 8px;
-  border-width: 3px;
-  border-style: solid;
-  border-color: blue;
-  border-radius: 10px;
-  text-decoration: none;
-}}
 </style>
 <div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 """
