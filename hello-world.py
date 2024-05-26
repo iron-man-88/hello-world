@@ -612,7 +612,7 @@ main()
 
 
 
-ccc = "<span style=/"color:blue/">xxx</span>"
+ccc = "<span style="color:blue">xxx</span>"
 
 from st_copy_to_clipboard import st_copy_to_clipboard
 
