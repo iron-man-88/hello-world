@@ -300,7 +300,7 @@ div.a {{
   width:fit-content;
   height:fit-content;
 }}
-ttip{{
+a.ttip{{
   color:blue;
   padding:2px;
   z-index:1;
