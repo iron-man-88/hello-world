@@ -308,7 +308,6 @@ a.ttip:hover::after{{
   content:attr(data-tooltip);
   position:relative;
   left: 5px;
-  min-width:50px;
   padding:2px;
   color:black;
   background-color:blue;
@@ -340,7 +339,7 @@ div.square{{
   width:fit-content;
   height:fit-content;
   text-align: center;
-  background: dodgerblue;
+  background: lightblue;
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
