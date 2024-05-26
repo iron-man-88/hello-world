@@ -342,6 +342,7 @@ div.square{{
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
+  z-index: 1;
 }}
 
 
