@@ -297,13 +297,16 @@ div.a {{
   color: red;
   z-index: 1;
   text-decoration: none;
+  width:fit-content;
+  height:fit-content;
 }}
-div.ttip{{
+ttip{{
   color:blue;
   padding:2px;
   z-index:1;
   text-decoration: none;
-  width: fit-content;
+  width:fit-content;
+  height:fit-content;
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
@@ -327,7 +330,7 @@ position:relative;
   z-index:1;
   width: fit-content;
  }}
-div.square.a{{
+div.square{{
   width:fit-content;
   height:fit-content;
   text-align: center;
