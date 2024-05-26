@@ -324,7 +324,6 @@ div.ttip{{
   height:fit-content;
   text-decoration-line: line-through;
   text-decoration-color: lightblue;
-  text-decoration: none;
 }}
 a.ttip:hover::after{{
   content:attr(data-tooltip);
