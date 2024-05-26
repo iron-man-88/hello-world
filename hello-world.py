@@ -283,7 +283,7 @@ st.text_input(label)
 left_position = st.sidebar.slider("Left", 1, 1340, value=0)
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
 #variable_output = st.text_input("Enter some text", value="Streamlit is awesome")
-#variable_output = st.sidebar.text_area("Enter some text", value="Streamlit is awesome<br>aaa")
+variable_output = st.sidebar.text_area("Enter some text", value="286Streamlit is awesome<br>aaa")
 #variable_output = "Streamlit is awesome<br>aaa"
 
 html_str = f"""
