@@ -329,7 +329,7 @@ position:relative;
  }}
 div.square{{
   background-color: lightblue;
-  max-width: 2px;
+  width: fit-content;
   position:relative;
   left: {left_position}px;
   top: {top_position}px;
