@@ -54,9 +54,8 @@ a:active{color: blue; text-decoration: none;}
 
 
 .test1 {
-    background-color: black;
+    background-color: green;
     border: 1px solid #DCDCDC;
-    padding: 20px 20px 20px 70px;
-    padding: 5% 5% 5% 10%;
+    padding: 5px;
     border-radius: 10px;
 }
