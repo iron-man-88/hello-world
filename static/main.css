@@ -25,3 +25,18 @@ div.aa{
   width:fit-content;
   height:fit-content;
 }
+div.ttip{
+  color:blue;
+  padding:2px;
+  z-index:1;
+  width:fit-content;
+  height:fit-content;
+}
+a.ttip:hover::after{
+  content:attr(data-tooltip);
+  position:relative;
+  left: 5px;
+  padding:2px;
+  color:black;
+  background-color:blue;
+}
