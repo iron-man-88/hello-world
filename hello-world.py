@@ -316,7 +316,11 @@ position:relative;
   width: fit-content;
  }}
 </style>
-<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
+<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
+<p>My mother has <span style="color:blue">blue</span> eyes.</p>
+<p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
+<p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
+</div>
 """
 #<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 #<a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
