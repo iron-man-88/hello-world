@@ -303,18 +303,6 @@ div.square{{
   top: {top_position}px;
 }}
 
-p.div_outer{{
-position:relative;
-  left: {left_position}px;
-  top: {top_position}px;
-  color:blue;
-  background-color:lightblue;
-  border:1px#808080 solid;
-  padding:2px;
-  text-decoration: none;
-  z-index:1;
-  width: fit-content;
- }}
 </style>
 <div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
 <p>My mother has <span style="color:blue">blue</span> eyes.</p>
