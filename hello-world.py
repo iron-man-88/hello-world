@@ -294,7 +294,7 @@ variable_output = st.sidebar.text_area("Enter some text", value="286Streamlit is
 
 html_str = f"""
 <style>
-div.square{{
+div.ssquare{{
   width:fit-content;
   height:fit-content;
   text-align: center;
