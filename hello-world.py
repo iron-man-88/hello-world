@@ -476,8 +476,6 @@ divEnd = """</div>"""
 container2 = st.container()
 
 with container1:
-    container1.markdown(div, unsafe_allow_html=True)
-    st.header("Hello")
-    container1.markdown(divEnd, unsafe_allow_html=True)
+    container1.markdown(div, "Hello", divEnd, unsafe_allow_html=True)
 
 local_css("./static/main.css")
