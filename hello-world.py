@@ -464,13 +464,13 @@ st_copy_to_clipboard(ccc)
 ##########################################################
 # https://discuss.streamlit.io/t/styling-a-specific-container-with-a-specific-div-class/68912
 
-def local_css(file_name, div_name):
+def local_css(file_name, id):
     with open(file_name) as f:
         css = f.read()
         st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 container1 = st.container()
-div = """<div id={div_name} class="test1">"Hallo"</div>"""
+div = """<div  id = 'my_div_inner_%s' class="test1">"Hallo"</div>""" % id
 
 with container1:
     container1.markdown(div, unsafe_allow_html=True)
