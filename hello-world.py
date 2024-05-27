@@ -470,7 +470,7 @@ def local_css(file_name, id):
         st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 container1 = st.container()
-div = """<div  id = 'my_div_inner_%s' class="test1">"Hallo"</div>""" % id
+div = """<div id = 'my_div_iinner_%s' class="test1">"inner473"</div>""" % id
 
 with container1:
     container1.markdown(div, unsafe_allow_html=True)
