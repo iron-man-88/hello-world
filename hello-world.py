@@ -299,21 +299,6 @@ html_str = f"""
 #  height:fit-content;
 # ...
 #}}
-div.ttip{{
-  color:blue;
-  padding:2px;
-  z-index:1;
-  width:fit-content;
-  height:fit-content;
-}}
-a.ttip:hover::after{{
-  content:attr(data-tooltip);
-  position:relative;
-  left: 5px;
-  padding:2px;
-  color:black;
-  background-color:blue;
-}}
 /* unvisited link */
 a:link {{color: blue; text-decoration: none;}}
 /* visited link */
