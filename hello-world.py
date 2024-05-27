@@ -453,19 +453,6 @@ create_container_with_color("ppp", color="blue")
 
 
 
-st.title('Tooltips in Streamlit')
-st.radio("Pick a number", [1, 2, 3], help='Select a number out of 3 choices')
-
-# Tooltips also support markdown
-radio_markdown = '''
-Select a number, you have **3** choices!
-'''.strip()
-
-st.header('Tooltips with Markdown')
-st.radio("Pick a number", [1, 2, 3], help=radio_markdown)
-
-
-
 
 # https://discuss.streamlit.io/t/html-template/63836/2
 import streamlit.components.v1 as components
