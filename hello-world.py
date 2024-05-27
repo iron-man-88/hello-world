@@ -293,7 +293,7 @@ st.text_input(label)
 
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
 # st.sidebar
-left_position = st.sidebar.slider("Left", 1, 1340, value=0)
+left_position = st.sidebar.slider("Left", 1, 1340, value=0, help='Select left position of Div!!!')
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
 variable_output = st.sidebar.text_area("Enter some text", value="291Streamlit is awesome<br>aaa")
 
