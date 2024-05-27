@@ -294,9 +294,9 @@ variable_output = st.sidebar.text_area("Enter some text", value="286Streamlit is
 
 html_str = f"""
 <style>
-div.ssquare{{
-  width:fit-content;
-  height:fit-content;
+div.square{{
+  left: {left_position}px;
+  top: {top_position}px;
 }}
 /* unvisited link */
 a:link {{color: blue; text-decoration: none;}}
