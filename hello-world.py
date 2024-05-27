@@ -473,8 +473,6 @@ container1 = st.container()
 div = """<div class = 'test1'>"""
 divEnd = """</div>"""
 
-container2 = st.container()
-
 with container1:
     container1.markdown(div, "Hello", divEnd, unsafe_allow_html=True)
 
