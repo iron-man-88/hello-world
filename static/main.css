@@ -2,3 +2,18 @@ bigcolor{font-size:24px}
 strong{color: #ED178F}
 red {color: red;}
 h1 {color: green;}
+div.square{
+  width:fit-content;
+  height:fit-content;
+  text-align: center;
+  background: lightblue;
+  position:relative;
+  left: {left_position}px;
+  top: {top_position}px;
+  z-index: 1;
+  padding: 0px 8px 4px 8px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: blue;
+  border-radius: 10px;
+}
