@@ -297,13 +297,7 @@ top_position = st.sidebar.slider("Top", 1, 800, value=0)
 variable_output = st.sidebar.text_area("Enter some text", value="291Streamlit is awesome<br>aaa")
 
 html_str = f"""
-<style>
-div.square{{
-  left: {left_position}px;
-  top: {top_position}px;
-}}
-
-</style>
+<style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
 <div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
 <p>My mother has <span style="color:blue">blue</span> eyes.</p>
 <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
@@ -311,20 +305,6 @@ div.square{{
 </div>
 """
 #<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
-#<a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
-#<div class="a" data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
-#######<div class="a">{variable_output}<div data-tooltip="346Kampf"></div></div>
-#<div class="a">{variable_output}</div>
-######<a data-tooltip="Kampf" class="ttip"<p class="div_outer">{variable_output}</p>
-###<p class="a">{variable_output}</p>
-###<div data-tooltip="Kampf" class="div_inner" <div class="div_outer">{variable_output}</div>
-###<div data-tooltip="Kampf" class="div_inner">
-###<a data-tooltip="Kampf" class="ttip">{variable_output}
-###<div class="div_outer"><div class="div_inner">342 kkkK&auml;mpfer</div></div>
-#<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
-#<a data-tooltip="Kampf" class="ttip">K&auml;mpfer
-aaa="*bbb*"
-#st.markdown(aaa)
 #st.markdown(html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
 st.markdown(html_str, unsafe_allow_html=True)
 st.write("Your name:")
