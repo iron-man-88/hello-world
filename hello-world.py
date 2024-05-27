@@ -464,17 +464,10 @@ st_copy_to_clipboard(ccc)
 ##########################################################
 # https://discuss.streamlit.io/t/styling-a-specific-container-with-a-specific-div-class/68912
 
-##
-# css laden
-with open('./static/main.css') as f:
-    css = f.read()
-
-st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
-##
-
 def local_css(file_name):
     with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+        css = f.read()
+        st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 container1 = st.container()
 div = """<div class = 'test1'>"""
@@ -490,13 +483,4 @@ with container1:
 with container2:
     st.header("Hello2")
 
-local_css("style.css")
-This is my css:
-
-.test1 {
-    background-color: black;
-    border: 1px solid #DCDCDC;
-    padding: 20px 20px 20px 70px;
-    padding: 5% 5% 5% 10%;
-    border-radius: 10px;
-}
+local_css("./static/main.css")
