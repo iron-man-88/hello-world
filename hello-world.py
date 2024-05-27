@@ -288,9 +288,7 @@ st.text_input(label)
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
 left_position = st.sidebar.slider("Left", 1, 1340, value=0)
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
-#variable_output = st.text_input("Enter some text", value="Streamlit is awesome")
-variable_output = st.sidebar.text_area("Enter some text", value="286Streamlit is awesome<br>aaa")
-#variable_output = "Streamlit is awesome<br>aaa"
+variable_output = st.sidebar.text_area("Enter some text", value="291Streamlit is awesome<br>aaa")
 
 html_str = f"""
 <style>
@@ -372,8 +370,8 @@ def example2():
                 border-radius: 0.5rem;
                 padding: calc(1em - 1px);
                 position: relative;
-                left: 60px; #{lleft};
-                bottom: 500px;
+                left: 6px; #{lleft};
+                bottom: 50px;
             }
             """,
     ):
