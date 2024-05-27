@@ -470,7 +470,7 @@ def local_css(file_name, id):
         css = f.read()
         st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
-<style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
+#<style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
 #div = """<div id = 'my_div_iinner_%s' class="test1">"inner473"</div>""" % id
 div = """<div id = id  class="square"><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>"""
 
