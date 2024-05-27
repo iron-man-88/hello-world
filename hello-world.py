@@ -477,4 +477,4 @@ div = """<div id = {div_name} class = "test1">"Hallo"</div>"""
 with container1:
     container1.markdown(div, unsafe_allow_html=True)
 
-local_css("./static/main.css", {div_name})
+local_css("./static/main.css", div_name)
