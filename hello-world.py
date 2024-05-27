@@ -422,8 +422,6 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('AB_01_01.svg')
 ####################################################################################################
 #https://discuss.streamlit.io/t/applying-custom-css-to-manually-created-containers/33428/9
-
-
 def create_container_with_color(id, color="#E4F2EC"):
     #stw(id)
     # todo: instead of color you can send in any css
@@ -450,11 +448,7 @@ def create_container_with_color(id, color="#E4F2EC"):
 
 create_container_with_color("ppp", color="red")
 
-
-
-
-
-
+###########################################################################
 
 ccc = "<span style="""""color:___">xxx</span>"""""
 st.write("616_ ", ccc)
@@ -463,3 +457,46 @@ from st_copy_to_clipboard import st_copy_to_clipboard
 # Render copy to clipboard button
 st.write("blue")
 st_copy_to_clipboard(ccc)
+
+
+
+
+##########################################################
+# https://discuss.streamlit.io/t/styling-a-specific-container-with-a-specific-div-class/68912
+
+##
+# css laden
+with open('./static/main.css') as f:
+    css = f.read()
+
+st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+##
+
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+container1 = st.container()
+div = """<div class = 'test1'>"""
+divEnd = """</div>"""
+
+container2 = st.container()
+
+with container1:
+    container1.markdown(div, unsafe_allow_html=True)
+    st.header("Hello")
+    container1.markdown(divEnd, unsafe_allow_html=True)
+
+with container2:
+    st.header("Hello2")
+
+local_css("style.css")
+This is my css:
+
+.test1 {
+    background-color: black;
+    border: 1px solid #DCDCDC;
+    padding: 20px 20px 20px 70px;
+    padding: 5% 5% 5% 10%;
+    border-radius: 10px;
+}
