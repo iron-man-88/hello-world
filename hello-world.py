@@ -267,6 +267,12 @@ st.write("259 ")
 
 
 #################################################
+svg_url = "AB_01_01.svg"
+#my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
+st.image(svg_url)
+
+
+
 def change_label_style(label, font_size='12px', font_color='blue', font_family='sans-serif'):
     html = f"""
     <script>
@@ -342,9 +348,6 @@ st.write("Your name:", name)
 
 
 
-svg_url = "AB_01_01.svg"
-#my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
-st.image(svg_url)
 
 leftt = 130
 def example2():
@@ -361,7 +364,6 @@ def example2():
         st.button("Green button")
 
     st.button("Normal button")
-    lleft = '60px'
     with stylable_container(
         key="container_with_border",
         css_styles="""
