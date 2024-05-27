@@ -452,36 +452,6 @@ create_container_with_color("ppp", color="blue")
 
 
 
-
-
-# https://discuss.streamlit.io/t/html-template/63836/2
-import streamlit.components.v1 as components
-from jinja2 import Template
-
-bbb = "aaa"
-
-def main():
-    # Your dynamic data
-    app_title = "My Streamlit App"
-    items = ["Item 1", "Item 2", "Item 3"]
-    variable_outputtt = "bbb"
-
-    # Load the Jinja2 template
-    with open("template.html", "r") as template_file:
-        template_content = template_file.read()
-        jinja_template = Template(template_content)
-
-    # Render the template with dynamic data
-    rendered_html = jinja_template.render(title=app_title, items=items, variable_output = variable_outputtt)
-
-    # Display the HTML in Streamlit app
-    components.html(rendered_html, width=400, height=500, scrolling=False)
-    
-main()
-
-
-
-
 ccc = "<span style="""""color:___">xxx</span>"""""
 st.write("616_ ", ccc)
 from st_copy_to_clipboard import st_copy_to_clipboard
