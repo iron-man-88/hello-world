@@ -262,7 +262,7 @@ st.data_editor(
     },
     hide_index=False,
 )
-st.write("259 ")
+st.write("265 ")
 
 
 
@@ -513,22 +513,6 @@ def create_container_with_color(id, color="#E4F2EC"):
     return plh
 
 create_container_with_color("ppp", color="blue")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
