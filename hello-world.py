@@ -292,6 +292,7 @@ st.text_input(label)
 #################################################
 
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
+# st.sidebar
 left_position = st.sidebar.slider("Left", 1, 1340, value=0)
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
 variable_output = st.sidebar.text_area("Enter some text", value="291Streamlit is awesome<br>aaa")
@@ -307,10 +308,6 @@ html_str = f"""
 #<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 #st.markdown(html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
 st.markdown(html_str, unsafe_allow_html=True)
-st.write("Your name:")
-
-#################################################
-
 #################################################
 with st.popover("OP"):
     st.markdown("Hello World 👋")
@@ -318,10 +315,7 @@ with st.popover("OP"):
 
 st.write("Your name:", name)
 
-
-
-
-leftt = 130
+#leftt = 130
 def example2():
     with stylable_container(
         key="green_button",
@@ -365,7 +359,7 @@ with stylable_container(
                 border-radius: 5px;
                 white-space: nowrap;
                 position: relative;
-                left: 160px; #{lleft};
+                left: 160px;
                 bottom: 100px;
             }
             """,
