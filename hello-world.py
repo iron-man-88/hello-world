@@ -466,13 +466,13 @@ div_name = "div_1"
 
 # https://discuss.streamlit.io/t/styling-a-specific-container-with-a-specific-div-class/68912
 
-def local_css(file_name):
+def local_css(file_name, div_name):
     with open(file_name) as f:
         css = f.read()
         st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 container1 = st.container()
-div = """<div id=div_name class="test1">"Hallo"</div>"""
+div = """<div id={div_name} class="test1">"Hallo"</div>"""
 
 with container1:
     container1.markdown(div, unsafe_allow_html=True)
