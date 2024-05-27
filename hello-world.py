@@ -465,14 +465,14 @@ st_copy_to_clipboard(ccc)
 ##########################################################
 # https://discuss.streamlit.io/t/styling-a-specific-container-with-a-specific-div-class/68912
 
-def local_css(file_name, id):
+def local_css(file_name, id, lleft_position, ttop_position):
     with open(file_name) as f:
         css = f.read()
         st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
-#<style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
+<style>div.square{{left: {lleft_position}px; top: {ttop_position}px;}}</style>
 #div = """<div id = 'my_div_iinner_%s' class="test1">"inner473"</div>""" % id
 div = """<div id = id  class="square"><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>"""
 
 st.markdown(div, unsafe_allow_html=True)
-local_css("./static/main.css", "div_1")
+local_css("./static/main.css", "div_1", 10, 10)
