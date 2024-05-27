@@ -462,6 +462,8 @@ st_copy_to_clipboard(ccc)
 
 
 ##########################################################
+div_name = "div_1"
+
 # https://discuss.streamlit.io/t/styling-a-specific-container-with-a-specific-div-class/68912
 
 def local_css(file_name):
@@ -470,9 +472,9 @@ def local_css(file_name):
         st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 container1 = st.container()
-div = """<div class = 'test1'>"Hallo"</div>"""
+div = """<div id = {div_name} class = "test1">"Hallo"</div>"""
 
 with container1:
     container1.markdown(div, unsafe_allow_html=True)
 
-local_css("./static/main.css")
+local_css("./static/main.css", {div_name})
