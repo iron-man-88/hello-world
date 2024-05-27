@@ -422,6 +422,8 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('AB_01_01.svg')
 ####################################################################################################
 #https://discuss.streamlit.io/t/applying-custom-css-to-manually-created-containers/33428/9
+
+
 def create_container_with_color(id, color="#E4F2EC"):
     #stw(id)
     # todo: instead of color you can send in any css
@@ -429,7 +431,7 @@ def create_container_with_color(id, color="#E4F2EC"):
     html_code = """<div id = 'my_div_outer'>"581outer"</div>"""
     st.markdown(html_code, unsafe_allow_html=True)
     with plh:
-        inner_html_code = """<div id = 'my_div_inner%s'>"inner584"</div>""" % id
+        inner_html_code = """<div id = 'my_div_inner_%s'>"inner584"</div>""" % id
         plh.markdown(inner_html_code, unsafe_allow_html=True)
     ## applying style
     chat_plh_style = """
@@ -447,6 +449,37 @@ def create_container_with_color(id, color="#E4F2EC"):
     return plh
 
 create_container_with_color("ppp", color="blue")
+
+
+
+
+
+# https://discuss.streamlit.io/t/html-template/63836/2
+import streamlit.components.v1 as components
+from jinja2 import Template
+
+bbb = "aaa"
+
+def main():
+    # Your dynamic data
+    app_title = "My Streamlit App"
+    items = ["Item 1", "Item 2", "Item 3"]
+    variable_outputtt = "bbb"
+
+    # Load the Jinja2 template
+    with open("template.html", "r") as template_file:
+        template_content = template_file.read()
+        jinja_template = Template(template_content)
+
+    # Render the template with dynamic data
+    rendered_html = jinja_template.render(title=app_title, items=items, variable_output = variable_outputtt)
+
+    # Display the HTML in Streamlit app
+    components.html(rendered_html, width=400, height=500, scrolling=False)
+    
+main()
+
+
 
 
 ccc = "<span style="""""color:___">xxx</span>"""""
