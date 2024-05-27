@@ -480,7 +480,4 @@ with container1:
     st.header("Hello")
     container1.markdown(divEnd, unsafe_allow_html=True)
 
-with container2:
-    st.header("Hello2")
-
 local_css("./static/main.css")
