@@ -8,8 +8,8 @@ div.square{
   text-align: center;
   background: lightblue;
   position:relative;
-  left: {left_position}px;
-  top: {top_position}px;
+  #left: {left_position}px;
+  #top: {top_position}px;
   z-index: 1;
   padding: 0px 8px 4px 8px;
   border-width: 3px;
