@@ -474,5 +474,5 @@ css_style = "<style>div.id{{left:{lleft_position}px; top:{ttop_position}px;}}</s
 #div = """<div id = 'my_div_iinner_%s' class="test1">"inner473"</div>""" % id
 div = """<div id = id  class="square"><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>"""
 
-st.markdown(css_style, div, unsafe_allow_html=True)
+st.markdown(div, unsafe_allow_html=True)
 local_css("./static/main.css", "div_1", 10, 10)
