@@ -299,7 +299,7 @@ variable_output = st.sidebar.text_area("Enter some text", value="291Streamlit is
 
 html_str = f"""
 <style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
-<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
+<div id = "my_div_1"  class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
 <p>My mother has <span style="color:blue">blue</span> eyes.</p>
 <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
 <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
