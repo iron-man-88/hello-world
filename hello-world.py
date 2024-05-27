@@ -31,7 +31,7 @@ st.markdown( # Breite des main divs
 with open('./static/main.css') as f:
     css = f.read()
 
-st.markdown(f'<stzle>{css}<&stzle>', unsafe_allow_html=True)
+st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 st.sidebar.title('Hello, World! It is wonderful')
