@@ -469,7 +469,7 @@ def local_css(file_name, id, left="0px",  top="0px"):
         st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 ###css_style = """<style>div.id{{left:{llleft_position}px; top:{tttop_position}px;}}</style>"""
-css_style = """<style>div{left: %s; top: %s;}</style>"""
+css_style = """<style>div.id{{left: %s; top: %s;}}</style>"""
 css_style = css_style  % (left, top) #neu
 div = """<div id = 'my_div_iinner_%s' class="square">"inner473"</div>""" % id
 #div = """<div id = 'my_div_iinner_%s' class="test1">"inner473"</div>""" % id
@@ -480,4 +480,4 @@ div = """<div id = 'my_div_iinner_%s' class="square">"inner473"</div>""" % id
 st.markdown(div, unsafe_allow_html=True)
 
 ###local_css("./static/main.css", "div_1", 100, 100)
-local_css("./static/main.css", "div_1", "100px", "100px")
+local_css("./static/main.css", "div_1", left="100px", top="100px")
