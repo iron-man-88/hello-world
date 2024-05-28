@@ -466,7 +466,7 @@ def local_css(file_name, id_, lleft_position, ttop_position):
 css_style = """<style>div.id{{left:{lleft_position}px; top:{ttop_position}px;}}</style>"""
 #div = """<div id = 'my_div_iinner_%s' class="test1">"inner473"</div>""" % id
 #div = """<div id = id  class="square"><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>"""
-div = """<div id = {{id_}} class="square" css_style><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>""" % id
+div = """<div id = {{'id_'}} class="square" css_style><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>""" % id
 
 #st.markdown(css_style, div, unsafe_allow_html=True)
 st.markdown(div, unsafe_allow_html=True)
