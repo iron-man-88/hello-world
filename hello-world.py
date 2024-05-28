@@ -437,6 +437,7 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
     ## applying style
     chat_plh_style = """
         <style>
+###            div[data-testid='stVerticalBlock']:has(div#my_div_inner_%s):not(:has(div#my_div_outer)) {
             div{
                 background-color: %s;
                 border-radius: 10px;
@@ -447,11 +448,13 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
             };
         </style>
         """
-    chat_plh_style = chat_plh_style % (id, color, left)
+###    chat_plh_style = chat_plh_style % (id, color, left)
+    chat_plh_style = chat_plh_style % (color, left)
     st.markdown(chat_plh_style, unsafe_allow_html=True)
     return plh
 
-create_container_with_color(ddd, color="red", left=lleft)
+###create_container_with_color(ddd, color="red", left=lleft)
+create_container_with_color(color="red", left=lleft)
 ###########################################################################
 ccc = "<span style="""""color:___">xxx</span>"""""
 st.write("616_ ", ccc)
