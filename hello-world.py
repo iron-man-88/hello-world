@@ -441,6 +441,8 @@ def create_container_with_color(id, color="#E4F2EC"):
                 border-radius: 10px;
                 padding: 10px 10px 20px 10px;height:10px
                 width: fit-content;
+                position: relative;
+                left: 100px;
             };
         </style>
         """
