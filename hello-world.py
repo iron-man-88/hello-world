@@ -463,12 +463,13 @@ st_copy_to_clipboard(ccccc)
 ##########################################################
 # https://discuss.streamlit.io/t/styling-a-specific-container-with-a-specific-div-class/68912
 ###def local_css(file_name, id_, llleft_position, tttop_position):
-def local_css(file_name, id_, llleft_position, tttop_position):
+def local_css(file_name, id_, left="0px", tttop_position):
     with open(file_name) as f:
         css = f.read()
         st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
-css_style = """<style>div.id{{left:{llleft_position}px; top:{tttop_position}px;}}</style>"""
+###css_style = """<style>div.id{{left:{llleft_position}px; top:{tttop_position}px;}}</style>"""
+css_style = """<style>div.id{{left: %s; top: %s;}}</style>""" % (left, top)
 div = """<div id = 'my_div_iinner_%s' class="square">"inner473"</div>""" % id
 #div = """<div id = 'my_div_iinner_%s' class="test1">"inner473"</div>""" % id
 #div = """<div id = id  class="square"><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>"""
@@ -477,5 +478,5 @@ div = """<div id = 'my_div_iinner_%s' class="square">"inner473"</div>""" % id
 #st.markdown(css_style, div, unsafe_allow_html=True)
 st.markdown(div, unsafe_allow_html=True)
 
-#local_css("./static/main.css", "div_1", 100, 100)
-local_css("./static/main.css", "div_1", 100, 100)
+###local_css("./static/main.css", "div_1", 100, 100)
+local_css("./static/main.css", "div_1", "100px", "100px")
