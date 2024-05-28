@@ -451,7 +451,7 @@ def create_container_with_color(color="#E4F2EC", left="0px"):
         </style>
         """
 ###    chat_plh_style = chat_plh_style % (id, color, left)
-    chat_plh_style = chat_plh_style % (color, left)
+    chat_plh_style = chat_plh_style
     st.markdown(chat_plh_style, unsafe_allow_html=True)
     return plh
 
