@@ -431,7 +431,7 @@ def create_container_with_color(id, color="#E4F2EC"):
     html_code = """<div id = 'my_div_outer'>"581outer"</div>"""
     st.markdown(html_code, unsafe_allow_html=True)
     with plh:
-        inner_html_code = """<div id = 'my_div_inner_%s'>"inner584"</div>""" % id
+        inner_html_code = """<div id = 'my_div_inner_%s'>"inner434"</div>""" % id
         plh.markdown(inner_html_code, unsafe_allow_html=True)
     ## applying style
     chat_plh_style = """
