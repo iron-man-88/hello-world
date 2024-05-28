@@ -450,7 +450,7 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
     st.markdown(chat_plh_style, unsafe_allow_html=True)
     return plh
 
-create_container_with_color(ddd, color="red", left="0px")
+create_container_with_color(ddd, color="red", left="100px")
 ###########################################################################
 ccc = "<span style="""""color:___">xxx</span>"""""
 st.write("616_ ", ccc)
