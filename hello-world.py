@@ -453,13 +453,13 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
 
 create_container_with_color(ddd, color="red", left=lleft)
 ###########################################################################
-ccc = "<span style="""""color:___">xxx</span>"""""
-st.write("616_ ", ccc)
+ccccc = "<span style="""""color:___">xxx</span>"""""
+st.write("457_ ", ccccc)
 from st_copy_to_clipboard import st_copy_to_clipboard
 
 # Render copy to clipboard button
 st.write("blue")
-st_copy_to_clipboard(ccc)
+st_copy_to_clipboard(ccccc)
 ##########################################################
 # https://discuss.streamlit.io/t/styling-a-specific-container-with-a-specific-div-class/68912
 def local_css(file_name, id_, lleft_position, ttop_position):
