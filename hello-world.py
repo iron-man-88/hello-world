@@ -423,6 +423,7 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('AB_01_01.svg')
 ####################################################################################################
 ddd = "pppqqq451"
+lleft = "200px"
 #https://discuss.streamlit.io/t/applying-custom-css-to-manually-created-containers/33428/9
 def create_container_with_color(id, color="#E4F2EC", left="0px"):
     #stw(id)
@@ -450,7 +451,7 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
     st.markdown(chat_plh_style, unsafe_allow_html=True)
     return plh
 
-create_container_with_color(ddd, color="red", left="100px")
+create_container_with_color(ddd, color="red", left=lleft)
 ###########################################################################
 ccc = "<span style="""""color:___">xxx</span>"""""
 st.write("616_ ", ccc)
