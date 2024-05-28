@@ -471,4 +471,5 @@ div = """<div id = {id_} class="square" css_style><a data-tooltip="475Kampf" cla
 #st.markdown(css_style, div, unsafe_allow_html=True)
 st.markdown(div, unsafe_allow_html=True)
 
-local_css("./static/main.css", "div_1", 100, 100)
+#local_css("./static/main.css", "div_1", 100, 100)
+local_css("./static/main.css", "%s", 100, 100)
