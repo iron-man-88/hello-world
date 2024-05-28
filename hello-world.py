@@ -440,7 +440,7 @@ def create_container_with_color(color="#E4F2EC", left="0px"):
     chat_plh_style = """
         <style>
 ###            div[data-testid='stVerticalBlock']:has(div#my_div_inner_%s):not(:has(div#my_div_outer)) {
-            div{
+            div:has(div#my_div_inner_%s){
                 background-color: %s;
                 border-radius: 10px;
                 padding: 10px 10px 20px 10px;height:10px
@@ -451,7 +451,7 @@ def create_container_with_color(color="#E4F2EC", left="0px"):
         </style>
         """
 ###    chat_plh_style = chat_plh_style % (id, color, left)
-    chat_plh_style = chat_plh_style
+    chat_plh_style = chat_plh_style % (color, left)
     st.markdown(chat_plh_style, unsafe_allow_html=True)
     return plh
 
