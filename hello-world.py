@@ -441,10 +441,10 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
                 background-color: %s;
 #                border-radius: 10px;
                 padding: 10px 10px 20px 10px;height:10px
-#                width: fit-content;
+                width: fit-content;
 #                position: relative;
                 left: %s;
-                width:fit-content;
+#                width:fit-content;
                 height:fit-content;
                 text-align: center;
                 position:relative;
