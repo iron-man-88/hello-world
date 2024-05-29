@@ -447,7 +447,6 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
                 width:fit-content;
                 height:fit-content;
                 text-align: center;
-                background: lightblue;
                 position:relative;
   #left: {left_position}px;
   #top: {top_position}px;
