@@ -451,7 +451,6 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
   #left: {left_position}px;
   #top: {top_position}px;
                 z-index: 1;
-                padding: 0px 8px 4px 8px;
                 border-width: 3px;
                 border-style: solid;
                 border-color: blue;
