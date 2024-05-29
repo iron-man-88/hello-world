@@ -440,7 +440,7 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
             div[data-testid='stVerticalBlock']:has(div#my_div_inner_%s):not(:has(div#my_div_outer)) {
                 background-color: %s;
 #                border-radius: 10px;
-#                padding: 10px 10px 20px 10px;height:10px
+                padding: 10px 10px 20px 10px;height:10px
 #                width: fit-content;
 #                position: relative;
                 left: %s;
