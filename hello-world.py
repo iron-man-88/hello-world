@@ -439,12 +439,25 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
         <style>
             div[data-testid='stVerticalBlock']:has(div#my_div_inner_%s):not(:has(div#my_div_outer)) {
                 background-color: %s;
-                border-radius: 10px;
-                padding: 10px 10px 20px 10px;height:10px
-                width: fit-content;
-                position: relative;
+#                border-radius: 10px;
+#                padding: 10px 10px 20px 10px;height:10px
+#                width: fit-content;
+#                position: relative;
                 left: %s;
-            };
+                width:fit-content;
+                height:fit-content;
+                text-align: center;
+                background: lightblue;
+                position:relative;
+  #left: {left_position}px;
+  #top: {top_position}px;
+                z-index: 1;
+                padding: 0px 8px 4px 8px;
+                border-width: 3px;
+                border-style: solid;
+                border-color: blue;
+                border-radius: 10px;
+           };
         </style>
         """
     chat_plh_style = chat_plh_style % (id, color, left)
