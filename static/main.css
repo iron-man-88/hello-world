@@ -42,8 +42,8 @@ a.ttip:hover::after{
   background-color:blue;
   z-index:1;
 
-  top: 100%;
-  #left: 50%;
+  bottom: 100%;
+  left: 50%;
   #margin-left: -5px;
   
 }
