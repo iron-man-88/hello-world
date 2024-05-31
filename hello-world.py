@@ -512,5 +512,5 @@ html_temp = """
 <h1 style="color:{};text-align:center;">Streamlit Simple CSS Shape Generator </h1>
 </div>
 """
-st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
+#st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
 st.markdown("<div style='background-color:{}; color:{} position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
