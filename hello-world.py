@@ -499,7 +499,7 @@ local_css("./static/main.css", "div_1", 100, 100)
 
 
 
-bgcolor2 = st.beta_color_picker("Pick a Background color")
+bgcolor2 = st.color_picker("Pick a Background color")
 html_design = """
 		<div style="height:{}px;width:{}px;background-color:{};border-radius:{}px {}px {}px {}px;border-style:{};border-color:{}">
 		</div>
