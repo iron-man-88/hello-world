@@ -482,7 +482,7 @@ age = 22
 formatted_string = f"Hello, {name}! You are {age} years old."
 
 # Print Result
-st.string(formatted_string)
+st.write(formatted_string)
 
 
 
