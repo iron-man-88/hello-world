@@ -497,8 +497,8 @@ local_css("./static/main.css", "div_1", 100, 100)
 
 bgcolor = None
 fontcolor = None
-bgcolor = st.beta_color_picker("Pick a Background color")
-fontcolor = st.beta_color_picker("Pick a Font Color","#fff")
+bgcolor = st.color_picker("Pick a Background color")
+fontcolor = st.color_picker("Pick a Font Color","#fff")
 
 html_temp = """
 <div style="background-color:{};padding:10px">
