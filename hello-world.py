@@ -518,8 +518,8 @@ html_temp = """
 #htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
 #height:fit-content;'>aaa</div>"""
 htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
-height:fit-content;'>aaa <a data-tooltip="Kampf" class="ttip">K&auml;mpfer</div>"""
+height:fit-content;'>aaa<a data-tooltip="Kampf" class="ttip"></div>"""
 
 st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
 
-#st.markdown("<div style='background-color:{}; color:{}; position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
+st.markdown("<div style='background-color:{}; color:{}; position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
