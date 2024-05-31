@@ -498,4 +498,4 @@ var_num = 1
 # Creating dynamic variable name using globals()
 globals()[prefix + str(var_num) + suffix] = 42
 # Accessing dynamic variable
-st.string(dynamic_1_variable) # Output: 42
+st.write(dynamic_1_variable) # Output: 42
