@@ -442,6 +442,12 @@ local_css("./static/main.css", "div_1", 100, 100)
 #test#local_css("./static/main.css", "div_1", left="100px", top="100px")
 
 #################################################################################################################
+aaa_ = "db_1"; bbb_ = "db_2"; name_id_ = "id_1"
+aaa_ = "100px"; bbb_ = "10px"; name_id_ = "id_1_xyz"
+
+first_+name_id_ = name_id_; second_ = None
+st.write("445 name_id_ ", first_+name_id_)
+
 bgcolor=None; fontcolor=None; position = None; top = None; left = None
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
