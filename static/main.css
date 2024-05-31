@@ -35,7 +35,7 @@ div.ttip{
 }
 a.ttip:hover::after{
   content:attr(data-tooltip);
-  position:relative;
+  #position:relative;
   left: 5px;
   padding:2px;
   color:black;
