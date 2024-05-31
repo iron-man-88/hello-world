@@ -495,10 +495,15 @@ local_css("./static/main.css", "div_1", 100, 100)
 
 
 
-height = None
-bgcolor2 = st.color_picker("Pick a Background color")
-html_design = """
-		<div style="height:{}px;">
-		</div>
-		"""
-st.markdown(html_design.format(height),unsafe_allow_html=True)
+bgcolor = None
+fontcolor = None
+bgcolor = st.beta_color_picker("Pick a Background color")
+fontcolor = st.beta_color_picker("Pick a Font Color","#fff")
+
+html_temp = """
+<div style="background-color:{};padding:10px">
+<h1 style="color:{};text-align:center;">Streamlit Simple CSS Shape Generator </h1>
+</div>
+"""
+st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
+st.markdown("<div><p style='color:{}'>Hello Streamlit</p></div>".format(bgcolor),unsafe_allow_html=True)
