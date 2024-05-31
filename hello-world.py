@@ -270,7 +270,7 @@ st.write("265 ")
 svg_url = "AB_01_01.svg"
 #my_png = cairosvg.svg2png(url=svg_url, output_width=426, output_height=240)
 st.image(svg_url)
-
+################################################
 
 
 def change_label_style(label, font_size='12px', font_color='blue', font_family='sans-serif'):
@@ -285,7 +285,7 @@ def change_label_style(label, font_size='12px', font_color='blue', font_family='
     """
     st.components.v1.html(html)
 
-label = " 276My text here"
+label = " 288 My text here"
 st.text_input(label)
 
 ### change_label_style(label, '30px')
@@ -369,58 +369,6 @@ with stylable_container(
         po.text_input('name', key='nname')
 
 st.write("Your name:", name)
-##########################
-
-##2
-#st.markdown(
-#    """
-#    <style>
-#    .element-container:has(style){
-#        display: none;
-#    }
-#    #button-after {
-#        display: none;
-#    }
-#    .element-container:has(#button-after) {
-#        display: none;
-#    }
-#    .element-container:has(#button-after) + div button {
-#        background-color: orange;
-#        #position: relative;
-#        #left: 30px;
-#        #bottom: 500px;
-#        }
-#    </style>
-#    """,
-#    unsafe_allow_html=True,
-#)
-#st.button("button1")
-#st.markdown('<span id="button-after"></span>', unsafe_allow_html=True)
-#st.button("My Button")
-#st.button("button2")
-##2
-
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
-    <style>
-    body {
-    background-image: url("data:image/svgsvg+xml;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
-
-set_png_as_page_bg('AB_01_01.svg')
 ####################################################################################################
 ddd = "pppqqq425"
 lleft = "100px"
@@ -493,13 +441,8 @@ st.markdown(div, unsafe_allow_html=True)
 local_css("./static/main.css", "div_1", 100, 100)
 #test#local_css("./static/main.css", "div_1", left="100px", top="100px")
 
-
-
-bgcolor = None
-fontcolor = None
-position = None
-top = None
-left = None
+#################################################################################################################
+bgcolor = None, fontcolor = None, position = None, top = None, left = None
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
 
@@ -514,7 +457,6 @@ html_temp = """
 """
 #st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
 
-
 #htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
 #height:fit-content;'>aaa</div>"""
 htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
@@ -526,4 +468,4 @@ htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; po
 
 st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
 
-st.markdown("<div style='background-color:{}; color:{}; position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
+st.markdown("<div style='background-color:{}; color:{}; position:relative; left:10px; top:10px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
