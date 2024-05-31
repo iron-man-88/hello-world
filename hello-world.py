@@ -477,3 +477,17 @@ htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; po
 st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
 
 st.markdown("<div style='background-color:{}; color:{}; position:relative; left:10px; top:10px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
+
+
+
+
+#https://pytutorial.com/python-variable-in-string/#%%20Operator
+# Variables
+name = "Pytutorial"
+age = 22
+
+# Insert Variables into String using f-string
+formatted_string = f"Hello, {name}! You are {age} years old."
+
+# Print Result
+st.string(formatted_string)
