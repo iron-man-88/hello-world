@@ -518,7 +518,7 @@ html_temp = """
 #htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
 #height:fit-content;'>aaa</div>"""
 htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
-             height:fit-content;'><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
+             height:fit-content;'><a data-tooltip="Kampf" class="ttip">K&auml;mpfer
              <p>My mother has <span style="color:blue">blue</span> eyes.</p>
              <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
              <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
