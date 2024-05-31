@@ -442,7 +442,7 @@ local_css("./static/main.css", "div_1", 100, 100)
 #test#local_css("./static/main.css", "div_1", left="100px", top="100px")
 
 #################################################################################################################
-bgcolor=None; fontcolor=None position = None, top = None, left = None
+bgcolor=None; fontcolor=None; position = None; top = None; left = None
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
 
