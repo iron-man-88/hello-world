@@ -495,10 +495,7 @@ local_css("./static/main.css", "div_1", 100, 100)
 
 
 
-
-
-
-
+height = None
 bgcolor2 = st.color_picker("Pick a Background color")
 html_design = """
 		<div style="height:{}px;">
