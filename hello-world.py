@@ -445,7 +445,7 @@ local_css("./static/main.css", "div_1", 100, 100)
 aaa_ = "db_1"; bbb_ = "db_2"; name_id_ = "id_1"
 aaa_ = "100px"; bbb_ = "10px"; name_id_ = "id_1_xyz"
 
-first_+name_id_ = name_id_; second_ = None
+first_+name_id_ == name_id_; second_ = None
 st.write("445 name_id_ ", first_+name_id_)
 
 bgcolor=None; fontcolor=None; position = None; top = None; left = None
