@@ -432,7 +432,7 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
     html_code = """<div id = 'my_div_outer'>"581outer"</div>"""
     st.markdown(html_code, unsafe_allow_html=True)
     with plh:
-        inner_html_code = """<div id = 'my_div_inner_%s'>"inner434"</div>""" % id
+        inner_html_code = """<div id = 'my_div_inner_%s'>"inner435"</div>""" % id
         plh.markdown(inner_html_code, unsafe_allow_html=True)
     ## applying style
     chat_plh_style = """
@@ -513,4 +513,9 @@ html_temp = """
 </div>
 """
 #st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
+
+
+htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{} position:relative; left:100px; top:100px;'>"""
+st.markdown(htmll_code.format(bgcolor,color),unsafe_allow_html=True)
+
 st.markdown("<div style='background-color:{}; color:{} position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
