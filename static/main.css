@@ -40,6 +40,7 @@ a.ttip:hover::after{
   padding:2px;
   color:black;
   background-color:blue;
+  z-index:1;
 }
 /* unvisited link */
 a:link{color: blue; text-decoration: none;}
