@@ -503,6 +503,7 @@ left = None
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
 
+position = "relative"
 left="100px"
 top="100px"
 
