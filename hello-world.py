@@ -525,18 +525,6 @@ K&auml;mpfer + {variable_output}
 <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
 </div>"""
 
-
-Kämpfer + 291Streamlit is awesome
-aaa
-
-My mother has blue eyes.
-
-This is a simple Streamlit app with a Jinja2 template.
-
-We're sorry, that todo item was not found:
-
-
-
 st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
 
 st.markdown("<div style='background-color:{}; color:{}; position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
