@@ -516,6 +516,6 @@ html_temp = """
 
 
 htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{} position:relative; left:100px; top:100px;'>"""
-st.markdown(htmll_code.format(bgcolor,color),unsafe_allow_html=True)
+st.markdown(htmll_code.format(bgcolor,fontcolor),unsafe_allow_html=True)
 
 st.markdown("<div style='background-color:{}; color:{} position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
