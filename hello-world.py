@@ -501,7 +501,7 @@ local_css("./static/main.css", "div_1", 100, 100)
 
 bgcolor2 = st.color_picker("Pick a Background color")
 html_design = """
-		<div style="height:{}px;width:{}px;background-color:{};border-radius:{}px {}px {}px {}px;border-style:{};border-color:{}">
+		<div style="height:{}px;">
 		</div>
 		"""
-st.markdown(html_design.format(height,width,bgcolor2,top_left_border,top_right_border,bottom_left_border,bottom_right_border,border_style,border_color),unsafe_allow_html=True)
+st.markdown(html_design.format(height),unsafe_allow_html=True)
