@@ -36,16 +36,12 @@ div.ttip{
 a.ttip:hover::after{
   content:attr(data-tooltip);
   position:absolute;
-  #left: 5px;
+  bottom: 100%;
+  left: 100%;
   padding:2px;
   color:black;
   background-color:blue;
   z-index:1;
-
-  bottom: 100%;
-  left: 100%;
-  #margin-left: -5px;
-  
 }
 /* unvisited link */
 a:link{color: blue; text-decoration: none;}
