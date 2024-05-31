@@ -466,13 +466,13 @@ htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; po
              <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
              </div>"""
 
-fhtmll_code = f"<div id='mmy_div_outer' style='background-color:{bgcolor}; color:{fontcolor}; position:relative; left:{pos_left};
+fhtmll_code = f"""<div id='mmy_div_outer' style='background-color:{bgcolor}; color:{fontcolor}; position:relative; left:{pos_left};
              top:{pos_top}; width:fit-content;
              height:fit-content;'><a data-tooltip="Kampf" class="ttip">K&auml;mpfer
              <p>My mother has <span style="color:blue">blue</span> eyes.</p>
              <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
              <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
-             </div>"
+             </div>"""
 
 st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
 st.markdown(fhtmll_code,unsafe_allow_html=True)
