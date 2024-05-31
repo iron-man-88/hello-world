@@ -504,7 +504,7 @@ bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
 
 position = "relative"
-left="100px"
+left= 100+"px"
 top="100px"
 
 html_temp = """
