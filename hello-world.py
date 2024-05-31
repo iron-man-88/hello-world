@@ -505,3 +505,5 @@ var_num = 1
 globals()[prefix + str(var_num) + suffix] = 42
 # Accessing dynamic variable
 st.write(dynamic_1_variable) # Output: 42
+dynamic_1_variable = dynamic_1_variable +1
+st.write(dynamic_1_variable) # Output: 43
