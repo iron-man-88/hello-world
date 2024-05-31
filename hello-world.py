@@ -497,8 +497,14 @@ local_css("./static/main.css", "div_1", 100, 100)
 
 bgcolor = None
 fontcolor = None
+position = None
+top = None
+left = None
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
+
+left="100px"
+top="100px"
 
 html_temp = """
 <div style="background-color:{};padding:10px">
@@ -506,4 +512,4 @@ html_temp = """
 </div>
 """
 st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
-st.markdown("<div><p style='background-color:{}; color:{}'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
+st.markdown("<div><p style='background-color:{}; color:{} position:{}; left:{}; top:{};'>Hello Streamlit</p></div>".format(bgcolor, fontcolor, position, left, top,),unsafe_allow_html=True)
