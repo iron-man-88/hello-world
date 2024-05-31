@@ -518,7 +518,7 @@ html_temp = """
 #htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
 #height:fit-content;'>aaa</div>"""
 htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
-height:fit-content;'>aaa<a data-tooltip="Kampf" class="ttip"></div>"""
+height:fit-content;'><a data-tooltip="Kampf" class="ttip">irgendeinen Text</div>"""
 
 st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
 
