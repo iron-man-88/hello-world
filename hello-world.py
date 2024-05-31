@@ -504,8 +504,8 @@ bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
 
 position = "relative"
-left= "100px"
-top="100px"
+pos_left= "100px"
+pos_top="10px"
 
 html_temp = """
 <div style="background-color:{};padding:10px">
@@ -515,8 +515,8 @@ html_temp = """
 #st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
 
 
-htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:100px; top:100px; width:fit-content;
+htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
 height:fit-content;'>aaa</div>"""
-st.markdown(htmll_code.format(bgcolor, fontcolor),unsafe_allow_html=True)
+st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
 
 #st.markdown("<div style='background-color:{}; color:{}; position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
