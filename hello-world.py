@@ -513,4 +513,4 @@ html_temp = """
 </div>
 """
 st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
-st.markdown("<div><p style='background-color:{}; color:{} position:{}; left:{}; top:{};'>Hello Streamlit</p></div>".format(bgcolor, fontcolor, position, left, top,),unsafe_allow_html=True)
+st.markdown("<div><p style='background-color:{}; color:{} position:{}; left:{}; top:{};'>Hello Streamlit</p></div>".format(bgcolor, fontcolor, position, left, top),unsafe_allow_html=True)
