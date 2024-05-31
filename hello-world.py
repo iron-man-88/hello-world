@@ -515,7 +515,8 @@ html_temp = """
 #st.markdown(html_temp.format(bgcolor,fontcolor),unsafe_allow_html=True)
 
 
-htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:100px; top:100px;'>aaa</div>"""
+htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:100px; top:100px; width:fit-content;
+height:fit-content;'>aaa</div>"""
 st.markdown(htmll_code.format(bgcolor, fontcolor),unsafe_allow_html=True)
 
-#st.markdown("<div style='background-color:{}; color:{} position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
+#st.markdown("<div style='background-color:{}; color:{}; position:relative; left:100px; top:100px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
