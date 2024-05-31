@@ -41,6 +41,11 @@ a.ttip:hover::after{
   color:black;
   background-color:blue;
   z-index:1;
+
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  
 }
 /* unvisited link */
 a:link{color: blue; text-decoration: none;}
