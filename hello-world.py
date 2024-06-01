@@ -442,10 +442,9 @@ local_css("./static/main.css", "div_1", 100, 100)
 #test#local_css("./static/main.css", "div_1", left="100px", top="100px")
 
 #################################################################################################################
-bgcolor=None; fontcolor=None; position = None; top = None; left = None
+#bgcolor=None; fontcolor=None; position = None; top = None; left = None
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
-
 position = "relative"
 pos_left= "100px"
 pos_top="10px"
@@ -467,7 +466,6 @@ html_temp = """
 
 fhtmll_code = f"""<div id='mmy_div_outer' style='background-color:{bgcolor}; color:{fontcolor}; position:relative; left:{pos_left};
              top:{pos_top}; width:fit-content; height:fit-content;'><a data-tooltip="Kampf" class="ttip">{div_content}</div>"""
-
 st.markdown(fhtmll_code,unsafe_allow_html=True)
 
 ###########################################################################
