@@ -475,7 +475,7 @@ fhtmll_code = f"""<div id='mmy_div_outer' style='background-color:{bgcolor}; col
              height:fit-content;'><a data-tooltip="Kampf" class="ttip">{div_content}
              </div>"""
 
-st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
+#st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
 st.markdown(fhtmll_code,unsafe_allow_html=True)
 
 st.markdown("<div style='background-color:{}; color:{}; position:relative; left:10px; top:10px;'>Hello Streamlit</p></div>".format(bgcolor, fontcolor),unsafe_allow_html=True)
