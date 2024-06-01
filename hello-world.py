@@ -451,7 +451,7 @@ st.write(dynamic_1_variable) # Output: 43
 page_no = "div_S001"
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
-pos_left= "100px"
+#pos_left= "100px"
 globals()[page_no + "_" + str(var_num) + pos_left] = "100px"   # eigentlich später Wert aus DB
 pos_top="10px"
 div_tooltip="Kampf"
