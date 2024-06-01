@@ -439,9 +439,9 @@ local_css("./static/main.css", "div_1", 100, 100)
 #https://www.codingdeeply.com/dynamic-variable-name-python/
 prefix = "dynamic_"
 suffix = "_variable"
-var_num = 1
+var_ = 1
 # Creating dynamic variable name using globals()
-globals()[prefix + str(var_num) + suffix] = 42
+globals()[prefix + str(var_) + suffix] = 42
 # Accessing dynamic variable
 st.write(dynamic_1_variable) # Output: 42
 dynamic_1_variable = dynamic_1_variable +1
@@ -451,6 +451,7 @@ bgcolor=None; fontcolor=None; pos_top = ""; pos_left = ""
 page_no = "div_S001"
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
+var_num = 1 # eigentlich später Wert aus DB
 globals()[page_no + "_" + str(var_num) + pos_left] = "100px" # eigentlich später Wert aus DB
 globals()[page_no + "_" + str(var_num) + pos_top] = "10px" # eigentlich später Wert aus DB
 div_content="""K&auml;mpfer<p>My mother has <span style="color:blue">blue</span> eyes.</p><p>This is a simple
