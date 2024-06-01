@@ -461,7 +461,7 @@ div_content="""K&auml;mpfer<p>My mother has <span style="color:blue">blue</span>
             <red>todo</red></bigcolor> item was not found:</p>"""
 
 fhtmll_code = f"""<div id={page_no} style='background-color:{bgcolor}; color:{fontcolor}; position:relative;
-              left:{globals()[page_no + str(var_num) + pos_left]}; top:{pos_top}; width:fit-content; height:fit-content;'>
+              left:{globals()[page_no + "_" + str(var_num) + pos_left]}; top:{pos_top}; width:fit-content; height:fit-content;'>
               <a data-tooltip="Kampf" class="ttip">{div_content}</div>"""
 st.markdown(fhtmll_code,unsafe_allow_html=True)
 #####
