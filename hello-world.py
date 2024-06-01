@@ -450,7 +450,7 @@ st.write(dynamic_1_variable) # Output: 43
 #bgcolor=None; fontcolor=None; position = None; top = None; left = None
 page_no = "div_S001_"
 
-globals()[page_no + str(var_num) + suffix]
+globals()[page_no + str(var_num) + suffix] = ""
 
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
