@@ -453,7 +453,6 @@ bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
 globals()[page_no + "_" + str(var_num) + pos_left] = "100px" # eigentlich später Wert aus DB
 globals()[page_no + "_" + str(var_num) + pos_top] = "10px" # eigentlich später Wert aus DB
-pos_top="10px"
 div_tooltip="Kampf"
 div_content="""K&auml;mpfer<p>My mother has <span style="color:blue">blue</span> eyes.</p><p>This is a simple
             <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p><p>We're sorry, that <bigcolor>
