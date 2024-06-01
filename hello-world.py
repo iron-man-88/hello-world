@@ -450,17 +450,20 @@ st.write(dynamic_1_variable) # Output: 43
 #bgcolor=None; fontcolor=None; position = None; top = None; left = None
 page_no = "div_S001_"
 
-globals()[page_no + str(var_num) + suffix] = ""
-
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
 pos_left= "100px"
+globals()[page_no + str(var_num) + pos_left] = "100px"   # eigentlich später Wert aus DB
 pos_top="10px"
 div_tooltip="Kampf"
 div_content="""K&auml;mpfer<p>My mother has <span style="color:blue">blue</span> eyes.</p><p>This is a simple
             <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p><p>We're sorry, that <bigcolor>
             <red>todo</red></bigcolor> item was not found:</p>"""
 
+fhtmll_code = f"""<div id='mmy_div_outer' style='background-color:{bgcolor}; color:{fontcolor}; position:relative; left:{globals()[page_no + str(var_num) + pos_left]};
+             top:{pos_top}; width:fit-content; height:fit-content;'><a data-tooltip="Kampf" class="ttip">{div_content}</div>"""
+st.markdown(fhtmll_code,unsafe_allow_html=True)
+#####
 html_temp = """
 <div style="background-color:{};padding:10px">
 <h1 style="color:{};text-align:center;">Streamlit Simple CSS Shape Generator </h1>
@@ -471,11 +474,6 @@ html_temp = """
 #htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
 #height:fit-content;'>aaa</div>"""
 #st.markdown(htmll_code.format(bgcolor, fontcolor, pos_left, pos_top),unsafe_allow_html=True)
-
-fhtmll_code = f"""<div id='mmy_div_outer' style='background-color:{bgcolor}; color:{fontcolor}; position:relative; left:{pos_left};
-             top:{pos_top}; width:fit-content; height:fit-content;'><a data-tooltip="Kampf" class="ttip">{div_content}</div>"""
-st.markdown(fhtmll_code,unsafe_allow_html=True)
-
 ###########################################################################
 #https://pytutorial.com/python-variable-in-string/#%%20Operator
 # Variables
