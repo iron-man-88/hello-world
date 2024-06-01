@@ -450,9 +450,9 @@ position = "relative"
 pos_left= "100px"
 pos_top="10px"
 div_tooltip="Kampf"
-div_content="K&auml;mpfer<p>My mother has <span style="""color:blue""">blue</span> eyes.</p><p>This is a simple 
+div_content="""K&auml;mpfer<p>My mother has <span style="""color:blue""">blue</span> eyes.</p><p>This is a simple 
 <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p><p>We're sorry, that <bigcolor>
-<red>todo</red></bigcolor> item was not found:</p>"
+<red>todo</red></bigcolor> item was not found:</p>"""
 
 html_temp = """
 <div style="background-color:{};padding:10px">
