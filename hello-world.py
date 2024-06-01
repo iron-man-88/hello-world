@@ -481,12 +481,7 @@ formatted_string = f"Hello, {name}! You are {age} years old."
 
 # Print Result
 st.write(formatted_string)
-
-
-
-
-
-
+###########################################################################
 
 
 #https://www.codingdeeply.com/dynamic-variable-name-python/
