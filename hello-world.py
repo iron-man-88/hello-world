@@ -215,7 +215,7 @@ config = {
 result = st.data_editor(dframe, column_config = config, num_rows=readWrite,
                         hide_index=useHideIndex, use_container_width=useContainerWidth, column_order=(useColumnOrder)) #org dynamic
 if st.button('Get results'):
-    st.write("212 ", result)
+    st.write("218 ", result)
 #######################################################
 
 ######### https://discuss.streamlit.io/t/session-state-issue-with-st-checkbox/24020/2
@@ -253,7 +253,7 @@ st.data_editor(
     data_df,
     column_config={
         "widgets": st.column_config.TextColumn(
-            "248 Widgets",
+            "256 Widgets",
             help="Streamlit **widget** commands 🎈 her you can explain a little bit",
             default="st.",
             max_chars=50,
@@ -370,17 +370,17 @@ with stylable_container(
 
 st.write("Your name:", name)
 ####################################################################################################
-ddd = "pppqqq425"
+ddd = "pppqqq373"
 lleft = "100px"
 #https://discuss.streamlit.io/t/applying-custom-css-to-manually-created-containers/33428/9
 def create_container_with_color(id, color="#E4F2EC", left="0px"):
     #stw(id)
     # todo: instead of color you can send in any css
     plh = st.container()
-    html_code = """<div id = 'my_div_outer'>"581outer"</div>"""
+    html_code = """<div id = 'my_div_outer'>"380outer"</div>"""
     st.markdown(html_code, unsafe_allow_html=True)
     with plh:
-        inner_html_code = """<div id = 'my_div_inner_%s'>"inner435"</div>""" % id
+        inner_html_code = """<div id = 'my_div_inner_%s'>"inner383"</div>""" % id
         plh.markdown(inner_html_code, unsafe_allow_html=True)
     ## applying style
     chat_plh_style = """
@@ -413,7 +413,7 @@ def create_container_with_color(id, color="#E4F2EC", left="0px"):
 create_container_with_color(ddd, color="red", left=lleft)
 ###########################################################################
 ccccc = "<span style="""""color:___">xxx</span>"""""
-st.write("457_ ", ccccc)
+st.write("416_ ", ccccc)
 from st_copy_to_clipboard import st_copy_to_clipboard
 
 # Render copy to clipboard button
@@ -432,8 +432,8 @@ css_style = """<style>div.id{{left:{llleft_position}px; top:{tttop_position}px;}
 #test#css_style = css_style  %(left, top) #neu
 div = """<div id = 'my_div_iinner_%s' class="square">"inner473"</div>""" % id
 #div = """<div id = 'my_div_iinner_%s' class="test1">"inner473"</div>""" % id
-#div = """<div id = id  class="square"><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>"""
-#div = """<div id = 'id_' class="square" css_style><a data-tooltip="475Kampf" class="ttip">475K&auml;mpfer</div>"""
+#div = """<div id = id  class="square"><a data-tooltip="475Kampf" class="ttip">435K&auml;mpfer</div>"""
+#div = """<div id = 'id_' class="square" css_style><a data-tooltip="436Kampf" class="ttip">436K&auml;mpfer</div>"""
 
 #st.markdown(css_style, div, unsafe_allow_html=True)
 st.markdown(div, unsafe_allow_html=True)
@@ -449,6 +449,7 @@ fontcolor = st.color_picker("Pick a Font Color","#fff")
 position = "relative"
 pos_left= "100px"
 pos_top="10px"
+div_tooltip="Kampf"
 
 html_temp = """
 <div style="background-color:{};padding:10px">
@@ -460,7 +461,7 @@ html_temp = """
 #htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
 #height:fit-content;'>aaa</div>"""
 htmll_code = """<div id='mmy_div_outer' style='background-color:{}; color:{}; position:relative; left:{}; top:{}; width:fit-content;
-             height:fit-content;'><a data-tooltip="Kampf" class="ttip">K&auml;mpfer
+             height:fit-content;'><a data-tooltip={div_tooltip} class="ttip">K&auml;mpfer
              <p>My mother has <span style="color:blue">blue</span> eyes.</p>
              <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
              <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
