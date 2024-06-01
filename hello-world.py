@@ -447,7 +447,7 @@ st.write(dynamic_1_variable) # Output: 42
 dynamic_1_variable = dynamic_1_variable +1
 st.write(dynamic_1_variable) # Output: 43
 #################################################################################################################
-#bgcolor=None; fontcolor=None; position = None; top = None; left = None
+bgcolor=None; fontcolor=None; position = None; top = None; pos_left = None
 page_no = "div_S001"
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
