@@ -453,14 +453,13 @@ bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
 globals()[page_no + "_" + str(var_num) + pos_left] = "100px" # eigentlich später Wert aus DB
 globals()[page_no + "_" + str(var_num) + pos_top] = "10px" # eigentlich später Wert aus DB
-#div_tooltip="Kampf"
 div_content="""K&auml;mpfer<p>My mother has <span style="color:blue">blue</span> eyes.</p><p>This is a simple
             <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p><p>We're sorry, that <bigcolor>
             <red>todo</red></bigcolor> item was not found:</p>"""
 
 fhtmll_code = f"""<div id={page_no} style='background-color:{bgcolor}; color:{fontcolor}; position:relative;
               left:{globals()[page_no + "_" + str(var_num) + pos_left]}; top:{globals()[page_no + "_" + str(var_num) + pos_top]}; width:fit-content; height:fit-content;'>
-              <a data-tooltip="Kampf" class="ttip">{div_content}</div>"""
+              <a data-tooltip=page_no class="ttip">{div_content}</div>"""
 st.markdown(fhtmll_code,unsafe_allow_html=True)
 #####
 html_temp = """
