@@ -447,12 +447,12 @@ st.write(dynamic_1_variable) # Output: 42
 dynamic_1_variable = dynamic_1_variable +1
 st.write(dynamic_1_variable) # Output: 43
 #################################################################################################################
-bgcolor=None; fontcolor=None; position = None; top = None; pos_left = ""
+bgcolor=None; fontcolor=None; pos_top = ""; top = None; pos_left = ""
 page_no = "div_S001"
 bgcolor = st.color_picker("Pick a Background color")
 fontcolor = st.color_picker("Pick a Font Color","#fff")
-#pos_left= "100px"
-globals()[page_no + "_" + str(var_num) + pos_left] = "100px"   # eigentlich später Wert aus DB
+globals()[page_no + "_" + str(var_num) + pos_left] = "100px" # eigentlich später Wert aus DB
+globals()[page_no + "_" + str(var_num) + pos_top] = "10px" # eigentlich später Wert aus DB
 pos_top="10px"
 div_tooltip="Kampf"
 div_content="""K&auml;mpfer<p>My mother has <span style="color:blue">blue</span> eyes.</p><p>This is a simple
@@ -460,7 +460,7 @@ div_content="""K&auml;mpfer<p>My mother has <span style="color:blue">blue</span>
             <red>todo</red></bigcolor> item was not found:</p>"""
 
 fhtmll_code = f"""<div id={page_no} style='background-color:{bgcolor}; color:{fontcolor}; position:relative;
-              left:{globals()[page_no + "_" + str(var_num) + pos_left]}; top:{pos_top}; width:fit-content; height:fit-content;'>
+              left:{globals()[page_no + "_" + str(var_num) + pos_left]}; top:{globals()[page_no + "_" + str(var_num) + pos_top]}; width:fit-content; height:fit-content;'>
               <a data-tooltip="Kampf" class="ttip">{div_content}</div>"""
 st.markdown(fhtmll_code,unsafe_allow_html=True)
 #####
