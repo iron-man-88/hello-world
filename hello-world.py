@@ -457,3 +457,10 @@ components.html(html_string)  # JavaScript works
 st.markdown(html_string, unsafe_allow_html=True)  # JavaScript doesn't work
 ###########################################################################
 
+const textArea = document.querySelector('.textarea-test')
+
+textArea.addEventListener('input',(e)=>{
+textArea.style.height = "auto"
+  textArea.style.height = `${textArea.scrollHeight}px`;
+})
+<textarea name="" id="" cols="30" rows="4" class="textarea-test"></textarea>
