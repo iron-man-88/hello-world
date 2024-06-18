@@ -502,6 +502,6 @@ st.markdown(f"""```
 {js_code}""")
 
 return_value = st_javascript(js_code)
-st.markdown(f"Return value was: {return_value}")
-print(f"Return value wassss: {return_value}")
+st.markdown(f"Return value was505: {return_value}")
+st.write(f"Return value was506: {return_value}")
 ###########################################################################
