@@ -7,6 +7,7 @@ import base64
 import textwrap
 import numpy as np
 #from streamlit_extras.dataframe_explorer import dataframe_explorer
+from st_bridge import bridge, html
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
 
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -487,7 +488,6 @@ st.write(formatted_string)
 ###########################################################################
 
 
-from st_bridge import bridge, html
 
 data = bridge("my-bridge", default="no button is clicked")
 
