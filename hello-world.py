@@ -485,3 +485,23 @@ formatted_string = f"Hello, {name}! You are {age} years old."
 # Print Result
 st.write(formatted_string)
 ###########################################################################
+
+
+from st_bridge import bridge, html
+
+data = bridge("my-bridge", default="no button is clicked")
+
+html("""
+<button onClick="stBridges.send('my-bridge', 'button 1 is clicked')">Button 1</button>
+<button onClick="stBridges.send('my-bridge', 'button 2 is clicked')">Button 2</button>
+<button onClick="stBridges.send('my-bridge', 'button 3 is clicked')">Button 3</button>
+""")
+
+st.write(data)
+###########################################################################
+
+
+
+
+
+
