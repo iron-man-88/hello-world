@@ -67,14 +67,14 @@ def read_file_text(df_lang_column, csv_key):                                    
 #    st.write("63 df_read_file_cell ", df_read_file_cell) # test
     return df_read_file_cell                                                ## ## return is for selected output, otherwise value is empty    st.write("64 df_read_file " , df_read_file)
 
-st.write("62 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_1'))
-st.write("63 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_2'))
-st.write("64 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_3'))
-st.write("65 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_4'))
+st.write("70 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_1'))
+st.write("71 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_2'))
+st.write("72 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_3'))
+st.write("73 df_read_file_cell ",read_file_text(df_lang_column, 'greeting_4'))
 #####################################https://stackoverflow.com/questions/73659180/how-to-stop-streamlit-to-reseting-after-using-radio###############################
 
 def greet(name, namee):
-    st.write("69 Hello name ", name, namee)
+    st.write("77 Hello name ", name, namee)
 # pass argument
 greet("John", "Johnn")
 
@@ -83,7 +83,7 @@ def add_numbers(num1, num2):
     return sum
 # function call with two values
 aaa = add_numbers(5, 4)
-st.write("78 Sum: ", aaa)
+st.write("86 Sum: ", aaa)
 
 
 
@@ -241,7 +241,7 @@ else:
 #########
 
 ############################################
-st.write("236 ")
+st.write("244 ")
 data_df = pd.DataFrame(
     {
         "widgets": ["st.selectbox_xxx", "st.number_input", "st.text_area", "st.button"],
