@@ -491,7 +491,7 @@ st.write(formatted_string)
 
 
 ###########################################################################
-from streamlit_javascript import st_javascript
+import from streamlit_javascript import st_javascript
 
 js_code = """await fetch("https://reqres.in/api/products/3")
 .then(function(response) {return response.json();})"""
