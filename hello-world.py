@@ -408,7 +408,7 @@ div_content="""405 K&auml;mpfer<p>My mother has <span style="color:blue">blue</s
 
 fhtmll_code = f"""<div id={page_no} style='background-color:{bgcolor}; color:{fontcolor}; position:relative; contenteditable:true;
               left:{globals()[page_no + "_" + str(var_num) + pos_left]}; top:{globals()[page_no + "_" + str(var_num) + pos_top]}; width:fit-content; height:fit-content;'>
-              <a data-tooltip={var_num} class="ttip">{div_content}</div>"""
+              {div_content}</div>"""
 st.markdown(fhtmll_code,unsafe_allow_html=True)
 #####
 html_temp = """
