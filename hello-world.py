@@ -41,22 +41,6 @@ st.title('You are great!')
 st.title('The Preeminent One')
 
 #####################################################################################################################
-
-###########################################################################
-data = bridge("my-bridge", default="no button is clicked")
-
-html("""
-<button onClick="stBridges.send('my-bridge', 'button 1 is clicked')">Button 1</button>
-<button onClick="stBridges.send('my-bridge', 'button 2 is clicked')">Button 2</button>
-<button onClick="stBridges.send('my-bridge', 'button 3 is clicked')">Button 3</button>
-""")
-
-st.write(data)
-###########################################################################
-
-
-
-
 if 'but_click' not in st.session_state:
     st.session_state.but_click = ''
 if 'radio_click' not in st.session_state:
@@ -507,3 +491,14 @@ st.write(formatted_string)
 
 
 
+###########################################################################
+data = bridge("my-bridge", default="no button is clicked")
+
+html("""
+<button onClick="stBridges.send('my-bridge', 'button 1 is clicked')">Button 1</button>
+<button onClick="stBridges.send('my-bridge', 'button 2 is clicked')">Button 2</button>
+<button onClick="stBridges.send('my-bridge', 'button 3 is clicked')">Button 3</button>
+""")
+
+st.write(data)
+###########################################################################
