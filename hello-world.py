@@ -288,7 +288,7 @@ def change_label_style(label, font_size='12px', font_color='blue', font_family='
 label = " 288 My text here"
 st.text_input(label)
 
-change_label_style(label, '30px')
+change_label_style(label, '90px')
 #################################################
 
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
