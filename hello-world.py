@@ -295,7 +295,7 @@ change_label_style(label, '90px', 'green' 'sans-serif')
 # st.sidebar
 left_position = st.sidebar.slider("Left", 1, 1340, value=0, help='Select left position of Div!!!')
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
-variable_output = st.sidebar.text_area("Enter some text", value="291Streamlit is awesome<br>aaa")
+variable_output = st.sidebar.text_area("Enter some text", value="298 Streamlit is awesome<br>aaa")
 div_id = "my_div_1"
 
 html_str = f"""
@@ -316,38 +316,6 @@ with st.popover("OP"):
 
 st.write("Your name:", name)
 
-#leftt = 130
-def example2():
-    with stylable_container(
-        key="green_button",
-        css_styles="""
-            button {
-                background-color: green;
-                color: white;
-                border-radius: 20px;
-            }
-            """,
-    ):
-        st.button("Green button")
-
-    st.button("Normal button")
-    with stylable_container(
-        key="container_with_border",
-        css_styles="""
-            {
-                border: 1px solid rgba(49, 51, 63, 0.2);
-                border-radius: 0.5rem;
-                padding: calc(1em - 1px);
-                position: relative;
-                bottom: 500px;
-            }
-            """,
-    ):
-        st.markdown("This is a container with a border.")
-
-example2()
-
-##########################
 ####################################################################################################
 ####################################################################################################
 ddd = "pppqqq373"
