@@ -1,5 +1,5 @@
 import streamlit as st
-from st_bridge import bridge, html
+#from st_bridge import bridge, html
 import pandas as pd
 import streamlit_extras as se
 from streamlit_extras.grid import grid
@@ -492,13 +492,16 @@ st.write(formatted_string)
 
 
 ###########################################################################
-data = bridge("my-bridge", default="no button is clicked")
+from streamlit_javascript import st_javascript
 
-html("""
-<button onClick="stBridges.send('my-bridge', 'button 1 is clicked')">Button 1</button>
-<button onClick="stBridges.send('my-bridge', 'button 2 is clicked')">Button 2</button>
-<button onClick="stBridges.send('my-bridge', 'button 3 is clicked')">Button 3</button>
-""")
+js_code = """await fetch("https://reqres.in/api/products/3")
+.then(function(response) {return response.json();})"""
 
-st.write(data)
+st.subheader("Executing javascript code:")
+st.markdown(f"""```
+{js_code}""")
+
+return_value = st_javascript(js_code)
+st.markdown(f"Return value was: {return_value}")
+print(f"Return value was: {return_value}")
 ###########################################################################
