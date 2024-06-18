@@ -6,7 +6,6 @@ from streamlit_extras.stylable_container import stylable_container
 import base64
 import textwrap
 import numpy as np
-import streamlit.components.v1 as v1
 #from streamlit_extras.dataframe_explorer import dataframe_explorer
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
 
@@ -458,10 +457,3 @@ components.html(html_string)  # JavaScript works
 st.markdown(html_string, unsafe_allow_html=True)  # JavaScript doesn't work
 ###########################################################################
 
-const textArea = document.querySelector('.textarea-test')
-
-textArea.addEventListener('input',(e)=>{
-textArea.style.height = "auto"
-  textArea.style.height = `${textArea.scrollHeight}px`;
-})
-<textarea name="" id="" cols="30" rows="4" class="textarea-test"></textarea>
