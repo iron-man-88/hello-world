@@ -299,7 +299,7 @@ variable_output = st.sidebar.text_area("Enter some text", value="298 Streamlit i
 div_id = "my_div_1"
 
 html_str = f"""
-<style>div.square{{left: {left_position}px; top: {top_position}px; contenteditable:"true"}}</style>
+<style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
 <div id = {div_id}  class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
 <p>My mother has <span style="color:blue">blue</span> eyes.</p>
 <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
@@ -406,7 +406,7 @@ div_content="""405 K&auml;mpfer<p>My mother has <span style="color:blue">blue</s
             <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p><p>We're sorry, that <bigcolor>
             <red>todo</red></bigcolor> item was not found:</p>"""
 
-fhtmll_code = f"""<div id={page_no} style='background-color:{bgcolor}; color:{fontcolor}; position:relative;
+fhtmll_code = f"""<div id={page_no} style='background-color:{bgcolor}; color:{fontcolor}; position:relative; contenteditable:true;
               left:{globals()[page_no + "_" + str(var_num) + pos_left]}; top:{globals()[page_no + "_" + str(var_num) + pos_top]}; width:fit-content; height:fit-content;'>
               <a data-tooltip={var_num} class="ttip">{div_content}</div>"""
 st.markdown(fhtmll_code,unsafe_allow_html=True)
