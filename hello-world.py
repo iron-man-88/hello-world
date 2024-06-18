@@ -273,7 +273,7 @@ st.image(svg_url)
 ################################################
 
 
-def change_label_style(label, font_size='45px', font_color='blue', font_family='sans-serif'):
+def change_label_style(label, font_size='12px', font_color='blue', font_family='sans-serif'):
     html = f"""
     <script>
         var elems = window.parent.document.querySelectorAll('p');
@@ -288,7 +288,7 @@ def change_label_style(label, font_size='45px', font_color='blue', font_family='
 label = " 288 My text here"
 st.text_input(label)
 
-change_label_style(label, '90px')
+change_label_style(label, '90px', 'green' 'sans-serif')
 #################################################
 
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
