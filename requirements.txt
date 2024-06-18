@@ -1,6 +1,6 @@
 streamlit==1.35.*
 #streamlit-bridge==1.1.3
-#streamlit-javascript
+streamlit-javascript
 # https://www.restack.io/docs/streamlit-knowledge-fix-modulenotfounderror-streamlit-extras
 streamlit_extras==0.4.2
 streamlit_float
