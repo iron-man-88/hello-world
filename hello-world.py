@@ -513,8 +513,6 @@ st.write(f"Return value was506: {return_value}")
 
 ###########################################################################
 
-import streamlit.components.v1 as components
-
 html_string = '''
 <h1>HTML string in RED</h1>
 
