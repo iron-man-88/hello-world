@@ -286,7 +286,7 @@ def change_label_style(label, font_size='12px', font_color='blue', font_family='
     st.components.v1.html(html)
 
 label = " 288 My text here"
-st.text_input("label")
+# st.text_input(label)
 
 change_label_style(label, '90px', 'green' 'sans-serif')
 #################################################
