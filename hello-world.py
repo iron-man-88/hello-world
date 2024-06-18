@@ -491,18 +491,21 @@ st.write(formatted_string)
 
 
 ###########################################################################
-import from streamlit_javascript import st_javascript
+import streamlit.components.v1 as components
 
-js_code = """await fetch("https://reqres.in/api/products/3")
-.then(function(response) {return response.json();})"""
+html_string = '''
+<h1>HTML string in RED</h1>
 
-st.subheader("Executing javascript code:")
-st.markdown(f"""```
-{js_code}""")
+<script language="javascript">
+  document.querySelector("h1").style.color = "red";
+  console.log("Streamlit runs JavaScript");
+  alert("Streamlit runs JavaScript");
+</script>
+'''
 
-return_value = st_javascript(js_code)
-st.markdown(f"Return value was505: {return_value}")
-st.write(f"Return value was506: {return_value}")
+components.html(html_string)  # JavaScript works
+
+st.markdown(html_string, unsafe_allow_html=True)  # JavaScript doesn't work
 ###########################################################################
 
 
