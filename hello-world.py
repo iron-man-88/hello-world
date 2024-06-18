@@ -293,8 +293,8 @@ change_label_style(label, '90px', 'green' 'sans-serif')
 
 #https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/3
 # st.sidebar
-left_position = st.sidebar.slider("Left", 1, 1340, value=0, help='Select left position of Div!!!')
-top_position = st.sidebar.slider("Top", 1, 800, value=0)
+left_position = slider("Left", 1, 1340, value=0, help='Select left position of Div!!!')
+top_position = slider("Top", 1, 800, value=0)
 variable_output = text_area("Enter some text", value="298 Streamlit is awesome<br>aaa")
 div_id = "my_div_1"
 
