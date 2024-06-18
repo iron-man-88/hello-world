@@ -402,7 +402,7 @@ fontcolor = st.color_picker("Pick a Font Color","#fff")
 var_num = 1 # eigentlich später Wert aus DB
 globals()[page_no + "_" + str(var_num) + pos_left] = "100px" # eigentlich später Wert aus DB
 globals()[page_no + "_" + str(var_num) + pos_top] = "10px" # eigentlich später Wert aus DB
-div_content="""K&auml;mpfer<p>My mother has <span style="color:blue">blue</span> eyes.</p><p>This is a simple
+div_content="""405 K&auml;mpfer<p>My mother has <span style="color:blue">blue</span> eyes.</p><p>This is a simple
             <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p><p>We're sorry, that <bigcolor>
             <red>todo</red></bigcolor> item was not found:</p>"""
 
