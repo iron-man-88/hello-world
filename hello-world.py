@@ -458,3 +458,24 @@ st.markdown(html_string, unsafe_allow_html=True)  # JavaScript doesn't work
 ###########################################################################
 
 st.write('Hello, *World!* :sunglasses:')
+
+
+st.markdown(
+    """
+    <div id="div"></div>
+    <script>
+var info = function(dd) {
+  return function() {
+      var offsets = dd.getBoundingClientRect();
+	  var top = offsets.top + window.scrollY;
+	  var left = offsets.left + window.scrollX;
+    alert(dd.id + " 68 dd.id, " + dd.offsetWidth + " dd.offsetWidth, " + dd.offsetHeight + " dd.offsetHeight, " + top + " top, " + left + " left" );
+  }
+};
+var dds = document.getElementsByClassName("div-id");
+for (var i = 0, l = dds.length; l > i; i++)
+  dds[i].onclick = info(dds[i]);
+    </script>
+    """,
+    unsafe_allow_html=True,
+)
