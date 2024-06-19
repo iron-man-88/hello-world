@@ -461,8 +461,6 @@ st.write('Hello, *World!* :sunglasses:')
 
 # https://stackoverflow.com/questions/67977391/can-i-display-custom-javascript-in-streamlit-web-app
 html_string464 = '''
-<h1>HTML string in RED</h1>
-
 <script language="javascript">
 var info = function(dd) {
   return function() {
@@ -475,6 +473,7 @@ var info = function(dd) {
 var dds = document.getElementsByClassName("div-id");
 for (var i = 0, l = dds.length; l > i; i++)
   dds[i].onclick = info(dds[i]);
+  alert("476 Streamlit runs JavaScript");
 </script>
 '''
 
