@@ -462,7 +462,6 @@ st.write('Hello, *World!* :sunglasses:')
 
 st.markdown(
     """
-    <div id="div"></div>
     <script>
 var info = function(dd) {
   return function() {
