@@ -473,7 +473,6 @@ var info = function(dd) {
 var dds = document.getElementsByClassName("div-id");
 for (var i = 0, l = dds.length; l > i; i++)
   dds[i].onclick = info(dds[i]);
-  alert("476 476 476 476 476 476");
 </script>
 '''
 
