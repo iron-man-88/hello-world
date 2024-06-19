@@ -300,8 +300,8 @@ div_id = "my_div_1"
 
 html_str = f"""
 <style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
-<div id = {div_id}  class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}
-<p>My mother has <span style="color:blue">blue</span> eyes.</p>
+<div id = {div_id}  class="square">{variable_output}
+<p>My mother has <span style="color:green">green</span> eyes.</p>
 <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
 <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
 </div>
