@@ -308,7 +308,7 @@ html_str = f"""
 """
 #<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 #st.markdown(html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
-st.markdown(html_str, unsafe_allow_html=True, st.write('Hello, *World!* :sunglasses:'))
+st.markdown(html_str, unsafe_allow_html=True)
 #################################################
 with st.popover("OP"):
     st.markdown("Hello World 👋")
