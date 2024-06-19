@@ -295,7 +295,7 @@ change_label_style(label, '90px', 'green' 'sans-serif')
 # st.sidebar
 left_position = st.sidebar.slider("Left", 1, 1340, value=0, help='Select left position of Div!!!')
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
-variable_output = st.sidebar.text_area("Enter some text", value="298 Streamlit is awesome<br>aaa" st.write('Hello, *World!* :sunglasses:'))
+variable_output = st.sidebar.text_area("Enter some text", value="298 Streamlit is awesome<br>aaa" + st.write('Hello, *World!* :sunglasses:'))
 div_id = "my_div_1"
 
 html_str = f"""
