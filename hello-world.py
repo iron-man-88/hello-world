@@ -298,6 +298,17 @@ top_position = st.sidebar.slider("Top", 1, 800, value=0)
 variable_output = st.sidebar.text_area("Enter some text", value="298 Streamlit is awesome<br>aaa")
 div_id = "my_div_1"
 
+html_str = f"""
+<style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
+<div id = {div_id}  class="square div-id" contenteditable="true">{variable_output}
+<p>My mother has <span style="color:green">green</span> eyes.</p>
+<p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
+<p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
+</div>
+"""
+#<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
+#st.markdown(html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
+st.markdown(html_str, unsafe_allow_html=True)
 #################################################
 with st.popover("OP"):
     st.markdown("Hello World 👋")
@@ -472,15 +483,3 @@ components.html(html_string464)  # JavaScript works
 st.markdown(html_string464, unsafe_allow_html=True)  # JavaScript doesn't work
 ###########################################################################
 
-
-html_str = f"""
-<style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
-<div id = {div_id}  class="square div-id" contenteditable="true">{variable_output}
-<p>My mother has <span style="color:green">green</span> eyes.</p>
-<p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
-<p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
-</div>
-"""
-#<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
-#st.markdown(html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
-st.markdown(html_str, unsafe_allow_html=True)
