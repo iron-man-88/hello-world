@@ -297,7 +297,7 @@ left_position = st.sidebar.slider("Left", 1, 1340, value=0, help='Select left po
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
 variable_output = st.sidebar.text_area("Enter some text", value="298 Streamlit is awesome<br>aaa")
 div_id = "my_div_1"
- # ...uare"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {varia ....
+
 html_str = f"""
 <style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
 <div id = {div_id}  class="square" contenteditable="true">{variable_output}
@@ -457,3 +457,4 @@ components.html(html_string)  # JavaScript works
 st.markdown(html_string, unsafe_allow_html=True)  # JavaScript doesn't work
 ###########################################################################
 
+st.write('Hello, *World!* :sunglasses:')
