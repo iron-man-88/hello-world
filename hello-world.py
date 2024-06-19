@@ -456,13 +456,15 @@ components.html(html_string)  # JavaScript works
 
 st.markdown(html_string, unsafe_allow_html=True)  # JavaScript doesn't work
 ###########################################################################
-
 st.write('Hello, *World!* :sunglasses:')
+###########################################################################
 
+# https://stackoverflow.com/questions/67977391/can-i-display-custom-javascript-in-streamlit-web-app
 
-st.markdown(
-    """
-    <script>
+html_string464 = '''
+<h1>HTML string in RED</h1>
+
+<script language="javascript">
 var info = function(dd) {
   return function() {
       var offsets = dd.getBoundingClientRect();
@@ -474,7 +476,10 @@ var info = function(dd) {
 var dds = document.getElementsByClassName("div-id");
 for (var i = 0, l = dds.length; l > i; i++)
   dds[i].onclick = info(dds[i]);
-    </script>
-    """,
-    unsafe_allow_html=True,
-)
+</script>
+'''
+
+components.html(html_string464)  # JavaScript works
+
+st.markdown(html_string464, unsafe_allow_html=True)  # JavaScript doesn't work
+###########################################################################
