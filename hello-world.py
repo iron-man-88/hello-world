@@ -459,3 +459,26 @@ st.markdown(html_string, unsafe_allow_html=True)  # JavaScript doesn't work
 st.write('Hello, *World!* :sunglasses:')
 ###########################################################################
 
+# https://stackoverflow.com/questions/67977391/can-i-display-custom-javascript-in-streamlit-web-app
+html_string464 = '''
+<script language="javascript">
+var info = function(dd) {
+  return function() {
+      var offsets = dd.getBoundingClientRect();
+	  var top = offsets.top + window.scrollY;
+	  var left = offsets.left + window.scrollX;
+    alert(dd.id + " 68 dd.id, " + dd.offsetWidth + " dd.offsetWidth, " + dd.offsetHeight + " dd.offsetHeight, " + top + " top, " + left + " left" );
+  }
+};
+var dds = document.getElementsByClassName("div-id");
+for (var i = 0, l = dds.length; l > i; i++)
+  dds[i].onclick = info(dds[i]);
+  alert("476 476 476 476 476 476");
+</script>
+'''
+
+components.html(html_string464)  # JavaScript works
+
+st.markdown(html_string464, unsafe_allow_html=True)  # JavaScript doesn't work
+###########################################################################
+
