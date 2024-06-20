@@ -509,6 +509,6 @@ content = """<p><a href='#' id='Link 1'>First link</a></p>
     <a href='#' id='I-bin-Image 2'><img width='20%' src='https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=200'></a>
     """
 clicked = click_detector(content)
-
+div_clicked = click_detector(html_str)
 st.markdown(f"**{clicked} clicked**" if clicked != "" else "**No click**")
-st.write(clicked)
+st.write(div_clicked)
