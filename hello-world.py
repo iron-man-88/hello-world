@@ -298,10 +298,10 @@ left_position = st.sidebar.slider("Left", 1, 1340, value=0, help='Select left po
 top_position = st.sidebar.slider("Top", 1, 800, value=0)
 variable_output = st.sidebar.text_area("Enter some text", value="298 Streamlit is awesome<br>aaa")
 div_id = "my_div_1"
-
+#<div id = {div_id}  class="square div-id" contenteditable="true">{variable_output}
 html_str = f"""
 <style>div.square{{left: {left_position}px; top: {top_position}px;}}</style>
-<div id = {div_id}  class="square div-id" contenteditable="true">{variable_output}
+<div id = {div_id}  class="square div-id" contenteditable="true"><a href='#' id='Link 2'>Second link</a>{variable_output}
 <p>My mother has <span style="color:green">green</span> eyes.</p>
 <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
 <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
