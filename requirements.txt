@@ -6,4 +6,4 @@ streamlit_extras==0.4.2
 streamlit_float
 #streamlit_ace
 st-copy-to-clipboard
-#clickable_images
+st-clickable-images
