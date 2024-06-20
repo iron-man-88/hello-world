@@ -7,3 +7,4 @@ streamlit_float
 #streamlit_ace
 st-copy-to-clipboard
 st-clickable-images
+st_click_detector
