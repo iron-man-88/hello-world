@@ -305,7 +305,7 @@ html_str = f"""
 <p>My mother has <span style="color:green">green</span> eyes.</p>
 <p>This is a simple <bigcolor>Streamlit</bigcolor> app with a Jinja2 template.</p>
 <p>We're sorry, that <bigcolor><red>todo</red></bigcolor> item was not found:</p>
-></a>
+</a>
 """
 #<div class="square"><a data-tooltip="Kampf" class="ttip">K&auml;mpfer + {variable_output}</div>
 #st.markdown(html_str, unsafe_allow_html=True, help='354 Select a number out of 3 choices')
