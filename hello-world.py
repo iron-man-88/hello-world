@@ -497,6 +497,3 @@ clicked = clickable_images(
 )
 
 st.markdown(f"Image #{clicked} clicked" if clicked > -1 else "No image clicked")
-
-Usage
-
