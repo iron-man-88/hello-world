@@ -511,3 +511,4 @@ content = """<p><a href='#' id='Link 1'>First link</a></p>
 clicked = click_detector(content)
 
 st.markdown(f"**{clicked} clicked**" if clicked != "" else "**No click**")
+st.write(clicked)
