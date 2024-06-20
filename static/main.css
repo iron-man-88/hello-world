@@ -33,7 +33,7 @@ div.ttip{
   width:fit-content;
   height:fit-content;
 }
-a.ttip:hover::after{
+a_a.ttip:hover::after{
   content:attr(data-tooltip);
   position:absolute;
   bottom: 100%;
