@@ -17,6 +17,7 @@ file.close()
 st.write(data)
 import json
 dates_json = json.dumps(data)
+dates_json_type = json.dumps(type(data))
 st.write(dates_json)
 
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
