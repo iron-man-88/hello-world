@@ -462,14 +462,13 @@ st.write(formatted_string)
 ###########################################################################
 # https://stackoverflow.com/questions/67977391/can-i-display-custom-javascript-in-streamlit-web-app
 #import streamlit.components.v1 as components
-
+ddd = "abc"
 html_string = '''
 <h1>HTML string in RED</h1>
-ddd = "abc"
 <script language="javascript">
   document.querySelector("h1").style.color = "red";
   console.log("Streamlit runs JavaScript");
-  alert("Streamlit runs JavaScript");
+  #alert("Streamlit runs JavaScript");
   alert(ddd);
 </script>
 '''
