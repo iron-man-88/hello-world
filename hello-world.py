@@ -9,7 +9,6 @@ import numpy as np
 #from streamlit_extras.dataframe_explorer import dataframe_explorer
 st. set_page_config(layout="wide") # https://discuss.streamlit.io/t/how-to-increase-the-width-of-web-page/7697
 import streamlit.components.v1 as components
-import JSON
 import csv
 file = open("./database/neu.csv", "r")
 data = list(csv.reader(file, delimiter=","))
