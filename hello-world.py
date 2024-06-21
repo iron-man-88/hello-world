@@ -13,8 +13,13 @@ import csv
 file = open("./database/neu.csv", "r")
 data = list(csv.reader(file, delimiter=","))
 file.close()
-print(data)
+## print(data)
 st.write(data)
+
+pyodide.runPython(`x = [3, 4]`);
+st.write(pyodide.globals.get('data').toJs();)
+// >>> [ 3, 4 ]
+
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-height-of-streamlit-sidebar
     """
