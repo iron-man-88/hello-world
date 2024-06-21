@@ -19,7 +19,7 @@ import json
 dates_json = json.dumps(data)
 st.write(dates_json)
 dates_json_type = json.dumps(data)
-st.write(dates_json_type)
+st.write(type(dates_json_type))
 
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-height-of-streamlit-sidebar
