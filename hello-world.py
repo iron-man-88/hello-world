@@ -467,10 +467,10 @@ html_string = '''
 <h1>HTML string in RED</h1>
 <script language="javascript">
   ddd = "abc"
-  alert(ddd);
+  #alert(ddd);
   document.querySelector("h1").style.color = "red";
   console.log("Streamlit runs JavaScript");
-  #alert("Streamlit runs JavaScript");
+  alert("Streamlit runs JavaScript");
 </script>
 '''
 
