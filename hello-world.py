@@ -16,8 +16,8 @@ file.close()
 ## print(data)
 st.write(data)
 import json
-dates_json = json.dumps(data)
-st.write(dates_json)
+#dates_json = json.dumps(data)
+#st.write(dates_json)
 dates_json = json.dumps(type(data))
 st.write(dates_json)
 
