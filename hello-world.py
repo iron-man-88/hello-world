@@ -12,8 +12,8 @@ import streamlit.components.v1 as components
 import csv
 file = open("./database/neu.csv", "r")
 data = list(csv.reader(file, delimiter=","))
-datas = data
 file.close()
+datas = data
 ## print(data)
 st.write(data)
 import json
