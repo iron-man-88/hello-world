@@ -26,7 +26,7 @@ st.write(type(dates_json_type))
 
 html_string27 = '''
 <script language="javascript">
-  alert(data);
+  alert(data)
 </script>
 '''
 components.html(html_string27)
