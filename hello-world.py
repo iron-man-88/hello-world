@@ -470,7 +470,7 @@ ddd = "abc"
   document.querySelector("h1").style.color = "red";
   console.log("Streamlit runs JavaScript");
   alert("Streamlit runs JavaScript");
-  alert({ddd});
+  alert(ddd);
 </script>
 '''
 
