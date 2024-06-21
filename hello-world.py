@@ -16,7 +16,7 @@ file.close()
 ## print(data)
 st.write(data)
 
-st.write(pyodide.globals.get('data').toJs();)
+st.write(pyodide.globals.get('data').toJs())
 // >>> [ 3, 4 ]
 
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
