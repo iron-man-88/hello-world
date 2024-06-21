@@ -17,7 +17,6 @@ file.close()
 st.write(data)
 
 st.write(pyodide.globals.get('data').toJs())
-// >>> [ 3, 4 ]
 
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-height-of-streamlit-sidebar
