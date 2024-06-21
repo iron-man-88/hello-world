@@ -15,8 +15,7 @@ data = list(csv.reader(file, delimiter=","))
 file.close()
 ## print(data)
 st.write(data)
-
-st.write(pyodide.globals.get('data').toJs())
+import js
 
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-height-of-streamlit-sidebar
