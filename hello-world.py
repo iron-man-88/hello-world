@@ -13,8 +13,7 @@ import csv
 file = open("./database/neu.csv", "r")
 data = list(csv.reader(file, delimiter=","))
 file.close()
-datas = data
-st.write("17 ", datas)
+
 ## print(data)
 st.write(data)
 import json
@@ -23,10 +22,9 @@ st.write(dates_json)
 dates_json_type = json.dumps(data)
 st.write(type(dates_json_type))
 
-
 html_string27 = '''
 <script language="javascript">
-  alert(data)
+  alert(dates_json_type)
 </script>
 '''
 components.html(html_string27)
