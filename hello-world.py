@@ -12,6 +12,7 @@ import streamlit.components.v1 as components
 import csv
 file = open("./database/neu.csv", "r")
 data = list(csv.reader(file, delimiter=","))
+datas = data
 file.close()
 ## print(data)
 st.write(data)
@@ -461,7 +462,7 @@ html_string = '''
   document.querySelector("h1").style.color = "red";
   console.log("Streamlit runs JavaScript");
   alert("Streamlit runs JavaScript");
-  alert("464 ", data);
+  alert("465 ", datas);
 </script>
 '''
 
