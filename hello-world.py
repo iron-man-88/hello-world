@@ -14,6 +14,7 @@ file = open("./database/neu.csv", "r")
 data = list(csv.reader(file, delimiter=","))
 file.close()
 datas = data
+st.write("17 ", datas)
 ## print(data)
 st.write(data)
 import json
