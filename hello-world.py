@@ -16,7 +16,9 @@ file.close()
 ## print(data)
 st.write(data)
 
-pyodide.runPython(`x = [3, 4]`);
+pyodide.runPython(`
+  x = [3, 4]
+`);
 st.write(pyodide.globals.get('data').toJs();)
 // >>> [ 3, 4 ]
 
