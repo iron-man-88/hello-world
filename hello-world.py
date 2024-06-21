@@ -470,7 +470,7 @@ html_string = '''
   document.querySelector("h1").style.color = "red";
   console.log("Streamlit runs JavaScript");
   alert("Streamlit runs JavaScript");
-  alert(data);
+  alert({{data}});
 </script>
 '''
 
