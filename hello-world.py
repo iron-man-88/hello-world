@@ -466,7 +466,7 @@ st.write(formatted_string)
 html_string = '''
 <h1>HTML string in RED</h1>
 <script language="javascript">
-  ddd = "abc"
+  #ddd = "abc"
   #alert(ddd);
   document.querySelector("h1").style.color = "red";
   console.log("Streamlit runs JavaScript");
