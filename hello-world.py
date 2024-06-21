@@ -14,6 +14,7 @@ file = open("./database/neu.csv", "r")
 data = list(csv.reader(file, delimiter=","))
 file.close()
 print(data)
+st.write(data)
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-height-of-streamlit-sidebar
     """
