@@ -455,7 +455,7 @@ st.write(formatted_string)
 # https://stackoverflow.com/questions/67977391/can-i-display-custom-javascript-in-streamlit-web-app
 #import streamlit.components.v1 as components
 
-html_string = '''
+html_string = '''f
 <h1>HTML string in RED</h1>
 
 <script language="javascript">
