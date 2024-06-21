@@ -23,6 +23,15 @@ st.write(dates_json)
 dates_json_type = json.dumps(data)
 st.write(type(dates_json_type))
 
+
+html_string27 = '''
+<script language="javascript">
+  alert(datas);
+</script>
+'''
+components.html(html_string27)
+st.markdown(html_string27, unsafe_allow_html=True)
+
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-height-of-streamlit-sidebar
     """
