@@ -16,7 +16,7 @@ data = list(csv.reader(file, delimiter=","))
 file.close()
 
 ## print(data)
-#st.write(data)
+st.write("19", data)
 import json
 dates_json = json.dumps(data)
 #st.write("22 " + dates_json)
