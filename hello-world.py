@@ -16,12 +16,12 @@ data = list(csv.reader(file, delimiter=","))
 file.close()
 
 ## print(data)
-st.write(data)
+#st.write(data)
 import json
 dates_json = json.dumps(data)
-st.write(dates_json)
-dates_json_type = json.dumps(data)
-st.write(type(dates_json_type))
+st.write("22 ", dates_json)
+#dates_json_type = json.dumps(data)
+#st.write(type(dates_json_type))
 
 html_string27 = '''
 <script language="javascript">
