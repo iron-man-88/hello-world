@@ -29,7 +29,7 @@ html_string27 = '''
 </script>
 '''
 components.html(html_string27)
-st.markdown(html_string27, unsafe_allow_html=True)
+#st.markdown(html_string27, unsafe_allow_html=True)
 ### extra
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 st.markdown( # https://stackoverflow.com/questions/74611608/how-to-change-the-height-of-streamlit-sidebar
