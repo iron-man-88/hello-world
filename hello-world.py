@@ -19,7 +19,7 @@ file.close()
 #st.write(data)
 import json
 dates_json = json.dumps(data)
-st.write("22 " + dates_json)
+#st.write("22 " + dates_json)
 #dates_json_type = json.dumps(data)
 #st.write(type(dates_json_type))
 
