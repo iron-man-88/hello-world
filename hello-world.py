@@ -25,7 +25,7 @@ dates_json_type = json.dumps(data)
 
 html_string27 = '''
 <script language="javascript">
-  alert({dates_json_type})
+  alert({{dates_json_type}})
 </script>
 '''
 components.html(html_string27)
